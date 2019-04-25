@@ -1,8 +1,14 @@
 import React from 'react'
+import Title from './Title'
+import { PageContainer } from './Containers'
+import Plant from './Plant'
 
 const MobileLanding = () => {
   return (
-    <h1>This is the Mobile Layout</h1>
+    <PageContainer>
+      <Title />
+      <Plant />
+    </PageContainer>
   )
 }
 

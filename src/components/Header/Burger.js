@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { color } from '../Global/variables'
 
-export const BurgerMenu = styled.div`
+const BurgerMenu = styled.div`
   position: absolute;
   top: 0.5em;
   right: 0.5em;
@@ -45,7 +45,7 @@ export const BurgerMenu = styled.div`
    }
 `;
 
-export const TopLine = styled.span`
+const TopLine = styled.span`
   width: 100%;
   height: 6px;
   background-color: ${color.secondary};
@@ -61,25 +61,43 @@ export const TopLine = styled.span`
   }
 `;
 
-export const MidLine = styled(TopLine)`
+const MidLine = styled(TopLine)`
   ${BurgerMenu}: hover & {
     transform: scaleX(0.6);
   }
 `;
-export const BottomLine = styled(TopLine)`
+const BottomLine = styled(TopLine)`
   ${BurgerMenu}: hover & {
     transform: scaleX(0.7);
   }
 `;
 
+const CloseBtn = styled.button`
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 6;
+`
 
 const Burger = (props) => {
+  const close = props.isHidden
   return (
-    <BurgerMenu onClick={props.onClick}>
-      <TopLine />
-      <MidLine />
-      <BottomLine />
-    </BurgerMenu>
+    <React.Fragment>
+    {
+      close ?
+      <BurgerMenu onClick={props.onClick}>
+        <TopLine />
+        <MidLine />
+        <BottomLine />
+      </BurgerMenu>
+      :
+      <CloseBtn onClick={props.onClick}>Close</CloseBtn>
+    }
+    </React.Fragment>
   )
 }
 

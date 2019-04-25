@@ -3,38 +3,38 @@ module.exports = {
     title: `RKK Creative`,
     description: `Paphos Freelance Web Design and Development`,
     author: `RKK Creative`,
-
+    email: 'info@rkkcreative.xyz',
+    facebook: 'https://www.facebook.com/RKKCreative/',
+    twitter: 'https://twitter.com/rkkcreative/',
+    insta: 'https://www.instagram.com/rkkcreative/',
+    pin: 'https://www.pinterest.com/rkkcreative/',
+    linked: 'https://www.linkedin.com/in/rkkcreative/',
     menuLinks: [
-      {
-        name: "CMS",
-        link: "/CmsPage"
-      },
-      {
-        name: "Ecommerce",
-        link: "/EcommercePage"
-      },
       {
         name: "Home",
         link: "/"
+      },
+      {
+        name: "Web Design",
+        link: "/WebDesignPage"
+      },
+      {
+        name: "Development",
+        link: "/DevelopmentPage"
+      },
+      {
+        name: "Graphics",
+        link: "/WebGraphicsPage"
       },
       {
         name: "SEO",
         link: "/SeoOptPage"
       },
       {
-        name: "WebApps",
-        link: "/WebAppsPage"
+        name: "Portfolio",
+        link: "/PortfolioPage"
       },
-      {
-        name: "WebDesign",
-        link: "/WebDesignPage"
-      },
-      {
-        name: "WebGraphics",
-        link: "/WebGraphicsPage"
-      },
-
-    ]
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

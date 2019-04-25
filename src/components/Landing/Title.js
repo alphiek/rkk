@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { color, font, weight } from '../Global/variables'
+import { color, font, weight, spacing } from '../Global/variables'
 
-const TitleWrapper = styled(posed.div)`
+const TitleWrapper = styled.div`
   position: absolute;
   height: auto;
   width: 40vw;
@@ -12,8 +12,22 @@ const TitleWrapper = styled(posed.div)`
   background-color: ${color.white};
   z-index: 3;
   overflow: hidden;
+
+  @media only screen and (min-width: 824px) and (max-width: 1024px) {
+    margin-top: 28vh;
+    margin-left: 14vw;
+    width: 60vw;
+    background-color: transparent;
+  }
+
+  @media only screen and (max-width: 824px) {
+    margin-top: 15vh;
+    margin-left: 8vw;
+    width: 80vw;
+    background-color: transparent;
+  }
 `
-const TitleText = styled(posed.h1)`
+const TitleText = styled.h1`
   width: 90%;
   line-height: 105%;
   margin-top: 0.5em;
@@ -21,18 +35,25 @@ const TitleText = styled(posed.h1)`
   font-family: ${font.muli};
   font-weight: ${weight.extraBold};
   font-size: 2.2em;
-  letter-spacing: -0.05em;
+  letter-spacing: ${spacing.narrow};
+
+  @media only screen (min-width: 824px) and (max-width: 1024px) {
+    font-size: 2.5em;
+  }
 `
 
-const Location = styled(posed.h2)`
+const Location = styled.h2`
   margin-top: 0.9em;
   line-height: 100%;
   font-family: ${font.heebo};
   font-weight: ${weight.bold};
-  letter-spacing: 0.2em;
+  letter-spacing: ${spacing.wide};
   color: ${color.secondary};
   text-transform: uppercase;
   font-size: 0.6em;
+  @media (min-width: 824px) and (max-width: 1024px) {
+    font-size: 0.7em;
+  }
 `
 
 

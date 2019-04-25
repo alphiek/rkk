@@ -1,8 +1,14 @@
 import React from 'react'
+import Title from './Title'
+import { PageContainer } from './Containers'
+import Plant from './Plant'
 
 const TabletLanding = () => {
   return (
-    <h1>This is the Tablet Layout</h1>
+    <PageContainer>
+      <Title />
+      <Plant />
+    </PageContainer>
   )
 }
 

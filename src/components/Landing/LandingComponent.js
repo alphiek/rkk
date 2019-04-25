@@ -1,56 +1,35 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { color, font, weight } from '../Global/variables'
-import { BlueContainerAnim, RedContainerAnim } from './Containers'
+import { color, font, weight, spacing } from '../Global/variables'
+import { BlueContainerAnim, RedContainerAnim, PageContainer } from './Containers'
 import LampAnim from './LampAnim'
 import MouseAnim from './MouseAnim'
-import plant from '../../images/plant.svg'
+import Plant from './Plant'
 import Title from './Title'
 
 
-const Plant = styled.img`
+const LandingLink = styled(Link)`
   position: absolute;
-  bottom: 0vh;
-  right: 0vw;
-  width: 18vw;
+  z-index: 3;
+  text-transform: uppercase;
+  border: 0.2em solid ${color.secondary};
+  padding: 0.4em 0.9em;
+  font-family: ${font.heebo};
+  color: ${color.primary};
+  font-size: 0.6em;
+  letter-spacing: ${spacing.wide};
+  font-weight: ${weight.extraBold};
 `
 
-const PageContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-`
-
-const Portfolio = styled(Link)`
-  position: absolute;
+const Portfolio = styled(LandingLink)`
   top: 21vh;
   right: 23vw;
-  z-index: 3;
-  text-transform: uppercase;
-  border: 0.2em solid ${color.secondary};
-  padding: 0.4em 0.9em;
-  font-family: ${font.heebo};
-  color: ${color.primary};
-  font-size: 0.6em;
-  letter-spacing: 0.2em;
-  font-weight: ${weight.extraBold};
 `
 
-const Services = styled(Link)`
-  position: absolute;
+const Services = styled(LandingLink)`
   bottom: 15vh;
   left: 35vw;
-  z-index: 3;
-  color: ${color.primary};
-  font-size: 0.6em;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-family: ${font.heebo};
-  border: 0.2em solid ${color.secondary};
-  padding: 0.4em 0.9em;
-  font-weight: ${weight.extraBold};
 `
 
 const LandingComponent = () => (
@@ -62,7 +41,7 @@ const LandingComponent = () => (
       <MouseAnim />
     </BlueContainerAnim>
     <RedContainerAnim>
-      <Plant src={plant} alt='Plant and Headphones' />
+      <Plant />
     </RedContainerAnim>
     <Portfolio
       to='/portfolio'
