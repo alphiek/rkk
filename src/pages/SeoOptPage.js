@@ -1,7 +1,8 @@
 import React from "react"
+import SeoOptComponent from '../components/SeoOpt/SeoOptComponent'
 
 const SeoOptimization = () => (
-  <h1>This is the SEO Optimization page</h1>
+  <SeoOptComponent />
 )
 
 export default SeoOptimization

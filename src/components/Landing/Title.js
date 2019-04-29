@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
+import Fade from 'react-reveal/Fade'
 
 const TitleWrapper = styled.div`
   position: absolute;
@@ -61,8 +62,13 @@ const Title = () => {
   return (
     <div>
     <TitleWrapper>
+     <Fade bottom cascade>
       <TitleText>Freelance Web Design & Development</TitleText>
+      </Fade>
+      <Fade delay={500} right cascade>
       <Location>------- Paphos -------</Location>
+      </Fade>
+
     </TitleWrapper>
     </div>
   )

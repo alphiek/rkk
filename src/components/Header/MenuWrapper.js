@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { color, font, weight, spacing } from '../Global/variables'
 import SocialButtons from '../Header/SocialButtons'
+import Fade from 'react-reveal/Fade'
 
 const MenuOuter = styled.nav`
   width: 28%;
@@ -58,17 +59,22 @@ const MenuWrapper = (props) => {
   return (
     <MenuOuter>
       <MenuLinksWrapper>
+      <Fade top>
         <MenuLinksTitle>Menu</MenuLinksTitle>
+      </Fade>
         {
           props.compProps.links.map(link => (
+            <Fade top cascade delay={100}>
             <MenuList
               onClick={props.toggleHidden}
               key={link.name}>
              <MenuLinksItem
-              to={link.link}>
+              to={link.link}
+              partiallyActive={true}>
                 {link.name}
               </MenuLinksItem>
             </MenuList>
+            </Fade>
           ))
         }
         {

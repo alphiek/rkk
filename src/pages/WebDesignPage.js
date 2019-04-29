@@ -1,7 +1,12 @@
 import React from "react"
+import WebDesignComponent from '../components/WebDesign/WebDesignComponent'
 
-const WebDesignPage = () => (
-  <h1>This is the Web Design page</h1>
-)
+const WebDesignPage = () => {
+  return (
+    <div>
+    <WebDesignComponent/>
+    </div>
+  )
+}
 
 export default WebDesignPage

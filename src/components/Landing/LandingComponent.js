@@ -44,12 +44,12 @@ const LandingComponent = () => (
       <Plant />
     </RedContainerAnim>
     <Portfolio
-      to='/portfolio'
+      to='/PortfolioPage'
       partiallyActive={true}
       >Portfolio
     </Portfolio>
     <Services
-      to='/services'
+      to='/WebDesignPage'
       partiallyActive={true}
       >Services
     </Services>

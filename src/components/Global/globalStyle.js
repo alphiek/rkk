@@ -11,6 +11,7 @@ html {
   line-height: 130%;
   box-sizing: border-box;
   overflow-y: scroll;
+  user-select: none;
   background-color: #ffffff;
   @media (max-width: 991px) {
   font-size: calc(0.6em + 1.2vw);
@@ -24,15 +25,15 @@ html {
 }
 
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 *:before {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {

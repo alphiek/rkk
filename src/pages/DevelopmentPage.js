@@ -1,8 +1,9 @@
 import React from "react"
+import DevComponent from '../components/Development/DevComponent'
 
 
-const EcommercePage = () => (
-  <h1>This is the Ecommerce page</h1>
+const Development = () => (
+  <DevComponent />
 )
 
-export default EcommercePage
+export default Development
