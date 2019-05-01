@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
 import RenderMenu from '../Header/RenderMenu'
 import SocialButtons from '../Header/SocialButtons'
+import Form from './Form'
 
 const PageWrapper = styled.div`
   width: 33%;
@@ -28,6 +29,7 @@ const ContactContainer = (props) => {
     <PageWrapper>
      <ContactWrapper>
         <ContactTitle>Contact</ContactTitle>
+        <Form />
      </ContactWrapper>
      {
       props.compProps.tablet || props.compProps.mobile ?

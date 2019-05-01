@@ -20,6 +20,7 @@ const TabletMenu = (props) => {
       {
         props.compProps.contact ?
           <ContactContainer
+          toggleForm={props.toggleForm}
           compProps={props.compProps}
           toggleHidden={props.toggleHidden}
           renderMenu={props.renderMenu}

@@ -114,7 +114,7 @@ input[type=checkbox]
 -moz-transform: scale(2); /* FF */
 -webkit-transform: scale(2); /* Safari and Chrome */
 -o-transform: scale(2); /* Opera */
-padding: 10px;
+padding: 5px;
 }
 
 button,
@@ -122,10 +122,12 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
+  font-size: 0.5em;
   margin: 0;
-  line-height: 2em;
+  line-height: 1.5em;
 }
+
+
 optgroup {
   font-weight: 700;
 }

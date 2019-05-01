@@ -9,20 +9,22 @@ class Header extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isHidden: true,
+      isHidden: false,
       links: [],
       desktop: true,
       tablet: false,
       mobile: false,
       menu: true,
       contact: false,
-      about: false
+      about: false,
+      form: false,
     }
     this.updatePredicate = this.updatePredicate.bind(this)
     this.toggleHidden = this.toggleHidden.bind(this)
     this.renderAbout = this.renderAbout.bind(this)
     this.renderMenu = this.renderMenu.bind(this)
     this.renderContact = this.renderContact.bind(this)
+    this.toggleForm = this.toggleForm.bind(this)
   }
   componentDidMount() {
     let items = this.props.links
@@ -68,6 +70,15 @@ class Header extends Component {
       )
     }
 
+    toggleForm(event) {
+      event.preventDefault()
+      this.setState(
+        {
+          form: !this.state.form
+        }
+      )
+    }
+
     renderContact(event) {
       event.preventDefault()
       this.setState(
@@ -99,6 +110,7 @@ class Header extends Component {
           {
             !this.state.isHidden ?
               <MenuContainer
+              toggleForm={this.toggleForm}
               compProps={this.state}
               toggleHidden={this.toggleHidden}
               renderMenu={this.renderMenu}

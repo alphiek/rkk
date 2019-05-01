@@ -8,7 +8,7 @@ const MenuComponent = (props) => {
   return (
     <PageWrapper>
       <About compProps={props.compProps} />
-      <ContactContainer compProps={props.compProps} />
+      <ContactContainer compProps={props.compProps} toggleForm={props.toggleForm} />
       <MenuWrapper compProps={props.compProps} toggleHidden={props.toggleHidden} />
     </PageWrapper>
   )

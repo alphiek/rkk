@@ -16,8 +16,8 @@ const SeoOptComponent = () => {
           for he is truly his brother's keeper and the finder of lost children.
           And I will strike down upon thee with great vengeance and furious anger those who would attempt
            to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.
-           <PortfolioLink />
         </BodyText>
+        <PortfolioLink />
       </TextWrapper>
       <BottomNav />
     </PageWrapperCenter>

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
+import Img from 'gatsby-image'
 
 export const HeadingText = styled.h1`
   border-left: 0.15em solid ${color.secondary};
@@ -39,9 +40,14 @@ export const TextWrapper = styled.div`
 
 export const FullWidthWrapper = styled.div`
   width: 80%;
-  margin-left: 12%;
-  margin-right: 12%;
+  margin-left: 8%;
 `
 export const PortfolioWrapper = styled(FullWidthWrapper)`
   margin-top: 8%;
+`
+
+export const ImgFull = styled(Img)`
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 `
