@@ -64,10 +64,9 @@ const MenuWrapper = (props) => {
       </Fade>
         {
           props.compProps.links.map(link => (
-            <Fade right cascade delay={100}>
+            <Fade right cascade delay={100} key={link.name}>
             <MenuList
-              onClick={props.toggleHidden}
-              key={link.name}>
+              onClick={props.toggleHidden}>
              <MenuLinksItem
               to={link.link}
               partiallyActive={true}>
