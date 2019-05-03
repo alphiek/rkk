@@ -11,7 +11,7 @@ const Mouse = styled(a.svg)`
 
 const MouseAnim = () => {
   const props = useSpring({
-    delay: 900,
+    delay: 500,
     config: config.slow,
     left: '10vw', from: { left: '-40vw' }
   })

@@ -7,6 +7,7 @@ import LampAnim from './LampAnim'
 import MouseAnim from './MouseAnim'
 import Plant from './Plant'
 import Title from './Title'
+import Fade from 'react-reveal/Fade'
 
 
 const LandingLink = styled(Link)`
