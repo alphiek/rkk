@@ -7,6 +7,7 @@ import LampAnim from './LampAnim'
 import MouseAnim from './MouseAnim'
 import Plant from './Plant'
 import Title from './Title'
+import Fade from 'react-reveal/Fade'
 
 
 const LandingLink = styled(Link)`
@@ -43,6 +44,7 @@ const LandingComponent = () => (
     <RedContainerAnim>
       <Plant />
     </RedContainerAnim>
+    <Fade delay={500} cascade>
     <Portfolio
       exit={{ length: 0.5 }}
       entry={{ delay: 0.8 }}
@@ -50,6 +52,8 @@ const LandingComponent = () => (
       partiallyActive={true}
       >Portfolio
     </Portfolio>
+    </Fade>
+    <Fade delay={600} cascade>
     <Services
       exit={{ length: 0.5 }}
       entry={{ delay: 0.8 }}
@@ -57,6 +61,7 @@ const LandingComponent = () => (
       partiallyActive={true}
       >Services
     </Services>
+    </Fade>
   </PageContainer>
 )
 
