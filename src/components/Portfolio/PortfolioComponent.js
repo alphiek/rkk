@@ -1,10 +1,10 @@
 import React from 'react'
-import { PageWrapper, PortfolioWrapper, HeadingText, BodyText } from '../Global/Shared'
-
+import { PortfolioPageWrapper, PortfolioWrapper, HeadingText, BodyText } from '../Global/Shared'
+import GridContainer from './GridContainer'
 
 const PortfolioComponent = () => {
   return (
-    <PageWrapper>
+    <PortfolioPageWrapper>
       <PortfolioWrapper>
         <HeadingText>Latest Work</HeadingText>
           <BodyText>
@@ -13,7 +13,8 @@ const PortfolioComponent = () => {
           Think about all the fucking possibilities. Why are you fucking reading all of this? Get back to work.
           </BodyText>
       </PortfolioWrapper>
-    </PageWrapper >
+      <GridContainer />
+    </PortfolioPageWrapper >
   )
 }
 

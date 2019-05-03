@@ -15,6 +15,7 @@ const AboutWrapper = styled.div`
   margin-left: 1.5em;
   margin-right: 1.5em;
   padding: 1.8em;
+  overflow: hidden;
 `
 const AboutTitle = styled.h2`
   font-size: 1.8em;
@@ -42,11 +43,12 @@ const About = (props) => {
   return (
     <React.Fragment>
     <PageWrapper>
+    <Fade left>
       <AboutWrapper>
-      <Fade top >
+      <Fade bottom >
         <AboutTitle>About</AboutTitle>
       </Fade>
-      <Fade top cascade delay={150}>
+      <Fade bottom cascade>
         <AboutText>Normally, both your asses would be dead as fucking fried chicken,
         but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you,
         I wanna help you. But I can't give you this case, it don't belong to me. Besides,
@@ -57,6 +59,7 @@ const About = (props) => {
         </AboutText>
       </Fade>
       </AboutWrapper>
+      </Fade>
         {
          props.compProps.tablet || props.compProps.mobile ?
          <React.Fragment>

@@ -29,3 +29,7 @@ export const spacing = {
   narrow: '-0.05em',
   small: '-0.01em'
 }
+
+export const boxShadow = {
+  shadow: '-2px 2px 17px -5px rgba(0,0,0,0.75)'
+}

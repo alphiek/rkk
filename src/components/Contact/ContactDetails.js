@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { color, weight, spacing, font } from '../Global/variables'
 import SocialButtons from '../Header/SocialButtons'
+import Fade from 'react-reveal/Fade'
 
 const ContactText = styled.p`
   margin-top: 2em;
@@ -26,6 +27,7 @@ const Address = styled.address`
 const ContactDetails = () => {
   return (
     <div>
+    <Fade bottom cascade>
      <ContactText>Have a project in mind? give us a call to discuss or click the link below to complete our contact form and we will be in touch</ContactText>
      <Address>
       Koili, Paphos
@@ -38,6 +40,7 @@ const ContactDetails = () => {
       <br />
       <a>CY: +357 6546545</a>
      </Address>
+     </Fade>
       <SocialButtons />
     </div>
   )
