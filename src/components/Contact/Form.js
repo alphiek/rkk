@@ -10,7 +10,7 @@ import {
   ErrorMessage,
   CheckBox,
   ConsentText,
-  Submit
+  Submit,
 } from './FormStyles'
 
 
@@ -25,6 +25,9 @@ const SignUp = ({
   <div>
     <FormWrapper onSubmit={handleSubmit}>
       <Label htmlFor="name">
+      {errors.name && touched.name && (
+        <ErrorMessage id="feedback">{errors.name}</ErrorMessage>
+      )}
         <InputWrapper
           type="text"
           onChange={handleChange}
@@ -33,11 +36,11 @@ const SignUp = ({
           name="name"
         />
         <Placeholder>Name</Placeholder>
-        {errors.name && touched.name && (
-          <ErrorMessage id="feedback">{errors.name}</ErrorMessage>
-        )}
       </Label>
       <Label htmlFor="email">
+      {errors.email && touched.email && (
+        <ErrorMessage id="feedback">{errors.email}</ErrorMessage>
+      )}
         <InputWrapper
           type="email"
           onChange={handleChange}
@@ -47,11 +50,11 @@ const SignUp = ({
           noValidate
         />
         <Placeholder>Email</Placeholder>
-        {errors.email && touched.email && (
-          <ErrorMessage id="feedback">{errors.email}</ErrorMessage>
-        )}
       </Label>
       <Label htmlFor='message'>
+      {errors.message && touched.message && (
+        <ErrorMessage id="feedback">{errors.message}</ErrorMessage>
+      )}
       <Message
         id="message"
         onChange={handleChange}
@@ -61,11 +64,11 @@ const SignUp = ({
         value={values.message || ""}
         ></Message>
       <Placeholder>Message</Placeholder>
-      {errors.message && touched.message && (
-        <ErrorMessage id="feedback">{errors.message}</ErrorMessage>
-      )}
       </Label>
       <label htmlFor="consent">
+      {errors.consent && touched.consent && (
+        <ErrorMessage id="feedback">{errors.consent}</ErrorMessage>
+      )}
         <ConsentText>
           I agree with the
           <a
@@ -86,9 +89,6 @@ const SignUp = ({
           </a>{" "}
           and for RKK to contact me to discuss my request
         </ConsentText>
-        {errors.consent && touched.consent && (
-          <ErrorMessage id="feedback">{errors.consent}</ErrorMessage>
-        )}
         <CheckBox
           type="checkbox"
           name="consent"
@@ -120,8 +120,8 @@ const Form = withFormik({
       .oneOf([true], "Please give us consent to contact you")
       .required("Please give us consent to contact you"),
     message: Yup.string()
-      .min(2, "Please leave a brief message or provide telephone number with dialling code for a callback")
-      .required("Please leave a brief message or provide telephone number with dialling code for a callback"),
+      .min(2, "Please leave a message or provide telephone number to request a callback")
+      .required("Please leave a message or provide telephone number to request a callback"),
   }),
 
   handleSubmit: (values, { setSubmitting, resetForm }) => {

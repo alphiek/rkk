@@ -2,8 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
 import RenderMenu from '../Header/RenderMenu'
-import SocialButtons from '../Header/SocialButtons'
 import Form from './Form'
+import BackButton from './BackButton'
+import ContactDetails from './ContactDetails'
+import SocialButtons from '../Header/SocialButtons'
 
 const PageWrapper = styled.div`
   width: 33%;
@@ -15,6 +17,7 @@ const ContactWrapper = styled.div`
   margin-left: 1.5em;
   margin-right: 1.5em;
   padding: 1.8em;
+  overflow: hidden;
 `
 const ContactTitle = styled.h2`
   font-size: 1.8em;
@@ -29,7 +32,12 @@ const ContactContainer = (props) => {
     <PageWrapper>
      <ContactWrapper>
         <ContactTitle>Contact</ContactTitle>
-        <Form />
+        {props.compProps.form ?
+            <Form />
+          :
+          <ContactDetails />
+        }
+        <BackButton form={props.compProps.form} toggleForm={props.toggleForm}/>
      </ContactWrapper>
      {
       props.compProps.tablet || props.compProps.mobile ?

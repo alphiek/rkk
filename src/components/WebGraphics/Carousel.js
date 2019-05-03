@@ -2,6 +2,23 @@ import React, { Component } from 'react'
 import Swiper from 'react-id-swiper'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
+import { color, font, weight, spacing } from '../Global/variables'
+
+const Instruction = styled.p`
+  margin-top: 2em;
+  text-align: right;
+  line-height: 100%;
+  font-family: ${font.heebo};
+  font-weight: ${weight.bold};
+  letter-spacing: ${spacing.wide};
+  color: ${color.lightGrey};
+  text-transform: uppercase;
+  font-size: 0.5em;
+  @media (min-width: 824px) and (max-width: 1024px) {
+    font-size: 0.7em;
+}
+`
 
 class Carousel extends Component {
   constructor(props) {
@@ -63,13 +80,13 @@ class Carousel extends Component {
               <Img fluid={this.state.items.imageTwo.childImageSharp.fluid} />
               <Img fluid={this.state.items.imageThree.childImageSharp.fluid} />
               <Img fluid={this.state.items.imageFour.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageFive.childImageSharp.fluid} />
               <Img fluid={this.state.items.imageSix.childImageSharp.fluid} />
               <Img fluid={this.state.items.imageSeven.childImageSharp.fluid} />
               <Img fluid={this.state.items.imageEight.childImageSharp.fluid} />
               <Img fluid={this.state.items.imageNine.childImageSharp.fluid} />
               <Img fluid={this.state.items.imageTen.childImageSharp.fluid} />
             </Swiper>
+            <Instruction>-----Swipe to view recent work------</Instruction>
             </div>
             :
             null
@@ -107,13 +124,6 @@ class Carousel extends Component {
               }
             }
             imageFour: file(relativePath: { eq: "Graphics/Mobile.png" }) {
-              childImageSharp {
-                fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            imageFive: file(relativePath: { eq: "Graphics/SEO.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
                   ...GatsbyImageSharpFluid

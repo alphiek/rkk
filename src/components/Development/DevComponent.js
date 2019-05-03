@@ -3,6 +3,7 @@ import { PageWrapperCenter, TextWrapper, HeadingText, BodyText } from '../Global
 import NumberNav from '../Global/Numbers'
 import PortfolioLink from '../Global/PortfolioLink'
 import BottomNav from '../Global/BottomNav'
+import Skills from './Skills'
 
 const DevComponent = () => {
   return (
@@ -17,6 +18,7 @@ const DevComponent = () => {
         </BodyText>
         <PortfolioLink />
       </TextWrapper>
+      <Skills />
       <BottomNav />
     </PageWrapperCenter>
   )

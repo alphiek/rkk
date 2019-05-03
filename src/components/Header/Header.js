@@ -9,7 +9,7 @@ class Header extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isHidden: false,
+      isHidden: true,
       links: [],
       desktop: true,
       tablet: false,
