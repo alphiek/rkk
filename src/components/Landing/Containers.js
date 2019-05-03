@@ -30,7 +30,7 @@ const RedContainer = styled(BlueContainer)`
 export const BlueContainerAnim = ({ children }) => {
   const props = useSpring({
     delay: 300,
-    config: config.slow,
+    config: { mass: 1, tension: 280, friction: 60 },
     to: ({right: 0}),
     from: ({right: -3000 })
   })

@@ -12,8 +12,9 @@ const Lamp = styled(a.svg)`
 
   const LampAnim = () => {
     const props = useSpring({
-      config: config.slow,
-      left: '0px', from: { left: '-1000px' }
+      delay: 500,
+      config: { mass: 1, tension: 280, friction: 60 },
+      left: '0px', opacity: 1, from: { left: '-500px', opacity: 0 }
     })
     return (
       <Lamp
