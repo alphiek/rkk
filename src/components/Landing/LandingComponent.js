@@ -21,6 +21,7 @@ const LandingLink = styled(Link)`
   font-size: 0.6em;
   letter-spacing: ${spacing.wide};
   font-weight: ${weight.extraBold};
+  line-height: 180%;
 `
 
 const Portfolio = styled(LandingLink)`
@@ -45,22 +46,22 @@ const LandingComponent = () => (
       <Plant />
     </RedContainerAnim>
     <Fade delay={500} cascade>
-    <Portfolio
-      exit={{ length: 0.5 }}
-      entry={{ delay: 0.8 }}
-      to='/PortfolioPage'
-      partiallyActive={true}
-      >Portfolio
-    </Portfolio>
+      <Portfolio
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
+        to='/PortfolioPage'
+        partiallyActive={true}
+        >Portfolio
+      </Portfolio>
     </Fade>
     <Fade delay={600} cascade>
-    <Services
-      exit={{ length: 0.5 }}
-      entry={{ delay: 0.8 }}
-      to='/WebDesignPage'
-      partiallyActive={true}
-      >Services
-    </Services>
+      <Services
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
+        to='/WebDesignPage'
+        partiallyActive={true}
+        >Services
+      </Services>
     </Fade>
   </PageContainer>
 )

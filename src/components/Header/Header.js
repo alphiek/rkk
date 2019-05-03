@@ -103,7 +103,7 @@ class Header extends Component {
 
     render() {
       return (
-        <React.Fragment>
+        <>
           <Burger
             onClick={this.toggleHidden}
             isHidden={this.state.isHidden}/>
@@ -121,11 +121,11 @@ class Header extends Component {
           }
           <Logo />
           {
-            this.state.mobile && this.state.isHidden ?
+            (this.state.tablet && this.state.isHidden) || (this.state.mobile && this.state.isHidden) ?
               <BrowseBtn toggleHidden={this.toggleHidden} />
               : null
           }
-        </React.Fragment>
+        </>
       )
     }
 }

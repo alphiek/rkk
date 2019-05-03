@@ -1,6 +1,8 @@
 import React from "react"
 import LandingContainer from '../components/Landing/LandingContainer'
 import Helmet from "react-helmet"
+import ogImage from '../images/ogImage.png'
+import logo from '../images/icon.png'
 
 const index = () => (
   <>
@@ -12,10 +14,10 @@ const index = () => (
     <meta property="og:url" content="https://rkkcreative.xyz"></meta>
     <meta property="og:type" content="website"></meta>
     <meta property="og:title" content="Freelance Web Design and Development Services"></meta>
-    <meta property="og:image" content='tbc'></meta>
+    <meta property="og:image" content={ogImage}></meta>
     <meta property="og:image:width" content="1200"></meta>
     <meta property="og:image:height" content="630"></meta>
-    <meta property="og:description" content="Something Here"></meta>
+    <meta property="og:description" content="Have a project in mind? Contact us for a free consultation"></meta>
     <meta property="og:site_name" content="RKK Creative"></meta>
 
     <meta name="twitter:card" content="summary_large_image"></meta>
@@ -23,25 +25,25 @@ const index = () => (
     <meta name="twitter:url" content="https://rkkcreative.xyz"></meta>
     <meta name="twitter:title" content="RKK Creative"></meta>
     <meta name="twitter:description" content="Freelance Web Design and Development Services"></meta>
-    <meta name="twitter:image" content='tbc'></meta>
+    <meta name="twitter:image" content={ogImage}></meta>
 
     <script type="application/ld+json">{`
         {
             "@context": "http://schema.org",
-            "@type": "Website",
+            "@type": "LocalBusiness",
             "name": "RKK Creative",
             "description": "Freelance Web Design and Development Services",
-            "image": "image",
-            "logo": "tbc",
+            "image": ${ogImage},
+            "logo": ${logo},
             "@id": "https://rkkcreative.xyz/",
             "url": "https://rkkcreative.xyz/",
             "telephone": "",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "",
-              "addressLocality": "",
-              "postalCode": "",
-              "addressCountry": ""
+              "streetAddress": "8 Panagiotou Christodoulou",
+              "addressLocality": "Koili, Paphos",
+              "postalCode": "8543",
+              "addressCountry": "cy"
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",

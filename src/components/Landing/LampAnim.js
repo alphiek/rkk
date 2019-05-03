@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSpring, animated as a, config } from 'react-spring'
+import { useSpring, animated as a } from 'react-spring'
 import styled from 'styled-components'
 import { color } from '../Global/variables'
 

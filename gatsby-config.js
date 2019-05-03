@@ -47,7 +47,13 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
-    'gatsby-plugin-transition-link',  
+    'gatsby-plugin-transition-link',
+    {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://www.rkkcreative.xyz`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -66,7 +72,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
         display: `standalone`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/icon.png`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
