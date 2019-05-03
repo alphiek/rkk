@@ -7,10 +7,10 @@ import linked from '../../images/Icons/Icon-LinkedIn.svg'
 import mail from '../../images/Icons/Icon-Mail.svg'
 import pin from '../../images/Icons/Icon-Pinterest.svg'
 import twitter from '../../images/Icons/Icon-Twitter.svg'
-
+import Fade from 'react-reveal/Fade'
 
 const SocialWrapper = styled.div`
-  margin-top: 0.5em;
+  margin-top: 1.5em;
   margin-bottom: 0.5em;
   display: flex;
   width: 55%;
@@ -23,35 +23,47 @@ const Icon = styled.img`
 
 const SocialButtons = ({ data }) => (
     <SocialWrapper>
+    <Fade bottom delay={300}>
       <a
         href={`mailto:${data.site.siteMetadata.email}`}
       ><Icon src={mail} alt='Email Link' /></a>
+    </Fade>
+    <Fade bottom delay={350}>
       <a
         href={data.site.siteMetadata.facebook}
         target="_blank"
         rel="noopener noreferrer"
       ><Icon src={facebook} alt='Facebook Link' /></a>
+    </Fade>
+    <Fade bottom delay={400}>
       <a
         href={data.site.siteMetadata.twitter}
         target="_blank"
         rel="noopener noreferrer"
       ><Icon src={twitter} alt='Twitter Link' /></a>
+    </Fade>
+    <Fade bottom delay={450}>
       <a
         href={data.site.siteMetadata.insta}
         target="_blank"
         rel="noopener noreferrer"
       ><Icon src={insta} alt='Instagram Link' /></a>
+    </Fade>
+    <Fade bottom delay={500}>
       <a
         href={data.site.siteMetadata.pin}
         target="_blank"
         rel="noopener noreferrer"
       ><Icon src={pin} alt='Instagram Link' /></a>
+    </Fade>
+    <Fade bottom delay={550} >
       <a
         href={data.site.siteMetadata.linked}
         target="_blank"
         rel="noopener noreferrer"
       ><Icon src={linked} alt='LinkedIn Link' /></a>
-    </SocialWrapper>
+     </Fade>
+     </SocialWrapper>
 )
 
 export default () => (

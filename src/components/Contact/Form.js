@@ -1,6 +1,7 @@
 import React from "react";
 import { withFormik } from "formik";
 import * as Yup from "yup";
+import Fade from 'react-reveal/Fade'
 import {
   InputWrapper,
   FormWrapper,
@@ -23,6 +24,7 @@ const SignUp = ({
   touched
 }) => (
   <div>
+  <Fade bottom>
     <FormWrapper onSubmit={handleSubmit}>
       <Label htmlFor="name">
       {errors.name && touched.name && (
@@ -99,6 +101,7 @@ const SignUp = ({
       </label>
       <Submit type="Submit">submit</Submit>
     </FormWrapper>
+    </Fade>
   </div>
 );
 

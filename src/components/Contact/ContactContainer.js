@@ -6,6 +6,7 @@ import Form from './Form'
 import BackButton from './BackButton'
 import ContactDetails from './ContactDetails'
 import SocialButtons from '../Header/SocialButtons'
+import Fade from 'react-reveal/Fade'
 
 const PageWrapper = styled.div`
   width: 33%;
@@ -31,7 +32,9 @@ const ContactContainer = (props) => {
   return (
     <PageWrapper>
      <ContactWrapper>
+     <Fade bottom>
         <ContactTitle>Contact</ContactTitle>
+     </Fade>
         {props.compProps.form ?
             <Form />
           :
