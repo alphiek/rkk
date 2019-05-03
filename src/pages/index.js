@@ -2,8 +2,8 @@ import React from "react"
 import LandingContainer from '../components/Landing/LandingContainer'
 
 
-const IndexPage = () => (
+const index = () => (
   <LandingContainer />
 )
 
-export default IndexPage
+export default index

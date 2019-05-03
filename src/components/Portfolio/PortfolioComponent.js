@@ -1,9 +1,11 @@
 import React from 'react'
 import { PortfolioPageWrapper, PortfolioWrapper, HeadingText, BodyText } from '../Global/Shared'
 import GridContainer from './GridContainer'
+import { TransWrap } from '../Global/TransWrap'
 
 const PortfolioComponent = () => {
   return (
+    <TransWrap>
     <PortfolioPageWrapper>
       <PortfolioWrapper>
         <HeadingText>Latest Work</HeadingText>
@@ -15,6 +17,7 @@ const PortfolioComponent = () => {
       </PortfolioWrapper>
       <GridContainer />
     </PortfolioPageWrapper >
+  </TransWrap>
   )
 }
 

@@ -47,6 +47,7 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    'gatsby-plugin-transition-link',  
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

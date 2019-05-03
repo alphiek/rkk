@@ -4,9 +4,11 @@ import NumberNav from '../Global/Numbers'
 import PortfolioLink from '../Global/PortfolioLink'
 import BottomNav from '../Global/BottomNav'
 import Skills from './Skills'
+import { TransWrap } from '../Global/TransWrap'
 
 const DevComponent = () => {
   return (
+    <TransWrap>
     <PageWrapperCenter>
       <NumberNav />
       <TextWrapper>
@@ -21,6 +23,7 @@ const DevComponent = () => {
       <Skills />
       <BottomNav />
     </PageWrapperCenter>
+    </TransWrap>
   )
 }
 

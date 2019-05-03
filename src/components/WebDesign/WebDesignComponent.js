@@ -5,9 +5,11 @@ import Fade from 'react-reveal/Fade'
 import NumberNav from '../Global/Numbers'
 import PortfolioLink from '../Global/PortfolioLink'
 import BottomNav from '../Global/BottomNav'
+import { TransWrap } from '../Global/TransWrap'
 
 const WebDesignComponent = () => {
   return (
+    <TransWrap>
     <PageWrapperCenter>
       <NumberNav />
       <ImageDeck />
@@ -27,6 +29,7 @@ const WebDesignComponent = () => {
       </TextWrapper>
       <BottomNav />
     </PageWrapperCenter>
+    </TransWrap>
   )
 }
 

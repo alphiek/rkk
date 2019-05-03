@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
 import { BlueContainerAnim, RedContainerAnim, PageContainer } from './Containers'
@@ -44,11 +44,15 @@ const LandingComponent = () => (
       <Plant />
     </RedContainerAnim>
     <Portfolio
+      exit={{ length: 0.5 }}
+      entry={{ delay: 0.8 }}
       to='/PortfolioPage'
       partiallyActive={true}
       >Portfolio
     </Portfolio>
     <Services
+      exit={{ length: 0.5 }}
+      entry={{ delay: 0.8 }}
       to='/WebDesignPage'
       partiallyActive={true}
       >Services

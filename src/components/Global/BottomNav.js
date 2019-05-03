@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
 
@@ -37,21 +37,29 @@ const BottomNav = () => {
     <Wrapper>
      <NavContainer>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/WebDesignPage'
         partiallyActive={true}
         activeStyle={activeStyle}>Web Design</LinkStyle>
       <hr/>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/DevelopmentPage'
         partiallyActive={true}
         activeStyle={activeStyle}>Web Development</LinkStyle>
       <hr/>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/WebGraphicsPage'
         partiallyActive={true}
         activeStyle={activeStyle}>Web Graphics</LinkStyle>
       <hr/>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/SeoOptPage'
         partiallyActive={true}
         activeStyle={activeStyle}>SEO Optimisation</LinkStyle>

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
 
@@ -24,6 +24,8 @@ const PortfolioLink = () => {
   return (
     <Wrapper>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/PortfolioPage/'
         partiallyActive={true}>View Portfolio -----------------------</LinkStyle>
     </Wrapper>

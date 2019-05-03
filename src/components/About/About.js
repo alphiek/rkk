@@ -41,7 +41,7 @@ const Copyright = styled.p`
 `
 const About = (props) => {
   return (
-    <React.Fragment>
+    <>
     <PageWrapper>
     <Fade left>
       <AboutWrapper>
@@ -70,7 +70,7 @@ const About = (props) => {
         }
     </PageWrapper>
     <Copyright>© {new Date().getFullYear()}, RKK Creative</Copyright>
-    </React.Fragment>
+    </>
   )
 }
 

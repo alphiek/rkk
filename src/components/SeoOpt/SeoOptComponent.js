@@ -4,9 +4,11 @@ import NumberNav from '../Global/Numbers'
 import PortfolioLink from '../Global/PortfolioLink'
 import BottomNav from '../Global/BottomNav'
 import SeoImage from './SeoImage'
+import { TransWrap } from '../Global/TransWrap'
 
 const SeoOptComponent = () => {
   return (
+    <TransWrap>
     <PageWrapperCenter>
       <NumberNav />
       <TextWrapper>
@@ -21,6 +23,7 @@ const SeoOptComponent = () => {
       <SeoImage />
       <BottomNav />
     </PageWrapperCenter>
+    </TransWrap>
   )
 }
 

@@ -4,9 +4,11 @@ import NumberNav from '../Global/Numbers'
 import PortfolioLink from '../Global/PortfolioLink'
 import BottomNav from '../Global/BottomNav'
 import Carousel from './Carousel'
+import { TransWrap } from '../Global/TransWrap'
 
 const WebGraphicsComponent = () => {
   return (
+    <TransWrap>
     <PageWrapperCenter>
      <NumberNav />
       <FullWidthWrapper>
@@ -22,6 +24,7 @@ const WebGraphicsComponent = () => {
       </FullWidthWrapper>
       <BottomNav />
     </PageWrapperCenter >
+  </TransWrap>
   )
 }
 

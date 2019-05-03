@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
 
@@ -26,21 +26,29 @@ const NumberNav = () => {
   return (
     <Wrapper>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/WebDesignPage'
         partiallyActive={true}
         activeStyle={activeStyle}>01</LinkStyle>
       <hr/>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/DevelopmentPage'
         partiallyActive={true}
         activeStyle={activeStyle}>02</LinkStyle>
       <hr/>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/WebGraphicsPage'
         partiallyActive={true}
         activeStyle={activeStyle}>03</LinkStyle>
       <hr/>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/SeoOptPage'
         partiallyActive={true}
         activeStyle={activeStyle}>04</LinkStyle>
