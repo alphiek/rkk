@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
+import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
   margin-top: 0.5em;
@@ -22,6 +23,7 @@ const LinkStyle = styled(Link)`
 
 const PortfolioLink = () => {
   return (
+    <Fade bottom delay={1200}>
     <Wrapper>
       <LinkStyle
         exit={{ length: 0.5 }}
@@ -29,6 +31,7 @@ const PortfolioLink = () => {
         to='/PortfolioPage/'
         partiallyActive={true}>View Portfolio -----------------------</LinkStyle>
     </Wrapper>
+   </Fade>
   )
 }
 

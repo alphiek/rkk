@@ -43,6 +43,10 @@ export const PortfolioPageWrapper = styled(PageWrapper)`
 export const PageWrapperCenter = styled(PageWrapper)`
   align-items: center;
 `
+
+export const PageWrapperStack = styled(PageWrapperCenter)`
+  
+`
 export const TextWrapper = styled.div`
   margin-left: 12%;
   width: 30%;

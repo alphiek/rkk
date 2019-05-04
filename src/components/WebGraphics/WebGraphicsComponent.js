@@ -39,9 +39,7 @@ class WebGraphicsComponent extends Component {
      <Fade top duration={1000}>
      <PageWrapperCenter>
       {!this.state.tablet ?
-        <Fade bottom delay={1200}>
         <NumberNav />
-        </Fade>
         : null
       }
        <FullWidthWrapper>
@@ -54,12 +52,10 @@ class WebGraphicsComponent extends Component {
              Here at RKK we are passionate about high quality, eyecatching graphics whether for Social Media, Branding or Web use we
              dedicated to making your imagery stand out from the crowd. Each design is fully optimised to ensure that they are perfect solution
              for both web and mobile usage. From Social Media banners, custom vector illustrations, icons, image retouch to logo design our graphics
-             packages are always tailored to support your brand and requirements. 
+             packages are always tailored to support your brand and requirements.
            </BodyText>
            </Fade>
-           <Fade bottom delay={1200}>
            <PortfolioLink />
-           </Fade>
        </FullWidthWrapper>
        {!this.state.tablet ?
          <BottomNav />

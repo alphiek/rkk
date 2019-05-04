@@ -25,11 +25,11 @@ module.exports = {
         link: "/DevelopmentPage"
       },
       {
-        name: "Graphics",
+        name: "Web Graphics",
         link: "/WebGraphicsPage"
       },
       {
-        name: "SEO",
+        name: "SEO Optimisation",
         link: "/SeoOptPage"
       },
       {

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
-
+import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
   padding-left: 0.5em;
@@ -24,6 +24,7 @@ const activeStyle = {
 
 const NumberNav = () => {
   return (
+    <Fade bottom cascade delay={1200}>
     <Wrapper>
       <LinkStyle
         exit={{ length: 0.5 }}
@@ -54,6 +55,7 @@ const NumberNav = () => {
         activeStyle={activeStyle}>04</LinkStyle>
       <hr/>
     </Wrapper>
+    </Fade>
   )
 }
 
