@@ -4,6 +4,8 @@ import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
+import Fade from 'react-reveal/Fade'
+
 
 const Instruction = styled.p`
   margin-top: 2em;
@@ -19,7 +21,6 @@ const Instruction = styled.p`
     font-size: 0.7em;
 }
 `
-
 class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -74,20 +75,22 @@ class Carousel extends Component {
           <div>
           {
             this.state.loaded ?
-            <div style={{marginBottom: '3em'}}>
-            <Swiper {...params}>
-              <Img fluid={this.state.items.imageOne.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageTwo.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageThree.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageFour.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageSix.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageSeven.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageEight.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageNine.childImageSharp.fluid} />
-              <Img fluid={this.state.items.imageTen.childImageSharp.fluid} />
-            </Swiper>
-            <Instruction>-----Swipe to view recent work------</Instruction>
-            </div>
+            <div>
+                <Swiper {...params}>
+                  <Img fluid={this.state.items.imageOne.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageTwo.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageThree.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageFour.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageSix.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageSeven.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageEight.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageNine.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageTen.childImageSharp.fluid} />
+                </Swiper>
+                <Fade right delay={1200}>
+                <Instruction>-----Swipe to view recent work------</Instruction>
+                </Fade>
+              </div>
             :
             null
           }

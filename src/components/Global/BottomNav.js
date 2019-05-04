@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
+import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
   position: fixed;
@@ -35,6 +36,7 @@ const activeStyle = {
 const BottomNav = () => {
   return (
     <Wrapper>
+    <Fade bottom cascade delay={1200}>
      <NavContainer>
       <LinkStyle
         exit={{ length: 0.5 }}
@@ -64,6 +66,7 @@ const BottomNav = () => {
         partiallyActive={true}
         activeStyle={activeStyle}>SEO Optimisation</LinkStyle>
       </NavContainer>
+      </Fade>
     </Wrapper>
   )
 }

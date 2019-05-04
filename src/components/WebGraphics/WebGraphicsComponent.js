@@ -1,31 +1,76 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { PageWrapperCenter, FullWidthWrapper, HeadingText, BodyText } from '../Global/Shared'
 import NumberNav from '../Global/Numbers'
 import PortfolioLink from '../Global/PortfolioLink'
 import BottomNav from '../Global/BottomNav'
 import Carousel from './Carousel'
 import { TransWrap } from '../Global/TransWrap'
+import Fade from 'react-reveal/Fade'
 
-const WebGraphicsComponent = () => {
-  return (
-    <TransWrap>
-    <PageWrapperCenter>
-     <NumberNav />
-      <FullWidthWrapper>
-      <Carousel />
-        <HeadingText>Web Graphics</HeadingText>
-          <BodyText>
-          Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it?
-          Do you see a little Asian child with a blank expression on his face sitting outside
-          on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store.
-          And you must think you're in a toy store, because you're here shopping for an infant named Jeb.
-          </BodyText>
-          <PortfolioLink />
-      </FullWidthWrapper>
-      <BottomNav />
-    </PageWrapperCenter >
-  </TransWrap>
-  )
+
+class WebGraphicsComponent extends Component {
+  constructor() {
+    super()
+    this.state = {
+      isHidden: false,
+      tablet: false
+    }
+    this.updatePredicate = this.updatePredicate.bind(this)
+  }
+
+  componentDidMount() {
+    this.updatePredicate()
+    window.addEventListener('resize', this.updatePredicate)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updatePredicate)
+  }
+
+  updatePredicate() {
+      this.setState({
+        tablet: window.innerWidth <= 1024
+      })
+    }
+
+ render(){
+   return(
+     <TransWrap>
+     <Fade top duration={1000}>
+     <PageWrapperCenter>
+      {!this.state.tablet ?
+        <Fade bottom delay={1200}>
+        <NumberNav />
+        </Fade>
+        : null
+      }
+       <FullWidthWrapper>
+         <Carousel />
+         <Fade bottom delay={1000}>
+         <HeadingText>Web Graphics</HeadingText>
+         </Fade>
+         <Fade bottom delay={1100}>
+           <BodyText>
+             Here at RKK we are passionate about high quality, eyecatching graphics whether for Social Media, Branding or Web use we
+             dedicated to making your imagery stand out from the crowd. Each design is fully optimised to ensure that they are perfect solution
+             for both web and mobile usage. From Social Media banners, custom vector illustrations, icons, image retouch to logo design our graphics
+             packages are always tailored to support your brand and requirements. 
+           </BodyText>
+           </Fade>
+           <Fade bottom delay={1200}>
+           <PortfolioLink />
+           </Fade>
+       </FullWidthWrapper>
+       {!this.state.tablet ?
+         <BottomNav />
+         : null
+       }
+     </PageWrapperCenter >
+     </Fade>
+   </TransWrap>
+   )
+ }
 }
+
 
 export default WebGraphicsComponent
