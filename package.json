@@ -37,6 +37,7 @@
     "typeface-heebo": "0.0.72",
     "typeface-muli": "0.0.71",
     "typeface-raleway": "0.0.54",
+    "typeface-roboto": "0.0.54",
     "yup": "^0.27.0"
   },
   "devDependencies": {

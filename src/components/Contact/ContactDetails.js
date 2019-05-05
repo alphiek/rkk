@@ -34,11 +34,11 @@ const ContactDetails = () => {
       <br />
       Cyprus
       <br />
-      <a>Email: info@rkkcreative.xyz</a>
+      <a href='#www'>Email: info@rkkcreative.xyz</a>
       <br />
-      <a>UK: +44 64664 64564645</a>
+      <a href='#www'>UK: +44 64664 64564645</a>
       <br />
-      <a>CY: +357 6546545</a>
+      <a href='#www'>CY: +357 6546545</a>
      </Address>
      </Fade>
       <SocialButtons />

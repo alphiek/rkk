@@ -45,7 +45,7 @@ export const PageWrapperCenter = styled(PageWrapper)`
 `
 
 export const PageWrapperStack = styled(PageWrapperCenter)`
-  
+
 `
 export const TextWrapper = styled.div`
   margin-left: 12%;

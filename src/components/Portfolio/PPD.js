@@ -1,24 +1,58 @@
-import React from 'React'
-import styled from 'styled-components'
-import ppd from '../../images/Portfolio/PPD.svg'
-import { Thumbnail } from '../Global/Shared'
+import React from 'react'
+import {
+  TextContainer,
+  ListWrapper,
+  Wrapper,
+  InfoFlex,
+  Title,
+  Tech,
+  Description,
+  ServiceWrapper
+} from '../Global/PortfolioShared'
+import FodeImage from './FodeImage'
 
-const PPDThumb = styled(Thumbnail)`
-  background : -moz-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  background : -webkit-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  background : -webkit-gradient(radial,108.08% 44.47% ,3.82 , 108.08% 44.47%, 744.92 ,color-stop(0.0051,rgba(235, 51, 73, 1) ),color-stop(1,rgba(244, 92, 67, 1) ));
-  background : -o-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  background : -ms-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2);"
-  background : radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
-`
+const tech = [
+  'Webflow',
+  'HTML',
+  'CSS',
+  'jQuery',
+
+]
+
+const services = [
+  'Website Design',
+  'Branding',
+  'Blog',
+  'Ghost Writing',
+  'Social Graphics',
+  'Web Graphics',
+  'Mobile Optimisation',
+  'SEO'
+]
 
 const PPD = () => {
+  const list = tech.map(item => <Tech key={item}>{item}</Tech>)
+  const serviceList = services.map(service => <Tech key={service}>{service}</Tech>)
   return (
-    <PPDThumb>
-    <img src={ppd} alt='Paphos Painter Decorators Logo' />
-    </PPDThumb>
+    <Wrapper>
+    <TextContainer>
+    <Title>Paphos Painter Decorators</Title>
+      <InfoFlex>
+        <ListWrapper>
+          {list}
+        </ListWrapper>
+        <Description>
+          This design is fucking brilliant. Never, never assume that what you have achieved is fucking good enough.
+          Remember it’s called the creative process, it’s not the creative fucking moment. Use your fucking hands.
+          Think about all the fucking possibilities. Why are you fucking reading all of this? Get back to work.
+       </Description>
+      </InfoFlex>
+      <ServiceWrapper>
+        {serviceList}
+      </ServiceWrapper>
+    </TextContainer>
+    <FodeImage />
+    </Wrapper>
   )
 }
 

@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import LML from './LML'
-import PPD from './PPD'
-import FODE from './FODE'
+import { FODE, LML, PPD } from './Thumbnails'
 
 
 const Container = styled.div`
@@ -10,7 +8,7 @@ const Container = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1.5em;
   grid-row-gap: 1.5em;
 `

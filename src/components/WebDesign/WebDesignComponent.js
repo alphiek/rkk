@@ -21,7 +21,7 @@ const WebDesignComponent = () => {
         <BodyText>
           We are devoted to creating experiences that advocate clean, modern design principles. We carefully analyse the needs of our
           customers to craft high performing websites that support brand direction, accessibility and usability.
-          Whether web application, website or CMS our designs are perfectly responsive and bespoke to our clients requirements. 
+          Whether web application, website or CMS our designs are perfectly responsive and bespoke to our clients requirements.
         </BodyText>
         <PortfolioLink />
       </Fade>
