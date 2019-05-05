@@ -5,7 +5,7 @@ import { color, font, weight } from '../Global/variables'
 const LogoWrapper = styled.div`
   height: 2.5em;
   width: 'auto';
-  margin: 0.5em;
+  margin: 0.6em;
   text-align: center;
   position: absolute;
   top: 0;
@@ -14,7 +14,7 @@ const LogoWrapper = styled.div`
 const LogoText = styled.p`
   font-family: ${font.muli};
   color: ${color.body};
-  font-size: 0.9em;
+  font-size: 1em;
   font-weight: ${weight.black};
   border-bottom: 0.25em solid ${color.secondary};
   line-height: 130%;

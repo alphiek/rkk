@@ -12,6 +12,24 @@ const MobileLinkContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 5;
+
+  @media only screen
+      and (max-width: 960px)
+      and (orientation: landscape) {
+        display:none;
+      }
+  @media only screen
+      and (max-height: 600px)
+      and (max-width: 1024px)
+      and (orientation: landscape) {
+        display: none;
+  }
+
+  @media only screen
+      and (max-height: 767px)
+      and (orientation: portrait) {
+        height:7em;
+      }
 `
 const LinkMobile = styled.p`
   font-size: 1.2em;
@@ -22,6 +40,17 @@ const LinkMobile = styled.p`
   color: ${color.white};
   z-index: 8;
   text-transform: uppercase;
+  @media only screen
+      and (max-width: 960px)
+      and (orientation: landscape) {
+        display:none;
+      }
+  @media only screen
+      and (max-height: 767px)
+      and (orientation: portrait) {
+        font-size:1em;
+      }
+
 `
 
 const BrowseBtn = (props) => {
