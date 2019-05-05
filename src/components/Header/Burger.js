@@ -17,42 +17,45 @@ const BurgerMenu = styled.div`
   @media (min-width: 768px) and (max-width: 1024px) {
    margin-top: 0.5em;
    height: 1.6em;
-   width: 2.2em;
+   width: 2em;
   }
 
   @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape)  {
     margin-top: 0.5em;
-    height: 1.6em;
-    width: 2.5em;
+    height: 1.4em;
+    width: 2.2em;
    }
 
    @media (min-width: 481px) and (max-width: 767px) and (orientation: portrait) {
      margin-top: 0.5em;
-     height: 1.6em;
-     width: 2.5em;
+     height: 1.4em;
+     width: 2.2em;
    }
 
    @media (min-width: 481px) and (max-width: 767px) and (orientation: landscape) {
      margin-top: 0.5em;
-     height: 1.4em;
-     width: 2em;
+     height: 1.2em;
+     width: 1.8em;
    }
 
    @media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
      margin-top: 0.5em;
-     height: 1.4em;
-     width: 2em;
+     height: 1.6em;
+     width: 1.8em;
    }
 `;
 
 const TopLine = styled.span`
   width: 100%;
-  height: 6px;
+  height: 5px;
   background-color: ${color.secondary};
   transition: 0.5s;
+  @media (max-width: 824px) and (orientation: portrait) {
+    height: 5px;
+  }
 
-  @media (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
-    height: 6px;
+  @media (max-width: 330px) and (orientation: portrait) {
+    height: 3px;
   }
 
   ${BurgerMenu}: hover & {

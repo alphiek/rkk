@@ -28,7 +28,6 @@ const Portfolio = styled(LandingLink)`
   top: 21vh;
   right: 23vw;
 `
-
 const Services = styled(LandingLink)`
   bottom: 15vh;
   left: 35vw;

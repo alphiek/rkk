@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSprings, animated as a, interpolate } from 'react-spring'
 import styled from 'styled-components'
-import { useGesture } from 'react-with-gesture'
+import { useGesture } from 'react-use-gesture'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
@@ -41,17 +41,17 @@ const ImgWrapper = styled(a.div)`
   border-radius: 10px;
   box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
 `
-
-const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
-const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5, y: -500 })
-const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
-
 const ImageDeck = ({data}) => {
   const cards = [
     <Img fluid={data.imageOne.childImageSharp.fluid} />,
     <Img fluid={data.imageTwo.childImageSharp.fluid} />,
     <Img fluid={data.imageThree.childImageSharp.fluid} />
   ]
+
+const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
+const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5 })
+const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
+
   const [gone] = useState(() => new Set())
   const [props, set] = useSprings(cards.length, i => ({...to(i), from: from(i)}))
   const bind = useGesture(({ args: [index], down, delta: [xDelta], distance, direction: [xDir], velocity}) => {
