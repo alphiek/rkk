@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { PageWrapperCenter, FullWidthWrapper, HeadingText, BodyText } from '../Global/Shared'
+import { FullWidthWrapper, HeadingText, BodyText } from '../Global/Shared'
+import { PageWrapperCenter } from '../Global/ServiceFlexWrapper'
 import NumberNav from '../Global/Numbers'
 import PortfolioLink from '../Global/PortfolioLink'
 import BottomNav from '../Global/BottomNav'

@@ -1,10 +1,8 @@
 import React from 'react'
-import { PageWrapperStack, TextWrapper, HeadingText, BodyText } from '../Global/Shared'
-import NumberNav from '../Global/Numbers'
+import { HeadingText, BodyText } from '../Global/Shared'
+import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
 import PortfolioLink from '../Global/PortfolioLink'
-import BottomNav from '../Global/BottomNav'
 import SeoImage from './SeoImage'
-import { TransWrap } from '../Global/TransWrap'
 import Fade from 'react-reveal/Fade'
 import data from './data'
 import styled from 'styled-components'
@@ -28,27 +26,25 @@ const ListFlex = styled.div`
 const SeoOptComponent = () => {
   const services = data.map(item => <ListFlex key={item.key}><Tick/><Service>{item.name}</Service></ListFlex>)
   return (
-    <TransWrap>
-    <PageWrapperStack>
-      <NumberNav />
-      <TextWrapper>
-      <Fade bottom delay={1000} opposite={true}>
-        <HeadingText>SEO Optimisation</HeadingText>
+    <ServiceFlexWrapper>
+      <LeftWrapper>
+        <Fade bottom delay={1000} opposite={true}>
+          <HeadingText>SEO Optimisation</HeadingText>
         </Fade>
         <Fade right cascade delay={1000}>
-        <BodyText>
-          Boost your website's organic search results and search engine visability with our technical SEO services:
-        </BodyText>
-        <ul style={{ marginTop: '0.5em' }}>
-        {services}
-        </ul>
+          <BodyText>
+            Boost your website's organic search results and search engine visability with our technical SEO services:
+          </BodyText>
+          <ul style={{ marginTop: '0.5em' }}>
+          {services}
+          </ul>
         </Fade>
         <PortfolioLink />
-      </TextWrapper>
+      </LeftWrapper>
+      <RightWrapper>
       <SeoImage />
-      <BottomNav />
-    </PageWrapperStack>
-    </TransWrap>
+      </RightWrapper>
+    </ServiceFlexWrapper>
   )
 }
 

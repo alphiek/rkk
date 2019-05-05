@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { color, font, weight, spacing, boxShadow } from './variables'
 import Img from 'gatsby-image'
+import { PageWrapper } from './ServiceFlexWrapper'
 
 export const HeadingText = styled.h1`
   border-left: 0.15em solid ${color.secondary};
@@ -25,11 +26,6 @@ export const BodyText = styled.p`
   letter-spacing: ${spacing.small};
 `
 
-export const PageWrapper = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100vh;
-`
 export const PortfolioPageWrapper = styled(PageWrapper)`
   justify-content: flex-start;
   width: 84%;
@@ -39,19 +35,6 @@ export const PortfolioPageWrapper = styled(PageWrapper)`
   flex-direction: column;
   padding-bottom: 3em;
 `
-
-export const PageWrapperCenter = styled(PageWrapper)`
-  align-items: center;
-`
-
-export const PageWrapperStack = styled(PageWrapperCenter)`
-
-`
-export const TextWrapper = styled.div`
-  margin-left: 12%;
-  width: 30%;
-`
-
 export const FullWidthWrapper = styled.div`
   width: 84%;
   margin-left: 8%;
