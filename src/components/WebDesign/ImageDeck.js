@@ -8,12 +8,16 @@ import Img from 'gatsby-image'
 const Wrapper = styled.div`
   overscroll-behavior-y: contain;
   overflow: hidden;
-  position: fixed;
-  width: 60vw;
+  position: relative;
+  width: 50vw;
   height: 100vh;
-  right: 0;
-  top: 0;
   cursor: pointer;
+@media only screen
+    and (max-width: 1024px) {
+      height: 100%;
+      width: 100%;
+      overflow: visible;
+    }
 `
 
 const Container = styled(a.div)`
@@ -35,11 +39,24 @@ const ImgWrapper = styled(a.div)`
   margin-right: 6em;
   width: 70%;
   max-width: 1200px;
-  height: 30%;
+  height: auto;
   max-height: 630px;
   will-change: transform;
   border-radius: 10px;
-  box-shadow: 0 12.5px 100px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+  box-shadow: 0 12.5px 30px -10px rgba(50, 50, 73, 0.4), 0 10px 10px -10px rgba(50, 50, 73, 0.3);
+@media only screen
+    and (max-width: 1024px) {
+      margin-top: 0;
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+@media only screen
+    and (max-width: 824px)
+    and (orientation: landscape) {
+      width:100%;
+      margin-right: 1em;
+    }
 `
 const ImageDeck = ({data}) => {
   const cards = [
@@ -49,7 +66,7 @@ const ImageDeck = ({data}) => {
   ]
 
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
-const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5 })
+const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5,y: -500 })
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
   const [gone] = useState(() => new Set())

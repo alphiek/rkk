@@ -6,6 +6,11 @@ import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
   padding-left: 0.5em;
+@media only screen
+    and (max-width: 824px) {
+      display: none;
+
+    }
 `
 
 const LinkStyle = styled(Link)`

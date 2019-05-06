@@ -8,6 +8,14 @@ import Fade from 'react-reveal/Fade'
 const PageWrapper = styled.div`
   width: 31%;
   border-right: 0.3em solid ${color.secondary};
+
+@media only screen
+  and (max-width: 824px) {
+    width: 90%;
+    margin: 5%;
+    border-right: none;
+    margin-bottom: 5em;
+  }
 `
 const AboutWrapper = styled.div`
   border: 0.3em solid ${color.white};
@@ -23,6 +31,10 @@ const AboutTitle = styled.h2`
   font-family: ${font.muli};
   font-weight: ${weight.extraBold};
   letter-spacing: ${spacing.narrow};
+@media only screen
+  and (max-width: 824px) {
+    font-size: 2.2em;
+  }
 `
 const AboutText = styled.p`
   margin-top: 2em;
@@ -30,6 +42,10 @@ const AboutText = styled.p`
   color: ${color.white};
   font-weight: ${weight.light};
   line-height: 130%;
+@media only screen
+  and (max-width: 824px) {
+    font-size: 1em;
+  }
 `
 const Copyright = styled.p`
   font-weight: ${weight.light};

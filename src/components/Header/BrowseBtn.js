@@ -14,11 +14,6 @@ const MobileLinkContainer = styled.div`
   z-index: 5;
 
   @media only screen
-      and (max-width: 960px)
-      and (orientation: landscape) {
-        display:none;
-      }
-  @media only screen
       and (max-height: 600px)
       and (max-width: 1024px)
       and (orientation: landscape) {
@@ -26,9 +21,8 @@ const MobileLinkContainer = styled.div`
   }
 
   @media only screen
-      and (max-height: 767px)
-      and (orientation: portrait) {
-        height:7em;
+      and (max-width: 1024px) {
+        display: none;
       }
 `
 const LinkMobile = styled.p`
@@ -46,9 +40,10 @@ const LinkMobile = styled.p`
         display:none;
       }
   @media only screen
-      and (max-height: 767px)
+      and (max-height: 1024px)
       and (orientation: portrait) {
-        font-size:1em;
+        font-size:0.8em;
+        padding: 0.2em 2.5em;
       }
 
 `

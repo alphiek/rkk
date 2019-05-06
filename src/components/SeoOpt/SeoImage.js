@@ -11,9 +11,23 @@ const MainImage = styled(Img)`
   height: auto;
   transform: perspective(2000px) rotateX(15deg) rotateY(-15deg) rotateZ(15deg);
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
+@media only screen
+    and (max-width: 1024px) {
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50vw;
+    }
+@media only screen
+    and (max-width: 824px) {
+      width: 70vw;
+    }
+@media only screen
+    and (max-width: 824px)
+    and (orientation: landscape) {
+      width: 35vw;
+    }
 `
-
-
 const SeoImage = ({data}) => {
   return (
     <>
