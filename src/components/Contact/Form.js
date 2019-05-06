@@ -1,6 +1,7 @@
 import React from "react";
 import { withFormik } from "formik";
 import * as Yup from "yup";
+import * as emailjs from 'emailjs-com'
 import Fade from 'react-reveal/Fade'
 import {
   InputWrapper,
