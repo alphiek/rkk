@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
 import Fade from 'react-reveal/Fade'
+import PropTypes from 'prop-types'
 
 export const Back = styled.div`
   margin-top: 2em;
@@ -19,13 +20,12 @@ export const BackText = styled.p`
   font-size: 0.5em;
 `
 
-
-const BackButton = (props) => {
+const BackButton = ({toggleForm, form}) => {
   return (
-    <Back onClick={props.toggleForm}>
+    <Back onClick={toggleForm}>
     <Fade bottom delay={600}>
     {
-      props.form ?
+      form ?
       <BackText>Back to Contact Details</BackText>
       :
       <BackText>Contact Form</BackText>
@@ -36,3 +36,8 @@ const BackButton = (props) => {
 }
 
 export default BackButton
+
+BackButton.propTypes = {
+  form: PropTypes.bool.isRequired,
+  toggleForm: PropTypes.func.isRequired
+}

@@ -1,28 +1,62 @@
 import React, { Component } from 'react'
-import { PortfolioPageWrapper, PortfolioWrapper, HeadingText, BodyText } from '../Global/Shared'
+import { PortfolioPageWrapper } from '../Global/PortfolioShared'
 import { TransWrap } from '../Global/TransWrap'
-import FODE from './FODE'
+import GridContainer from './GridContainer'
+import Heading from './Heading'
 import LML from './LML'
 import PPD from './PPD'
+import FODE from './FODE'
 
 class PortfolioComponent extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      main: true,
+      lml:  false,
+      ppd: false,
+      lk: false,
+      fode: false,
+      south: false,
+      forager: false,
+    }
+    this.toggleMain = this.toggleMain.bind(this)
+  }
+
+  toggleMain(event) {
+    event.preventDefault()
+    console.log(event.target.id)
+    const name = event.target.id
+    console.log(name)
+    this.setState(
+      {
+       main: !this.state.main,
+       [name]: !this.state.name
+      },
+    )
+  }
 
   render() {
     return (
       <TransWrap>
       <PortfolioPageWrapper>
-        <PortfolioWrapper>
-          <HeadingText>Latest Work</HeadingText>
-            <BodyText>
-            This design is fucking brilliant. Never, never assume that what you have achieved is fucking good enough.
-            Remember it’s called the creative process, it’s not the creative fucking moment. Use your fucking hands.
-            Think about all the fucking possibilities. Why are you fucking reading all of this? Get back to work.
-            </BodyText>
-        </PortfolioWrapper>
-        <FODE />
-        <LML />
-        <PPD />
+        <Heading />
+        <GridContainer toggleMain={this.toggleMain} state={this.state}/>
       </PortfolioPageWrapper >
+      {
+        this.state.fode ?
+        <FODE />
+        : null
+      }
+      {
+        this.state.ppd ?
+        <PPD />
+        : null
+      }
+      {
+        this.state.lml ?
+        <LML />
+        : null
+      }
     </TransWrap>
     )
   }

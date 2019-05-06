@@ -1,45 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
-import RenderMenu from '../Header/RenderMenu'
-import { color, font, weight, spacing } from '../Global/variables'
-import SocialButtons from '../Header/SocialButtons'
 import Fade from 'react-reveal/Fade'
+import {
+  PageWrapper,
+  AboutWrapper,
+  AboutTitle,
+  AboutText,
+  Copyright }
+  from './aboutStyles'
+import PropTypes from 'prop-types'
 
-const PageWrapper = styled.div`
-  width: 31%;
-  border-right: 0.3em solid ${color.secondary};
-`
-const AboutWrapper = styled.div`
-  border: 0.3em solid ${color.white};
-  height: 22em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
-  padding: 1.8em;
-  overflow: hidden;
-`
-const AboutTitle = styled.h2`
-  font-size: 1.8em;
-  color: ${color.secondary};
-  font-family: ${font.muli};
-  font-weight: ${weight.extraBold};
-  letter-spacing: ${spacing.narrow};
-`
-const AboutText = styled.p`
-  margin-top: 2em;
-  font-size: 0.65em;
-  color: ${color.white};
-  font-weight: ${weight.light};
-  line-height: 130%;
-`
-const Copyright = styled.p`
-  font-weight: ${weight.light};
-  position: absolute;
-  bottom: 4em;
-  margin-left: 4em;
-  font-size: 0.5em;
-  color: ${color.white};
-`
-const About = (props) => {
+const About = ({ children }) => {
   return (
     <>
     <PageWrapper>
@@ -60,18 +30,14 @@ const About = (props) => {
       </Fade>
       </AboutWrapper>
       </Fade>
-        {
-         props.compProps.tablet || props.compProps.mobile ?
-         <React.Fragment>
-           <RenderMenu renderMenu={props.renderMenu}/>
-           <SocialButtons />
-         </React.Fragment>
-         : null
-        }
+      {children}
     </PageWrapper>
     <Copyright>© {new Date().getFullYear()}, RKK Creative</Copyright>
     </>
   )
 }
-
 export default About
+
+About.propTypes = {
+  children: PropTypes.node
+}

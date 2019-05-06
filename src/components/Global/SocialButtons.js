@@ -8,6 +8,7 @@ import mail from '../../images/Icons/Icon-Mail.svg'
 import pin from '../../images/Icons/Icon-Pinterest.svg'
 import twitter from '../../images/Icons/Icon-Twitter.svg'
 import Fade from 'react-reveal/Fade'
+import PropTypes from 'prop-types'
 
 const SocialWrapper = styled.div`
   margin-top: 1.5em;
@@ -85,3 +86,18 @@ export default () => (
     render={data => <SocialButtons data={data} />}
   />
 )
+
+SocialButtons.propTypes = {
+  data: PropTypes.shape({
+      site: PropTypes.shape({
+        siteMetadata: PropTypes.shape({
+          email: PropTypes.string.isRequired,
+          facebook: PropTypes.string.isRequired,
+          insta: PropTypes.string.isRequired,
+          linked: PropTypes.string.isRequired,
+          pin: PropTypes.string.isRequired,
+          twitter: PropTypes.string.isRequired,
+        }).isRequired,
+      }).isRequired,
+    }).isRequired,
+  }

@@ -2,6 +2,7 @@ import React from 'react'
 import { useSpring, animated as a, config } from 'react-spring'
 import { color } from '../Global/variables'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 export const PageContainer = styled.div`
   position: relative;
@@ -53,4 +54,12 @@ export const RedContainerAnim = ({ children }) => {
     {children}
     </RedContainer>
   )
+}
+
+BlueContainer.propTypes = {
+  children: PropTypes.node.isRequired,
+}
+
+RedContainer.propTypes = {
+  children: PropTypes.node.isRequired,
 }

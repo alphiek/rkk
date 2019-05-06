@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
+import PropTypes from 'prop-types'
 
 const MenuButton = styled.button`
   font-size: 0.8em;
@@ -23,3 +24,7 @@ const RenderMenu = (props) => {
 }
 
 export default RenderMenu
+
+RenderMenu.propTypes = {
+  renderMenu: PropTypes.func.isRequired
+}

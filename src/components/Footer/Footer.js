@@ -1,16 +1,16 @@
 import React from 'react'
-import About from '../About/About'
+import AboutTab from '../About/AboutTab'
 import ContactContainer from '../Contact/ContactContainer'
-import MenuWrapper from './MenuWrapper'
-import PageWrapper from './PageWrapper'
+import MenuWrapperTablet from '../Menu/MenuWrapperTablet'
+import { PageWrapper } from '../Global/Menu_FooterPageWrapper'
 
-const TabletMenu = (props) => {
+const Footer = (props) => {
   return (
     <PageWrapper>
       {
         props.compProps.menu ?
-          <MenuWrapper
-          compProps={props.compProps}
+          <MenuWrapperTablet
+          links={props.compProps.links}
           toggleHidden={props.toggleHidden}
           renderAbout={props.renderAbout}
           renderContact={props.renderContact}
@@ -21,17 +21,15 @@ const TabletMenu = (props) => {
         props.compProps.contact ?
           <ContactContainer
           toggleForm={props.toggleForm}
-          compProps={props.compProps}
-          toggleHidden={props.toggleHidden}
+          form={props.compProps.form}
+          tablet={props.compProps.tablet}
           renderMenu={props.renderMenu}
           />
           : null
       }
       {
         props.compProps.about ?
-          <About
-          compProps={props.compProps}
-          toggleHidden={props.toggleHidden}
+          <AboutTab
           renderMenu={props.renderMenu}
           />
           : null
@@ -40,4 +38,4 @@ const TabletMenu = (props) => {
   )
 }
 
-export default TabletMenu
+export default Footer

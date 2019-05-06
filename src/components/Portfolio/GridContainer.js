@@ -8,17 +8,15 @@ const Container = styled.div`
   position: relative;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 1.5em;
-  grid-row-gap: 1.5em;
+  grid-template-columns: repeat(3, 1fr);
 `
 
-const GridContainer = () => {
+const GridContainer = (props) => {
   return(
     <Container>
-        <LML />
-        <PPD />
-        <FODE />
+        <LML toggleMain={props.toggleMain} visbible={props.state.lml}/>
+        <PPD toggleMain={props.toggleMain} visbible={props.state.ppd}/>
+        <FODE toggleMain={props.toggleMain} visbible={props.state.fode}/>
     </ Container>
   )
 }

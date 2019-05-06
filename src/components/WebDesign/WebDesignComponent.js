@@ -4,11 +4,12 @@ import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/Service
 import ImageDeck from './ImageDeck'
 import Fade from 'react-reveal/Fade'
 import PortfolioLink from '../Global/PortfolioLink'
+import PropTypes from 'prop-types'
 
 
-const WebDesignComponent = () => {
+const WebDesignComponent = ({tablet}) => {
   return (
-    <ServiceFlexWrapper>
+    <ServiceFlexWrapper tablet={tablet}>
       <LeftWrapper>
         <Fade top >
           <HeadingText>Web Design</HeadingText>
@@ -31,3 +32,7 @@ const WebDesignComponent = () => {
 
 
 export default WebDesignComponent
+
+WebDesignComponent.propTypes = {
+  tablet: PropTypes.bool.isRequired
+}

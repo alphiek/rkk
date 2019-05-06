@@ -1,8 +1,9 @@
 import React from 'react'
-import NumberNav from '../Global/Numbers'
+import NumberNav from '../Global/NumberNav'
 import BottomNav from '../Global/BottomNav'
 import { TransWrap } from '../Global/TransWrap'
 import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 export const PageWrapper = styled.div`
   display: flex;
@@ -26,16 +27,30 @@ export const RightWrapper = styled.div`
   width: 60%;
 `
 
-export const ServiceFlexWrapper = ({children}) => {
+export const ServiceFlexWrapper = ({tablet, children}) => {
+  const hide = tablet
   return (
     <TransWrap>
     <PageWrapperCenter>
-      <NumberNav />
+      {
+        !hide ?
+        <NumberNav />
+        : null
+      }
        <FlexContainer>
           {children}
-        </FlexContainer>
-      <BottomNav />
+       </FlexContainer>
+      {
+        !hide ?
+        <BottomNav />
+        : null
+      }
     </PageWrapperCenter>
     </TransWrap>
   )
+}
+
+ServiceFlexWrapper.propTypes = {
+  tablet: PropTypes.bool.isRequired,
+  children: PropTypes.node.isRequired,
 }

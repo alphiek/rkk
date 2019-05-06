@@ -1,5 +1,5 @@
 import React from "react"
-import DevComponent from '../components/Development/DevComponent'
+import DevContainer from '../components/Development/DevContainer'
 import Helmet from "react-helmet"
 import ogImage from '../images/ogImage.png'
 import logo from '../images/icon.png'
@@ -68,7 +68,7 @@ const Development = () => (
         }
    `}</script>
   </Helmet>
-  <DevComponent />
+  <DevContainer />
   </>
 )
 

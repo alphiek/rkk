@@ -1,6 +1,7 @@
 import React from 'react'
 import posed from 'react-pose'
 import { TransitionState } from "gatsby-plugin-transition-link";
+import PropTypes from 'prop-types'
 
 const Trans = posed.div({
   hidden: { opacity: 0},
@@ -22,4 +23,8 @@ export const TransWrap = ({ children }) => {
     )}
   </TransitionState>
   )
+}
+
+TransWrap.propTypes = {
+  children: PropTypes.node.isRequired
 }

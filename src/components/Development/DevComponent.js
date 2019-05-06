@@ -4,10 +4,11 @@ import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/Service
 import PortfolioLink from '../Global/PortfolioLink'
 import Skills from './Skills'
 import Fade from 'react-reveal/Fade'
+import PropTypes from 'prop-types'
 
-const DevComponent = () => {
+const DevComponent = ({tablet}) => {
   return (
-    <ServiceFlexWrapper>
+    <ServiceFlexWrapper tablet={tablet}>
       <LeftWrapper>
         <Fade bottom delay={1000} opposite={true}>
           <HeadingText>Development</HeadingText>
@@ -27,11 +28,17 @@ const DevComponent = () => {
           <PortfolioLink />
       </LeftWrapper>
       <RightWrapper>
-      <Skills />
+      {tablet ?
+       <div>This is for the tablet version</div>
+       : <Skills />
+      }
       </RightWrapper>
     </ServiceFlexWrapper>
   )
 }
 
-
 export default DevComponent
+
+DevComponent.propTypes = {
+  tablet: PropTypes.bool.isRequired
+}

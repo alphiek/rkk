@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-import Burger from './Burger'
-import Logo from './Logo'
-import MenuContainer from './MenuContainer'
 import { StaticQuery, graphql } from 'gatsby'
-import BrowseBtn from './BrowseBtn'
+import Burger from './Burger'
+import MenuComponent from '../Menu/MenuComponent'
+import PropTypes from 'prop-types'
 
 class Header extends Component {
   constructor(props){
@@ -11,26 +10,15 @@ class Header extends Component {
     this.state = {
       isHidden: true,
       links: [],
-      desktop: true,
-      tablet: false,
-      mobile: false,
-      menu: true,
-      contact: false,
-      about: false,
+      contact: true,
       form: false,
+      tablet: false
     }
-    this.updatePredicate = this.updatePredicate.bind(this)
     this.toggleHidden = this.toggleHidden.bind(this)
-    this.renderAbout = this.renderAbout.bind(this)
-    this.renderMenu = this.renderMenu.bind(this)
-    this.renderContact = this.renderContact.bind(this)
     this.toggleForm = this.toggleForm.bind(this)
   }
   componentDidMount() {
     let items = this.props.links
-
-    this.updatePredicate()
-    window.addEventListener('resize', this.updatePredicate)
 
     items.forEach(item => {
       this.setState(previous => ({
@@ -39,34 +27,10 @@ class Header extends Component {
     })
   }
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updatePredicate)
-  }
-
-  updatePredicate() {
-      this.setState({
-        desktop: window.innerWidth > 1024,
-        tablet: window.innerWidth <= 1024 && window.innerWidth > 824,
-        mobile: window.innerWidth <= 824
-      })
-    }
-
     toggleHidden(event) {
       event.preventDefault()
       this.setState(
-        {isHidden: !this.state.isHidden},
-        () => this.renderMenu(event)
-      )
-    }
-
-    renderAbout(event) {
-      event.preventDefault()
-      this.setState(
-        {
-          menu: false,
-          contact: false,
-          about: true
-        }
+        {isHidden: !this.state.isHidden}
       )
     }
 
@@ -79,28 +43,6 @@ class Header extends Component {
       )
     }
 
-    renderContact(event) {
-      event.preventDefault()
-      this.setState(
-        {
-          menu: false,
-          contact: true,
-          about: false
-        }
-      )
-    }
-
-    renderMenu(event) {
-      event.persist()
-      this.setState(
-        {
-          menu: true,
-          contact: false,
-          about: false
-        }
-      )
-    }
-
     render() {
       return (
         <>
@@ -109,25 +51,20 @@ class Header extends Component {
             isHidden={this.state.isHidden}/>
           {
             !this.state.isHidden ?
-              <MenuContainer
+              <MenuComponent
               toggleForm={this.toggleForm}
               compProps={this.state}
               toggleHidden={this.toggleHidden}
-              renderMenu={this.renderMenu}
-              renderAbout={this.renderAbout}
-              renderContact={this.renderContact}
               /> :
               null
-          }
-          <Logo />
-          {
-            (this.state.tablet && this.state.isHidden) || (this.state.mobile && this.state.isHidden) ?
-              <BrowseBtn toggleHidden={this.toggleHidden} />
-              : null
           }
         </>
       )
     }
+}
+
+Header.propTypes = {
+  links: PropTypes.array.isRequired
 }
 
 

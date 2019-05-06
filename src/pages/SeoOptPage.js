@@ -1,5 +1,5 @@
 import React from "react"
-import SeoOptComponent from '../components/SeoOpt/SeoOptComponent'
+import SeoOptContainer from '../components/SeoOpt/SeoOptContainer'
 import { Helmet } from 'react-helmet'
 import seo from '../images/SEO.png'
 import logo from '../images/icon.png'
@@ -69,7 +69,7 @@ const SeoOptimization = () => (
         }
    `}</script>
   </Helmet>
-  <SeoOptComponent />
+  <SeoOptContainer />
   </>
 )
 

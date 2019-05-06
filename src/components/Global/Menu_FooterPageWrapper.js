@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useSpring, animated as a, config } from 'react-spring'
-import { color } from '../Global/variables'
+import { color } from './variables'
+import PropTypes from 'prop-types'
 
 const Wrapper = styled(a.div)`
   position: absolute;
@@ -14,7 +15,7 @@ const Wrapper = styled(a.div)`
   z-index: 5;
 `
 
-const PageWrapper = ({ children }) => {
+export const PageWrapper = ({ children }) => {
   const props = useSpring({
     config: config.slow,
     bottom: '0px', from: { bottom: '-3000px' }
@@ -26,4 +27,6 @@ const PageWrapper = ({ children }) => {
   )
 }
 
-export default PageWrapper
+PageWrapper.propTypes = {
+  children: PropTypes.node.isRequired
+}

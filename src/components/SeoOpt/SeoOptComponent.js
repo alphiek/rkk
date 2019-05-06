@@ -8,6 +8,7 @@ import data from './data'
 import styled from 'styled-components'
 import { color, weight, spacing } from '../Global/variables'
 import Tick from './Tick'
+import PropTypes from 'prop-types'
 
 const Service = styled.li`
   line-height: 135%;
@@ -23,10 +24,10 @@ const ListFlex = styled.div`
   padding: 0.2em;
 `
 
-const SeoOptComponent = () => {
+const SeoOptComponent = ({tablet}) => {
   const services = data.map(item => <ListFlex key={item.key}><Tick/><Service>{item.name}</Service></ListFlex>)
   return (
-    <ServiceFlexWrapper>
+    <ServiceFlexWrapper tablet={tablet}>
       <LeftWrapper>
         <Fade bottom delay={1000} opposite={true}>
           <HeadingText>SEO Optimisation</HeadingText>
@@ -48,5 +49,8 @@ const SeoOptComponent = () => {
   )
 }
 
-
 export default SeoOptComponent
+
+SeoOptComponent.propTypes = {
+  tablet: PropTypes.bool.isRequired
+}

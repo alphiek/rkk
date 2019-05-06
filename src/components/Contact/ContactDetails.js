@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color, weight, spacing, font } from '../Global/variables'
-import SocialButtons from '../Header/SocialButtons'
+import SocialButtons from '../Global/SocialButtons'
 import Fade from 'react-reveal/Fade'
 
 const ContactText = styled.p`
@@ -28,20 +28,20 @@ const ContactDetails = () => {
   return (
     <div>
     <Fade bottom cascade>
-     <ContactText>Have a project in mind? give us a call to discuss or click the link below to complete our contact form and we will be in touch</ContactText>
-     <Address>
-      Koili, Paphos
-      <br />
-      Cyprus
-      <br />
-      <a href='#www'>Email: info@rkkcreative.xyz</a>
-      <br />
-      <a href='#www'>UK: +44 64664 64564645</a>
-      <br />
-      <a href='#www'>CY: +357 6546545</a>
-     </Address>
+       <ContactText>Have a project in mind? give us a call to discuss or click the link below to complete our contact form and we will be in touch</ContactText>
+       <Address>
+        Koili, Paphos
+        <br />
+        Cyprus
+        <br />
+        <a href='#www'>Email: info@rkkcreative.xyz</a>
+        <br />
+        <a href='#www'>UK: +44 64664 64564645</a>
+        <br />
+        <a href='#www'>CY: +357 6546545</a>
+       </Address>
      </Fade>
-      <SocialButtons />
+    <SocialButtons />
     </div>
   )
 }

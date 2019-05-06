@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color, font, weight } from '../Global/variables'
+import PropTypes from 'prop-types'
 
 const MobileLinkContainer = styled.div`
   height: 10em;
@@ -53,12 +54,16 @@ const LinkMobile = styled.p`
 
 `
 
-const BrowseBtn = (props) => {
+const FooterButton = ({toggleHidden}) => {
   return (
-    <MobileLinkContainer onClick={props.toggleHidden}>
-      <LinkMobile onClick={props.toggleHidden} >Browse</LinkMobile>
+    <MobileLinkContainer onClick={toggleHidden}>
+      <LinkMobile onClick={toggleHidden} >Browse</LinkMobile>
     </MobileLinkContainer>
   )
 }
 
-export default BrowseBtn
+export default FooterButton
+
+FooterButton.propTypes = {
+  toggleHidden: PropTypes.func.isRequired
+}

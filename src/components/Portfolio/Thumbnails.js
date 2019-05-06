@@ -35,9 +35,10 @@ const Logo = styled.img`
   width: 5em;
 `
 
-export const FODE = () => {
+export const FODE = (props) => {
+  console.log(props)
   return (
-    <FodeThumb>
+    <FodeThumb id='fode' onClick={props.toggleMain}>
     <Logo src={fode} alt='Fly or Die Logo' />
     </FodeThumb>
   )

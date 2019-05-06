@@ -1,5 +1,5 @@
 import React from "react"
-import WebDesignComponent from '../components/WebDesign/WebDesignComponent'
+import WebDesignContainer from '../components/WebDesign/WebDesignContainer'
 import { Helmet } from 'react-helmet'
 import webdesign from '../images/Graphics/Webdesign.png'
 import logo from '../images/icon.png'
@@ -70,7 +70,7 @@ const WebDesignPage = () => {
           }
      `}</script>
     </Helmet>
-    <WebDesignComponent/>
+    <WebDesignContainer/>
     </>
   )
 }

@@ -1,16 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
-import RenderMenu from '../Header/RenderMenu'
 import Form from './Form'
 import BackButton from './BackButton'
 import ContactDetails from './ContactDetails'
-import SocialButtons from '../Header/SocialButtons'
 import Fade from 'react-reveal/Fade'
+import PropTypes from 'prop-types'
+import RenderMenu from '../Menu/RenderMenu'
 
 const PageWrapper = styled.div`
   width: 33%;
   border-right: 0.3em solid ${color.secondary};
+  @media only screen and (max-width: 1024px){
+    width: 100%;
+  }
 `
 const ContactWrapper = styled.div`
   background-color: ${color.white};
@@ -28,30 +31,34 @@ const ContactTitle = styled.h2`
   letter-spacing: ${spacing.narrow};
 `
 
-const ContactContainer = (props) => {
+const ContactContainer = ({ form, tablet, toggleForm, renderMenu }) => {
   return (
     <PageWrapper>
      <ContactWrapper>
      <Fade bottom>
         <ContactTitle>Contact</ContactTitle>
      </Fade>
-        {props.compProps.form ?
+        {form ?
             <Form />
           :
           <ContactDetails />
         }
-        <BackButton form={props.compProps.form} toggleForm={props.toggleForm}/>
+        <BackButton form={form} toggleForm={toggleForm}/>
      </ContactWrapper>
-     {
-      props.compProps.tablet || props.compProps.mobile ?
-      <React.Fragment>
-        <RenderMenu renderMenu={props.renderMenu}/>
-        <SocialButtons />
-      </React.Fragment>
-      : null
-     }
+     {tablet ?
+     <RenderMenu renderMenu={renderMenu}/>
+     :
+     null
+   }
     </PageWrapper>
   )
 }
 
 export default ContactContainer
+
+ContactContainer.propTypes = {
+  form: PropTypes.bool.isRequired,
+  tablet: PropTypes.bool.isRequired,
+  toggleForm: PropTypes.func.isRequired,
+  renderMenu: PropTypes.func
+}

@@ -4,6 +4,7 @@ import TabletLanding from './TabletLanding'
 import MobileLanding from './MobileLanding'
 
 
+
 class LandingContainer extends Component {
   constructor(props) {
     super(props)
@@ -34,7 +35,7 @@ class LandingContainer extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <>
         {this.state.desktop ?
           <LandingComponent /> :
           null
@@ -47,7 +48,7 @@ class LandingContainer extends Component {
           <MobileLanding /> :
           null
         }
-      </React.Fragment>
+      </>
     )
   }
 }

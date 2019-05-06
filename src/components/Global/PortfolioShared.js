@@ -1,6 +1,17 @@
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
 import { BodyText } from './Shared'
+import { PageWrapper } from './ServiceFlexWrapper'
+
+export const PortfolioPageWrapper = styled(PageWrapper)`
+  justify-content: flex-start;
+  width: 84%;
+  height: auto;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 3em;
+`
 
 export const Wrapper = styled.div`
  position: relative;
