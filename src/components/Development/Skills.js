@@ -11,6 +11,8 @@ import sass from '../../images/Logos/sass.svg'
 import webflow from '../../images/Logos/webflow.svg'
 import wordpress from '../../images/Logos/wordpress.svg'
 import graphql from '../../images/Logos/graphql.svg'
+import snipcart from '../../images/Logos/snipcart.svg'
+
 
 const LogoWrapper = styled.div`
   display: flex;
@@ -30,16 +32,18 @@ const Logo = styled(a.img)`
 `
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 9 - 150}px,${y / 12 - 100}px,0)`
-const trans2 = (x, y) => `translate3d(${x / 2 + 35}px,${y / 2 - 230}px,0)`
-const trans3 = (x, y) => `translate3d(${x / 2 - 250}px,${y / 10 - 200}px,0)`
-const trans4 = (x, y) => `translate3d(${x / 2 + 150}px,${y / 20 + 3.5}px,0)`
-const trans5 = (x, y) => `translate3d(${x / 20 - 200}px,${y / 30 + 200}px,0)`
-const trans6 = (x, y) => `translate3d(${x / 30 + -90}px,${y / 35 + 230}px,0)`
-const trans7 = (x, y) => `translate3d(${x / 40 + 250}px,${y / 50 + 200}px,0)`
-const trans8 = (x, y) => `translate3d(${x / 2 - 70}px,${y / 20 - 70}px,0)`
-const trans9 = (x, y) => `translate3d(${x / 2 + 80}px,${y / 20 - 60}px,0)`
-const trans10 = (x, y) => `translate3d(${x / 2 + 150}px,${y / 1 + 150}px,0)`
+const trans1 = (x, y) => `translate3d(${x / 7 - 280}px,${y / 8 - 20}px,0)`
+const trans2 = (x, y) => `translate3d(${x / 7 + 60}px,${y / 10 - 260}px,0)`
+const trans3 = (x, y) => `translate3d(${x / 8 - 200}px,${y / 9 - 200}px,0)`
+const trans4 = (x, y) => `translate3d(${x / 6 + 80}px,${y / 9 + 80}px,0)`
+const trans5 = (x, y) => `translate3d(${x / 8 - 180}px,${y / 7 + 180}px,0)`
+const trans6 = (x, y) => `translate3d(${x / 6 - 60}px,${y / 6 - 80}px,0)`
+const trans7 = (x, y) => `translate3d(${x / 8 + 40}px,${y / 7 + 240}px,0)`
+const trans8 = (x, y) => `translate3d(${x / 9 + 280}px,${y / 10 - 220}px,0)`
+const trans9 = (x, y) => `translate3d(${x / 8 + 340}px,${y / 8 - 40}px,0)`
+const trans10 = (x, y) => `translate3d(${x / 7 + 260}px,${y / 7 + 160}px,0)`
+const trans11 = (x, y) => `translate3d(${x / 7 + 160}px,${y / 7 - 100}px,0)`
+
 
 
 const Skills = () => {
@@ -56,6 +60,7 @@ const Skills = () => {
       <Logo src={webflow} alt='Webflow Logo' style={{ transform: props.xy.interpolate(trans8) }} />
       <Logo src={wordpress} alt='Wordpress Logo' style={{ transform: props.xy.interpolate(trans9) }} />
       <Logo src={graphql} alt='Graphql Logo' style={{ transform: props.xy.interpolate(trans10) }} />
+      <Logo src={snipcart} alt='Snipcart Logo' style={{ transform: props.xy.interpolate(trans11) }} />
     </LogoWrapper>
   )
 }

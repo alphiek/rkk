@@ -17,8 +17,20 @@ const Instruction = styled.p`
   color: ${color.lightGrey};
   text-transform: uppercase;
   font-size: 0.5em;
-  @media (min-width: 824px) and (max-width: 1024px) {
+  @media only screen
+    and (min-width: 824px)
+    and (max-width: 1024px) {
     font-size: 0.7em;
+}
+@media only screen
+    and (max-width: 823px)
+    and (orientation: portrait) {
+      margin-bottom: 5em;
+    }
+@media only screen
+    and (max-width: 823px)
+    and (orientation: landscape) {
+        margin-bottom:5em;
 }
 `
 class Carousel extends Component {

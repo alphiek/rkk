@@ -127,16 +127,29 @@ const Form = withFormik({
       .required("Please leave a message or provide telephone number to request a callback"),
   }),
 
-  handleSubmit: (values, { setSubmitting, resetForm }) => {
-    setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
-      setSubmitting(false);
-    }, 1000);
-    console.log(values);
-    resetForm({});
-  },
 
-  displayName: "Basic Form"
-})(SignUp);
+    handleSubmit: (values, {setSubmitting, resetForm }) => {
+        const service_id = 'rkk_form_server';
+        const template_id = 'rkk_form_forward';
+        const user_id = 'user_Yx8GcXupiG88q1ZoCTSjT';
+        const template_params = {
+            userName: values.name,
+            userEmail: values.email,
+            userMessage: values.message,
+            userConsent: values.consent
+        };
 
-export default Form;
+        emailjs.send(service_id, template_id, template_params, user_id)
+            .then(function (response) {
+                alert("We've received your request and we'll respond ASAP");
+                resetForm();
+            }, function (error) {
+                alert("Process failed. Please try again.");
+                console.log('Email sending failed', error);
+            });
+    },
+
+    displayName: "Basic Form"
+  })(SignUp);
+
+  export default Form;

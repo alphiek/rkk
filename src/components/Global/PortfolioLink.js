@@ -16,9 +16,21 @@ const LinkStyle = styled(Link)`
   color: ${color.secondary};
   text-transform: uppercase;
   font-size: 0.5em;
-  @media (min-width: 824px) and (max-width: 1024px) {
-    font-size: 0.7em;
-  }
+@media only screen
+    and (max-width: 1024px) {
+      font-size: 0.8em;
+}
+@media only screen
+    and ( max-width: 824px)
+    and (max-height: 824px) {
+      font-size: 0.65em;
+      padding: 2em 0 1em 0;
+    }
+@media only screen
+    and (max-width: 824px)
+    and (orientation: landscape) {
+      font-size: 0.6em;
+    }
 `
 
 const PortfolioLink = () => {
@@ -27,9 +39,9 @@ const PortfolioLink = () => {
     <Wrapper>
       <LinkStyle
         exit={{ length: 0.5 }}
-        entry={{ delay: 0.8 }}
+        entry={{ delay: 0.6 }}
         to='/PortfolioPage/'
-        partiallyActive={true}>View Portfolio -----------------------</LinkStyle>
+        partiallyActive={true}>View Portfolio ------------------</LinkStyle>
     </Wrapper>
    </Fade>
   )

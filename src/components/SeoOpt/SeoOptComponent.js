@@ -22,6 +22,20 @@ const ListFlex = styled.div`
   flex-direction: row;
   align-items: flex-end;
   padding: 0.2em;
+@media only screen
+    and (max-width: 1024px) {
+      margin-left: 2em;
+      font-size:1.5em;
+}
+@media only screen
+    and (max-width: 823px) {
+      margin-left:0;
+    }
+@media only screen
+    and (max-width: 824px)
+    and (orientation: landscape) {
+      font-size: 0.9em;
+    }
 `
 
 const SeoOptComponent = ({tablet}) => {
