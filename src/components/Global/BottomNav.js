@@ -10,8 +10,6 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  background: white;
-  padding-top: 1em;
 `
 const NavContainer = styled.div`
   display: flex;
