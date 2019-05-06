@@ -12,11 +12,6 @@ const Wrapper = styled.div`
   justify-content: flex-end;
   background: white;
   padding-top: 1em;
-
-@media only screen
-    and (max-width: 824px) {
-      display: none;
-    } 
 `
 const NavContainer = styled.div`
   display: flex;
