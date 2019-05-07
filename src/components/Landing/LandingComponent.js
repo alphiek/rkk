@@ -15,7 +15,7 @@ const LandingLink = styled(Link)`
   z-index: 3;
   text-transform: uppercase;
   border: 0.2em solid ${color.secondary};
-  padding: 0.4em 0.9em;
+  padding: 0.6em 0.9em;
   font-family: ${font.heebo};
   color: ${color.primary};
   font-size: 0.6em;

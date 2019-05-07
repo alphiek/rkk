@@ -6,25 +6,12 @@ import PropTypes from 'prop-types'
 const MobileLinkContainer = styled.div`
   height: 10em;
   background-color: ${color.primary};
-  position: fixed;
-  bottom: 0;
+  position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 5;
-
-  @media only screen
-      and (max-width: 960px)
-      and (orientation: landscape) {
-        display:none;
-      }
-  @media only screen
-      and (max-height: 600px)
-      and (max-width: 1024px)
-      and (orientation: landscape) {
-        display: none;
-  }
 
   @media only screen
       and (max-height: 767px)
@@ -41,17 +28,6 @@ const LinkMobile = styled.p`
   color: ${color.white};
   z-index: 8;
   text-transform: uppercase;
-  @media only screen
-      and (max-width: 960px)
-      and (orientation: landscape) {
-        display:none;
-      }
-  @media only screen
-      and (max-height: 767px)
-      and (orientation: portrait) {
-        font-size:1em;
-      }
-
 `
 
 const FooterButton = ({toggleHidden}) => {

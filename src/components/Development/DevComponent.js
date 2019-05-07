@@ -3,6 +3,7 @@ import { HeadingText, BodyText } from '../Global/Shared'
 import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
 import PortfolioLink from '../Global/PortfolioLink'
 import Skills from './Skills'
+import DevTablet from './DevTablet'
 import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 
@@ -29,8 +30,9 @@ const DevComponent = ({tablet}) => {
       </LeftWrapper>
       <RightWrapper>
       {tablet ?
-       <div>This is for the tablet version</div>
-       : <Skills />
+       <DevTablet />
+       :
+       <Skills />
       }
       </RightWrapper>
     </ServiceFlexWrapper>
