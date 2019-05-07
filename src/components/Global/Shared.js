@@ -1,6 +1,5 @@
 import styled from 'styled-components'
-import { color, font, weight, spacing, boxShadow } from './variables'
-import Img from 'gatsby-image'
+import { color, font, weight, spacing } from './variables'
 
 export const HeadingText = styled.h1`
   border-left: 0.15em solid ${color.secondary};
@@ -64,30 +63,4 @@ export const FullWidthWrapper = styled.div`
     and (orientation: landscape){
       margin-top: 14em;
     }
-`
-export const PortfolioWrapper = styled(FullWidthWrapper)`
-  margin-top: 8%;
-  width: 100%;
-  margin-right: 0;
-  margin-left: 0;
-  margin-bottom: 0;
-  height: 7em;
-`
-
-export const ImgFull = styled(Img)`
-  width: 100%;
-  display: block;
-  margin: 0 auto;
-`
-
-export const Thumbnail = styled.div`
-  -webkit-box-shadow: ${boxShadow.shadow};
-  -moz-box-shadow: ${boxShadow.shadow};
-   box-shadow: ${boxShadow.shadow};
-  padding: 3em;
-  &:hover {
-    transform: scale(1.05);
-    transition: transform 1s;
-  }
-}
 `

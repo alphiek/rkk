@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSpring, animated as a } from 'react-spring'
 import styled from 'styled-components'
 import data from './data'
 
@@ -10,7 +9,7 @@ const Container = styled.div`
   grid-template-columns: repeat(4, 1fr);
 `
 
-const Logo = styled(a.img)`
+const Logo = styled.img`
   width: 4em;
 `
 

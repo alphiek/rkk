@@ -1,7 +1,17 @@
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
-import { BodyText } from './Shared'
+import { BodyText, FullWidthWrapper } from './Shared'
 import { PageWrapper } from './ServiceFlexWrapper'
+
+
+export const PortfolioWrapper = styled(FullWidthWrapper)`
+  margin-top: 8%;
+  width: 100%;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+  height: 5em;
+`
 
 export const PortfolioPageWrapper = styled(PageWrapper)`
   justify-content: flex-start;

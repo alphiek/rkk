@@ -26,6 +26,7 @@ export const font = {
 export const spacing = {
   wide:'0.2em',
   large: '0.1em',
+  standard: '0.02em',
   narrow: '-0.05em',
   small: '-0.01em'
 }

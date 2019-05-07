@@ -8,30 +8,35 @@ import {
   Tech,
   Description,
   ServiceWrapper
-} from '../Global/PortfolioShared'
-import FodeImage from './FodeImage'
+} from '../../Global/PortfolioShared'
+import FodeImage from '../FODE/FodeImage'
 
 const tech = [
-  'Gatsby',
-  'React',
-  'SnipCart',
-  'DatoCMS',
+  'Webflow',
+  'HTML',
+  'CSS',
+  'jQuery',
+
 ]
 
 const services = [
-  'Ecommerce',
-  'Progressive Web Application',
-  'Site Design',
-  'SEO',
+  'Website Design',
+  'Branding',
+  'Blog',
+  'Ghost Writing',
+  'Social Graphics',
+  'Web Graphics',
+  'Mobile Optimisation',
+  'SEO'
 ]
 
-const FODE = () => {
+const PPD = () => {
   const list = tech.map(item => <Tech key={item}>{item}</Tech>)
   const serviceList = services.map(service => <Tech key={service}>{service}</Tech>)
   return (
     <Wrapper>
     <TextContainer>
-    <Title>House of Fode</Title>
+    <Title>Paphos Painter Decorators</Title>
       <InfoFlex>
         <ListWrapper>
           {list}
@@ -51,4 +56,4 @@ const FODE = () => {
   )
 }
 
-export default FODE
+export default PPD

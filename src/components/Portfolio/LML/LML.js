@@ -8,8 +8,8 @@ import {
   Tech,
   Description,
   ServiceWrapper
-} from '../Global/PortfolioShared'
-import FodeImage from './FodeImage'
+} from '../../Global/PortfolioShared'
+import FodeImage from '../FODE/FodeImage'
 
 const tech = [
   'Webflow',

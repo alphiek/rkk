@@ -1,62 +1,111 @@
 import React from 'react'
 import styled from 'styled-components'
-import fode from '../../images/Portfolio/FODE.svg'
-import lml from '../../images/Portfolio/LML.svg'
-import ppd from '../../images/Portfolio/PPD.svg'
-import { Thumbnail } from '../Global/Shared'
+import Img from 'gatsby-image'
+import { weight, spacing } from '../Global/variables'
 
-
-const FodeThumb = styled(Thumbnail)`
-  background: white;
+const Wrapper = styled.div`
+  position: relative;
 `
-const LMLThumb = styled(Thumbnail)`
-  background : -moz-linear-gradient(71.92% 129.54% 110deg,rgba(171, 174, 241, 1) 0%,rgba(134, 179, 212, 1) 43%,rgba(121, 203, 189, 1) 100%);
-  background : -webkit-linear-gradient(110deg, rgba(171, 174, 241, 1) 0%, rgba(134, 179, 212, 1) 43%, rgba(121, 203, 189, 1) 100%);
-  background : -webkit-gradient(linear,71.92% 129.54% ,28.08% 9.1% ,color-stop(0,rgba(171, 174, 241, 1) ),color-stop(0.43,rgba(134, 179, 212, 1) ),color-stop(1,rgba(121, 203, 189, 1) ));
-  background : -o-linear-gradient(110deg, rgba(171, 174, 241, 1) 0%, rgba(134, 179, 212, 1) 43%, rgba(121, 203, 189, 1) 100%);
-  background : -ms-linear-gradient(110deg, rgba(171, 174, 241, 1) 0%, rgba(134, 179, 212, 1) 43%, rgba(121, 203, 189, 1) 100%);
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#ABAEF1', endColorstr='#79CBBD' ,GradientType=0)";
-  background : linear-gradient(-20deg, rgba(171, 174, 241, 1) 0%, rgba(134, 179, 212, 1) 43%, rgba(121, 203, 189, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ABAEF1',endColorstr='#79CBBD' , GradientType=1);
+const InfoWrapper = styled.div`
+  padding: 1em;
+  position: absolute;
+  font-size: 0.9em;
+  font-weight: ${weight.bold};
+  letter-spacing: ${spacing.standard};
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  color: 	#f9f9f9;
+  background: -moz-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%, rgba(7,7,7,0) 50%, rgba(7,7,7,0) 100%);
+  background: -webkit-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
+  background: linear-gradient(135deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
 `
-
-const PPDThumb = styled(Thumbnail)`
-  background : -moz-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  background : -webkit-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  background : -webkit-gradient(radial,108.08% 44.47% ,3.82 , 108.08% 44.47%, 744.92 ,color-stop(0.0051,rgba(235, 51, 73, 1) ),color-stop(1,rgba(244, 92, 67, 1) ));
-  background : -o-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  background : -ms-radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Stlye=2);"
-  background : radial-gradient(108.08% 44.47%, circle farthest-corner, rgba(235, 51, 73, 1) 0.51%, rgba(244, 92, 67, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Stlye=2);
+const Line = styled.hr`
+  width: 2em;
+  margin-top: 0.2em;
 `
 
-const Logo = styled.img`
-  width: 5em;
+const SubText = styled.span`
+  text-transform: uppercase;
+  font-size: 0.6em;
+  letter-spacing: ${spacing.large};
 `
 
-export const FODE = (props) => {
-  console.log(props)
+export const FodeThumbnail = ({ thumb, onClickToggle }) => {
   return (
-    <FodeThumb id='fode' onClick={props.toggleMain}>
-    <Logo src={fode} alt='Fly or Die Logo' />
-    </FodeThumb>
+    <Wrapper>
+      <InfoWrapper id='fode' onClick={onClickToggle}>
+        House of FODE
+        <Line />
+        <SubText>Ecommerce</SubText>
+      </InfoWrapper>
+      <Img fluid={thumb} />
+    </Wrapper>
   )
 }
 
 
-export const LML = () => {
+export const LMLThumbnail = ({ thumb, onClickToggle }) => {
   return (
-    <LMLThumb>
-    <img src={lml} alt='Like-Minded-Living Logo' />
-    </LMLThumb>
+    <Wrapper>
+      <InfoWrapper id='lml' onClick={onClickToggle}>
+        Like-Minded Living
+        <Line />
+        <SubText>Property</SubText>
+      </InfoWrapper>
+      <Img fluid={thumb} />
+    </Wrapper>
   )
 }
 
-export const PPD = () => {
+export const PPDThumbnail = ({ thumb, onClickToggle }) => {
   return (
-    <PPDThumb>
-    <img src={ppd} alt='Paphos Painter Decorators Logo' />
-    </PPDThumb>
+    <Wrapper>
+      <InfoWrapper id='ppd' onClick={onClickToggle}>
+        Paphos Painter Decorators
+        <Line />
+        <SubText>Trades</SubText>
+      </InfoWrapper>
+      <Img fluid={thumb} />
+    </Wrapper>
+  )
+}
+
+export const LKThumbnail = ({ thumb, onClickToggle }) => {
+  return (
+    <Wrapper>
+      <InfoWrapper id='lk' onClick={onClickToggle}>
+        Louise Kelly Salon
+        <Line />
+        <SubText>Beauty</SubText>
+      </InfoWrapper>
+      <Img fluid={thumb} />
+    </Wrapper>
+  )
+}
+
+export const SCCThumbnail = ({ thumb, onClickToggle }) => {
+  return (
+    <Wrapper>
+      <InfoWrapper id='scc' onClick={onClickToggle}>
+        South Coast Coaches
+        <Line />
+        <SubText>Travel</SubText>
+      </InfoWrapper>
+      <Img fluid={thumb} />
+    </Wrapper>
+  )
+}
+
+export const ForagerThumbnail = ({ thumb, onClickToggle }) => {
+  return (
+    <Wrapper>
+      <InfoWrapper id='forager' onClick={onClickToggle}>
+        Forager
+        <Line />
+        <SubText>Web Application</SubText>
+      </InfoWrapper>
+      <Img fluid={thumb} />
+    </Wrapper>
   )
 }

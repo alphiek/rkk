@@ -1,9 +1,9 @@
 import React from "react"
-import PortfolioComponent from '../components/Portfolio/PortfolioComponent'
+import PortfolioContainer from '../components/Portfolio/PortfolioContainer'
 
 
 const PortfolioPage = () => (
-  <PortfolioComponent />
+  <PortfolioContainer />
 )
 
 export default PortfolioPage
