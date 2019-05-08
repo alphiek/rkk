@@ -5,7 +5,6 @@ import { color, font, weight, spacing } from './variables'
 import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
-  margin-top: 0.5em;
 `
 
 const LinkStyle = styled(Link)`
@@ -15,7 +14,7 @@ const LinkStyle = styled(Link)`
   letter-spacing: ${spacing.wide};
   color: ${color.secondary};
   text-transform: uppercase;
-  font-size: 0.5em;
+  font-size: 0.45em;
 @media only screen
     and (max-width: 1024px) {
       font-size: 0.8em;

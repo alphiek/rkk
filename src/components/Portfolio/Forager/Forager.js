@@ -1,52 +1,60 @@
 import React from 'react'
 import { PoseGroup } from 'react-pose'
 import { foragerData } from '../copy'
-import { LeftWrapper } from '../../Global/ServiceFlexWrapper'
+import { Services, ServiceList } from '../../Global/Shared'
 import {
   Wrapper,
   Title,
   DevTag,
   Description,
-  Services,
   ServiceWrapper,
-  ListWrapper,
-  Tech,
-  Built,
-  Line
-} from '../../Global/PortfolioShared'
+  InfoFlex,
+  InfoFlexChild,
+  ServiceFlexChild,
+  Link
+} from '../PortfolioShared'
 import DevelopmentIcon from '../DevelopmentIcon'
 import ForagerImage from './ForagerImage'
 
-const Forager = ({ forager }) => {
+const Forager = ({ forager, onClickToggle }) => {
   return (
     <PoseGroup>
      {
        forager && [
          foragerData.map(item =>
            <Wrapper key={item.key}>
-             <LeftWrapper style={{marginLeft: '2em', marginRight: '2em'}}>
-               <Title>{item.title}</Title>
-               <DevelopmentIcon />
-               <DevTag>In Development</DevTag>
-               <Description>
-                {item.description}
-               </Description>
-               <Line />
-               <Services>Services</Services>
-                <ServiceWrapper>
-                {item.services.map(service =>
-                  <Tech key={service}>{service}</Tech>
-                )}
-                </ServiceWrapper>
-                <Line />
-                <Built>Built with</Built>
-                <ListWrapper>
-                 {item.tech.map(tech =>
-                   <Tech key={tech}>{tech}</Tech>
-                 )}
-                </ListWrapper>
-            </LeftWrapper>
-           <ForagerImage />
+             <ForagerImage />
+             <InfoFlex>
+               <InfoFlexChild>
+                 <Title>{item.title}</Title>
+                 <DevelopmentIcon />
+                 <DevTag>In Development</DevTag>
+                 <Description>
+                  {item.description}
+                 </Description>
+                 <Link
+                  id='close'
+                  onClick={onClickToggle}>
+                  ---Back to Portfolio---
+                </Link>
+                </InfoFlexChild>
+                <ServiceFlexChild>
+                  <Services>Services</Services>
+                  <ServiceWrapper>
+                  {item.services.map(service =>
+                    <ServiceList key={service}>{service}</ServiceList>
+                  )}
+                  </ServiceWrapper>
+                </ServiceFlexChild>
+                <ServiceFlexChild>
+                  <Services>Built with</Services>
+                    <ServiceWrapper>
+                       {item.tech.map(tech =>
+                         <ServiceList key={tech}>{tech}</ServiceList>
+                       )}
+                    </ServiceWrapper>
+                </ServiceFlexChild>
+              </InfoFlex>
           </Wrapper>
          )
        ]

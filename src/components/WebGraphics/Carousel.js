@@ -11,12 +11,12 @@ const Instruction = styled.p`
   margin-top: 2em;
   text-align: right;
   line-height: 100%;
-  font-family: ${font.heebo};
-  font-weight: ${weight.bold};
+  font-family: ${font.muli};
+  font-weight: ${weight.black};
   letter-spacing: ${spacing.wide};
   color: ${color.lightGrey};
   text-transform: uppercase;
-  font-size: 0.5em;
+  font-size: 0.45em;
   @media only screen
     and (min-width: 824px)
     and (max-width: 1024px) {

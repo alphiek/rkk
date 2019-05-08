@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GridContainer from './GridContainer'
 import Heading from './Heading'
 import PropTypes from 'prop-types'
-import { PortfolioPageWrapper } from '../Global/PortfolioShared'
+import { PortfolioPageWrapper } from './PortfolioShared'
 
 import MainContent from './MainContent'
 

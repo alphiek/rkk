@@ -9,20 +9,14 @@ export const PageWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
-@media only screen
-    and (max-width: 824px)
-    and (orientation: landscape) {
-    }
 `
 export const PageWrapperCenter = styled(PageWrapper)`
   align-items: center;
-@media only screen
-    and (max-width: 1024px) {
-    }
 `
 export const FlexContainer = styled(PageWrapper)`
   justify-content: center;
   align-items: center;
+
 @media only screen
     and (max-width: 1024px) {
       flex-direction: column-reverse;
@@ -39,6 +33,7 @@ export const LeftWrapper = styled.div`
   width: 40%;
   margin-left: 7%;
   padding-right: 3em;
+  padding: 3em;
 @media only screen
     and (max-width: 1024px) {
       height: 50%;

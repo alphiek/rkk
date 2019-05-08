@@ -8,42 +8,54 @@ import PPD from './PPD/PPD'
 import SCC from './SCC/SCC'
 
 
-const MainContent = ({ mainContent }) => {
+const MainContent = ({ mainContent, onClickToggle }) => {
   return (
     <>
     {
      mainContent.fode ?
-       <FODE fode={mainContent.fode}/>
+       <FODE
+        fode={mainContent.fode}
+        onClickToggle={onClickToggle}/>
        :
        null
     }
     {
       mainContent.forager ?
-      <Forager forager={mainContent.forager} />
+      <Forager
+       forager={mainContent.forager}
+       onClickToggle={onClickToggle} />
       :
       null
     }
     {
       mainContent.lk ?
-      <LK lk={mainContent.lk} />
+      <LK
+        lk={mainContent.lk}
+        onClickToggle={onClickToggle} />
       :
       null
     }
     {
       mainContent.lml ?
-      <LML lml={mainContent.lml} />
+      <LML
+        lml={mainContent.lml}
+        onClickToggle={onClickToggle} />
       :
       null
     }
     {
       mainContent.ppd ?
-      <PPD ppd={mainContent.ppd} />
+      <PPD
+        ppd={mainContent.ppd}
+        onClickToggle={onClickToggle} />
       :
       null
     }
     {
       mainContent.scc ?
-      <SCC scc={mainContent.scc} />
+      <SCC
+        scc={mainContent.scc}
+        onClickToggle={onClickToggle} />
       :
       null
     }

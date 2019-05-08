@@ -8,7 +8,7 @@ export const HeadingText = styled.h1`
   line-height: 105%;
   color: ${color.primary};
   font-family: ${font.muli};
-  font-weight: ${weight.bold};
+  font-weight: ${weight.black};
   font-size: 1.6em;
   letter-spacing: ${spacing.narrow};
 
@@ -18,11 +18,35 @@ export const HeadingText = styled.h1`
     font-size: 2.5em;
   }
 `
+
+export const Services = styled.h2`
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-style: italic;
+  color: ${color.grey};
+  font-size: 0.55em;
+  letter-spacing: ${spacing.large};
+  font-family: ${font.libre};
+`
+
+export const ServiceList = styled.li`
+  color: ${color.lightGrey};
+  font-family: ${font.muli};
+  font-weight: ${weight.black};
+  font-size: 0.45em;
+  letter-spacing: ${spacing.large};
+  text-transform: uppercase;
+  line-height: 130%;
+  padding: 0.3em;
+  list-style: none;
+`
+
 export const BodyText = styled.p`
   line-height: 135%;
+  padding-bottom: 1em;
   color: ${color.body};
   font-weight: ${weight.light};
-  font-size: 0.65em;
+  font-size: 0.55em;
   letter-spacing: ${spacing.small};
 @media only screen
     and (max-width: 1024px)

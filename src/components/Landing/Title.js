@@ -39,7 +39,7 @@ const TitleText = styled.h1`
   margin-top: 0.5em;
   color: ${color.primary};
   font-family: ${font.muli};
-  font-weight: ${weight.extraBold};
+  font-weight: ${weight.black};
   font-size: 2.2em;
   letter-spacing: ${spacing.narrow};
 

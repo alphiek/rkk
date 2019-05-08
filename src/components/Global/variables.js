@@ -21,6 +21,7 @@ export const weight = {
 export const font = {
   heebo: 'Heebo, Tahoma, sans-serif',
   muli: 'Muli, Helvetica, sans-serif',
+  libre: 'Libre baskerville'
 }
 
 export const spacing = {

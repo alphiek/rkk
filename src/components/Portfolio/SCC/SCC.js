@@ -1,51 +1,61 @@
 import React from 'react'
 import { PoseGroup } from 'react-pose'
 import { sccData } from '../copy'
-import { LeftWrapper } from '../../Global/ServiceFlexWrapper'
+import { Services, ServiceList } from '../../Global/Shared'
 import {
   Wrapper,
   Title,
   DevTag,
   Description,
-  Services,
   ServiceWrapper,
-  ListWrapper,
-  Tech,
-  Built,
-  Line
-} from '../../Global/PortfolioShared'
+  InfoFlex,
+  InfoFlexChild,
+  ServiceFlexChild,
+  Link
+} from '../PortfolioShared'
 import DevelopmentIcon from '../DevelopmentIcon'
 import SCCImage from './SCCImage'
 
-const SCC = ({ scc }) => {
+const SCC = ({ scc, onClickToggle }) => {
   return (
     <PoseGroup>
      {
        scc && [
         sccData.map(item =>
-           <Wrapper key={item.key}>
-             <LeftWrapper style={{marginLeft: '2em', marginRight: '2em'}}>
-               <Title>{item.title}</Title>
-               <Description>
-                {item.description}
-               </Description>
-               <Line />
-               <Services>Services</Services>
-                <ServiceWrapper>
-                {item.services.map(service =>
-                  <Tech key={service}>{service}</Tech>
-                )}
-                </ServiceWrapper>
-                <Line />
-                <Built>Built with</Built>
-                <ListWrapper>
-                 {item.tech.map(tech =>
-                   <Tech key={tech}>{tech}</Tech>
+          <Wrapper key={item.key}>
+            <SCCImage />
+            <InfoFlex>
+              <InfoFlexChild>
+                <Title>{item.title}</Title>
+                <DevelopmentIcon />
+                <DevTag>In Development</DevTag>
+                <Description>
+                 {item.description}
+                </Description>
+                <Link
+                 id='close'
+                 onClick={onClickToggle}>
+                 ---Back to Portfolio---
+               </Link>
+               </InfoFlexChild>
+               <ServiceFlexChild>
+                 <Services>Services</Services>
+                 <ServiceWrapper>
+                 {item.services.map(service =>
+                   <ServiceList key={service}>{service}</ServiceList>
                  )}
-                </ListWrapper>
-            </LeftWrapper>
-           <SCCImage />
-          </Wrapper>
+                 </ServiceWrapper>
+               </ServiceFlexChild>
+               <ServiceFlexChild>
+                 <Services>Built with</Services>
+                   <ServiceWrapper>
+                      {item.tech.map(tech =>
+                        <ServiceList key={tech}>{tech}</ServiceList>
+                      )}
+                   </ServiceWrapper>
+               </ServiceFlexChild>
+             </InfoFlex>
+         </Wrapper>
          )
        ]
      }
