@@ -20,7 +20,7 @@ const TopImage = styled(MainImage)`
   z-index: 5;
   width: 13vw;
 `
-const FodeImage = ({data}) => {
+const LKImage = ({data}) => {
   return (
     <RightWrapper>
       <Fade right delay={1200}>
@@ -36,7 +36,7 @@ const FodeImage = ({data}) => {
 export default () => (
   <StaticQuery
     query={graphql`
-      query Fode {
+      query LK {
         imageOne: file(relativePath: { eq: "FODE/holding.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
@@ -53,7 +53,7 @@ export default () => (
       }
     }
     `}
-    render={data => <FodeImage data={data} />
+    render={data => <LKImage data={data} />
   }
   />
 )

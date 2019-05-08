@@ -1,58 +1,55 @@
 import React from 'react'
+import { PoseGroup } from 'react-pose'
+import { ppdData } from '../copy'
+import { LeftWrapper } from '../../Global/ServiceFlexWrapper'
 import {
-  TextContainer,
-  ListWrapper,
   Wrapper,
-  InfoFlex,
   Title,
-  Tech,
+  DevTag,
   Description,
-  ServiceWrapper
+  Services,
+  ServiceWrapper,
+  ListWrapper,
+  Tech,
+  Built,
+  Line
 } from '../../Global/PortfolioShared'
-import FodeImage from '../FODE/FodeImage'
+import DevelopmentIcon from '../DevelopmentIcon'
+import PPDImage from './PPDImage'
 
-const tech = [
-  'Webflow',
-  'HTML',
-  'CSS',
-  'jQuery',
-
-]
-
-const services = [
-  'Website Design',
-  'Branding',
-  'Blog',
-  'Ghost Writing',
-  'Social Graphics',
-  'Web Graphics',
-  'Mobile Optimisation',
-  'SEO'
-]
-
-const PPD = () => {
-  const list = tech.map(item => <Tech key={item}>{item}</Tech>)
-  const serviceList = services.map(service => <Tech key={service}>{service}</Tech>)
+const PPD = ({ ppd }) => {
   return (
-    <Wrapper>
-    <TextContainer>
-    <Title>Paphos Painter Decorators</Title>
-      <InfoFlex>
-        <ListWrapper>
-          {list}
-        </ListWrapper>
-        <Description>
-          This design is fucking brilliant. Never, never assume that what you have achieved is fucking good enough.
-          Remember it’s called the creative process, it’s not the creative fucking moment. Use your fucking hands.
-          Think about all the fucking possibilities. Why are you fucking reading all of this? Get back to work.
-       </Description>
-      </InfoFlex>
-      <ServiceWrapper>
-        {serviceList}
-      </ServiceWrapper>
-    </TextContainer>
-    <FodeImage />
-    </Wrapper>
+    <PoseGroup>
+     {
+       ppd && [
+        ppdData.map(item =>
+           <Wrapper key={item.key}>
+             <LeftWrapper style={{marginLeft: '2em', marginRight: '2em'}}>
+               <Title>{item.title}</Title>
+               <Description>
+                {item.description}
+               </Description>
+               <Line />
+               <Services>Services</Services>
+                <ServiceWrapper>
+                {item.services.map(service =>
+                  <Tech key={service}>{service}</Tech>
+                )}
+                </ServiceWrapper>
+                <Line />
+                <Built>Built with</Built>
+                <ListWrapper>
+                 {item.tech.map(tech =>
+                   <Tech key={tech}>{tech}</Tech>
+                 )}
+                </ListWrapper>
+            </LeftWrapper>
+           <PPDImage />
+          </Wrapper>
+         )
+       ]
+     }
+     </PoseGroup>
   )
 }
 

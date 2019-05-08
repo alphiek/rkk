@@ -1,6 +1,6 @@
 import React from 'react'
 import { PoseGroup } from 'react-pose'
-import { lmlData } from '../copy'
+import { foragerData } from '../copy'
 import { LeftWrapper } from '../../Global/ServiceFlexWrapper'
 import {
   Wrapper,
@@ -15,17 +15,19 @@ import {
   Line
 } from '../../Global/PortfolioShared'
 import DevelopmentIcon from '../DevelopmentIcon'
-import LMLImage from './LMLImage'
+import ForagerImage from './ForagerImage'
 
-const LML = ({ lml }) => {
+const Forager = ({ forager }) => {
   return (
     <PoseGroup>
      {
-       lml && [
-         lmlData.map(item =>
+       forager && [
+         foragerData.map(item =>
            <Wrapper key={item.key}>
              <LeftWrapper style={{marginLeft: '2em', marginRight: '2em'}}>
                <Title>{item.title}</Title>
+               <DevelopmentIcon />
+               <DevTag>In Development</DevTag>
                <Description>
                 {item.description}
                </Description>
@@ -44,7 +46,7 @@ const LML = ({ lml }) => {
                  )}
                 </ListWrapper>
             </LeftWrapper>
-           <LMLImage />
+           <ForagerImage />
           </Wrapper>
          )
        ]
@@ -53,4 +55,4 @@ const LML = ({ lml }) => {
   )
 }
 
-export default LML
+export default Forager

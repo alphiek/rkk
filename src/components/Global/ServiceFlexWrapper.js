@@ -20,7 +20,7 @@ export const PageWrapperCenter = styled(PageWrapper)`
     and (max-width: 1024px) {
     }
 `
-const FlexContainer = styled(PageWrapper)`
+export const FlexContainer = styled(PageWrapper)`
   justify-content: center;
   align-items: center;
 @media only screen

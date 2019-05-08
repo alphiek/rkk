@@ -1,8 +1,43 @@
 import styled from 'styled-components'
 import { color, font, weight, spacing } from './variables'
-import { BodyText, FullWidthWrapper } from './Shared'
+import {FullWidthWrapper, BodyText } from './Shared'
 import { PageWrapper } from './ServiceFlexWrapper'
+import { PosedWrapper } from './PortfolioPosedShared'
 
+
+export const Services = styled.h3`
+margin-top: 1em;
+margin-bottom: 0.2em;
+text-transform: uppercase;
+color: ${color.grey};
+font-size: 0.60em;
+`
+export const Built = styled.h4`
+margin-top: 1em;
+margin-bottom: 0.2em;
+text-transform: uppercase;
+color: ${color.grey};
+font-size: 0.60em;
+`
+export const Line = styled.hr`
+  width: 10%;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  height: 0.2em;
+  background: ${color.secondary};
+  border: none;
+`
+export const DevTag = styled.p`
+  margin-bottom: 0.2em;
+  text-transform: uppercase;
+  color: ${color.grey};
+  font-size: 0.67em;
+`
+export const Description = styled(BodyText)`
+  margin-left: 1em;
+  padding-top: 0.5em;
+  font-size: 0.65em;
+`
 
 export const PortfolioWrapper = styled(FullWidthWrapper)`
   margin-top: 8%;
@@ -23,39 +58,35 @@ export const PortfolioPageWrapper = styled(PageWrapper)`
   padding-bottom: 3em;
 `
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(PosedWrapper)`
  position: relative;
  display: flex;
+ align-items: center;
+ justify-content: center;
  width: 100%;
- height: 30%;
- margin-bottom: 5em;
- margin-top: 1em;
+ height: 100vh;
 `
-export const TextContainer = styled.div`
- width: 45%;
-`
-export const InfoFlex = styled.div`
- display: flex;
-`
+
 export const ListWrapper = styled.div`
-  padding-top: 1.2em;
-  padding-right: 1.2em;
-  width: 10em;
+  margin-left: 0.5em;
+  padding: 0.5em;
+  width: 80%;
+
 `
 export const ServiceWrapper = styled.div`
-  padding-top: 1.2em;
-  border-top: 0.2em solid ${color.secondary};
-  width: 49%;
-  margin-left: 2em;
+  padding: 0.5em;
+  margin-left: 0.5em;
+  width: 80%;
 `
 export const Title = styled.h2`
   border-bottom: 0.15em solid ${color.secondary};
-  padding: 0.3em;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
   line-height: 105%;
   color: ${color.primary};
   font-family: ${font.muli};
   font-weight: ${weight.bold};
-  font-size: 1.4em;
+  font-size: 1.45em;
   letter-spacing: ${spacing.narrow};
   width: 10em;
 
@@ -64,23 +95,16 @@ export const Title = styled.h2`
   }
 `
 export const Tech = styled.p`
-  text-align: right;
   line-height: 135%;
   padding-bottom: 0.5em;
   font-family: ${font.heebo};
   font-weight: ${weight.extraBold};
   letter-spacing: ${spacing.wide};
-  color: ${color.lightGrey};
+  color: ${color.grey};
   text-transform: uppercase;
   font-size: 0.4em;
   width: 100%;
   @media (min-width: 824px) and (max-width: 1024px) {
     font-size: 0.7em;
   }
-`
-export const Description = styled(BodyText)`
-  font-size: 0.6em;
-  margin-right: 3em;
-  border-left: 0.3em solid ${color.secondary};
-  padding: 1.2em;
 `

@@ -1,6 +1,6 @@
 import React from 'react'
 import { PoseGroup } from 'react-pose'
-import { lmlData } from '../copy'
+import { sccData } from '../copy'
 import { LeftWrapper } from '../../Global/ServiceFlexWrapper'
 import {
   Wrapper,
@@ -15,14 +15,14 @@ import {
   Line
 } from '../../Global/PortfolioShared'
 import DevelopmentIcon from '../DevelopmentIcon'
-import LMLImage from './LMLImage'
+import SCCImage from './SCCImage'
 
-const LML = ({ lml }) => {
+const SCC = ({ scc }) => {
   return (
     <PoseGroup>
      {
-       lml && [
-         lmlData.map(item =>
+       scc && [
+        sccData.map(item =>
            <Wrapper key={item.key}>
              <LeftWrapper style={{marginLeft: '2em', marginRight: '2em'}}>
                <Title>{item.title}</Title>
@@ -44,7 +44,7 @@ const LML = ({ lml }) => {
                  )}
                 </ListWrapper>
             </LeftWrapper>
-           <LMLImage />
+           <SCCImage />
           </Wrapper>
          )
        ]
@@ -53,4 +53,4 @@ const LML = ({ lml }) => {
   )
 }
 
-export default LML
+export default SCC
