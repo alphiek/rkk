@@ -12,6 +12,7 @@ html {
   box-sizing: border-box;
   overflow-y: scroll;
   user-select: none;
+  height: 100%;
   background-color: #ffffff;
   @media (max-width: 991px) {
   font-size: calc(0.6em + 1.2vw);
@@ -44,6 +45,8 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
   background-color: #ffffff;
+  position: relative;
+  min-height:100vh;
 }
 
 div {
