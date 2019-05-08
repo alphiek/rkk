@@ -6,6 +6,7 @@ export const MenuOuter = styled.nav`
   width: 28%;
   @media only screen and (max-width: 1024px){
     width: 100%;
+    height: 80vh;
   }
 `
 export const MenuLinksWrapper = styled.div`

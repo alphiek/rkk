@@ -7,10 +7,12 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(4, 1fr);
+  padding: 17%;
 `
 
 const Logo = styled.img`
   width: 4em;
+  padding: 0.4em;
 `
 
 const SkillsGrid = () => {

@@ -28,6 +28,12 @@ const ListFlex = styled.div`
       font-size:1.5em;
 }
 @media only screen
+    and (max-width: 1024px)
+    and (orientation: landscape) {
+      margin-left: 2em;
+      font-size:1em;
+}
+@media only screen
     and (max-width: 823px) {
       margin-left:0;
     }

@@ -5,7 +5,7 @@ import { color } from './variables'
 import PropTypes from 'prop-types'
 
 const Wrapper = styled(a.div)`
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
