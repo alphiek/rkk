@@ -8,7 +8,6 @@ import PropTypes from 'prop-types'
 export const PageWrapper = styled.div`
   display: flex;
   width: 100%;
-  height: 100vh;
 `
 export const PageWrapperCenter = styled(PageWrapper)`
   align-items: center;
@@ -23,9 +22,20 @@ export const FlexContainer = styled(PageWrapper)`
       justify-content: flex-end;
     }
 @media only screen
-    and (max-width: 824px)
+    and (max-width: 1024px)
     and (orientation: landscape) {
       flex-direction: row;
+    }
+@media only screen
+    and (max-width: 800px)
+    and (orientation: landscape) {
+      flex-direction: column-reverse;
+    }
+@media only screen
+    and (max-width: 823px)
+    and (orientation: landscape){
+      margin-top: 5em;
+      margin-bottom: 5em;
     }
 `
 
@@ -37,7 +47,7 @@ export const LeftWrapper = styled.div`
 @media only screen
     and (max-width: 1024px) {
       height: 50%;
-      width: 70%;
+      width: 60%;
     }
 @media only screen
     and (max-width: 824px)
@@ -55,12 +65,10 @@ export const LeftWrapper = styled.div`
       padding-right: 2em;
     }
 @media only screen
-    and (max-width: 768px)
+    and (max-width: 800px)
     and (orientation: landscape) {
-      width: 72%;
-      margin-left: 11%;
-      margin-right: 0;
-      padding-right: 2em;
+      height: 50%;
+      width: 70%;
     }
 `
 export const RightWrapper = styled.div`
@@ -70,6 +78,7 @@ export const RightWrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 45vh;
       height: 50%;
       width: 100%;
     }
@@ -96,6 +105,13 @@ export const RightWrapper = styled.div`
     and (max-height: 824px)
     and (orientation: portrait) {
       height: 40%;
+    }
+@media only screen
+    and (max-width: 800px)
+    and (orientation: landscape) {
+      height: 50%;
+      width: 60%;
+      margin-bottom: 10%;
     }
 
 `

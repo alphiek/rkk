@@ -42,26 +42,35 @@ const TitleText = styled.h1`
   font-weight: ${weight.black};
   font-size: 2.2em;
   letter-spacing: ${spacing.narrow};
+  @media only screen
+      and (max-height: 1440px)
+      and (max-width: 960px) {
+        font-size: 3em;
+      }
 
   @media only screen
-      and (min-width: 824px)
-      and (max-width: 1024px) {
-        font-size: 2.5em;
-  }
+      and (max-height: 1024px)
+      and (max-width: 768px) {
+        font-size: 2em;
+      }
   @media only screen
-  and (max-height: 1024px)
-  and (min-height:1000px)
-  and (max-width: 768px)
-  and (min-width: 700px)
+      and (max-width: 800px)
+      and (max-height: 960px) {
+        font-size: 2em;
+      }
+
+  @media only screen
+      and (max-width: 1024px)
+      and (min-height: 1024px)
       and (orientation: portrait) {
-        font-size: 2.5em;
-        width: 70%;
+        font-size: calc( 3.5em - 1vw);
       }
   @media only screen
       and (max-width: 824px)
-      and (orientation: portrait) {
-        font-size:1.9em;
-  }
+      and (max-height: 824px) {
+        font-size: 2em;
+      }
+
   @media only screen
       and (min-width: 961px)
       and (max-width: 1024px)
@@ -89,8 +98,6 @@ const TitleText = styled.h1`
         font-size:1.5em;
         width:70%;
       }
-
-
 `
 
 const Location = styled.h2`
@@ -102,13 +109,22 @@ const Location = styled.h2`
   color: ${color.secondary};
   text-transform: uppercase;
   font-size: 0.6em;
+  @media only screen
+      and (max-height: 1440px)
+      and (max-width: 1024px) {
+        font-size: 1.25em;
+      }
 
-  @media (min-width: 824px) and (max-width: 1024px) {
-    font-size: 0.7em;
+  @media only screen
+      and (max-width: 768px)
+      and (max-height: 1024px)
+      and (orientation: landscape) {
+        font-size: 1.25em;
   }
 
   @media only screen
       and (max-width: 824px)
+      and (max-height: 824px)
       and (orientation: portrait) {
         font-size:0.7em;
         letter-spacing:0.28em;
@@ -116,14 +132,9 @@ const Location = styled.h2`
         margin-top:1.4em;
   }
   @media only screen
-      and (max-height: 1024px)
-      and (min-height:1000px)
-      and (max-width: 768px)
-      and (min-width: 700px)
-      and (orientation: portrait) {
-        font-size: 0.8em;
-        letter-spacing: 0.21em;
-      }
+       and (max-width: 414px) {
+         font-size: 0.58em;
+ }
   @media only screen
       and (min-width: 961px)
       and (max-width: 1024px)
