@@ -18,7 +18,7 @@ const PlantStyles = styled.svg`
       and (max-width: 1024px)
       and (orientation: landscape) {
         width: 40vw;
-        bottom: 27%;
+        bottom: 15%;
   }
   @media only screen
       and (max-height: 600px)
@@ -31,6 +31,11 @@ const PlantStyles = styled.svg`
         width: 70vw;
         bottom: 25%;
   }
+  @media only screen
+      and (max-width: 824px)
+      and (orientation: landscape) {
+        top:1%;
+      }
   @media only screen
       and (min-width: 481px)
       and (max-width: 823px)

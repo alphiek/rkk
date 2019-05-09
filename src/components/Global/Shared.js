@@ -63,9 +63,10 @@ export const BodyText = styled.p`
       font-size:1.2em;
     }
 @media only screen
-    and (max-width: 824px)
+    and (max-width: 1024px)
     and (orientation: landscape) {
-      font-size: 0.7em;    }
+      font-size: 0.8em;
+    }
 `
 export const FullWidthWrapper = styled.div`
   width: 84%;
@@ -81,10 +82,12 @@ export const FullWidthWrapper = styled.div`
     and (max-width: 823px)
     and (orientation: portrait) {
       margin-top: 25%;
+      margin-bottom: 20%;
     }
 @media only screen
     and (max-width: 823px)
     and (orientation: landscape){
-      margin-top: 14em;
+      margin-top: 5em;
+      margin-bottom: 5em;    
     }
 `

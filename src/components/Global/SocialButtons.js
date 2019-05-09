@@ -16,6 +16,12 @@ const SocialWrapper = styled.div`
   display: flex;
   width: 55%;
   justify-content: space-between;
+@media only screen
+    and (max-width: 824px)
+    and (orientation:portrait) {
+      width: 100%;
+      padding: 10%;
+    }
 `
 const Icon = styled.img`
   width: auto;

@@ -9,6 +9,7 @@ const MainImage = styled(Img)`
   margin-top: -3em;
   width: 25em;
   height: auto;
+  position: relative;
   transform: perspective(2000px) rotateX(15deg) rotateY(-15deg) rotateZ(15deg);
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
   
@@ -18,6 +19,11 @@ const MainImage = styled(Img)`
       margin-left: auto;
       margin-right: auto;
       width: 50vw;
+    }
+@media only screen
+    and (orientation: landscape) {
+      width: 45vw;
+      right: 5%;
     }
 @media only screen
     and (max-width: 824px) {

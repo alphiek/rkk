@@ -8,6 +8,8 @@ import data from './data'
 import { seoData } from '../Copy/copy'
 import PropTypes from 'prop-types'
 
+
+
 const SeoOptComponent = ({tablet}) => {
   const services = data.map(item => <ServiceList>{item.name}</ServiceList>)
   return (
