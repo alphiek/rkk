@@ -17,15 +17,15 @@ export const AboutWrapper = styled.div`
   overflow: hidden;
 `
 export const AboutTitle = styled.h2`
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: ${color.secondary};
   font-family: ${font.muli};
-  font-weight: ${weight.extraBold};
+  font-weight: ${weight.black};
   letter-spacing: ${spacing.narrow};
 `
 export const AboutText = styled.p`
   margin-top: 2em;
-  font-size: 0.65em;
+  font-size: 0.5em;
   color: ${color.white};
   font-weight: ${weight.light};
   line-height: 130%;

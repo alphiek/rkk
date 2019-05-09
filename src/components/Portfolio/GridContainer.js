@@ -19,34 +19,41 @@ const Container = styled.div`
   grid-template-columns: repeat(3, 1fr);
 `
 
-const GridContainer = ({ images, onClickToggle }) => {
+const GridContainer = ({ images, onClickToggle, grid }) => {
   return(
-    <Container>
-      <FodeThumbnail
-        thumb={images.imageOne.childImageSharp.fluid}
+    <>
+    {
+      grid ?
+      <Container>
+        <FodeThumbnail
+          thumb={images.imageOne.childImageSharp.fluid}
+          onClickToggle={onClickToggle}
+        />
+        <LMLThumbnail
+          thumb={images.imageTwo.childImageSharp.fluid}
+          onClickToggle={onClickToggle}
+        />
+        <PPDThumbnail
+        thumb={images.imageThree.childImageSharp.fluid}
         onClickToggle={onClickToggle}
-      />
-      <LMLThumbnail
-        thumb={images.imageTwo.childImageSharp.fluid}
+        />
+        <LKThumbnail
+        thumb={images.imageFour.childImageSharp.fluid}
         onClickToggle={onClickToggle}
-      />
-      <PPDThumbnail
-      thumb={images.imageThree.childImageSharp.fluid}
-      onClickToggle={onClickToggle}
-      />
-      <LKThumbnail
-      thumb={images.imageFour.childImageSharp.fluid}
-      onClickToggle={onClickToggle}
-      />
-      <SCCThumbnail
-      thumb={images.imageFive.childImageSharp.fluid}
-      onClickToggle={onClickToggle}
-      />
-      <ForagerThumbnail
-      thumb={images.imageSix.childImageSharp.fluid}
-      onClickToggle={onClickToggle}
-      />
-    </Container>
+        />
+        <SCCThumbnail
+        thumb={images.imageFive.childImageSharp.fluid}
+        onClickToggle={onClickToggle}
+        />
+        <ForagerThumbnail
+        thumb={images.imageSix.childImageSharp.fluid}
+        onClickToggle={onClickToggle}
+        />
+      </Container>
+      :
+      null
+    }
+    </>
   )
 }
 
@@ -54,5 +61,6 @@ export default GridContainer
 
 GridContainer.propTypes = {
   images: PropTypes.object.isRequired,
-  onClickToggle: PropTypes.func.isRequired
+  onClickToggle: PropTypes.func.isRequired,
+  grid: PropTypes.bool.isRequired
 }

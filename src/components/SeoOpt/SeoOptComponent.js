@@ -1,67 +1,36 @@
 import React from 'react'
-import { HeadingText, BodyText } from '../Global/Shared'
+import { HeadingText, BodyText, ServiceList, Services } from '../Global/Shared'
 import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
 import PortfolioLink from '../Global/PortfolioLink'
 import SeoImage from './SeoImage'
 import Fade from 'react-reveal/Fade'
 import data from './data'
-import styled from 'styled-components'
-import { color, weight, spacing } from '../Global/variables'
-import Tick from './Tick'
+import { seoData } from '../Copy/copy'
 import PropTypes from 'prop-types'
 
-const Service = styled.li`
-  line-height: 135%;
-  color: ${color.body};
-  font-weight: ${weight.light};
-  font-size: 0.55em;
-  letter-spacing: ${spacing.small};
-`
-const ListFlex = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  padding: 0.2em;
-@media only screen
-    and (max-width: 1024px) {
-      margin-left: 2em;
-      font-size:1.5em;
-}
-@media only screen
-    and (max-width: 1024px)
-    and (orientation: landscape) {
-      margin-left: 2em;
-      font-size:1em;
-}
-@media only screen
-    and (max-width: 823px) {
-      margin-left:0;
-    }
-@media only screen
-    and (max-width: 824px)
-    and (orientation: landscape) {
-      font-size: 0.9em;
-    }
-`
+
 
 const SeoOptComponent = ({tablet}) => {
-  const services = data.map(item => <ListFlex key={item.key}><Tick/><Service>{item.name}</Service></ListFlex>)
+  const services = data.map(item => <ServiceList>{item.name}</ServiceList>)
   return (
     <ServiceFlexWrapper tablet={tablet}>
-      <LeftWrapper>
-        <Fade bottom delay={1000} opposite={true}>
-          <HeadingText>SEO Optimisation</HeadingText>
-        </Fade>
-        <Fade right cascade delay={1000}>
-          <BodyText>
-            Boost your website's organic search results and search engine visability with our technical SEO services:
-          </BodyText>
-          <ul style={{ marginTop: '0.5em' }}>
-          {services}
-          </ul>
-        </Fade>
-        <PortfolioLink />
-      </LeftWrapper>
+      {
+        seoData.map(seo =>
+          <LeftWrapper>
+            <Fade bottom delay={1000} opposite={true}>
+              <HeadingText>{seo.title}</HeadingText>
+            </Fade>
+            <Fade right cascade delay={1000}>
+              <BodyText>{seo.description}</BodyText>
+              <Services>Services</Services>
+              <ul style={{ marginBottom: '0.8em' }}>
+              {services}
+              </ul>
+            </Fade>
+            <PortfolioLink />
+          </LeftWrapper>
+        )
+      }
       <RightWrapper>
       <SeoImage />
       </RightWrapper>

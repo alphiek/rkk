@@ -3,10 +3,11 @@ import styled from 'styled-components'
 import { color, weight, spacing, font } from '../Global/variables'
 import SocialButtons from '../Global/SocialButtons'
 import Fade from 'react-reveal/Fade'
+import { contactData } from '../Copy/copy'
 
 const ContactText = styled.p`
   margin-top: 2em;
-  font-size: 0.65em;
+  font-size: 0.5em;
   color: ${color.body};
   font-weight: ${weight.light};
   line-height: 130%;
@@ -14,7 +15,7 @@ const ContactText = styled.p`
 
 const Address = styled.address`
   margin-top: 2em;
-  font-size: 0.65em;
+  font-size: 0.55em;
   color: ${color.body};
   font-weight: ${weight.light};
   line-height: 150%;
@@ -27,21 +28,25 @@ const Address = styled.address`
 const ContactDetails = () => {
   return (
     <div>
-    <Fade bottom cascade>
-       <ContactText>Have a project in mind? give us a call to discuss or click the link below to complete our contact form and we will be in touch</ContactText>
-       <Address>
-        Koili, Paphos
-        <br />
-        Cyprus
-        <br />
-        <a href='#www'>Email: info@rkkcreative.xyz</a>
-        <br />
-        <a href='#www'>UK: +44 64664 64564645</a>
-        <br />
-        <a href='#www'>CY: +357 6546545</a>
-       </Address>
-     </Fade>
-    <SocialButtons />
+      {
+        contactData.map(data =>
+          <Fade key={data.key} bottom cascade>
+             <ContactText>{data.description}</ContactText>
+             <Address>
+              {data.lineOne}
+              <br />
+              {data.lineTwo}
+              <br />
+              <a href='#www'>{data.email}</a>
+              <br />
+              <a href='#www'>{data.uk}</a>
+              <br />
+              <a href='#www'>{data.cy}</a>
+             </Address>
+           </Fade>
+            )
+           }
+        <SocialButtons />
     </div>
   )
 }

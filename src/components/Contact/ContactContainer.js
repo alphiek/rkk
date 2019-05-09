@@ -24,10 +24,10 @@ const ContactWrapper = styled.div`
   overflow: hidden;
 `
 const ContactTitle = styled.h2`
-  font-size: 1.8em;
+  font-size: 1.6em;
   color: ${color.primary};
   font-family: ${font.muli};
-  font-weight: ${weight.extraBold};
+  font-weight: ${weight.black};
   letter-spacing: ${spacing.narrow};
 `
 

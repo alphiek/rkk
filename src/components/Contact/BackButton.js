@@ -12,11 +12,11 @@ export const Back = styled.div`
 
 export const BackText = styled.p`
   line-height: 100%;
-  font-family: ${font.heebo};
+  font-family: ${font.libre};
+  font-style: italic;
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.wide};
   color: ${color.primary};
-  text-transform: uppercase;
   font-size: 0.5em;
 `
 

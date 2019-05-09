@@ -10,6 +10,7 @@ class PortfolioContainer extends Component {
     this.state = {
       images: [],
       isLoaded: false,
+      grid: true,
       mainContent: {
         fode: false,
         lml: false,
@@ -48,6 +49,7 @@ class PortfolioContainer extends Component {
 
     if (event.target.id === 'close') {
       this.setState({
+        grid: true,
         mainContent: {
           ...this.defaultStates
         }
@@ -57,9 +59,10 @@ class PortfolioContainer extends Component {
       })
     } else {
       this.setState({
+        grid: false,
         mainContent: {
           ...this.defaultStates,
-          [event.target.id]: true
+          [event.target.id]: true,
         }
       },
       () => {
@@ -77,6 +80,7 @@ class PortfolioContainer extends Component {
            images={this.state.images}
            onClickToggle={this.onClickToggle}
            mainContent={this.state.mainContent}
+           grid={this.state.grid}
           />
         </TransWrap>
           :

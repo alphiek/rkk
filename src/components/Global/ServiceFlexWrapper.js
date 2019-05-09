@@ -8,29 +8,14 @@ import PropTypes from 'prop-types'
 export const PageWrapper = styled.div`
   display: flex;
   width: 100%;
-  min-height: 100vh;
-@media only screen
-    and (max-height: 1440px)
-    and (max-width: 960px) {
-      min-height: 70vh;
-      padding-bottom: 15vh;
-    }
-@media only screen
-    and (max-width: 768px)
-    and (orientation: landscape) {
-      padding-bottom: 5vh;
-    }
-@media only screen
-    and (max-width: 412px) {
-      padding-bottom: 15vh;
-    }
 `
 export const PageWrapperCenter = styled(PageWrapper)`
   align-items: center;
 `
-const FlexContainer = styled(PageWrapper)`
+export const FlexContainer = styled(PageWrapper)`
   justify-content: center;
   align-items: center;
+
 @media only screen
     and (max-width: 1024px) {
       flex-direction: column-reverse;
@@ -58,6 +43,7 @@ export const LeftWrapper = styled.div`
   width: 40%;
   margin-left: 7%;
   padding-right: 3em;
+  padding: 3em;
 @media only screen
     and (max-width: 1024px) {
       height: 50%;

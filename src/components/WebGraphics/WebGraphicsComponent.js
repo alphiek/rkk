@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FullWidthWrapper, HeadingText, BodyText } from '../Global/Shared'
+import { FullWidthWrapper, HeadingText, BodyText, Services, ServiceList } from '../Global/Shared'
 import { PageWrapperCenter } from '../Global/ServiceFlexWrapper'
 import NumberNav from '../Global/NumberNav'
 import PortfolioLink from '../Global/PortfolioLink'
@@ -7,6 +7,7 @@ import BottomNav from '../Global/BottomNav'
 import Carousel from './Carousel'
 import { TransWrap } from '../Global/TransWrap'
 import Fade from 'react-reveal/Fade'
+import { graphicsData } from '../Copy/copy'
 
 
 class WebGraphicsComponent extends Component {
@@ -45,18 +46,23 @@ class WebGraphicsComponent extends Component {
       }
        <FullWidthWrapper>
          <Carousel />
-         <Fade bottom delay={1000}>
-         <HeadingText>Web Graphics</HeadingText>
-         </Fade>
-         <Fade bottom delay={1100}>
-           <BodyText>
-             Here at RKK we are passionate about high quality, eyecatching graphics whether for Social Media, Branding or Web use we
-             dedicated to making your imagery stand out from the crowd. Each design is fully optimised to ensure that they are perfect solution
-             for both web and mobile usage. From Social Media banners, custom vector illustrations, icons, image retouch to logo design our graphics
-             packages are always tailored to support your brand and requirements.
-           </BodyText>
-           </Fade>
-           <PortfolioLink />
+         {
+           graphicsData.map(data =>
+             <Fade bottom cascade delay={1000}>
+               <HeadingText>{data.title}</HeadingText>
+               <BodyText>{data.description}</BodyText>
+               <div style={{ paddingBottom: '0.5em'}}>
+               <Fade bottom cascade delay={1100}>
+               <Services>Services</Services>
+               {data.services.map(service =>
+                 <ServiceList>{service}</ServiceList>
+               )}
+               </Fade>
+               </div>
+             </Fade>
+           )
+         }
+         <PortfolioLink />
        </FullWidthWrapper>
        {!this.state.tablet ?
          <BottomNav />
