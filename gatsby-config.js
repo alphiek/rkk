@@ -2,6 +2,7 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://www.rkkcreative.xyz`,
     title: `RKK Creative`,
     description: `Paphos Freelance Web Design and Development`,
     author: `RKK Creative`,
@@ -38,7 +39,39 @@ module.exports = {
       },
     ],
   },
-  plugins: [
+
+   plugins: [
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.rkkcreative.xyz',
+        sitemap: 'https://www.rkkcreative.xyz/sitemap.xml',
+        resolveEnv: () => process.env.GATSBY_ENV,
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }]
+          },
+          production: {
+            policy: [{ userAgent: '*', allow: '/' }]
+          }
+        }
+      }
+    },
+    {
+      resolve: `gatsby-plugin-accessibilityjs`,
+      options: {
+        injectStyles: `
+          .accessibility-error {
+            border: 3px solid #f00;
+          }
+        `,
+        errorClassName: `accessibility-error`,
+        onError: (error) => {
+          console.log(error)
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
