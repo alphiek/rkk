@@ -59,6 +59,7 @@ export const lkData = [
       'React Spring',
       'Pose',
       'Styled Components',
+      'Instagram API'
     ],
     services: [
       'PWA',
