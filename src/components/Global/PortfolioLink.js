@@ -17,12 +17,12 @@ const LinkStyle = styled(Link)`
   font-size: 0.45em;
 @media only screen
     and (max-width: 1024px) {
-      font-size: 0.8em;
+      font-size: 0.6em;
 }
 @media only screen
     and ( max-width: 824px)
     and (max-height: 824px) {
-      font-size: 0.65em;
+      font-size: 0.8em;
       padding: 2em 0 1em 0;
     }
 @media only screen
@@ -38,7 +38,7 @@ const PortfolioLink = () => {
     <Wrapper>
       <LinkStyle
         exit={{ length: 0.5 }}
-        entry={{ delay: 0.6 }}
+        entry={{ delay: 0.2 }}
         to='/PortfolioPage/'
         partiallyActive={true}>View Portfolio ------------------</LinkStyle>
     </Wrapper>

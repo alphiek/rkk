@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   width: 50vw;
   height: 100vh;
   cursor: pointer;
+  padding-top: 5%;
 @media only screen
     and (max-width: 1024px) {
       height: 100%;

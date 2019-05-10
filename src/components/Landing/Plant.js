@@ -9,46 +9,17 @@ const PlantStyles = styled.svg`
   width: 18vw;
   fill: ${color.secondary};
 
-  @media only screen and (min-width: 825px) and (max-width: 1024px) {
-    width: 60vw;
-    bottom: 25%;
+  @media only screen
+      and (max-width: 1024px) {
+        width: 60vh;
+        max-width: 90vw;
+        bottom: 27%;
   }
+
   @media only screen
-      and (min-width: 825px)
-      and (max-width: 1024px)
+      and (max-height: 411px)
       and (orientation: landscape) {
-        width: 40vw;
-        bottom: 15%;
-  }
-  @media only screen
-      and (max-height: 600px)
-      and (max-width: 1024px)
-      and (orientation: landscape) {
-        bottom: 1%;
-  }
-  @media only screen
-      and (max-width: 824px) {
-        width: 70vw;
-        bottom: 25%;
-  }
-  @media only screen
-      and (max-width: 824px)
-      and (orientation: landscape) {
-        top:1%;
-      }
-  @media only screen
-      and (min-width: 481px)
-      and (max-width: 823px)
-      and (orientation: landscape) {
-        width: 35vw;
-        bottom: 2%;
-  }
-  @media only screen
-      and (max-width: 480px)
-      and (max-height: 360px)
-      and (orientation: landscape) {
-        width:50vw;
-        bottom:0;
+        top: 10%;
       }
 
 `
