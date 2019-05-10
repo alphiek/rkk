@@ -30,7 +30,7 @@ module.exports = {
         link: "/WebGraphicsPage"
       },
       {
-        name: "SEO Optimisation",
+        name: "SEO",
         link: "/SeoOptPage"
       },
       {

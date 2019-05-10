@@ -3,16 +3,22 @@ import SocialButtons from '../Global/SocialButtons'
 import MenuWrapper from './MenuWrapper'
 import PropTypes from 'prop-types'
 import { TabletLinks, MenuList } from './menuStyles'
+import Fade from 'react-reveal/Fade'
 
-const MenuWrapperTablet = (props) => {
+const MenuWrapperTablet = ({ tablet, links, toggleHidden, renderAbout, renderContact}) => {
   return (
-    <MenuWrapper links={props.links} toggleHidden={props.toggleHidden}>
+    <MenuWrapper
+       links={links}
+       toggleHidden={toggleHidden}
+       tablet={tablet}>
+      <Fade right cascade delay={100}>
       <MenuList>
-        <TabletLinks onClick={props.renderAbout}>About</TabletLinks>
+        <TabletLinks onClick={renderAbout}>About</TabletLinks>
       </MenuList>
       <MenuList>
-        <TabletLinks onClick={props.renderContact}>Contact</TabletLinks>
+        <TabletLinks onClick={renderContact}>Contact</TabletLinks>
       </MenuList>
+      </Fade>
       <SocialButtons />
     </MenuWrapper>
   )
@@ -24,5 +30,6 @@ MenuWrapperTablet.propTypes = {
   links: PropTypes.array.isRequired,
   renderAbout: PropTypes.func.isRequired,
   renderContact: PropTypes.func.isRequired,
-  toggleHidden: PropTypes.func.isRequired
+  toggleHidden: PropTypes.func.isRequired,
+  tablet: PropTypes.bool.isRequired
 }

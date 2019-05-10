@@ -3,6 +3,7 @@ import About from '../About/About'
 import { PageWrapper } from '../Global/Menu_FooterPageWrapper'
 import ContactContainer from '../Contact/ContactContainer'
 import MenuWrapper from './MenuWrapper'
+import MenuWrapperTablet from './MenuWrapperTablet'
 import PropTypes from 'prop-types'
 
 const MenuComponent = ({ toggleForm, compProps, toggleHidden}) => {
@@ -14,7 +15,18 @@ const MenuComponent = ({ toggleForm, compProps, toggleHidden}) => {
       toggleForm={toggleForm}
       tablet={compProps.tablet}
       />
-      <MenuWrapper links={compProps.links} toggleHidden={toggleHidden} />
+      {
+        !compProps.tablet ?
+        <MenuWrapper
+          links={compProps.links}
+          tablet={compProps.tablet}
+          toggleHidden={toggleHidden} />
+          :
+        <MenuWrapperTablet
+          links={compProps.links}
+          tablet={compProps.tablet}
+          toggleHidden={toggleHidden} />
+      }
     </PageWrapper>
   )
 }
@@ -27,6 +39,7 @@ MenuComponent.propTypes = {
     form: PropTypes.bool.isRequired,
     isHidden: PropTypes.bool.isRequired,
     links: PropTypes.array.isRequired,
+    tablet: PropTypes.bool.isRequired
   }).isRequired,
   toggleForm: PropTypes.func.isRequired,
   toggleHidden: PropTypes.func.isRequired

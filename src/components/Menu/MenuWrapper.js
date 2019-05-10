@@ -9,13 +9,13 @@ import {
   MenuLinksItem,
 } from './menuStyles'
 
-const MenuWrapper = ({toggleHidden, links, children}) => {
+const MenuWrapper = ({toggleHidden, links, children, tablet}) => {
   return (
     <MenuOuter>
       <MenuLinksWrapper>
-      <Fade right>
-        <MenuLinksTitle>Menu</MenuLinksTitle>
-      </Fade>
+          <Fade right>
+            <MenuLinksTitle>Menu</MenuLinksTitle>
+          </Fade>
         {
           links.map(link => (
             <Fade right cascade delay={100} key={link.name}>
