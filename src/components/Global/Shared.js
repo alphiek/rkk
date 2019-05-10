@@ -9,14 +9,8 @@ export const HeadingText = styled.h1`
   color: ${color.primary};
   font-family: ${font.muli};
   font-weight: ${weight.black};
-  font-size: 1.6em;
+  font-size: calc(1.4em + 1vw);
   letter-spacing: ${spacing.narrow};
-
-  @media only screen
-      and (min-width: 824px)
-      and (max-width: 1024px) {
-    font-size: 2.5em;
-  }
 `
 
 export const Services = styled.h2`
@@ -39,6 +33,11 @@ export const ServiceList = styled.li`
   line-height: 130%;
   padding: 0.3em;
   list-style: none;
+  @media only screen
+      and (max-width: 824px) {
+        font-size: 0.6em;
+        padding: 0.5em 0.3em;
+      }
 `
 
 export const BodyText = styled.p`
@@ -88,6 +87,6 @@ export const FullWidthWrapper = styled.div`
     and (max-width: 823px)
     and (orientation: landscape){
       margin-top: 5em;
-      margin-bottom: 5em;    
+      margin-bottom: 5em;
     }
 `

@@ -1,12 +1,12 @@
 import React from 'react'
-import Title from './Title'
+import MobileTitle from './MobileTitle'
 import { PageContainer } from './Containers'
 import Plant from './Plant'
 
-const MobileLanding = () => {
+const MobileLanding = ({ mobile }) => {
   return (
     <PageContainer>
-      <Title />
+      <MobileTitle />
       <Plant />
     </PageContainer>
   )

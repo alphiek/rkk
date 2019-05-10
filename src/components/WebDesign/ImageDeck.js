@@ -12,6 +12,7 @@ const Wrapper = styled.div`
   width: 50vw;
   height: 100vh;
   cursor: pointer;
+  padding-top: 5%;
 @media only screen
     and (max-width: 1024px) {
       height: 100%;
@@ -66,13 +67,13 @@ const ImageDeck = ({data}) => {
   ]
 
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
-const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5,y: -500 })
+const from = i => ({ x: 1000, y: i * -4, rot: 0, scale: 1.5})
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
   const [gone] = useState(() => new Set())
   const [props, set] = useSprings(cards.length, i => ({...to(i), from: from(i)}))
   const bind = useGesture(({ args: [index], down, delta: [xDelta], distance, direction: [xDir], velocity}) => {
-    const trigger = velocity > 0.05
+    const trigger = velocity > 0.1
     const dir = xDir < 0 ? -1 : 1
     if (!down && trigger) gone.add(index)
     set(i => {

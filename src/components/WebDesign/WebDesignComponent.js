@@ -13,7 +13,7 @@ const WebDesignComponent = ({tablet}) => {
     {
       webdesignData.map(data =>
         <LeftWrapper key={data.key}>
-          <Fade top >
+          <Fade top>
             <HeadingText>{data.title}</HeadingText>
           </Fade>
           <Fade top cascade>
