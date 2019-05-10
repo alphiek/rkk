@@ -58,20 +58,6 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-accessibilityjs`,
-      options: {
-        injectStyles: `
-          .accessibility-error {
-            border: 3px solid #f00;
-          }
-        `,
-        errorClassName: `accessibility-error`,
-        onError: (error) => {
-          console.log(error)
-        },
-      },
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

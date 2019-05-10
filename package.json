@@ -31,7 +31,7 @@
     "react-pose": "^4.0.8",
     "react-reveal": "^1.2.2",
     "react-spring": "^8.0.19",
-    "react-transition-group": "^4.0.0",
+    "react-transition-group": "^4.0.1",
     "react-use-gesture": "^5.0.0",
     "styled-components": "^4.2.0",
     "swiper": "^4.5.0",

@@ -72,6 +72,7 @@ export const LeftWrapper = styled.div`
     }
 `
 export const RightWrapper = styled.div`
+  position: relative;
   width: 60%;
 @media only screen
     and (max-width: 1024px) {

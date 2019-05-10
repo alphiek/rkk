@@ -66,13 +66,13 @@ const ImageDeck = ({data}) => {
   ]
 
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
-const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5,y: -500 })
+const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5, y: -500 })
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
   const [gone] = useState(() => new Set())
   const [props, set] = useSprings(cards.length, i => ({...to(i), from: from(i)}))
   const bind = useGesture(({ args: [index], down, delta: [xDelta], distance, direction: [xDir], velocity}) => {
-    const trigger = velocity > 0.05
+    const trigger = velocity > 1
     const dir = xDir < 0 ? -1 : 1
     if (!down && trigger) gone.add(index)
     set(i => {
@@ -108,21 +108,21 @@ export default () => (
         imageOne: file(relativePath: { eq: "WebDesign/LandspaceTheme.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageTwo: file(relativePath: { eq: "WebDesign/MditanoTheme.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageThree: file(relativePath: { eq: "WebDesign/SignatureLeaf.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }

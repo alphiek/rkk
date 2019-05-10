@@ -5,16 +5,16 @@ import ContactContainer from '../Contact/ContactContainer'
 import MenuWrapper from './MenuWrapper'
 import PropTypes from 'prop-types'
 
-const MenuComponent = (props) => {
+const MenuComponent = ({ toggleForm, compProps, toggleHidden}) => {
   return (
-    <PageWrapper>
+    <PageWrapper isHidden={compProps.isHidden}>
       <About />
       <ContactContainer
-      form={props.compProps.form}
-      toggleForm={props.toggleForm}
-      tablet={props.compProps.tablet}
+      form={compProps.form}
+      toggleForm={toggleForm}
+      tablet={compProps.tablet}
       />
-      <MenuWrapper links={props.compProps.links} toggleHidden={props.toggleHidden} />
+      <MenuWrapper links={compProps.links} toggleHidden={toggleHidden} />
     </PageWrapper>
   )
 }
