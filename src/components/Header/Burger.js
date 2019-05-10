@@ -40,13 +40,16 @@ const BottomLine = styled(TopLine)`
 
 const CloseBtn = styled.button`
   position: absolute;
-  top: 0.5em;
-  right: 0.5em;
+  top: 0;
+  right: 0.4em;
+  font-size: 2em;
+  border-bottom: 5px solid red;
+  line-height: 100%;
   background-color: transparent;
-  color: white;
+  color: ${color.secondary};
   border: none;
   cursor: pointer;
-  z-index: 6;
+  z-index: 1001;
 `
 
 
@@ -61,7 +64,7 @@ const Burger = ({isHidden, onClick}) => {
         <BottomLine />
       </BurgerMenu>
       :
-     <CloseBtn onClick={onClick}>Close</CloseBtn>
+     <CloseBtn onClick={onClick}>&times;</CloseBtn>
     }
     </>
   )

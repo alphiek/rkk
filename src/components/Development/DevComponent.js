@@ -14,10 +14,10 @@ const DevComponent = ({ tablet }) => {
     {
       devData.map(data =>
           <LeftWrapper key={data.key}>
-            <Fade bottom delay={1000} opposite={true}>
+            <Fade bottom delay={200} opposite={true}>
               <HeadingText>{data.title}</HeadingText>
             </Fade>
-            <Fade bottom cascade delay={1000}>
+            <Fade bottom cascade delay={200}>
               <BodyText>{data.description}</BodyText>
               <BodyText>{data.descriptionTwo}</BodyText>
             </Fade>
