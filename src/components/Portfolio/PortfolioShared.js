@@ -51,7 +51,7 @@ export const Link = styled.p`
   font-family: ${font.heebo};
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.wide};
-  color: ${color.secondary};
+  color: ${color.primary};
   text-transform: uppercase;
   font-size: 0.45em;
   @media only screen

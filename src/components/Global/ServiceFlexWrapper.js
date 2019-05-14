@@ -26,92 +26,49 @@ export const FlexContainer = styled(PageWrapper)`
       flex-direction: column-reverse;
       justify-content: flex-end;
     }
-@media only screen
-    and (max-width: 800px)
-    and (orientation: landscape) {
-      flex-direction: column-reverse;
-    }
-@media only screen
-    and (max-width: 823px)
-    and (orientation: landscape){
-      margin-top: 5em;
-      margin-bottom: 5em;
-    }
 `
 
 export const LeftWrapper = styled.div`
   width: 40%;
   margin-left: 7%;
-  padding-right: 3em;
-  padding: 3em;
+  padding: 0em 3em 3em 3em;
 @media only screen
     and (max-width: 1024px) {
       margin-left: 0;
-      padding-right: 0;
       height: 50%;
       width: 70%;
     }
 @media only screen
-    and (max-width: 824px)
-    and (max-height: 824px)
-    and (orientation: portrait) {
-      width: 90%;
-      margin-left: 20%;
+    and (max-width: 824px) {
+      padding: 1.5em
     }
 @media only screen
-    and (max-width: 823px)
-    and (orientation: landscape) {
-      width: 55%;
-      margin-left: 11%;
-      margin-right: 0;
-      padding-right: 2em;
-    }
-@media only screen
-    and (max-width: 800px)
-    and (orientation: landscape) {
-      height: 50%;
-      width: 70%;
-    }
+      and (max-width: 570px) {
+        width: 85%;
+        margin-top: 10%;
+      }
 `
 export const RightWrapper = styled.div`
   position: relative;
-  width: 60%;
+  width: 55%;
 @media only screen
     and (max-width: 1024px) {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 45vh;
+      min-height: 50vw;
       height: 50%;
+      width: 90%;
+      margin: 5% 0% 0% 0%;
+    }
+@media only screen
+    and (max-width: 824px) {
       width: 100%;
-      padding: 5%;
-      margin: 10% 0
     }
 @media only screen
-    and (max-width: 823px)
-    and (min-height: 1024px) {
-      width:80%;
-}
-@media only screen
-    and (max-width: 824px)
-    and (orientation: landscape) {
-      right:0;
-      width: 50%;
-    }
-@media only screen
-    and (min-height: 810px)
-    and (max-height: 824px)
-    and (orientation: portrait) {
-      height: 40%;
-    }
-@media only screen
-    and (max-width: 800px)
-    and (orientation: landscape) {
-      height: 50%;
-      width: 60%;
-      margin-bottom: 10%;
-    }
-
+      and (max-width: 570px) {
+        margin-top: 8%;
+      }
 `
 
 export const ServiceFlexWrapper = ({tablet, children}) => {

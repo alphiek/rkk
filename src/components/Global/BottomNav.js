@@ -29,14 +29,14 @@ const LinkStyle = styled(Link)`
 `
 
 const activeStyle = {
-  color: color.body,
+  color: color.darkLink,
   fontWeight: weight.black,
 };
 
 const BottomNav = () => {
   return (
     <Wrapper>
-    <Fade bottom cascade delay={1200}>
+    <Fade bottom cascade delay={200}>
      <NavContainer>
       <LinkStyle
         exit={{ length: 0.5 }}
