@@ -68,6 +68,13 @@ module.exports = {
     },
     'gatsby-plugin-transition-link',
     {
+    resolve: `gatsby-plugin-accessibilityjs`,
+    options: {
+      injectStyles: false,
+      errorClassName: false,
+      },
+    },
+    {
     resolve: `gatsby-plugin-canonical-urls`,
     options: {
       siteUrl: `https://www.rkkcreative.xyz`,

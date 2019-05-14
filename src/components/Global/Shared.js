@@ -17,17 +17,17 @@ export const Services = styled.h2`
   margin-top: 1em;
   margin-bottom: 1em;
   font-style: italic;
-  color: ${color.grey};
-  font-size: 0.55em;
+  color: ${color.primary};
+  font-size: 0.6em;
   letter-spacing: ${spacing.large};
   font-family: ${font.libre};
 `
 
 export const ServiceList = styled.li`
-  color: ${color.lightGrey};
+  color: ${color.darkLink};
   font-family: ${font.muli};
   font-weight: ${weight.black};
-  font-size: 0.45em;
+  font-size: 0.40em;
   letter-spacing: ${spacing.large};
   text-transform: uppercase;
   line-height: 130%;
@@ -44,7 +44,7 @@ export const BodyText = styled.p`
   line-height: 135%;
   padding-bottom: 1em;
   color: ${color.body};
-  font-weight: ${weight.light};
+  font-weight: ${weight.normal};
   font-size: 0.55em;
   letter-spacing: ${spacing.small};
 @media only screen

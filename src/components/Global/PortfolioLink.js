@@ -12,7 +12,7 @@ const LinkStyle = styled(Link)`
   font-family: ${font.heebo};
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.wide};
-  color: ${color.secondary};
+  color: ${color.primary};
   text-transform: uppercase;
   font-size: 0.45em;
 @media only screen
@@ -34,7 +34,7 @@ const LinkStyle = styled(Link)`
 
 const PortfolioLink = () => {
   return (
-    <Fade bottom delay={1200}>
+    <Fade bottom delay={200}>
     <Wrapper>
       <LinkStyle
         exit={{ length: 0.5 }}

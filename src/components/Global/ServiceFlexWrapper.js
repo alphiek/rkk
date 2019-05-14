@@ -56,7 +56,6 @@ export const LeftWrapper = styled.div`
     and (max-height: 824px)
     and (orientation: portrait) {
       width: 90%;
-      margin-left: 20%;
     }
 @media only screen
     and (max-width: 823px)
@@ -84,8 +83,8 @@ export const RightWrapper = styled.div`
       min-height: 45vh;
       height: 50%;
       width: 100%;
-      padding: 5%;
-      margin: 10% 0
+      padding: 10%;
+      margin: 5% 0;
     }
 @media only screen
     and (max-width: 823px)
