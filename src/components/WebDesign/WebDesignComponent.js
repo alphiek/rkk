@@ -7,7 +7,7 @@ import PortfolioLink from '../Global/PortfolioLink'
 import PropTypes from 'prop-types'
 import { webdesignData } from '../Copy/copy'
 
-const WebDesignComponent = ({tablet}) => {
+const WebDesignComponent = ({ tablet }) => {
   return (
     <ServiceFlexWrapper tablet={tablet}>
     {
@@ -15,9 +15,7 @@ const WebDesignComponent = ({tablet}) => {
         <LeftWrapper key={data.key}>
               <Fade bottom delay={200}>
               <HeadingText>{data.title}</HeadingText>
-
               <BodyText>{data.description}</BodyText>
-
               <div style={{ marginBottom: '0.8em'}}>
               <Services>Services</Services>
               {

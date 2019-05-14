@@ -1,8 +1,28 @@
 import React, { Component } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Burger from './Burger'
-import MenuComponent from '../Menu/MenuComponent'
+import posed, { PoseGroup } from 'react-pose';
+import MenuComponent from './MenuComponent'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { color } from '../Global/variables'
+
+
+const Wrapper = posed.div({
+  enter: { x: '0%' },
+  exit: { x: '-100%' }
+});
+
+const PoseWrapper = styled(Wrapper)`
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: ${color.primaryFull};
+  z-index: 5;
+`
 
 class Header extends Component {
   constructor(props){
@@ -49,15 +69,19 @@ class Header extends Component {
           <Burger
             onClick={this.toggleHidden}
             isHidden={this.state.isHidden}/>
+          <PoseGroup>
           {
-            !this.state.isHidden ?
+            !this.state.isHidden &&
+            <PoseWrapper key='Modal'>
               <MenuComponent
-              toggleForm={this.toggleForm}
-              compProps={this.state}
-              toggleHidden={this.toggleHidden}
-              /> :
-              null
+                key='Menu'
+                toggleForm={this.toggleForm}
+                compProps={this.state}
+                toggleHidden={this.toggleHidden}
+              />
+            </PoseWrapper >
           }
+          </PoseGroup>
         </>
       )
     }

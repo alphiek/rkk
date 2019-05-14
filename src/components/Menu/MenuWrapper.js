@@ -9,7 +9,7 @@ import {
   MenuLinksItem,
 } from './menuStyles'
 
-const MenuWrapper = ({toggleHidden, links, children, tablet}) => {
+const MenuWrapper = ({toggleHidden, links, children }) => {
   return (
     <MenuOuter>
       <MenuLinksWrapper>

@@ -35,7 +35,7 @@ export const ServiceList = styled.li`
   color: ${color.darkLink};
   font-family: ${font.muli};
   font-weight: ${weight.black};
-  font-size: 0.45em;
+  font-size: 0.40em;
   letter-spacing: ${spacing.large};
   text-transform: uppercase;
   line-height: 130%;

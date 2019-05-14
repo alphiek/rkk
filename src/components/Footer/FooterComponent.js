@@ -15,7 +15,7 @@ class FooterComponent extends Component {
       contact: false,
       about: false,
       form: false,
-      tablet: true,
+      tablet: true
     }
     this.toggleHidden = this.toggleHidden.bind(this)
     this.renderAbout = this.renderAbout.bind(this)

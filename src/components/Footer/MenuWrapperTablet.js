@@ -1,8 +1,8 @@
 import React from 'react'
 import SocialButtons from '../Global/SocialButtons'
-import MenuWrapper from './MenuWrapper'
+import MenuWrapper from '../Menu/MenuWrapper'
 import PropTypes from 'prop-types'
-import { TabletLinks, MenuList } from './menuStyles'
+import { TabletLinks, MenuList } from '../Menu/menuStyles'
 import Fade from 'react-reveal/Fade'
 
 const MenuWrapperTablet = ({ tablet, links, toggleHidden, renderAbout, renderContact}) => {
