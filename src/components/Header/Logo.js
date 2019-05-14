@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { color, font, weight } from '../Global/variables'
+import { LogoLink } from '../Global/nonTransitionLinks'
 
 const LogoWrapper = styled.div`
   height: 2.5em;
@@ -10,24 +10,18 @@ const LogoWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-`
-const LogoText = styled.p`
-  font-family: ${font.muli};
-  color: ${color.body};
-  font-size: 1em;
-  font-weight: ${weight.black};
-  border-bottom: 0.25em solid ${color.secondary};
-  line-height: 130%;
-  @media only screen
-      and (max-width: 1024px) {
-        font-size:0.9em;
-      }
+  z-index: 8;
 `
 
 const Logo = () => {
   return (
     <LogoWrapper>
-      <LogoText>RKK</LogoText>
+      <LogoLink
+        aria-label='Link to Home Page'
+        to='/'
+        partiallyActive={true}>
+        RKK
+      </LogoLink>
     </LogoWrapper>
   )
 }

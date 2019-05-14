@@ -12,16 +12,14 @@ const PlantStyles = styled.svg`
   @media only screen
       and (max-width: 1024px) {
         width: 60vh;
-        max-width: 90vw;
+        max-width: 85vw;
         bottom: 27%;
   }
-
   @media only screen
       and (max-height: 411px)
       and (orientation: landscape) {
         top: 10%;
       }
-
 `
 
 const Plant = () => {

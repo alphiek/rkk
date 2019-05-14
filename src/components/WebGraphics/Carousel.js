@@ -14,9 +14,10 @@ const Instruction = styled.p`
   font-family: ${font.muli};
   font-weight: ${weight.black};
   letter-spacing: ${spacing.wide};
-  color: ${color.lightGrey};
+  color: ${color.darkLink};
   text-transform: uppercase;
   font-size: 0.45em;
+  margin-bottom: 3em;
   @media only screen
     and (min-width: 824px)
     and (max-width: 1024px) {
@@ -60,27 +61,29 @@ class Carousel extends Component {
         const params = {
           slidesPerView: 4,
           spaceBetween: 30,
+          grabCursor: true,
           pagination: {
             el: '.swiper-pagination',
+            type: 'progressbar',
             clickable: true,
           },
           breakpoints: {
-            1024: {
+            1920: {
               slidesPerView: 4,
-              spaceBetween: 40
+              spaceBetween: 20
             },
-            768: {
-              slidesPerView: 3,
+            1024: {
+              slidesPerView: 2,
               spaceBetween: 30
             },
-            640: {
+            824: {
               slidesPerView: 2,
               spaceBetween: 20
             },
-            320: {
+            570: {
               slidesPerView: 1,
               spaceBetween: 10
-            }
+            },
           }
         }
         return (
@@ -89,18 +92,18 @@ class Carousel extends Component {
             this.state.loaded ?
             <div>
                 <Swiper {...params}>
-                  <Img fluid={this.state.items.imageOne.childImageSharp.fluid} />
                   <Img fluid={this.state.items.imageTwo.childImageSharp.fluid} />
                   <Img fluid={this.state.items.imageThree.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageFour.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageSix.childImageSharp.fluid} />
                   <Img fluid={this.state.items.imageSeven.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageFour.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageOne.childImageSharp.fluid} />
+                  <Img fluid={this.state.items.imageSix.childImageSharp.fluid} />
                   <Img fluid={this.state.items.imageEight.childImageSharp.fluid} />
                   <Img fluid={this.state.items.imageNine.childImageSharp.fluid} />
                   <Img fluid={this.state.items.imageTen.childImageSharp.fluid} />
                 </Swiper>
-                <Fade right delay={1200}>
-                <Instruction>-----Swipe to view recent work------</Instruction>
+                <Fade right>
+                <Instruction>SWIPABLE</Instruction>
                 </Fade>
               </div>
             :

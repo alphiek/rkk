@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { FullWidthWrapper, HeadingText, BodyText, Services, ServiceList } from '../Global/Shared'
+import { FullWidthWrapper, HeadingText } from '../Global/Shared'
+import { H2Services, ListItem, BodyText } from '../Global/textSizes'
 import { PageWrapperCenter } from '../Global/ServiceFlexWrapper'
 import NumberNav from '../Global/NumberNav'
 import PortfolioLink from '../Global/PortfolioLink'
@@ -38,26 +39,25 @@ class WebGraphicsComponent extends Component {
  render(){
    return(
      <TransWrap>
-     <Fade top duration={1000}>
      <PageWrapperCenter>
       {!this.state.tablet ?
         <NumberNav />
         : null
       }
        <FullWidthWrapper>
+       <Fade right delay={200}>
          <Carousel />
+        </Fade>
          {
            graphicsData.map(data =>
-             <Fade bottom cascade delay={1000}>
+             <Fade key={data.key} bottom cascade>
                <HeadingText>{data.title}</HeadingText>
                <BodyText>{data.description}</BodyText>
                <div style={{ paddingBottom: '0.5em'}}>
-               <Fade bottom cascade delay={1100}>
-               <Services>Services</Services>
-               {data.services.map(service =>
-                 <ServiceList>{service}</ServiceList>
-               )}
-               </Fade>
+                   <H2Services>Services</H2Services>
+                   {data.services.map(service =>
+                     <ListItem key={service}>{service}</ListItem>
+                   )}
                </div>
              </Fade>
            )
@@ -69,7 +69,6 @@ class WebGraphicsComponent extends Component {
          : null
        }
      </PageWrapperCenter >
-     </Fade>
    </TransWrap>
    )
  }

@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeadingText, BodyText, ServiceList, Services } from '../Global/Shared'
+import { HeadingText } from '../Global/Shared'
+import { H2Services, ListItem, BodyText } from '../Global/textSizes'
 import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
 import PortfolioLink from '../Global/PortfolioLink'
 import SeoImage from './SeoImage'
@@ -11,7 +12,7 @@ import PropTypes from 'prop-types'
 
 
 const SeoOptComponent = ({tablet}) => {
-  const services = data.map(item => <ServiceList>{item.name}</ServiceList>)
+  const services = data.map(item => <ListItem>{item.name}</ListItem>)
   return (
     <ServiceFlexWrapper tablet={tablet}>
       {
@@ -22,7 +23,7 @@ const SeoOptComponent = ({tablet}) => {
             </Fade>
             <Fade right cascade delay={1000}>
               <BodyText>{seo.description}</BodyText>
-              <Services>Services</Services>
+              <H2Services>Services</H2Services>
               <ul style={{ marginBottom: '0.8em' }}>
               {services}
               </ul>

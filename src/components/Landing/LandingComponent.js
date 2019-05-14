@@ -1,7 +1,6 @@
 import React from 'react'
-import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
-import { color, font, weight, spacing } from '../Global/variables'
+import { MainLink } from '../Global/textSizes'
 import { BlueContainerAnim, RedContainerAnim, PageContainer } from './Containers'
 import LampAnim from './LampAnim'
 import MouseAnim from './MouseAnim'
@@ -9,21 +8,11 @@ import Plant from './Plant'
 import Title from './Title'
 import Fade from 'react-reveal/Fade'
 
-
-const LandingLink = styled(Link)`
+const LandingLink = styled(MainLink)`
   position: absolute;
   z-index: 3;
-  text-transform: uppercase;
-  border: 0.2em solid ${color.secondary};
   padding: 0.6em 0.9em;
-  font-family: ${font.heebo};
-  color: ${color.primary};
-  font-size: 0.6em;
-  letter-spacing: ${spacing.wide};
-  font-weight: ${weight.extraBold};
-  line-height: 180%;
 `
-
 const Portfolio = styled(LandingLink)`
   top: 21vh;
   right: 23vw;
@@ -46,6 +35,7 @@ const LandingComponent = () => (
     </RedContainerAnim>
     <Fade delay={500} cascade>
       <Portfolio
+        aria-label="Link to Portfolio"
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/PortfolioPage'
@@ -55,6 +45,7 @@ const LandingComponent = () => (
     </Fade>
     <Fade delay={600} cascade>
       <Services
+        aria-label="Link to Services"
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/WebDesignPage'

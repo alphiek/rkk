@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
-import {FullWidthWrapper, BodyText } from '../Global/Shared'
+import {FullWidthWrapper } from '../Global/Shared'
 import { PageWrapper } from '../Global/ServiceFlexWrapper'
 import { PosedWrapper } from './PortfolioPosedShared'
 import Img from 'gatsby-image'
@@ -95,11 +95,7 @@ export const DevTag = styled.p`
   color: ${color.grey};
   font-size: 0.67em;
 `
-export const Description = styled(BodyText)`
-  margin-left: 1em;
-  padding-top: 0.5em;
-  padding-bottom: 0.8em;
-`
+
 export const Wrapper = styled(PosedWrapper)`
  position: relative;
  display: flex;
@@ -112,20 +108,4 @@ export const Wrapper = styled(PosedWrapper)`
 
 export const ServiceWrapper = styled.div`
   width: 80%;
-`
-export const Title = styled.h2`
-  border-bottom: 0.15em solid ${color.secondary};
-  padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
-  line-height: 105%;
-  color: ${color.primary};
-  font-family: ${font.muli};
-  font-weight: ${weight.black};
-  font-size: 1.45em;
-  letter-spacing: ${spacing.narrow};
-  width: 10em;
-
-  @media only screen (min-width: 824px) and (max-width: 1024px) {
-    font-size: 2.5em;
-  }
 `

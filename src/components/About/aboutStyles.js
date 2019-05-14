@@ -25,9 +25,9 @@ export const AboutTitle = styled.h2`
 `
 export const AboutText = styled.p`
   margin-top: 2em;
-  font-size: 0.5em;
+  font-size: 0.55em;
   color: ${color.white};
-  font-weight: ${weight.light};
+  font-weight: ${weight.normal};
   line-height: 130%;
 `
 export const Copyright = styled.p`

@@ -14,15 +14,6 @@ html {
   user-select: none;
   height: 100%;
   background-color: #ffffff;
-  @media (max-width: 1024px) {
-  font-size: calc(0.6em + 1.2vw);
-};
-  @media (max-width: 824px) {
-  font-size: calc(0.6em + 1.8vw);
-};
-  @media (max-width: 479px) {
-  font-size: calc(0.6em + 2.2vw);
-};
 }
 
 * {
@@ -99,16 +90,13 @@ p {
   text-rendering: optimizeLegibility;
 }
 
+
 ul {
   list-style-type: none;
   list-style-position: outside;
   list-style-image: none;
 }
 
-ol {
-  list-style-position: outside;
-  list-style-image: none;
-}
 
 input[type=checkbox]
 {

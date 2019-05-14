@@ -1,5 +1,6 @@
 import React from 'react'
-import { HeadingText, BodyText } from '../Global/Shared'
+import { HeadingText } from '../Global/Shared'
+import { BodyText } from '../Global/textSizes.js'
 import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
 import PortfolioLink from '../Global/PortfolioLink'
 import Skills from './Skills'

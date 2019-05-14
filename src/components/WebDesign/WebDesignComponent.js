@@ -1,5 +1,6 @@
 import React from 'react'
-import { BodyText, HeadingText, Services, ServiceList } from '../Global/Shared'
+import { HeadingText } from '../Global/Shared'
+import { H2Services, ListItem, BodyText } from '../Global/textSizes'
 import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
 import ImageDeck from './ImageDeck'
 import Fade from 'react-reveal/Fade'
@@ -17,10 +18,10 @@ const WebDesignComponent = ({ tablet }) => {
               <HeadingText>{data.title}</HeadingText>
               <BodyText>{data.description}</BodyText>
               <div style={{ marginBottom: '0.8em'}}>
-              <Services>Services</Services>
+              <H2Services>Services</H2Services>
               {
               data.services.map(service =>
-              <ServiceList key={service}>{service}</ServiceList>
+              <ListItem key={service}>{service}</ListItem>
               )
               }
               </div>

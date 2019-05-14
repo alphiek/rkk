@@ -7,9 +7,9 @@ import { contactData } from '../Copy/copy'
 
 const ContactText = styled.p`
   margin-top: 2em;
-  font-size: 0.5em;
+  font-size: 0.55em;
   color: ${color.body};
-  font-weight: ${weight.light};
+  font-weight: ${weight.normal};
   line-height: 130%;
 `
 

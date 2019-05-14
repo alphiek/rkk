@@ -46,7 +46,7 @@ export const MenuList = styled.li`
 `
 
 export const MenuLinksItem = styled(Link)`
-  font-size: 0.65em;
+  font-size: 0.7em;
   font-family: ${font.heebo};
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.wide};

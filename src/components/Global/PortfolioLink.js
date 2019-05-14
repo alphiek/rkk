@@ -1,39 +1,24 @@
 import React from 'react'
-import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
-import { color, font, weight, spacing } from './variables'
 import Fade from 'react-reveal/Fade'
+import { PortfolioLnk } from './textSizes'
 
 const Wrapper = styled.div`
 @media only screen
     and (max-width: 1024px) {
-      margin-top: 2.3em;
+      margin-top: 1em;
     }
-`
-
-const LinkStyle = styled(Link)`
-  line-height: 100%;
-  font-family: ${font.heebo};
-  font-weight: ${weight.bold};
-  letter-spacing: ${spacing.wide};
-  color: ${color.primary};
-  text-transform: uppercase;
-  font-size: 0.45em;
-@media only screen
-    and (max-width: 1024px) {
-      font-size: 0.7em;
-}
 `
 
 const PortfolioLink = () => {
   return (
     <Fade bottom delay={400}>
     <Wrapper>
-      <LinkStyle
+      <PortfolioLnk
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/PortfolioPage/'
-        partiallyActive={true}>View Portfolio -----------</LinkStyle>
+        partiallyActive={true}>View Portfolio -----------</PortfolioLnk>
     </Wrapper>
    </Fade>
   )
