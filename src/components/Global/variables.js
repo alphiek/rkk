@@ -6,7 +6,8 @@ export const color = {
   body: 'hsl(0, 0%, 20%)',
   white: '#ffffff',
   grey: '#808080',
-  lightGrey: '#AEAEAE'
+  lightGrey: '#AEAEAE',
+  darkLink: '#605280'
 }
 
 export const weight = {

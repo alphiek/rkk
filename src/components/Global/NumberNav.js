@@ -18,38 +18,30 @@ text-transform: uppercase;
 line-height: 100%;
 `
 const activeStyle = {
-  color: color.body,
+  color: color.darkLink,
   fontWeight: weight.black
 };
 
 const NumberNav = () => {
   return (
-    <Fade bottom cascade delay={1200}>
+    <Fade bottom cascade>
     <Wrapper>
       <LinkStyle
-        exit={{ length: 0.5 }}
-        entry={{ delay: 0.8 }}
         to='/WebDesignPage'
         partiallyActive={true}
         activeStyle={activeStyle}>01</LinkStyle>
       <hr/>
       <LinkStyle
-        exit={{ length: 0.5 }}
-        entry={{ delay: 0.8 }}
         to='/DevelopmentPage'
         partiallyActive={true}
         activeStyle={activeStyle}>02</LinkStyle>
       <hr/>
       <LinkStyle
-        exit={{ length: 0.5 }}
-        entry={{ delay: 0.8 }}
         to='/WebGraphicsPage'
         partiallyActive={true}
         activeStyle={activeStyle}>03</LinkStyle>
       <hr/>
       <LinkStyle
-        exit={{ length: 0.5 }}
-        entry={{ delay: 0.8 }}
         to='/SeoOptPage'
         partiallyActive={true}
         activeStyle={activeStyle}>04</LinkStyle>

@@ -72,11 +72,10 @@ export const webdesignData = [
     customers to craft high performing websites that support brand direction, accessibility and usability.
     Whether web application, website or CMS our designs are perfectly responsive and bespoke to our clients requirements.`,
     services: [
-      `Social Media Graphics`,
-      `Illustration`,
-      `Logo Design`,
-      `Print Graphics`,
-      `Web Graphics`
+      `Website Redesign`,
+      `Ecommerce`,
+      `Starter Sites`,
+      `Portfolio Sites`,
     ]
   }
 ]

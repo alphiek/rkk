@@ -13,16 +13,13 @@ const Wrapper = styled(a.div)`
   height: 100vh;
   background-color: ${color.primaryFull};
   z-index: 5;
-  transition: transform .3s
-            cubic-bezier(0, .52, 0, 1);
-overflow: scroll;
-z-index: 1000;
 `
 
 export const PageWrapper = ({ children }) => {
   const props = useSpring({
     config: config.slow,
-    bottom: '0px', from: { bottom: '-3000px' }
+    bottom: '0%',
+    from: { bottom: '-100%'},
   })
   return (
     <Wrapper style={props}>

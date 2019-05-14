@@ -10,15 +10,6 @@ const LogoWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-@media only screen
-    and (max-width: 823px)
-    and (min-height: 1024px) {
-      font-size:1.2em;
-    }
-@media only screen
-    and (max-width: 824px) {
-      margin: 0.8em 0.6em;
-    }
 `
 const LogoText = styled.p`
   font-family: ${font.muli};
@@ -27,6 +18,10 @@ const LogoText = styled.p`
   font-weight: ${weight.black};
   border-bottom: 0.25em solid ${color.secondary};
   line-height: 130%;
+  @media only screen
+      and (max-width: 1024px) {
+        font-size:0.9em;
+      }
 `
 
 const Logo = () => {

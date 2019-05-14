@@ -14,10 +14,10 @@ html {
   user-select: none;
   height: 100%;
   background-color: #ffffff;
-  @media (max-width: 991px) {
+  @media (max-width: 1024px) {
   font-size: calc(0.6em + 1.2vw);
 };
-  @media (max-width: 767px) {
+  @media (max-width: 824px) {
   font-size: calc(0.6em + 1.8vw);
 };
   @media (max-width: 479px) {
