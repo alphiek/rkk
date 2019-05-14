@@ -6,7 +6,7 @@ import BackButton from './BackButton'
 import ContactDetails from './ContactDetails'
 import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
-import RenderMenu from '../Menu/RenderMenu'
+import RenderMenu from '../Footer/RenderMenu'
 
 const PageWrapper = styled.div`
   width: 33%;

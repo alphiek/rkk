@@ -29,9 +29,8 @@ class HeaderContainer extends Component {
     render() {
       return (
         <>
-          {this.state.desktop ?
-            <Header /> :
-            null
+          {this.state.desktop &&
+            <Header />
           }
           <Logo />
         </>

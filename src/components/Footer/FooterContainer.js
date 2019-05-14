@@ -28,9 +28,8 @@ class FooterContainer extends Component {
     render() {
       return (
         <>
-          {!this.state.desktop ?
-            <FooterComponent /> :
-            null
+          {!this.state.desktop &&
+            <FooterComponent />
           }
         </>
       )

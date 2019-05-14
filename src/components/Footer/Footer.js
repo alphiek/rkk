@@ -1,7 +1,7 @@
 import React from 'react'
 import AboutTab from '../About/AboutTab'
 import ContactContainer from '../Contact/ContactContainer'
-import MenuWrapperTablet from '../Menu/MenuWrapperTablet'
+import MenuWrapperTablet from './MenuWrapperTablet'
 import { PageWrapper } from '../Global/Menu_FooterPageWrapper'
 
 const Footer = (props) => {
