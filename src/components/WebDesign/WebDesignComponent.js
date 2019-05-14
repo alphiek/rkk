@@ -33,8 +33,6 @@ const WebDesignComponent = ({tablet}) => {
     }
       <RightWrapper>
         <ImageDeck />
-        <Fade left >
-        </Fade>
       </RightWrapper>
     </ServiceFlexWrapper>
   )
