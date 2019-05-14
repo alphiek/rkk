@@ -18,9 +18,9 @@ import Zoom from 'react-reveal/Zoom'
 
 const LogoWrapper = styled.div`
   display: flex;
-  width: 60%;
-  height: 80vh;
-  padding-bottom: 20vh;
+  width: 50%;
+  height: 100vh;
+  padding-bottom: 5vh;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -40,18 +40,18 @@ const LogoHeight = styled(a.img)`
 `
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 7 - 160}%,${y / 16 - 20}%,0)`
-const trans2 = (x, y) => `translate3d(${x / 14 - 10}%,${y / 10 - 430}%,0)`
-const trans3 = (x, y) => `translate3d(${x / 8 + 200}%,${y / 17 - 380}%,0)`
-const trans4 = (x, y) => `translate3d(${x / 17 + 250}%,${y / 7 - 340}%,0)`
-const trans5 = (x, y) => `translate3d(${x / 7 - 40}%,${y / 12 + 200}%,0)`
-const trans6 = (x, y) => `translate3d(${x / 9 + 50}%,${y / 6 - 10}%,0)`
-const trans7 = (x, y) => `translate3d(${x / 5 + 240}%,${y / 7 + 450}%,0)`
+const trans1 = (x, y) => `translate3d(${x / 6 - 250}%,${y / 10 - 20}%,0)`
+const trans2 = (x, y) => `translate3d(${x / 14 - 30}%,${y / 8 - 500}%,0)`
+const trans3 = (x, y) => `translate3d(${x / 7 + 220}%,${y / 17 - 450}%,0)`
+const trans4 = (x, y) => `translate3d(${x / 14 + 280}%,${y / 7 - 380}%,0)`
+const trans5 = (x, y) => `translate3d(${x / 6 - 80}%,${y / 11 + 260}%,0)`
+const trans6 = (x, y) => `translate3d(${x / 10 + 10}%,${y / 7 - 10}%,0)`
+const trans7 = (x, y) => `translate3d(${x / 5 + 240}%,${y / 7 + 570}%,0)`
 const trans8 = (x, y) => `translate3d(${x / 10 + 120}%,${y / 6 + 280}%,0)`
-const trans9 = (x, y) => `translate3d(${x / 9 + 180}%,${y / 7 - 20}%,0)`
-const trans10 = (x, y) => `translate3d(${x / 9 + 260}%,${y / 6 + 300}%,0)`
+const trans9 = (x, y) => `translate3d(${x / 9 + 220}%,${y / 7 - 20}%,0)`
+const trans10 = (x, y) => `translate3d(${x / 10 + 280}%,${y / 7 + 380}%,0)`
 const trans11 = (x, y) => `translate3d(${x / 6 + 220}%,${y / 10 - 140}%,0)`
-const trans12 = (x, y) => `translate3d(${x / 10 + 300}%,${y / 4 - 60}%,0)`
+const trans12 = (x, y) => `translate3d(${x / 10 + 370}%,${y / 4 - 80}%,0)`
 
 
 

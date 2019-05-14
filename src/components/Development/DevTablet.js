@@ -7,26 +7,29 @@ const Container = styled.div`
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(4, 1fr);
-  padding: 17%;
 `
-
+const GridItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 const Logo = styled.img`
-  width: 4em;
   padding: 0.4em;
 `
 
 const SkillsGrid = () => {
   const tabSkills = data.map(item =>
-    <div key={item.key}>
+    <GridItem key={item.key}>
       <a href={item.link}
         target="_blank"
         rel="noopener noreferrer"
       >
         <Logo src={item.src}
               alt={item.name}
+              style={{width: item.width }}
         />
       </a>
-    </div>)
+    </GridItem>)
 
   return (
     <Container >
