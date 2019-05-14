@@ -34,16 +34,24 @@ const LinkMobile = styled.p`
       }
 `
 
-const FooterButton = ({toggleHidden}) => {
+const FooterButton = ({ isHidden, toggleHidden }) => {
   return (
-    <MobileLinkContainer onClick={toggleHidden}>
-      <LinkMobile onClick={toggleHidden} >Browse</LinkMobile>
-    </MobileLinkContainer>
+    <>
+    {
+      isHidden ?
+      <MobileLinkContainer onClick={toggleHidden}>
+        <LinkMobile onClick={toggleHidden} >Browse</LinkMobile>
+      </MobileLinkContainer>
+      :
+      null
+    }
+    </>
   )
 }
 
 export default FooterButton
 
 FooterButton.propTypes = {
-  toggleHidden: PropTypes.func.isRequired
+  toggleHidden: PropTypes.func.isRequired,
+  isHidden: PropTypes.bool.isRequired,
 }

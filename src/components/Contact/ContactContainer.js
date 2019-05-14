@@ -58,7 +58,6 @@ export default ContactContainer
 
 ContactContainer.propTypes = {
   form: PropTypes.bool.isRequired,
-  tablet: PropTypes.bool.isRequired,
   toggleForm: PropTypes.func.isRequired,
   renderMenu: PropTypes.func
 }

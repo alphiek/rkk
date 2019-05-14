@@ -30,6 +30,8 @@ const PortfolioLink = () => {
     <Fade bottom delay={400}>
     <Wrapper>
       <LinkStyle
+        exit={{ length: 0.5 }}
+        entry={{ delay: 0.8 }}
         to='/PortfolioPage/'
         partiallyActive={true}>View Portfolio -----------</LinkStyle>
     </Wrapper>

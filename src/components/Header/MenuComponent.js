@@ -1,31 +1,43 @@
 import React from 'react'
-import About from '../About/About'
-import ContactContainer from '../Contact/ContactContainer'
-import MenuWrapper from '../Menu/MenuWrapper'
+import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
+import {
+  MenuOuter,
+  MenuLinksWrapper,
+  MenuLinksTitle,
+  MenuList,
+  MenuLinksItem,
+} from '../Global/menuStyles'
 
-const MenuComponent = ({ toggleForm, compProps, toggleHidden}) => {
+const MenuComponent = ({toggleHidden, links }) => {
   return (
-    <>
-      <About />
-      <ContactContainer
-        form={compProps.form}
-        toggleForm={toggleForm}
-      />
-      <MenuWrapper
-          links={compProps.links}
-          toggleHidden={toggleHidden} />
-    </>
+    <MenuOuter>
+      <MenuLinksWrapper>
+          <Fade right>
+            <MenuLinksTitle>Menu</MenuLinksTitle>
+          </Fade>
+        {
+          links.map(link => (
+            <Fade right cascade delay={100} key={link.name}>
+            <MenuList
+              onClick={toggleHidden}>
+             <MenuLinksItem
+              to={link.link}
+              partiallyActive={true}>
+                {link.name}
+              </MenuLinksItem>
+            </MenuList>
+            </Fade>
+          ))
+        }
+      </MenuLinksWrapper>
+    </MenuOuter>
   )
 }
 
 export default MenuComponent
 
 MenuComponent.propTypes = {
-  compProps: PropTypes.shape({
-    form: PropTypes.bool.isRequired,
-    links: PropTypes.array.isRequired,
-  }).isRequired,
-  toggleForm: PropTypes.func.isRequired,
-  toggleHidden: PropTypes.func.isRequired
+  links: PropTypes.array.isRequired,
+  toggleHidden: PropTypes.func.isRequired,
 }

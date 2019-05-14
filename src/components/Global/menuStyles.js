@@ -6,7 +6,7 @@ export const MenuOuter = styled.nav`
   width: 28%;
   @media only screen and (max-width: 1024px){
     width: 100%;
-    height: 80vh;
+    height: 100vh;
   }
 `
 export const MenuLinksWrapper = styled.div`
@@ -32,6 +32,9 @@ export const MenuLinksTitle = styled.h2`
   font-family: ${font.muli};
   font-weight: ${weight.extraBold};
   letter-spacing: ${spacing.narrow};
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 export const MenuList = styled.li`
   list-style: none;
@@ -53,12 +56,12 @@ export const MenuLinksItem = styled(Link)`
   line-height: 130%;
 
   @media only screen and (max-width: 1024px) {
-    font-size: 0.8em;
+    font-size: 1em;
   }
 `
 
 export const TabletLinks = styled.button`
-  font-size: 0.8em;
+  font-size: 1em;
   font-family: ${font.heebo};
   letter-spacing: ${spacing.wide};
   text-transform: uppercase;
