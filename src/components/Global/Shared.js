@@ -11,6 +11,10 @@ export const HeadingText = styled.h1`
   font-weight: ${weight.black};
   font-size: calc(1.4em + 1vw);
   letter-spacing: ${spacing.narrow};
+@media only screen
+    and (max-width: 1024px) {
+      margin-bottom: 0.9em;
+    }
 `
 
 export const Services = styled.h2`
@@ -21,6 +25,10 @@ export const Services = styled.h2`
   font-size: 0.6em;
   letter-spacing: ${spacing.large};
   font-family: ${font.libre};
+  @media only screen
+      and (max-width: 1024px) {
+        font-size: 0.9em;
+      }
 `
 
 export const ServiceList = styled.li`
@@ -34,9 +42,9 @@ export const ServiceList = styled.li`
   padding: 0.3em;
   list-style: none;
   @media only screen
-      and (max-width: 824px) {
-        font-size: 0.6em;
-        padding: 0.5em 0.3em;
+      and (max-width: 1024px) {
+        font-size: 0.7em;
+        padding: 0.5em;
       }
 `
 
@@ -45,48 +53,15 @@ export const BodyText = styled.p`
   padding-bottom: 1em;
   color: ${color.body};
   font-weight: ${weight.normal};
-  font-size: 0.55em;
+  font-size: 0.6em;
   letter-spacing: ${spacing.small};
 @media only screen
-    and (max-width: 1024px)
-    and (min-width: 824px){
-      font-size: 1em;
-    }
-@media only screen
-    and (max-width: 823px) {
-      font-size: 0.9em;
-    }
-@media only screen
-    and (max-width: 823px)
-    and (min-height: 1024px) {
-      font-size:1.2em;
-    }
-@media only screen
-    and (max-width: 1024px)
-    and (orientation: landscape) {
+    and (max-width: 1024px){
       font-size: 0.8em;
+      letter-spacing: 0em;
     }
 `
 export const FullWidthWrapper = styled.div`
   width: 84%;
   margin-left: 8%;
-
-@media only screen
-    and (min-width: 375px)
-    and (min-height: 811px)
-    and (orientation: portrait) {
-      margin-top: 0 !important;
-    }
-@media only screen
-    and (max-width: 823px)
-    and (orientation: portrait) {
-      margin-top: 25%;
-      margin-bottom: 20%;
-    }
-@media only screen
-    and (max-width: 823px)
-    and (orientation: landscape){
-      margin-top: 5em;
-      margin-bottom: 5em;
-    }
 `

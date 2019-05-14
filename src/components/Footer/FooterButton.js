@@ -32,16 +32,6 @@ const LinkMobile = styled.p`
       and (orientation: portrait) {
         font-size: 1em;
       }
-  @media only screen
-      and (max-height: 824px)
-      and (orientation: portrait) {
-        font-size:1em;
-      }
-  @media only screen
-      and (max-height: 1024px)
-      and (orientation: landscape) {
-        font-size: 1em;
-      }
 `
 
 const FooterButton = ({toggleHidden}) => {

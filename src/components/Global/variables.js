@@ -7,7 +7,7 @@ export const color = {
   white: '#ffffff',
   grey: '#808080',
   lightGrey: '#AEAEAE',
-  darkLink: '#605280',
+  darkLink: '#605280'
 }
 
 export const weight = {

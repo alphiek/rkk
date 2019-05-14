@@ -9,15 +9,15 @@ const Wrapper = styled.div`
   overscroll-behavior-y: contain;
   overflow: hidden;
   position: relative;
-  width: 50vw;
   height: 100vh;
-  cursor: pointer;
-  padding-top: 5%;
+  width: 100%;
+  cursor: grab;
+  padding-top: 8%;
 @media only screen
     and (max-width: 1024px) {
       height: 100%;
-      width: 100%;
       overflow: visible;
+      padding-top: 0;
     }
 `
 
@@ -48,16 +48,15 @@ const ImgWrapper = styled(a.div)`
 @media only screen
     and (max-width: 1024px) {
       margin-top: 0;
-      width: 70%;
+      width: 60%;
       margin-left: auto;
       margin-right: auto;
     }
 @media only screen
-    and (max-width: 824px)
-    and (orientation: landscape) {
-      width:100%;
-      margin-right: 1em;
-    }
+      and (max-width: 570px) {
+        width: 80%;
+        margin-top: 15%;
+      }
 `
 const ImageDeck = ({data}) => {
   const cards = [
@@ -67,7 +66,7 @@ const ImageDeck = ({data}) => {
   ]
 
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
-const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5, y: -500 })
+const from = i => ({ x: 0, y: i * -4, rot: 0, scale: 1.5, y: -1000 })
 const trans = (r, s) => `perspective(1500px) rotateX(30deg) rotateY(${r / 10}deg) rotateZ(${r}deg) scale(${s})`
 
   const [gone] = useState(() => new Set())
