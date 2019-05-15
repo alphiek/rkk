@@ -1,20 +1,23 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { color, font, weight, spacing } from '../Global/variables'
+import { H2Menu } from '../Global/textSizes'
 
 export const MenuOuter = styled.nav`
-  width: 28%;
+  width: 30%;
   @media only screen and (max-width: 1024px){
     width: 100%;
     height: 100vh;
   }
 `
 export const MenuLinksWrapper = styled.div`
+  border: 0.3em solid ${color.secondary};
+  overflow: hidden;
   text-align: center;
-  height: 22em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  height: 25em;
+  margin-left: 0.5em;
   padding: 1.8em;
+  box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
   @media only screen and (max-width: 1024px) {
     display: flex;
     flex-direction: column;
@@ -23,15 +26,12 @@ export const MenuLinksWrapper = styled.div`
   }
 `
 
-export const MenuLinksTitle = styled.h2`
-  font-size: 1.6em;
-  color: ${color.white};
-  border-bottom: 0.1em solid ${color.white};
+export const MenuLinksTitle = styled(H2Menu)`
+  color: #f9f9f9;
+  border-bottom: 0.1em solid #f9f9f9;
   margin-bottom: 0.5em;
+  padding-top: 0.1em;
   padding-bottom: 0.8em;
-  font-family: ${font.muli};
-  font-weight: ${weight.extraBold};
-  letter-spacing: ${spacing.narrow};
   @media only screen and (max-width: 1024px) {
     display: none;
   }
@@ -46,7 +46,7 @@ export const MenuList = styled.li`
 `
 
 export const MenuLinksItem = styled(Link)`
-  font-size: 0.7em;
+  font-size: 0.75em;
   font-family: ${font.heebo};
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.wide};

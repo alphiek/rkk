@@ -33,7 +33,7 @@ const About = ({ children }) => {
         {children}
       </PageWrapper>
     )}
-    <Copyright>© {new Date().getFullYear()}{aboutData.copyright}</Copyright>
+    <Copyright>© {new Date().getFullYear()} RKK Creative, all rights reserved </Copyright>
     </>
   )
 }

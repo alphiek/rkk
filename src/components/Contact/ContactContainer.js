@@ -7,28 +7,27 @@ import ContactDetails from './ContactDetails'
 import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 import RenderMenu from '../Footer/RenderMenu'
+import { H2Menu } from '../Global/textSizes'
 
 const PageWrapper = styled.div`
-  width: 33%;
-  border-right: 0.3em solid ${color.secondary};
+  width: 30%;
   @media only screen and (max-width: 1024px){
     width: 100%;
   }
 `
 const ContactWrapper = styled.div`
-  background-color: ${color.white};
-  height: 22em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  background-color: #f9f9f9;
+  height: 25em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
   padding: 1.8em;
   overflow: hidden;
+  box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
 `
-const ContactTitle = styled.h2`
-  font-size: 1.6em;
+const ContactTitle = styled(H2Menu)`
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
   color: ${color.primary};
-  font-family: ${font.muli};
-  font-weight: ${weight.black};
-  letter-spacing: ${spacing.narrow};
 `
 
 const ContactContainer = ({ form, tablet, toggleForm, renderMenu }) => {
@@ -36,7 +35,7 @@ const ContactContainer = ({ form, tablet, toggleForm, renderMenu }) => {
     <PageWrapper>
      <ContactWrapper>
      <Fade bottom>
-        <ContactTitle>Contact</ContactTitle>
+        <ContactTitle>Drop us a line</ContactTitle>
      </Fade>
         {form ?
             <Form />

@@ -32,10 +32,10 @@ class HeaderContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isHidden: true,
+      isHidden: false,
       links: [],
       contact: true,
-      form: false,
+      form: true,
     }
     this.toggleHidden = this.toggleHidden.bind(this)
     this.toggleForm = this.toggleForm.bind(this)

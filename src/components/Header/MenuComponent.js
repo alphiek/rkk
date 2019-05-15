@@ -13,8 +13,8 @@ const MenuComponent = ({toggleHidden, links }) => {
   return (
     <MenuOuter>
       <MenuLinksWrapper>
-          <Fade right>
-            <MenuLinksTitle>Menu</MenuLinksTitle>
+          <Fade right cascade >
+            <MenuLinksTitle>Links</MenuLinksTitle>
           </Fade>
         {
           links.map(link => (

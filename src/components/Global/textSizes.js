@@ -49,6 +49,30 @@ export const H2Heebo = styled.h2`
   }
 `
 
+export const H2Menu = styled.h2`
+  font-family: ${font.muli};
+  font-weight: ${weight.black};
+  letter-spacing: ${spacing.narrow};
+  font-size: calc(1.4em + 0.5vw);
+  line-height: 105%;
+
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 0.5em;
+    font-size: calc(1.4em + 1.4vw);
+  }
+  @media only screen and (max-width: 824px){
+    font-size: calc(1.4em + 2vw);
+  }
+
+  @media only screen and (max-width: 570px){
+    font-size: calc(1.4em + 3.8vw);
+  }
+
+  @media only screen and (max-width: 321px){
+    font-size: calc(1.4em + 2.5vw);
+  }
+`
+
 export const H2Services = styled.h2`
   font-size: calc(0.3em + 0.55vw);
   font-style: italic;

@@ -1,6 +1,6 @@
 export const aboutData = [
   {
-    title: 'About',
+    title: 'A bit about us',
     key: 1,
     description: `
     Normally, both your asses would be dead as fucking fried chicken,
@@ -17,7 +17,7 @@ export const aboutData = [
 
 export const contactData = [
   {
-    title: 'Contact',
+    title: 'Drop us a Line',
     key: 2,
     description: `
     Have a project in mind? give us a call to discuss or

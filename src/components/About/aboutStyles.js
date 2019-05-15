@@ -1,40 +1,49 @@
 import styled from 'styled-components'
 import { color, font, weight, spacing } from '../Global/variables'
+import { H2Menu } from '../Global/textSizes'
 
 export const PageWrapper = styled.div`
-  width: 31%;
-  border-right: 0.3em solid ${color.secondary};
+  width: 30%;
   @media only screen and (max-width: 1024px){
     width: 100%;
   }
 `
 export const AboutWrapper = styled.div`
-  border: 0.3em solid ${color.white};
-  height: 22em;
-  margin-left: 1.5em;
-  margin-right: 1.5em;
+  border: 0.3em solid #f9f9f9;
+  height: 25em;
+  margin-right: 0.5em;
   padding: 1.8em;
   overflow: hidden;
+  box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
 `
-export const AboutTitle = styled.h2`
-  font-size: 1.6em;
+export const AboutTitle = styled(H2Menu)`
   color: ${color.secondary};
-  font-family: ${font.muli};
-  font-weight: ${weight.black};
-  letter-spacing: ${spacing.narrow};
 `
 export const AboutText = styled.p`
   margin-top: 2em;
-  font-size: 0.55em;
   color: ${color.white};
+  line-height: 140%;
   font-weight: ${weight.normal};
-  line-height: 130%;
+  font-size: calc(0.45em + 0.2vw);
+  @media only screen and (max-width: 1024px) {
+   font-size: calc(0.45em + 0.6vw);
+  }
+
+  @media only screen and (max-width: 824px){
+    font-size: calc(0.4em + 1.3vw);
+  }
+
+  @media only screen and (max-width: 570px){
+    font-size: calc(0.4em + 2.5vw);
+    padding-bottom: 1.5em;
+    line-height: 150%;
+  }
 `
 export const Copyright = styled.p`
   font-weight: ${weight.light};
   position: absolute;
-  bottom: 4em;
-  margin-left: 4em;
+  bottom: 3em;
+  left: 7em;
   font-size: 0.5em;
   color: ${color.white};
 `

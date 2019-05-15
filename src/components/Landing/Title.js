@@ -14,6 +14,7 @@ export const TitleWrapper = styled.div`
   z-index: 3;
   overflow: hidden;
 
+
   @media only screen and (max-width: 1024px) {
     margin-top: 25vh;
     margin-left: 14vw;

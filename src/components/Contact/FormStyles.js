@@ -14,6 +14,7 @@ export const InputWrapper = styled.input`
   margin-top: 0.7em;
   margin-bottom: 0.7em;
   padding: 0.7em;
+  background: #f9f9f9;
 `
 export const Placeholder = styled.p`
   position: absolute;
@@ -26,7 +27,7 @@ export const Placeholder = styled.p`
   color: ${color.primary};
   text-transform: uppercase;
   font-size: 0.5em;
-  background: white;
+  background: #f9f9f9;
   padding: 0.5em 0.1em;
 `
 export const Label = styled.label`
@@ -38,6 +39,7 @@ export const Message = styled.textarea`
   margin-bottom: 0.7em;
   padding: 0.7em;
   width: 100%;
+  background-color: #f9f9f9;
 `
 export const ErrorMessage = styled.p`
   margin-bottom: 0.5em;
