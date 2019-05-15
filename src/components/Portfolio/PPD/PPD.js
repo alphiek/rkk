@@ -8,6 +8,7 @@ import {
 import PPDImage from './PPDImage'
 
 const PPD = ({ ppd, onClickToggle }) => {
+  const live = true
   return (
     <PoseGroup>
      {
@@ -18,6 +19,7 @@ const PPD = ({ ppd, onClickToggle }) => {
             <InfoFlexContainer
             item={item}
             onClickToggle={onClickToggle}
+            live={live}
             />
          </Wrapper>
          )

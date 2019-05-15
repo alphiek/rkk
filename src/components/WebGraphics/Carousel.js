@@ -44,16 +44,11 @@ class Carousel extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.data)
     this.setState(
       {
       items: this.props.data,
       loaded: true
-      },
-      () => {
-       console.log(this.state.items)
-      }
-    )
+      })
   }
 
 

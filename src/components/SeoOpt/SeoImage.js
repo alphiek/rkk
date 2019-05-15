@@ -5,40 +5,35 @@ import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade'
 
 const MainImage = styled(Img)`
-  margin-left: 3em;
+  margin-left: 1em;
   margin-top: -3em;
-  width: 25em;
+  width: 24em;
   height: auto;
   position: relative;
   transform: perspective(2000px) rotateX(15deg) rotateY(-15deg) rotateZ(15deg);
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
-  
-@media only screen
-    and (max-width: 1024px) {
-      margin-top: 0;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50vw;
-    }
-@media only screen
-    and (orientation: landscape) {
-      width: 45vw;
-      right: 5%;
-    }
-@media only screen
-    and (max-width: 824px) {
-      width: 70vw;
-    }
-@media only screen
-    and (max-width: 824px)
-    and (orientation: landscape) {
-      width: 35vw;
-    }
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 28em;
+  }
+
+  @media only screen and (max-width: 824px) {
+    margin-top: 2em;
+    width: 26em;
+  }
+
+  @media only screen and (max-width: 570px) {
+    margin-top: 3em;
+    width: 20em;
+  }
 `
 const SeoImage = ({data}) => {
   return (
     <>
-    <Fade right delay={900}>
+    <Fade right>
     <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
     </Fade>
     </>

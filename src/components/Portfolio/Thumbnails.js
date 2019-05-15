@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { weight, spacing } from '../Global/variables'
+import { color, weight, spacing } from '../Global/variables'
 
 const Wrapper = styled.div`
   position: relative;
@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 const InfoWrapper = styled.div`
   padding: 1em;
   position: absolute;
-  font-size: 0.9em;
+  font-size: calc(0.7em + 0.3vw);
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.standard};
   z-index: 5;
@@ -19,16 +19,52 @@ const InfoWrapper = styled.div`
   background: -moz-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%, rgba(7,7,7,0) 50%, rgba(7,7,7,0) 100%);
   background: -webkit-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
   background: linear-gradient(135deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
+  &: hover {
+    background-color: ${color.darkLinkO};
+  }
+  @media only screen and (max-width: 1024px) {
+    margin-bottom: 0.5em;
+    font-size: calc(0.7em + 0.6vw);
+  }
+  @media only screen and (max-width: 824px){
+    font-size: calc(0.7em + 1.1vw);
+  }
+
+  @media only screen and (max-width: 570px){
+    font-size: calc(0.7em + 2vw);
+  }
 `
-const Line = styled.hr`
+const Line = styled.div`
+  background-color: #f9f9f9;
   width: 2em;
+  height: 0.1em;
   margin-top: 0.2em;
+  @media only screen and (max-width: 824px){
+    height: 0.15em;
+    margin-top: 0.3em;
+    margin-bottom: 0.1em;
+  }
+  @media only screen and (max-width: 570px){
+    height: 0.2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.3em;
+  }
 `
 
 const SubText = styled.span`
   text-transform: uppercase;
-  font-size: 0.6em;
+  font-size: calc(0.45em + 0.3vw);;
   letter-spacing: ${spacing.large};
+  @media only screen and (max-width: 1024px) {
+    font-size: calc(0.45em + 0.3vw);
+  }
+  @media only screen and (max-width: 824px){
+    font-size: calc(0.45em + 0.4vw);
+  }
+
+  @media only screen and (max-width: 570px){
+    font-size: calc(0.45em + 1vw);
+  }
 `
 
 export const FodeThumbnail = ({ thumb, onClickToggle }) => {

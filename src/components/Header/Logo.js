@@ -10,14 +10,14 @@ const LogoWrapper = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 8;
+  z-index: 5;
 `
 
 const Logo = () => {
   return (
-    <LogoWrapper>
+    <LogoWrapper
+      aria-label='Link to Home Page'>
       <LogoLink
-        aria-label='Link to Home Page'
         to='/'
         partiallyActive={true}>
         RKK

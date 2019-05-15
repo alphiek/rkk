@@ -12,11 +12,21 @@ import {
   } from './Thumbnails'
 
 const Container = styled.div`
+  margin-top: 1em;
   width: 100%;
   position: relative;
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
+
+  @media only screen and (max-width: 824px){
+   grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media only screen and (max-width: 570px){
+   grid-template-columns: repeat(1, 1fr);
+   grid-row-gap: 1.5em;
+  }
 `
 
 const GridContainer = ({ images, onClickToggle, grid }) => {

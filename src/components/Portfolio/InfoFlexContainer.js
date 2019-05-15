@@ -7,64 +7,94 @@ import {
   H3Built,
   ListItem,
   BodyText,
-  PortfolioLnk
 } from '../Global/textSizes'
 
+import { PortfolioPageLnk } from '../Global/nonTransitionLinks'
 import {
   DevTag,
   ServiceWrapper,
   InfoFlex,
   InfoFlexChild,
   ServiceFlexChild,
-  Link
+  SiteTag
 } from './PortfolioShared'
 import DevelopmentIcon from './DevelopmentIcon'
 
-export const PortfolioTitle = styled(H1)`
+const PortfolioTitle = styled(H1)`
   border-bottom: 0.15em solid ${color.secondary};
   padding-bottom: 0.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3em;
   width: 10em;
+  @media only screen and (max-width: 1024px) {
+   margin-top: 1em;
+ }
 `
-export const Description = styled(BodyText)`
+const Description = styled(BodyText)`
   margin-left: 1em;
   padding-top: 0.5em;
   padding-bottom: 0.8em;
 `
 
-const InfoFlexContainer = ({ item, onClickToggle }) => {
+const ServiceWrapPortfolio = styled(ServiceWrapper)`
+  width: 95%;
+  @media only screen and (max-width: 570px) {
+   text-align: right;
+   width: 95%;
+  }
+`
+
+const InfoFlexContainer = ({ item, onClickToggle, live }) => {
+  console.log(live)
   return (
+    <>
     <InfoFlex>
       <InfoFlexChild>
         <PortfolioTitle>{item.title}</PortfolioTitle>
-        <DevelopmentIcon />
-        <DevTag>In Development</DevTag>
+        {
+          !live ?
+          <>
+          <DevelopmentIcon />
+          <DevTag>In Development</DevTag>
+          </>
+          :
+          <>
+          <DevelopmentIcon />
+          <SiteTag
+            href={item.site}
+            target="_blank"
+            rel="noopener noreferrer">
+            Visit Site
+          </SiteTag>
+          </>
+        }
         <Description>
          {item.description}
         </Description>
-        <PortfolioLnk
-         id='close'
-         onClick={onClickToggle}>
-         ---Back to Portfolio---
-       </PortfolioLnk>
        </InfoFlexChild>
        <ServiceFlexChild>
          <H2Services>Services</H2Services>
-         <ServiceWrapper>
+         <ServiceWrapPortfolio>
          {item.services.map(service =>
            <ListItem key={service}>{service}</ListItem>
          )}
-         </ServiceWrapper>
+         </ServiceWrapPortfolio>
        </ServiceFlexChild>
        <ServiceFlexChild>
          <H3Built>Built with</H3Built>
-           <ServiceWrapper>
+           <ServiceWrapPortfolio>
               {item.tech.map(tech =>
                 <ListItem key={tech}>{tech}</ListItem>
               )}
-           </ServiceWrapper>
+           </ServiceWrapPortfolio>
        </ServiceFlexChild>
-     </InfoFlex>
+    </InfoFlex>
+    <PortfolioPageLnk
+     aria-label='Back to main portfolio'
+     id='close'
+     onClick={onClickToggle}>
+     ---Back to Portfolio---
+    </PortfolioPageLnk>
+    </>
   )
 }
 

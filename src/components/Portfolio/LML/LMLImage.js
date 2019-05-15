@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 import {
   MainImage,
@@ -8,22 +9,26 @@ import {
   PageIndicator,
 } from '../PortfolioShared'
 
+const LMLFlex = styled(Flex)`
+  margin-bottom: 3em;
+  margin-top: 2em;
+`
 
 const LMLImage = ({ data }) => {
   return (
     <>
-    <Flex>
+    <LMLFlex>
       <PageIndicator>02</PageIndicator>
       <Fade right delay={1200}>
         <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
       </Fade>
       <Fade bottom delay={900}>
-        <TopImage style={{width: '8em', position: 'absolute', left: '-2em', top: '-8.5em' }}fluid={data.imageThree.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+        <TopImage style={{width: '9.5em', position: 'absolute', left: '-2em', top: '-6.7em' }} fluid={data.imageThree.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
       </Fade>
       <Fade bottom delay={900}>
-        <TopImage style={{width: '10em', position: 'absolute', left: '-10em', top: '-1em' }} fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+        <TopImage style={{width: '10em', position: 'absolute', left: '-10em', top: '-1.3em' }} fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
       </Fade>
-    </Flex>
+    </LMLFlex>
     </>
   )
 }

@@ -14,10 +14,10 @@ const FodeImage = ({ data }) => {
     <>
     <Flex>
       <PageIndicator>01</PageIndicator>
-      <Fade right delay={1200}>
+      <Fade right delay={400}>
         <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
       </Fade>
-      <Fade bottom delay={900}>
+      <Fade bottom delay={200}>
         <TopImage fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
       </Fade>
     </Flex>

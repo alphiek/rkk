@@ -7,7 +7,8 @@ export const color = {
   white: '#ffffff',
   grey: '#808080',
   lightGrey: '#AEAEAE',
-  darkLink: '#605280'
+  darkLink: 'hsl(258, 22%, 41%)',
+  darkLinkO: 'hsla(258, 22%, 41%, 0.70)',
 }
 
 export const weight = {
@@ -26,7 +27,10 @@ export const font = {
 }
 
 export const spacing = {
+  services: '0.38em',
+  servicesTab: '0.3em',
   wide:'0.2em',
+  li: '0.18em',
   large: '0.1em',
   standard: '0.02em',
   narrow: '-0.05em',

@@ -9,6 +9,16 @@ const DevIcon = styled.svg`
   height: 1.2em;
   margin-right: 0.5em;
   fill: ${color.secondary};
+  @media only screen and (max-width: 824px) {
+    width: 1.7em;
+    height: 1.7em;
+    margin-right: 0.8em;
+ }
+  @media only screen and (max-width: 570px) {
+    width: 2em;
+    height: 2em;
+    margin-right: 1em;
+ }
 `
 const DevelopmentIcon = () => {
   return (

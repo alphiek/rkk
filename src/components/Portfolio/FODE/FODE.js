@@ -8,6 +8,7 @@ import {
 import FodeImage from './FodeImage'
 
 const FODE = ({ fode, onClickToggle }) => {
+  const live = false
   return (
     <PoseGroup>
      {
@@ -18,6 +19,7 @@ const FODE = ({ fode, onClickToggle }) => {
              <InfoFlexContainer
               item={item}
               onClickToggle={onClickToggle}
+              live={live}
               />
           </Wrapper>
          )

@@ -1,18 +1,18 @@
 export default [
   {
-    name: 'Google Tag Manager Configuration',
+    name: 'Google Tag Manager',
     key: 1
   },
   {
-    name: 'Google Analytics & Search Console Setup',
+    name: 'Google Analytics',
     key: 7
   },
   {
-    name: 'Opengraph, TwitterCard & Social Media Intergration',
+    name: 'Social Media Intergration',
     key: 5
   },
   {
-    name: 'Progressive Web Applications & Mobile Optimisation',
+    name: 'PWA & Mobile Optimisation',
     key: 2
   },
   {
@@ -20,11 +20,11 @@ export default [
     key: 6
   },
   {
-    name: 'Image Optimisation, Favicon & Touch Icons',
+    name: 'Image Optimisation',
     key: 3
   },
   {
-    name: 'Structured Data, Metadata & Header Tags',
+    name: 'Structured Data',
     key: 4
   },
   {
@@ -32,11 +32,7 @@ export default [
     key: 10
   },
   {
-    name: 'Code Minification & Browser Caching',
+    name: 'Code Minification & Caching',
     key: 11
-  },
-  {
-    name: 'Sitemap & Robots.txt',
-    key: 13
   },
 ]

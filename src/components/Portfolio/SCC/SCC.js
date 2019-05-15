@@ -8,6 +8,7 @@ import {
 import SCCImage from './SCCImage'
 
 const SCC = ({ scc, onClickToggle }) => {
+  const live = false
   return (
     <PoseGroup>
      {
@@ -18,6 +19,7 @@ const SCC = ({ scc, onClickToggle }) => {
             <InfoFlexContainer
              item={item}
              onClickToggle={onClickToggle}
+             live={live}
              />
          </Wrapper>
          )

@@ -25,7 +25,7 @@ const PoseWrapper = styled(Wrapper)`
   width: 100%;
   height: 100vh;
   background-color: ${color.primaryFull};
-  z-index: 5;
+  z-index: 8;
 `
 
 class HeaderContainer extends Component {

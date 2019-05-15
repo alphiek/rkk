@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
-import { color, font, weight, spacing } from './variables'
+import { ServiceNavLinks } from './textSizes'
+import { color, weight } from './variables'
 import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
@@ -16,14 +16,7 @@ const NavContainer = styled.div`
   margin-bottom: 1em;
   margin-right: 1em;
 `
-const LinkStyle = styled(Link)`
-  color: ${color.grey};
-  font-family: ${font.muli};
-  font-weight: ${weight.light};
-  font-size: 0.45em;
-  letter-spacing: ${spacing.large};
-  text-transform: uppercase;
-  line-height: 100%;
+const LinkStyle = styled(ServiceNavLinks)`
   padding-left: 1em;
   padding-right: 1em;
 `

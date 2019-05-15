@@ -8,6 +8,7 @@ import {
 import ForagerImage from './ForagerImage'
 
 const Forager = ({ forager, onClickToggle }) => {
+  const live = false
   return (
     <PoseGroup>
      {
@@ -18,6 +19,7 @@ const Forager = ({ forager, onClickToggle }) => {
              <InfoFlexContainer
               item={item}
               onClickToggle={onClickToggle}
+              live={live}
               />
           </Wrapper>
          )

@@ -81,6 +81,7 @@ class PortfolioContainer extends Component {
            onClickToggle={this.onClickToggle}
            mainContent={this.state.mainContent}
            grid={this.state.grid}
+           live={this.state.live}
           />
         </TransWrap>
           :

@@ -12,6 +12,7 @@ export const PageWrapper = styled.div`
 
   @media only screen and (max-width: 1024px) {
     padding-bottom: 5em;
+    min-height: 88vh;
   }
 `
 export const PageWrapperCenter = styled(PageWrapper)`

@@ -8,7 +8,7 @@ import PPD from './PPD/PPD'
 import SCC from './SCC/SCC'
 
 
-const MainContent = ({ mainContent, onClickToggle }) => {
+const MainContent = ({ mainContent, onClickToggle, live }) => {
   return (
     <>
     {

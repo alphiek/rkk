@@ -1,22 +1,13 @@
 import React from 'react'
-import Link from 'gatsby-plugin-transition-link'
 import styled from 'styled-components'
-import { color, font, weight, spacing } from './variables'
+import { ServiceNavLinks } from './textSizes'
+import { color, weight } from './variables'
 import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
   padding-left: 0.5em;
 `
 
-const LinkStyle = styled(Link)`
-color: ${color.grey};
-font-family: ${font.muli};
-font-weight: ${weight.light};
-font-size: 0.45em;
-letter-spacing: ${spacing.small};
-text-transform: uppercase;
-line-height: 100%;
-`
 const activeStyle = {
   color: color.darkLink,
   fontWeight: weight.black
@@ -26,33 +17,33 @@ const NumberNav = () => {
   return (
     <Fade bottom cascade>
     <Wrapper>
-      <LinkStyle
+      <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/WebDesignPage'
         partiallyActive={true}
-        activeStyle={activeStyle}>01</LinkStyle>
+        activeStyle={activeStyle}>01</ServiceNavLinks>
       <hr/>
-      <LinkStyle
+      <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/DevelopmentPage'
         partiallyActive={true}
-        activeStyle={activeStyle}>02</LinkStyle>
+        activeStyle={activeStyle}>02</ServiceNavLinks>
       <hr/>
-      <LinkStyle
+      <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/WebGraphicsPage'
         partiallyActive={true}
-        activeStyle={activeStyle}>03</LinkStyle>
+        activeStyle={activeStyle}>03</ServiceNavLinks>
       <hr/>
-      <LinkStyle
+      <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/SeoOptPage'
         partiallyActive={true}
-        activeStyle={activeStyle}>04</LinkStyle>
+        activeStyle={activeStyle}>04</ServiceNavLinks>
       <hr/>
     </Wrapper>
     </Fade>

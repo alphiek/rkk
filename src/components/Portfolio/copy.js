@@ -30,7 +30,6 @@ export const foragerData = [
     tech: [
       'React',
       'Yelp API',
-      'Styled Components',
     ],
     services: [
       'Web App',
@@ -55,10 +54,6 @@ export const lkData = [
     tech: [
       'React',
       'Gatsby',
-      'React Reveal',
-      'React Spring',
-      'Pose',
-      'Styled Components',
       'Instagram API'
     ],
     services: [
@@ -94,14 +89,15 @@ export const lmlData = [
       'HTML Email',
       'Social Graphics',
       'Web Graphics',
-      'Mobile Optimisation',
+      'Mobile Site',
       'SEO'
     ],
     description: `This design is fucking brilliant.
       Never, never assume that what you have achieved is fucking good enough Remember
       it’s called the creative process, it’s not the creative fucking moment.
       Use your fucking hands Think about all the fucking possibilities.
-      Why are you fucking reading all of this? Get back to work.`
+      Why are you fucking reading all of this? Get back to work.`,
+    site: `https://likemindedliving.co.uk`
   }
 ]
 
@@ -121,14 +117,15 @@ export const ppdData = [
       'Blog',
       'Social Graphics',
       'Web Graphics',
-      'Mobile Optimisation',
+      'Mobile Site',
       'SEO'
     ],
     description: `This design is fucking brilliant.
       Never, never assume that what you have achieved is fucking good enough Remember
       it’s called the creative process, it’s not the creative fucking moment.
       Use your fucking hands Think about all the fucking possibilities.
-      Why are you fucking reading all of this? Get back to work.`
+      Why are you fucking reading all of this? Get back to work.`,
+    site: `https://paphospainterdecorators.com`
   }
 ]
 
@@ -146,10 +143,9 @@ export const sccData = [
       'Website Design',
       'Branding',
       'Blog',
-      'Ghost Writing',
       'Social Graphics',
       'Web Graphics',
-      'Mobile Optimisation',
+      'Mobile Site',
       'SEO'
     ],
     description: `This design is fucking brilliant.

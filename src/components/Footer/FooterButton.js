@@ -13,14 +13,21 @@ const MobileLinkContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 5;
-  min-height: 7em;
+  min-height: 9em;
+  
+  @media only screen and (max-width: 520px){
+    min-height: 10em;
+  }
 `
 const LinkMobile = styled(BrowseLink)`
   padding: 3vw 3.5vw;
-  margin: 5vw;
   z-index: 8;
-  min-height: 2em;
-  min-width: 5em;
+  min-height: 4%;
+  min-width: 5%;
+
+  @media only screen and (max-width: 520px){
+    padding: 6vw 6.5vw;
+  }
 `
 
 const FooterButton = ({ isHidden, toggleHidden }) => {

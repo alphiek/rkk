@@ -8,26 +8,42 @@ import Fade from 'react-reveal/Fade'
 import data from './data'
 import { seoData } from '../Copy/copy'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const Spacer = styled.div`
+  height: 0.8em;
+  @media only screen and (max-width: 1024px) {
+    height: 2em;
+  }
+  @media only screen and (max-width: 824px){
+    height: 2.5em;
+  }
+
+  @media only screen and (max-width: 570px){
+    height: 3em;
+  }
+`
 
 
 
 const SeoOptComponent = ({tablet}) => {
-  const services = data.map(item => <ListItem>{item.name}</ListItem>)
+  const services = data.map(item => <ListItem key={item.key}>{item.name}</ListItem>)
   return (
     <ServiceFlexWrapper tablet={tablet}>
       {
         seoData.map(seo =>
-          <LeftWrapper>
-            <Fade bottom delay={1000} opposite={true}>
+          <LeftWrapper key='seo'>
+            <Fade bottom >
               <HeadingText>{seo.title}</HeadingText>
             </Fade>
-            <Fade right cascade delay={1000}>
+            <Fade right cascade>
               <BodyText>{seo.description}</BodyText>
               <H2Services>Services</H2Services>
-              <ul style={{ marginBottom: '0.8em' }}>
+              <ul>
               {services}
               </ul>
             </Fade>
+            <Spacer />
             <PortfolioLink />
           </LeftWrapper>
         )

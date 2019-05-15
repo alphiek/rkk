@@ -8,6 +8,7 @@ import {
 import LMLImage from './LMLImage'
 
 const LML = ({ lml, onClickToggle }) => {
+  const live = true
   return (
     <PoseGroup>
      {
@@ -18,6 +19,7 @@ const LML = ({ lml, onClickToggle }) => {
              <InfoFlexContainer
              item={item}
              onClickToggle={onClickToggle}
+             live={live}
              />
           </Wrapper>
          )
