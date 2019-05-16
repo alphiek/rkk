@@ -15,6 +15,9 @@ const ButtonWrapper = styled.div`
   width: 100%;
   text-align: right;
   padding-right: 6em;
+@media only screen and (max-width: 1024px) {
+  padding-right: 10%;
+}
 `
 
 const RenderMenu = ({ renderMenu }) => {
