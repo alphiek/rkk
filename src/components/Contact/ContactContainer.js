@@ -16,7 +16,7 @@ const ContactContainer = ({ form, tablet, toggleForm, renderMenu }) => {
   return (
     <PageWrapper>
      <ContactWrapper>
-     <Fade bottom>
+     <Fade>
         <ContactTitle>Drop us a line</ContactTitle>
      </Fade>
         {form ?

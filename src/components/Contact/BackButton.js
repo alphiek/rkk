@@ -10,19 +10,25 @@ const Back = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 0.5em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   width: 100%;
   height: 3em;
   background-color: ${color.secondary};
+  overflow: hidden;
+  @media only screen and (max-width: 1024px) {
+    width: 87%;
+    position: absolute;
+    bottom: 5%;
+  }
 `
 
 const BackButton = ({toggleForm, form}) => {
   return (
     <Back onClick={toggleForm}>
-    <Fade bottom delay={600}>
+    <Fade bottom>
     {
       form ?
-      <BackText>Show Contact Details</BackText>
+      <BackText>Contact Details</BackText>
       :
       <BackText>Contact Form</BackText>
     }

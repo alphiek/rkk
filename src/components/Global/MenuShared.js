@@ -55,9 +55,10 @@ export const ContactTitle = styled(H2Menu)`
    overflow: hidden;
    box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
    @media only screen and (max-width: 1024px) {
-     margin-right: 0;
-     height: 80%;
+     margin: 0 10%;
+     height: auto;
      width: 80%;
+     padding: 5%;
      border: 0.3em solid ${color.secondary};
      background-color: ${color.offWhite};
   }
@@ -65,7 +66,14 @@ export const ContactTitle = styled(H2Menu)`
  export const ContactWrapper = styled(AboutWrapper)`
    margin-left: 0.5em;
    border: 0;
+   position: relative;
    background: ${color.offWhite};
+ @media only screen and (max-width: 1024px) {
+   min-height: 31em;
+ }
+ @media only screen and (max-width: 570px) {
+   min-height: 35em;
+ }
  `
 
  export const AboutText = styled(BodyText)`
@@ -131,6 +139,9 @@ export const ContactTitle = styled(H2Menu)`
      height: 80%;
      width: 80%;
    }
+  @media only screen and (max-width: 570px) {
+    margin: 2em;
+  }
  `
 
  export const BackText = styled.p`
@@ -142,7 +153,7 @@ export const ContactTitle = styled(H2Menu)`
    line-height: 105%;
 
    @media only screen and (max-width: 1024px) {
-     margin-bottom: 0.5em;
+     margin: 1em 0 ;
      font-size: calc(1.4em + 1.4vw);
    }
    @media only screen and (max-width: 824px){

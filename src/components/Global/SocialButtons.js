@@ -14,9 +14,7 @@ const SocialWrapper = styled.div`
 @media only screen
     and (max-width: 824px)
     and (orientation:portrait) {
-      width: 100%;
-      padding: 0 10%;
-      padding-bottom: 5%;
+      width: auto ;
     }
 `
 const SocialButtons = ({ data }) => (

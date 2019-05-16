@@ -10,6 +10,10 @@ const ContactFlex = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: space-between;
+  overflow: hidden;
+@media only screen and (max-width: 520px) {
+  Padding-bottom: 5em;
+}
 `
 
 const ContactDetails = () => {
@@ -17,7 +21,7 @@ const ContactDetails = () => {
     <>
       {
         contactData.map(data =>
-          <Fade key={data.key} bottom cascade>
+          <Fade key={data.key} cascade>
              <BodyText>{data.description}</BodyText>
              <ContactFlex>
              <Address>

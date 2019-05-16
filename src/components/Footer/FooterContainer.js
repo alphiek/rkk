@@ -7,11 +7,18 @@ import posed, { PoseGroup } from 'react-pose';
 
 
 const FooterWrapper = posed.div({
-  enter: { y: '0%',
-    transition: { ease: 'easeOut', duration: 700 }
-},
-  exit: { y: '100%',
-    transition: { ease: 'easeIn', duration: 500 }}
+  enter: {
+    opacity: 1,
+    delay: 300,
+    transition: {
+      opacity: { type: 'spring', stiffness: 100, damping: 15 },
+      default: { duration: 500 }
+    }
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 500 }
+  }
 });
 
 const PoseWrapper = styled(FooterWrapper)`
