@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { color, spacing } from '../Global/variables'
+import { color } from '../Global/variables'
 import {FullWidthWrapper } from '../Global/Shared'
 import { PageWrapper } from '../Global/ServiceFlexWrapper'
 import Img from 'gatsby-image'
@@ -37,14 +37,7 @@ export const Flex = styled.div`
    align-items: center;
    justify-content: center;
    margin-left: -2em;
-`
-export const PageIndicator = styled.p`
-   font-size: 14em;
-   color: ${color.secondary};
-   letter-spacing: ${spacing.narrow};
-   @media only screen and (max-width: 570px){
-     font-size: 8em;
-   }
+   position: relative;
 `
 
 export const InfoFlex = styled.div`
@@ -57,6 +50,10 @@ export const InfoFlex = styled.div`
    flex-wrap: wrap;
    justify-content: flex-start;
    align-items: flex-start;
+@media only screen and (max-width: 570px) {
+  width: 90%;
+  margin: 0 5%;
+}
   }
 `
 export const InfoFlexChild = styled.div`

@@ -40,3 +40,8 @@ export const ServicesWrapper = styled.ul`
   }
 
 `
+export const MobileWidthWrapper = styled.div`
+@media only screen and (max-width: 570px) {
+    padding: 0 1em;
+  }
+`

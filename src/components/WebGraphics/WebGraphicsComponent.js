@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { FullWidthWrapper, HeadingText } from '../Global/Shared'
+import { FullWidthWrapper, HeadingText, MobileWidthWrapper } from '../Global/Shared'
 import { H2Services, ListItem, BodyText } from '../Global/textSizes'
 import { PageWrapperCenter } from '../Global/ServiceFlexWrapper'
 import NumberNav from '../Global/NumberNav'
@@ -9,6 +9,8 @@ import Carousel from './Carousel'
 import { TransWrap } from '../Global/TransWrap'
 import Fade from 'react-reveal/Fade'
 import { graphicsData } from '../Copy/copy'
+
+
 
 
 class WebGraphicsComponent extends Component {
@@ -51,6 +53,7 @@ class WebGraphicsComponent extends Component {
          {
            graphicsData.map(data =>
              <Fade key={data.key} bottom cascade>
+             <MobileWidthWrapper>
                <HeadingText>{data.title}</HeadingText>
                <BodyText>{data.description}</BodyText>
                <div style={{ paddingBottom: '0.5em'}}>
@@ -59,6 +62,7 @@ class WebGraphicsComponent extends Component {
                      <ListItem key={service}>{service}</ListItem>
                    )}
                </div>
+               </MobileWidthWrapper>
              </Fade>
            )
          }
