@@ -1,14 +1,14 @@
 import React from 'react'
 import Fade from 'react-reveal/Fade'
-import {
-  PageWrapper,
-  AboutWrapper,
-  AboutTitle,
-  AboutText,
-  Copyright }
-  from './aboutStyles'
 import PropTypes from 'prop-types'
 import { aboutData } from '../Copy/copy'
+import {
+  PageWrapper,
+  AboutTitle,
+  AboutWrapper,
+  AboutText,
+  Copyright
+ } from '../Global/MenuShared'
 
 const About = ({ children }) => {
   return (

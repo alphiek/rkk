@@ -13,7 +13,8 @@ const Wrapper = posed.div({
     transition: { ease: 'easeOut', duration: 700 }
 },
   exit: { y: '100%',
-    transition: { ease: 'easeIn', duration: 500 }}
+    transition: { ease: 'easeIn', duration: 500 }
+}
 });
 
 
@@ -32,10 +33,10 @@ class HeaderContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isHidden: false,
+      isHidden: true,
       links: [],
       contact: true,
-      form: true,
+      form: false,
     }
     this.toggleHidden = this.toggleHidden.bind(this)
     this.toggleForm = this.toggleForm.bind(this)

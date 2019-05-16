@@ -3,12 +3,11 @@ export const color = {
   primaryFull: '#6600FF',
   secondary: 'hsl(181, 97%, 44%)',
   accent: 'hsl(358, 97%, 61%)',
-  body: 'hsl(0, 0%, 20%)',
   white: '#ffffff',
-  grey: '#808080',
-  lightGrey: '#AEAEAE',
+  offWhite: '#f9f9f9',
   darkLink: 'hsl(258, 22%, 41%)',
   darkLinkO: 'hsla(258, 22%, 41%, 0.70)',
+  lightGrey: '#AEAEAE'
 }
 
 export const weight = {

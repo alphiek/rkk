@@ -2,16 +2,16 @@ import React from 'react'
 import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 import {
-  MenuOuter,
+  MenuWrapper,
   MenuLinksWrapper,
   MenuLinksTitle,
   MenuList,
-  MenuLinksItem,
-} from '../Global/menuStyles'
+} from '../Global/MenuShared'
+import { MenuLinks } from '../Global/nonTransitionLinks'
 
 const MenuComponent = ({toggleHidden, links }) => {
   return (
-    <MenuOuter>
+    <MenuWrapper>
       <MenuLinksWrapper>
           <Fade right cascade >
             <MenuLinksTitle>Links</MenuLinksTitle>
@@ -21,17 +21,17 @@ const MenuComponent = ({toggleHidden, links }) => {
             <Fade right cascade delay={100} key={link.name}>
             <MenuList
               onClick={toggleHidden}>
-             <MenuLinksItem
+             <MenuLinks
               to={link.link}
               partiallyActive={true}>
                 {link.name}
-              </MenuLinksItem>
+              </MenuLinks>
             </MenuList>
             </Fade>
           ))
         }
       </MenuLinksWrapper>
-    </MenuOuter>
+    </MenuWrapper>
   )
 }
 

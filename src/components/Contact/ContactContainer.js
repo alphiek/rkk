@@ -1,34 +1,16 @@
 import React from 'react'
-import styled from 'styled-components'
-import { color, font, weight, spacing } from '../Global/variables'
 import Form from './Form'
 import BackButton from './BackButton'
 import ContactDetails from './ContactDetails'
 import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 import RenderMenu from '../Footer/RenderMenu'
-import { H2Menu } from '../Global/textSizes'
+import {
+  PageWrapper,
+  ContactTitle,
+  ContactWrapper
+ } from '../Global/MenuShared'
 
-const PageWrapper = styled.div`
-  width: 30%;
-  @media only screen and (max-width: 1024px){
-    width: 100%;
-  }
-`
-const ContactWrapper = styled.div`
-  background-color: #f9f9f9;
-  height: 25em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
-  padding: 1.8em;
-  overflow: hidden;
-  box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
-`
-const ContactTitle = styled(H2Menu)`
-  margin-top: 0.2em;
-  margin-bottom: 0.6em;
-  color: ${color.primary};
-`
 
 const ContactContainer = ({ form, tablet, toggleForm, renderMenu }) => {
   return (

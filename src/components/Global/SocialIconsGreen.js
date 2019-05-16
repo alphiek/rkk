@@ -4,7 +4,7 @@ import { color } from './variables'
 
 const Icon = styled.svg`
    width: auto;
-   height: 1em;
+   height: 1.3em;
    @media only screen and (max-width: 1024px) {
      height: 1.5em;
    }

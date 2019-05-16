@@ -25,8 +25,8 @@ export const contactData = [
     lineOne: `Koili, Paphos`,
     lineTwo: `Cyprus`,
     email: `Email: info@rkkcreative.xyz`,
-    uk: `UK: +44 64664 64564645`,
-    cy: `CY: +357 6546545`
+    uk: `UK: +44  7413 977023`,
+    cy: `CY: +357 97 694965`
   }
 ]
 

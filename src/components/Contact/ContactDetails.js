@@ -1,53 +1,46 @@
 import React from 'react'
-import styled from 'styled-components'
-import { color, weight, spacing, font } from '../Global/variables'
+import { BodyText } from '../Global/textSizes'
+import { Address, AddressLink } from '../Global/MenuShared'
 import SocialButtons from '../Global/SocialButtons'
 import Fade from 'react-reveal/Fade'
 import { contactData } from '../Copy/copy'
+import styled from 'styled-components'
 
-const ContactText = styled.p`
-  margin-top: 2em;
-  font-size: 0.55em;
-  color: ${color.body};
-  font-weight: ${weight.normal};
-  line-height: 130%;
+const ContactFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
 `
-
-const Address = styled.address`
-  margin-top: 2em;
-  font-size: 0.55em;
-  color: ${color.body};
-  font-weight: ${weight.light};
-  line-height: 150%;
-  font-style: normal;
-  font-family: ${font.heebo};
-  letter-spacing: ${spacing.large};
-`
-
 
 const ContactDetails = () => {
   return (
-    <div>
+    <>
       {
         contactData.map(data =>
           <Fade key={data.key} bottom cascade>
-             <ContactText>{data.description}</ContactText>
+             <BodyText>{data.description}</BodyText>
+             <ContactFlex>
              <Address>
               {data.lineOne}
               <br />
               {data.lineTwo}
               <br />
-              <a href='#www'>{data.email}</a>
+              <AddressLink
+                  href={`mailto:${data.email}`}
+                  target='_blank'>
+                  {data.email}
+              </AddressLink>
               <br />
-              <a href='#www'>{data.uk}</a>
+              <AddressLink href='tel:+447413977023'>{data.uk}</AddressLink>
               <br />
-              <a href='#www'>{data.cy}</a>
+              <AddressLink href='tel:+35797694965'>{data.cy}</AddressLink>
              </Address>
+             <SocialButtons />
+             </ContactFlex>
            </Fade>
             )
-           }
-        <SocialButtons />
-    </div>
+        }
+    </>
   )
 }
 

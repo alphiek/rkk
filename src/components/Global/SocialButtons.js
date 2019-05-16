@@ -7,9 +7,9 @@ import PropTypes from 'prop-types'
 
 const SocialWrapper = styled.div`
   margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   display: flex;
-  width: 55%;
+  flex-direction: column;
   justify-content: space-between;
 @media only screen
     and (max-width: 824px)

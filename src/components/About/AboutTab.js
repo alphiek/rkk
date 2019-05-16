@@ -4,11 +4,10 @@ import SocialButtons from '../Global/SocialButtons'
 import About from './About'
 import PropTypes from 'prop-types'
 
-const AboutTab = ({renderMenu}) => {
+const AboutTab = ({ renderMenu }) => {
   return (
     <About>
       <RenderMenu renderMenu={renderMenu}/>
-      <SocialButtons />
     </About>
   )
 }

@@ -25,7 +25,7 @@ const SignUp = ({
   touched
 }) => (
   <div>
-  <Fade bottom>
+  <Fade right cascade>
     <FormWrapper onSubmit={handleSubmit}>
       <Label htmlFor="name">
       {errors.name && touched.name && (

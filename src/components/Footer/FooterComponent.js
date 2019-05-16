@@ -31,7 +31,6 @@ const FooterComponent = ({ compProps, toggleHidden, renderMenu, renderAbout, ren
         compProps.about ?
           <AboutTab
           renderMenu={renderMenu}
-          toggleHidden={toggleHidden}
           />
           : null
       }

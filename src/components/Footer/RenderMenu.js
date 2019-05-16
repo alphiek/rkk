@@ -1,25 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-import { color, font, weight, spacing } from '../Global/variables'
+import { color } from '../Global/variables'
+import { BackText } from '../Global/MenuShared'
 import PropTypes from 'prop-types'
 
-const MenuButton = styled.button`
-  font-size: 0.8em;
-  font-family: ${font.heebo};
-  letter-spacing: ${spacing.wide};
-  text-transform: uppercase;
+const MenuButton = styled(BackText)`
   color: ${color.secondary};
-  font-weight: ${weight.black};
-  line-height: 130%;
-  background-color: transparent;
-  border: none;
+  &: hover {
+    color: ${color.offWhite};
+  }
 `
 
-const RenderMenu = (props) => {
+const ButtonWrapper = styled.div`
+  width: 100%;
+  text-align: right;
+  padding-right: 6em;
+`
+
+const RenderMenu = ({ renderMenu }) => {
   return (
-    <div>
-      <MenuButton onClick={props.renderMenu}>Menu</MenuButton>
-    </div>
+    <ButtonWrapper>
+      <MenuButton onClick={renderMenu}>Show Menu</MenuButton>
+    </ButtonWrapper>
   )
 }
 

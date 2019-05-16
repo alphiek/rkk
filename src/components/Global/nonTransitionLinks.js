@@ -75,3 +75,30 @@ export const PortfolioPageLnk = styled.p`
     margin-left: 0;
   }
 `
+
+export const MenuLinks = styled(Link)`
+  font-size: 0.75em;
+  font-family: ${font.heebo};
+  font-weight: ${weight.bold};
+  letter-spacing: ${spacing.servicesTab};
+  text-transform: uppercase;
+  color: ${color.secondary};
+  font-weight: ${weight.black};
+  line-height: 130%;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 1em;
+  }
+`
+
+export const TabletMenuLinks = styled.button`
+  font-size: 1em;
+  font-family: ${font.heebo};
+  letter-spacing: ${spacing.wide};
+  text-transform: uppercase;
+  color: ${color.secondary};
+  font-weight: ${weight.black};
+  line-height: 130%;
+  background-color: transparent;
+  border: none;
+`

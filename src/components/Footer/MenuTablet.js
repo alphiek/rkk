@@ -1,68 +1,77 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { TabletLinks, MenuList, MenuLinksItem } from '../Global/menuStyles'
+import Fade from 'react-reveal/Fade'
+import { TabletMenuLinks, MenuLinks } from '../Global/nonTransitionLinks'
+import {
+  MenuList,
+  MenuWrapper,
+  MenuLinksWrapper } from '../Global/MenuShared'
 
 const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
   return (
-    <ol>
+    <MenuWrapper>
+    <MenuLinksWrapper>
+      <Fade cascade bottom>
       <MenuList
          key='Home'
          onClick={toggleHidden}>
-          <MenuLinksItem
+          <MenuLinks
             to='/'
-            partiallyActive={true}>Home</MenuLinksItem>
+            partiallyActive={true}>Home</MenuLinks>
       </MenuList>
 
       <MenuList
         key='WebDesign'
         onClick={toggleHidden}>
-          <MenuLinksItem
+          <MenuLinks
             to='/WebDesignPage'
-            partiallyActive={true}>WebDesign</MenuLinksItem>
+            partiallyActive={true}>WebDesign</MenuLinks>
       </MenuList>
 
       <MenuList
         key='Dev'
         onClick={toggleHidden}>
-          <MenuLinksItem
+          <MenuLinks
             to='/DevelopmentPage'
-            partiallyActive={true}>Development</MenuLinksItem>
+            partiallyActive={true}>Development</MenuLinks>
       </MenuList>
 
       <MenuList
         key='Graphics'
         onClick={toggleHidden}>
-          <MenuLinksItem
+          <MenuLinks
             to='/WebGraphicsPage'
-            partiallyActive={true}>Web Graphics</MenuLinksItem>
+            partiallyActive={true}>Web Graphics</MenuLinks>
       </MenuList>
 
       <MenuList
         key='SEO'
         onClick={toggleHidden}>
-          <MenuLinksItem
+          <MenuLinks
             to='/SeoOptPage'
-            partiallyActive={true}>SEO</MenuLinksItem>
+            partiallyActive={true}>SEO</MenuLinks>
       </MenuList>
 
       <MenuList
         key='Portfolio'
         onClick={toggleHidden}>
-          <MenuLinksItem
+          <MenuLinks
             to='/PortfolioPage'
-            partiallyActive={true}>Portfolio</MenuLinksItem>
+            partiallyActive={true}>Portfolio</MenuLinks>
       </MenuList>
 
       <MenuList
         key='About'>
-          <TabletLinks onClick={renderAbout}>About</TabletLinks>
+          <TabletMenuLinks onClick={renderAbout}>About</TabletMenuLinks>
       </MenuList>
 
       <MenuList
          key='Contact'>
-          <TabletLinks onClick={renderContact}>Contact</TabletLinks>
+          <TabletMenuLinks onClick={renderContact}>Contact</TabletMenuLinks>
       </MenuList>
-    </ol>
+      </Fade>
+      </MenuLinksWrapper>
+    </MenuWrapper>
   )
 }
 

@@ -60,13 +60,13 @@ export const ConsentText = styled.p`
   width: 80%;
   font-size: 0.5em;
   line-height: 130%;
-  color: ${color.grey};
+  color: ${color.darkLink};
   margin-bottom: 1em;
 `
 
 export const Submit = styled.button`
   margin-top: 1em;
-  height: 4em;
+  height: 5em;
   background: ${color.primary};
   border: 0.2em solid ${color.secondary};
   color: white;
@@ -74,5 +74,5 @@ export const Submit = styled.button`
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.wide};
   text-transform: uppercase;
-  font-size: 0.5em;
+  font-size: 0.6em;
 `
