@@ -1,11 +1,11 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Fade from 'react-reveal/Fade'
+import NumberIndicator from '../NumberIndicator'
 import {
   MainImage,
   TopImage,
   Flex,
-  PageIndicator,
 } from '../PortfolioShared'
 
 
@@ -14,11 +14,11 @@ const LKImage = ({ data }) => {
   return (
     <>
     <Flex>
-      <PageIndicator>04</PageIndicator>
-      <Fade right delay={1200}>
+    <NumberIndicator>04</NumberIndicator>
+      <Fade right delay={300}>
         <MainImage style={{ width: '15em' }} fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
       </Fade>
-      <Fade bottom delay={900}>
+      <Fade bottom delay={200}>
         <TopImage fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
       </Fade>
     </Flex>

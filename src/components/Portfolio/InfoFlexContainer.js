@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { color } from '../Global/variables'
+import Fade from 'react-reveal/Fade'
 import {
   H1,
   H2Services,
@@ -28,11 +29,17 @@ const PortfolioTitle = styled(H1)`
   @media only screen and (max-width: 1024px) {
    margin-top: 1em;
  }
+ @media only screen and (max-width: 570px) {
+   width: auto;
+ }
 `
 const Description = styled(BodyText)`
   margin-left: 1em;
   padding-top: 0.5em;
   padding-bottom: 0.8em;
+  @media only screen and (max-width: 570px) {
+    margin-left: 0;
+  }
 `
 
 const ServiceWrapPortfolio = styled(ServiceWrapper)`
@@ -47,6 +54,7 @@ const InfoFlexContainer = ({ item, onClickToggle, live }) => {
   console.log(live)
   return (
     <>
+    <Fade bottom delay={200}>
     <InfoFlex>
       <InfoFlexChild>
         <PortfolioTitle>{item.title}</PortfolioTitle>
@@ -88,6 +96,7 @@ const InfoFlexContainer = ({ item, onClickToggle, live }) => {
            </ServiceWrapPortfolio>
        </ServiceFlexChild>
     </InfoFlex>
+    </Fade>
     <PortfolioPageLnk
      aria-label='Back to main portfolio'
      id='close'

@@ -2,11 +2,11 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
+import NumberIndicator from '../NumberIndicator'
 import {
   MainImage,
   TopImage,
   Flex,
-  PageIndicator,
 } from '../PortfolioShared'
 
 const LMLFlex = styled(Flex)`
@@ -18,7 +18,7 @@ const LMLImage = ({ data }) => {
   return (
     <>
     <LMLFlex>
-      <PageIndicator>02</PageIndicator>
+    <NumberIndicator>02</NumberIndicator>
       <Fade right delay={1200}>
         <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
       </Fade>

@@ -2,11 +2,11 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
+import NumberIndicator from '../NumberIndicator'
 import {
   MainImage,
   TopImage,
   Flex,
-  PageIndicator,
 } from '../PortfolioShared'
 
 const LeftImage = styled(TopImage)`
@@ -25,14 +25,14 @@ const ForagerImage = ({ data }) => {
   return (
     <>
     <Flex>
-      <PageIndicator>06</PageIndicator>
-      <Fade right delay={1200}>
+    <NumberIndicator>06</NumberIndicator>
+      <Fade right delay={300}>
         <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='Forager Search Box' />
       </Fade>
-      <Fade bottom delay={900}>
+      <Fade bottom delay={200}>
         <RightImage fluid={data.imageTwo.childImageSharp.fluid} alt='Sample Forager Icons' />
       </Fade>
-      <Fade bottom delay={900}>
+      <Fade bottom delay={200}>
         <LeftImage fluid={data.imageThree.childImageSharp.fluid} alt='Forager Results UI' />
       </Fade>
     </Flex>
