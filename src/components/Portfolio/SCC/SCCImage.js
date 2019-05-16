@@ -1,26 +1,27 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
+import Img from 'gatsby-image'
 import NumberIndicator from '../NumberIndicator'
 import {
-  MainImage,
-  TopImage,
   Flex,
 } from '../PortfolioShared'
-
+import {
+   MainImageAnim,
+   SecondImageAnim,
+} from './SCCSpring'
 
 const SCCImage = ({ data }) => {
   return (
     <>
     <Flex>
     <NumberIndicator>05</NumberIndicator>
-      <Fade right delay={1200}>
-        <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
-      </Fade>
-      <Fade bottom delay={900}>
-        <TopImage style={{ width: '20em', left: '-10em', position: 'absolute'}} fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
-      </Fade>
+      <MainImageAnim>
+        <Img fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
+      </MainImageAnim>
     </Flex>
+    <SecondImageAnim>
+      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+    </SecondImageAnim>
     </>
   )
 }

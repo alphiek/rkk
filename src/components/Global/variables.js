@@ -7,7 +7,8 @@ export const color = {
   offWhite: '#f9f9f9',
   darkLink: 'hsl(258, 22%, 41%)',
   darkLinkO: 'hsla(258, 22%, 41%, 0.70)',
-  lightGrey: '#AEAEAE'
+  lightGrey: '#AEAEAE',
+  thumbnail: 'hsla(0, 0%, 17%, 0.60)'
 }
 
 export const weight = {

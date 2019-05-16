@@ -1,34 +1,36 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade'
 import NumberIndicator from '../NumberIndicator'
+import { Flex } from '../PortfolioShared'
 import {
-  MainImage,
-  TopImage,
-  Flex,
-} from '../PortfolioShared'
+   MainImageAnim,
+   SecondImageAnim,
+   ThirdImageAnim
+} from './LMLSpring'
 
 const LMLFlex = styled(Flex)`
-  margin-bottom: 3em;
-  margin-top: 2em;
+  margin-bottom: 0.5em;
+  margin-top: 3em;
 `
 
 const LMLImage = ({ data }) => {
+
   return (
     <>
     <LMLFlex>
-    <NumberIndicator>02</NumberIndicator>
-      <Fade right delay={1200}>
-        <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
-      </Fade>
-      <Fade bottom delay={900}>
-        <TopImage style={{width: '9.5em', position: 'absolute', left: '-2em', top: '-6.7em' }} fluid={data.imageThree.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
-      </Fade>
-      <Fade bottom delay={900}>
-        <TopImage style={{width: '10em', position: 'absolute', left: '-10em', top: '-1.3em' }} fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
-      </Fade>
+      <NumberIndicator>02</NumberIndicator>
+      <MainImageAnim>
+        <Img fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
+      </MainImageAnim>
     </LMLFlex>
+    <SecondImageAnim>
+      <Img fluid={data.imageThree.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+    </SecondImageAnim>
+    <ThirdImageAnim>
+      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+    </ThirdImageAnim>
     </>
   )
 }

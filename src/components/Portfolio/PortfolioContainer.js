@@ -55,7 +55,7 @@ class PortfolioContainer extends Component {
         }
       },
       () => {
-        console.log('reset')
+        window.scrollTo(0, 0)
       })
     } else {
       this.setState({
@@ -66,7 +66,7 @@ class PortfolioContainer extends Component {
         }
       },
       () => {
-        console.log('open')
+        window.scrollTo(0, 0)
       })
     }
   }

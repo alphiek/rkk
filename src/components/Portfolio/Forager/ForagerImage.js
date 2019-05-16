@@ -1,42 +1,30 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
-import Fade from 'react-reveal/Fade'
+import Img from 'gatsby-image'
 import NumberIndicator from '../NumberIndicator'
+import { Flex } from '../PortfolioShared'
 import {
-  MainImage,
-  TopImage,
-  Flex,
-} from '../PortfolioShared'
-
-const LeftImage = styled(TopImage)`
-  width: 12.5vw;
-  margin-top: 9em;
-  margin-left: -9em;
-  z-index: 300;
-`
-const RightImage = styled(TopImage)`
-width: 13em;
-margin-right: -5em;
-margin-top: -6.5em;
-`
+   MainImageAnim,
+   SecondImageAnim,
+   ThirdImageAnim
+} from './ForagerSpring'
 
 const ForagerImage = ({ data }) => {
   return (
     <>
     <Flex>
-    <NumberIndicator>06</NumberIndicator>
-      <Fade right delay={300}>
-        <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='Forager Search Box' />
-      </Fade>
-      <Fade bottom delay={200}>
-        <RightImage fluid={data.imageTwo.childImageSharp.fluid} alt='Sample Forager Icons' />
-      </Fade>
-      <Fade bottom delay={200}>
-        <LeftImage fluid={data.imageThree.childImageSharp.fluid} alt='Forager Results UI' />
-      </Fade>
+      <NumberIndicator>06</NumberIndicator>
+      <MainImageAnim>
+          <Img fluid={data.imageOne.childImageSharp.fluid} alt='Forager Search Box' />
+      </MainImageAnim>
     </Flex>
-    </>
+    <SecondImageAnim>
+      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='Sample Forager Icons' />
+    </SecondImageAnim>
+    <ThirdImageAnim>
+      <Img fluid={data.imageThree.childImageSharp.fluid} alt='Forager Results UI' />
+    </ThirdImageAnim>
+  </>
   )
 }
 

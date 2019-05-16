@@ -1,28 +1,29 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Fade from 'react-reveal/Fade'
+import Img from 'gatsby-image'
 import NumberIndicator from '../NumberIndicator'
+import { Flex } from '../PortfolioShared'
 import {
-  MainImage,
-  TopImage,
-  Flex,
-} from '../PortfolioShared'
+   MainImageAnim,
+   SecondImageAnim,
+   ThirdImageAnim
+} from './PPDSpring'
 
 const PPDImage = ({ data }) => {
   return (
     <>
     <Flex>
-    <NumberIndicator>03</NumberIndicator>
-      <Fade right delay={300}>
-        <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
-      </Fade>
-      <Fade bottom delay={900}>
-        <TopImage style={{width: '8em', position: 'absolute', left: '-3em', top: '-8em' }} fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
-      </Fade>
-      <Fade bottom delay={900}>
-        <TopImage style={{width: '8em', position: 'absolute', left: '-7em', top: '1em' }}fluid={data.imageThree.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
-      </Fade>
+      <NumberIndicator>03</NumberIndicator>
+      <MainImageAnim>
+        <Img fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
+      </MainImageAnim>
     </Flex>
+    <SecondImageAnim>
+      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+    </SecondImageAnim>
+    <ThirdImageAnim>
+      <Img fluid={data.imageThree.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+    </ThirdImageAnim>
     </>
   )
 }

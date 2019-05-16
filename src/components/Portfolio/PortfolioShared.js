@@ -115,7 +115,7 @@ export const DevTag = styled.p`
   line-height: 2em;
   vertical-align: bottom;
   text-transform: uppercase;
-  color: ${color.grey};
+  color: ${color.darkLink};
   font-size: calc(0.5em + 0.2vw);
   @media only screen and (max-width: 1024px) {
     font-size: calc(0.5em + 0.6vw);
@@ -134,7 +134,7 @@ export const SiteTag = styled.a`
   line-height: 2em;
   vertical-align: bottom;
   text-transform: uppercase;
-  color: ${color.grey};
+  color: ${color.darkLink};
   font-size: calc(0.5em + 0.2vw);
   @media only screen and (max-width: 1024px) {
     font-size: calc(0.5em + 0.6vw);

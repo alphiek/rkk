@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 
 import {
@@ -35,30 +36,42 @@ const GridContainer = ({ images, onClickToggle, grid }) => {
     {
       grid ?
       <Container>
-        <FodeThumbnail
-          thumb={images.imageOne.childImageSharp.fluid}
+        <Fade left>
+          <FodeThumbnail
+            thumb={images.imageOne.childImageSharp.fluid}
+            onClickToggle={onClickToggle}
+          />
+        </Fade>
+        <Fade left delay={25}>
+          <LMLThumbnail
+            thumb={images.imageTwo.childImageSharp.fluid}
+            onClickToggle={onClickToggle}
+          />
+        </Fade>
+        <Fade left delay={50}>
+          <PPDThumbnail
+          thumb={images.imageThree.childImageSharp.fluid}
           onClickToggle={onClickToggle}
-        />
-        <LMLThumbnail
-          thumb={images.imageTwo.childImageSharp.fluid}
+          />
+        </Fade>
+        <Fade left delay={75}>
+          <LKThumbnail
+          thumb={images.imageFour.childImageSharp.fluid}
           onClickToggle={onClickToggle}
-        />
-        <PPDThumbnail
-        thumb={images.imageThree.childImageSharp.fluid}
-        onClickToggle={onClickToggle}
-        />
-        <LKThumbnail
-        thumb={images.imageFour.childImageSharp.fluid}
-        onClickToggle={onClickToggle}
-        />
-        <SCCThumbnail
-        thumb={images.imageFive.childImageSharp.fluid}
-        onClickToggle={onClickToggle}
-        />
-        <ForagerThumbnail
-        thumb={images.imageSix.childImageSharp.fluid}
-        onClickToggle={onClickToggle}
-        />
+          />
+        </Fade>
+        <Fade left delay={100}>
+          <SCCThumbnail
+          thumb={images.imageFive.childImageSharp.fluid}
+          onClickToggle={onClickToggle}
+          />
+        </Fade>
+        <Fade left delay={125}>
+          <ForagerThumbnail
+          thumb={images.imageSix.childImageSharp.fluid}
+          onClickToggle={onClickToggle}
+          />
+        </Fade>
       </Container>
       :
       null

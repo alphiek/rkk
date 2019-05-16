@@ -3,8 +3,11 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { color, weight, spacing } from '../Global/variables'
 
+
 const Wrapper = styled.div`
   position: relative;
+  width: 100%;
+  height: 100%;
 `
 const InfoWrapper = styled.div`
   padding: 1em;
@@ -20,7 +23,7 @@ const InfoWrapper = styled.div`
   background: -webkit-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
   background: linear-gradient(135deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
   &: hover {
-    background-color: ${color.darkLinkO};
+    background-color: ${color.thumbnail};
   }
   @media only screen and (max-width: 1024px) {
     margin-bottom: 0.5em;
@@ -66,6 +69,7 @@ const SubText = styled.span`
     font-size: calc(0.45em + 1vw);
   }
 `
+
 
 export const FodeThumbnail = ({ thumb, onClickToggle }) => {
   return (
