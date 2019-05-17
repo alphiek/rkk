@@ -11,6 +11,7 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: flex-end;
+  overflow: hidden;
 `
 const NavContainer = styled.div`
   display: flex;

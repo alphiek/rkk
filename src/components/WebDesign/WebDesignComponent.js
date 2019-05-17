@@ -1,40 +1,39 @@
-import React from 'react'
-import Fade from 'react-reveal/Fade'
-import { webdesignData } from '../Copy/copy'
+import React, { Component } from 'react'
 import ImageDeck from './ImageDeck'
-import PortfolioLink from '../Global/PortfolioLink'
-import { HeadingText, ServicesWrapper } from '../Global/Shared'
-import { H2Services, ListItem, BodyText } from '../Global/textSizes'
-import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
+import { ServiceFlexWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
+import MainContent from './MainContent'
 
-const WebDesignComponent = () => {
-  return (
-    <ServiceFlexWrapper>
-    {
-      webdesignData.map(data =>
-        <LeftWrapper key={data.key}>
-              <Fade bottom delay={200}>
-              <HeadingText>{data.title}</HeadingText>
-              <BodyText>{data.description}</BodyText>
-              <ServicesWrapper>
-                <H2Services>Services</H2Services>
-                <ul>
-                  {
-                  data.services.map(service =>
-                  <ListItem key={service}>{service}</ListItem>
-                  )
-                  }
-                </ul>
-              </ServicesWrapper>
-              </Fade>
-            <PortfolioLink/>
-        </LeftWrapper>
-      )
+class WebDesignComponent extends Component {
+  constructor() {
+    super()
+    this.state = {
+      loaded: false
     }
-      <RightWrapper>
-        <ImageDeck />
-      </RightWrapper>
-    </ServiceFlexWrapper>
-  )
+  }
+
+  componentDidMount() {
+    this.setState({
+      loaded: !this.state.loaded
+    })
+  }
+
+  render() {
+    return (
+      <>
+        {
+          this.state.loaded ?
+          <ServiceFlexWrapper>
+            <MainContent />
+            <RightWrapper>
+              <ImageDeck />
+            </RightWrapper>
+          </ServiceFlexWrapper>
+          :
+          null
+        }
+     </>      
+    )
+  }
 }
+
 export default WebDesignComponent
