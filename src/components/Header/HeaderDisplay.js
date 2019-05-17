@@ -1,41 +1,25 @@
-import React, { Component } from 'react'
+import React from 'react'
 import HeaderContainer from './HeaderContainer'
 import Logo from './Logo'
+import Breakpoint, { BreakpointProvider} from 'react-socks'
+import { setDefaultBreakpoints } from 'react-socks'
 
-class HeaderDisplay extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      desktop: true,
-    }
-    this.updatePredicate = this.updatePredicate.bind(this)
-  }
+setDefaultBreakpoints([
+  { tablet: 0 },
+  { desktop: 1024 }
+]);
 
-  componentDidMount() {
-    this.updatePredicate()
-    window.addEventListener('resize', this.updatePredicate)
-  }
+const HeaderDisplay = () => {
+  return (
+    <>
+    <BreakpointProvider>
+    <Breakpoint desktop only >
+      <HeaderContainer />
+      </Breakpoint>
+      </BreakpointProvider>
+      <Logo />
+    </>
+  )
+}
 
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updatePredicate)
-  }
-
-  updatePredicate() {
-      this.setState({
-        desktop: window.innerWidth > 1024,
-      })
-    }
-
-    render() {
-      return (
-        <>
-          {this.state.desktop &&
-            <HeaderContainer />
-          }
-          <Logo />
-        </>
-      )
-    }
-  }
-
-  export default HeaderDisplay
+export default HeaderDisplay

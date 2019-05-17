@@ -2,6 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 import { color } from '../Global/variables'
 import PropTypes from 'prop-types'
+import Fade from 'react-reveal/Fade'
 
 const BurgerMenu = styled.div`
   position: absolute;
@@ -10,8 +11,8 @@ const BurgerMenu = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 1.5em;
-  height: 1.1em;
+  width: 2.1vw;
+  height: 1.6vw;
   cursor: pointer;
   z-index: 6;
 `
@@ -44,11 +45,13 @@ const Burger = ({isHidden, onClick}) => {
     <>
     {
       isHidden ?
+      <Fade right cascade>
       <BurgerMenu onClick={onClick}>
         <TopLine />
         <MidLine />
         <BottomLine />
       </BurgerMenu>
+      </Fade>
       :
      null
     }

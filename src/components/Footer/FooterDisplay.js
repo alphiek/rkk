@@ -1,39 +1,21 @@
 import React, { Component } from 'react'
 import FooterContainer from './FooterContainer'
+import Breakpoint, { BreakpointProvider} from 'react-socks'
+import { setDefaultBreakpoints } from 'react-socks'
 
-class FooterDisplay extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      desktop: true,
-    }
-    this.updatePredicate = this.updatePredicate.bind(this)
-  }
+setDefaultBreakpoints([
+  { tablet: 0 },
+  { desktop: 1024 }
+]);
 
-  componentDidMount() {
-    this.updatePredicate()
-    window.addEventListener('resize', this.updatePredicate)
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updatePredicate)
-  }
-
-  updatePredicate() {
-      this.setState({
-        desktop: window.innerWidth > 1024,
-      })
-    }
-
-    render() {
-      return (
-        <>
-          {!this.state.desktop &&
-            <FooterContainer />
-          }
-        </>
-      )
-    }
-  }
+const FooterDisplay = () => {
+  return(
+    <BreakpointProvider>
+     <Breakpoint tablet only>
+       <FooterContainer />
+     </Breakpoint>
+    </BreakpointProvider>
+  )
+}
 
   export default FooterDisplay

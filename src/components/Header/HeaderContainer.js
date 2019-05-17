@@ -7,6 +7,13 @@ import Burger from './Burger'
 import MenuContainer from './MenuContainer'
 import { color } from '../Global/variables'
 
+const HeaderWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh
+`
 
 const Wrapper = posed.div({
   enter: { y: '0%',
@@ -23,6 +30,8 @@ const PoseWrapper = styled(Wrapper)`
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   background-color: ${color.primaryFull};
@@ -70,25 +79,25 @@ class HeaderContainer extends Component {
     render() {
       return (
         <>
-          <Burger
-            onClick={this.toggleHidden}
-            isHidden={this.state.isHidden}/>
-          <PoseGroup>
-          {
-            !this.state.isHidden &&
-            <PoseWrapper key='Modal'>
-              <MenuContainer
-                key='Menu'
-                toggleForm={this.toggleForm}
-                compProps={this.state}
-                toggleHidden={this.toggleHidden}
-              />
-            </PoseWrapper >
-          }
-          </PoseGroup>
-        </>
+        <Burger
+          onClick={this.toggleHidden}
+          isHidden={this.state.isHidden}/>
+        <PoseGroup>
+        {
+        !this.state.isHidden &&
+          <PoseWrapper key='Modal'>
+            <MenuContainer
+              key='Menu'
+              toggleForm={this.toggleForm}
+              compProps={this.state}
+              toggleHidden={this.toggleHidden}
+            />
+          </PoseWrapper >
+        }
+        </PoseGroup>
+      </>
       )
-    }
+  }
 }
 
 HeaderContainer.propTypes = {
