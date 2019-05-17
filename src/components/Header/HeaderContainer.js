@@ -7,13 +7,6 @@ import Burger from './Burger'
 import MenuContainer from './MenuContainer'
 import { color } from '../Global/variables'
 
-const HeaderWrapper = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh
-`
 
 const Wrapper = posed.div({
   enter: { y: '0%',

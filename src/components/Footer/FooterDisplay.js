@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import FooterContainer from './FooterContainer'
 import Breakpoint, { BreakpointProvider} from 'react-socks'
 import { setDefaultBreakpoints } from 'react-socks'
