@@ -5,7 +5,8 @@ import { color, weight } from './variables'
 import Fade from 'react-reveal/Fade'
 
 const Wrapper = styled.div`
-  position: fixed;
+  position: absolute;
+  right: 0;
   bottom: 0;
   display: flex;
   width: 100%;

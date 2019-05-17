@@ -1,8 +1,15 @@
 import React from "react"
-import WebDesignContainer from '../components/WebDesign/WebDesignContainer'
+import WebDesignComponent from '../components/WebDesign/WebDesignComponent'
 import { Helmet } from 'react-helmet'
 import webdesign from '../images/Graphics/Webdesign.png'
 import logo from '../images/icon.png'
+import { BreakpointProvider} from 'react-socks'
+import { setDefaultBreakpoints } from 'react-socks'
+
+setDefaultBreakpoints([
+  { tablet: 0 },
+  { desktop: 1025 }
+]);
 
 const WebDesignPage = () => {
   return (
@@ -70,7 +77,9 @@ const WebDesignPage = () => {
           }
      `}</script>
     </Helmet>
-    <WebDesignContainer/>
+    <BreakpointProvider>
+      <WebDesignComponent/>
+    </BreakpointProvider>
     </>
   )
 }

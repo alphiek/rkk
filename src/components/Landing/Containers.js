@@ -16,6 +16,42 @@ export const PageContainer = styled.div`
     }
 `
 
+export const TitleContainer = styled.div`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 40vw;
+  margin-top: 38.5vh;
+  margin-left: 22vw;
+  background-color: #FFFFFF;
+  z-index: 3;
+
+
+  @media only screen and (max-width: 1024px) {
+    margin-top: 25vh;
+    margin-left: 14vw;
+    width: 45vw;
+    background-color: transparent;
+  }
+
+  @media only screen and (max-width: 824px) {
+    margin-left: 4vw;
+    width: 55vw;
+  }
+
+  @media only screen and (max-width: 520px) {
+    width: 70vw;
+  }
+
+  @media only screen and (max-height: 411px) and (orientation: landscape) {
+    width: 60vw;
+    margin-left: 10vw;
+    margin-top:20vh
+  }
+`
+
 const BlueContainer = styled(a.div)`
   position: absolute;
   bottom: 0;
@@ -24,6 +60,9 @@ const BlueContainer = styled(a.div)`
   z-index: 1;
   overflow: hidden;
   background-color: ${color.secondary};
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 const RedContainer = styled(BlueContainer)`
   right: 0;
@@ -31,6 +70,9 @@ const RedContainer = styled(BlueContainer)`
   height: 60vh;
   z-index: 2;
   background-color: ${color.accent};
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 
 export const BlueContainerAnim = ({ children }) => {

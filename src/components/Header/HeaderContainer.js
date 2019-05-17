@@ -5,8 +5,9 @@ import styled from 'styled-components'
 import posed, { PoseGroup } from 'react-pose';
 import Burger from './Burger'
 import MenuContainer from './MenuContainer'
+import Logo from './Logo'
+import Breakpoint from 'react-socks'
 import { color } from '../Global/variables'
-
 
 const Wrapper = posed.div({
   enter: { y: '0%',
@@ -71,7 +72,8 @@ class HeaderContainer extends Component {
 
     render() {
       return (
-        <>
+       <header>
+        <Breakpoint desktop only>
         <Burger
           onClick={this.toggleHidden}
           isHidden={this.state.isHidden}/>
@@ -88,7 +90,9 @@ class HeaderContainer extends Component {
           </PoseWrapper >
         }
         </PoseGroup>
-      </>
+        </Breakpoint>
+        <Logo />
+      </header>
       )
   }
 }

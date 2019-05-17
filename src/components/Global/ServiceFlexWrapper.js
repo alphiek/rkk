@@ -1,9 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import Breakpoint from 'react-socks'
 import NumberNav from '../Global/NumberNav'
 import BottomNav from '../Global/BottomNav'
 import { TransWrap } from '../Global/TransWrap'
-import styled from 'styled-components'
-import PropTypes from 'prop-types'
+
 
 export const PageWrapper = styled.div`
   display: flex;
@@ -72,30 +74,24 @@ export const RightWrapper = styled.div`
   }
 `
 
-export const ServiceFlexWrapper = ({tablet, children}) => {
-  const hide = tablet
+export const ServiceFlexWrapper = ({ children }) => {
   return (
     <TransWrap>
       <PageWrapperCenter>
-        {
-          !hide ?
+        <Breakpoint desktop only>
           <NumberNav />
-          : null
-        }
-         <FlexContainer>
+        </Breakpoint>
+        <FlexContainer>
            {children}
-         </FlexContainer>
-        {
-          !hide ?
+        </FlexContainer>
+        <Breakpoint desktop only>
           <BottomNav />
-          : null
-        }
+        </Breakpoint>
       </PageWrapperCenter>
     </TransWrap>
   )
 }
 
 ServiceFlexWrapper.propTypes = {
-  tablet: PropTypes.bool.isRequired,
   children: PropTypes.node.isRequired,
 }

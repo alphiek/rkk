@@ -2,7 +2,6 @@ import React from 'react'
 import styled from "styled-components";
 import { color } from '../Global/variables'
 import PropTypes from 'prop-types'
-import Fade from 'react-reveal/Fade'
 
 const BurgerMenu = styled.div`
   position: absolute;
@@ -45,13 +44,11 @@ const Burger = ({isHidden, onClick}) => {
     <>
     {
       isHidden ?
-      <Fade right cascade>
       <BurgerMenu onClick={onClick}>
         <TopLine />
         <MidLine />
         <BottomLine />
       </BurgerMenu>
-      </Fade>
       :
      null
     }

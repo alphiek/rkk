@@ -3,6 +3,13 @@ import WebGraphicsComponent from '../components/WebGraphics/WebGraphicsComponent
 import { Helmet } from 'react-helmet'
 import ogImage from '../images/ogImage.png'
 import logo from '../images/icon.png'
+import { BreakpointProvider} from 'react-socks'
+import { setDefaultBreakpoints } from 'react-socks'
+
+setDefaultBreakpoints([
+  { tablet: 0 },
+  { desktop: 1025 }
+]);
 
 class WebGraphicsPage extends Component {
   render() {
@@ -71,7 +78,9 @@ class WebGraphicsPage extends Component {
             }
        `}</script>
       </Helmet>
-      <WebGraphicsComponent />
+      <BreakpointProvider>
+        <WebGraphicsComponent />
+      </BreakpointProvider>
       </>
     )
   }

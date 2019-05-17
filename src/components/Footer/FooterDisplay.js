@@ -4,17 +4,20 @@ import Breakpoint, { BreakpointProvider} from 'react-socks'
 import { setDefaultBreakpoints } from 'react-socks'
 
 setDefaultBreakpoints([
-  { tablet: 0 },
-  { desktop: 1024 }
+  { mobile: 0 },
+  { tablet: 825 },
+  { desktop: 1025 }
 ]);
 
 const FooterDisplay = () => {
   return(
+    <footer>
     <BreakpointProvider>
-     <Breakpoint tablet only>
+     <Breakpoint tablet down>
        <FooterContainer />
      </Breakpoint>
     </BreakpointProvider>
+    </footer>
   )
 }
 

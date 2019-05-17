@@ -1,8 +1,15 @@
 import React from "react"
-import SeoOptContainer from '../components/SeoOpt/SeoOptContainer'
 import { Helmet } from 'react-helmet'
+import { BreakpointProvider} from 'react-socks'
+import { setDefaultBreakpoints } from 'react-socks'
+import SeoOptComponent from '../components/SeoOpt/SeoOptComponent'
 import seo from '../images/SEO.png'
 import logo from '../images/icon.png'
+
+setDefaultBreakpoints([
+  { tablet: 0 },
+  { desktop: 1025 }
+]);
 
 const SeoOptimization = () => (
   <>
@@ -69,7 +76,9 @@ const SeoOptimization = () => (
         }
    `}</script>
   </Helmet>
-  <SeoOptContainer />
+  <BreakpointProvider>
+    <SeoOptComponent />
+  </BreakpointProvider>
   </>
 )
 

@@ -1,59 +1,60 @@
-import React from 'react'
+import React, { Component } from 'react'
+import Breakpoint from 'react-socks'
+import DesktopAnim from './DesktopAnim'
+import DesktopLinks from './DesktopLinks'
+import PlantTablet from './PlantTablet'
 import styled from 'styled-components'
-import { MainLink } from '../Global/textSizes'
-import { BlueContainerAnim, RedContainerAnim, PageContainer } from './Containers'
-import LampAnim from './LampAnim'
-import MouseAnim from './MouseAnim'
-import Plant from './Plant'
-import Title from './Title'
 import Fade from 'react-reveal/Fade'
+import { H1 } from '../Global/textSizes'
+import { TitleContainer, PageContainer } from './Containers'
 
-const LandingLink = styled(MainLink)`
-  position: absolute;
-  z-index: 3;
-  padding: 0.6em 0.9em;
-`
-const Portfolio = styled(LandingLink)`
-  top: 21vh;
-  right: 23vw;
-`
-const Services = styled(LandingLink)`
-  bottom: 15vh;
-  left: 35vw;
+export const LandingTitle = styled(H1)`
+  width: 90%;
+  margin-top: 1em;
+  margin-bottom: 1em;
 `
 
-const LandingComponent = () => (
+class LandingComponent extends Component {
+  constructor() {
+    super()
+    this.state = {
+      loaded: false
+    }
+  }
 
-  <PageContainer>
-    <Title />
-    <LampAnim />
-    <BlueContainerAnim>
-      <MouseAnim />
-    </BlueContainerAnim>
-    <RedContainerAnim>
-      <Plant />
-    </RedContainerAnim>
-    <Fade delay={500} cascade>
-      <Portfolio
-        aria-label="Link to Portfolio"
-        exit={{ length: 0.5 }}
-        entry={{ delay: 0.8 }}
-        to='/PortfolioPage'
-        partiallyActive={true}
-        >Portfolio
-      </Portfolio>
-    </Fade>
-    <Fade delay={600} cascade>
-      <Services
-        aria-label="Link to Services"
-        exit={{ length: 0.5 }}
-        entry={{ delay: 0.8 }}
-        to='/WebDesignPage'
-        partiallyActive={true}
-        >Services
-      </Services>
-    </Fade>
-  </PageContainer>
-)
+  componentDidMount() {
+    this.setState({
+      loaded: !this.state.loaded
+    })
+  }
+
+  render() {
+    return (
+      <>
+      {
+        this.state.loaded ?
+          <PageContainer>
+              <TitleContainer>
+              <Fade bottom cascade>
+                  <LandingTitle>Freelance Web Design&#160;& Development</LandingTitle>
+              </Fade>
+              </TitleContainer>
+            <Breakpoint desktop only>
+              <DesktopAnim />
+            </Breakpoint>
+            <Breakpoint tablet down >
+              <PlantTablet />
+            </Breakpoint>
+            <Breakpoint desktop only>
+              <DesktopLinks />
+            </Breakpoint>
+          </PageContainer>
+          :
+          null
+        }
+      </>
+    )
+  }
+}
 
 export default LandingComponent

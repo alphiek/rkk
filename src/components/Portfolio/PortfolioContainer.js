@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
-import { TransWrap } from '../Global/TransWrap'
 import { StaticQuery, graphql } from 'gatsby'
-import PortfolioComponent from './PortfolioComponent'
 import PropTypes from 'prop-types'
+import PortfolioComponent from './PortfolioComponent'
+import { TransWrap } from '../Global/TransWrap'
+
 
 class PortfolioContainer extends Component {
   constructor(props) {
@@ -81,7 +82,6 @@ class PortfolioContainer extends Component {
            onClickToggle={this.onClickToggle}
            mainContent={this.state.mainContent}
            grid={this.state.grid}
-           live={this.state.live}
           />
         </TransWrap>
           :

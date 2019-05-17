@@ -30,11 +30,11 @@ const MainImage = styled(Img)`
     width: 20em;
   }
 `
-const SeoImage = ({data}) => {
+const SeoImage = ({ data }) => {
   return (
     <>
     <Fade right>
-    <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
+      <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
     </Fade>
     </>
   )

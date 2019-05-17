@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { color } from '../Global/variables'
-import {FullWidthWrapper } from '../Global/Shared'
-import { PageWrapper } from '../Global/ServiceFlexWrapper'
 import Img from 'gatsby-image'
+import { color } from '../Global/variables'
+import { FullWidthWrapper } from '../Global/Shared'
+import { PageWrapper } from '../Global/ServiceFlexWrapper'
+
 
 export const MainImage = styled(Img)`
   position: relative;

@@ -1,14 +1,22 @@
 import React from "react"
-import LandingContainer from '../components/Landing/LandingContainer'
+import { BreakpointProvider} from 'react-socks'
+import { setDefaultBreakpoints } from 'react-socks'
 import Helmet from "react-helmet"
 import ogImage from '../images/ogImage.png'
 import logo from '../images/icon.png'
+import LandingComponent from '../components/Landing/LandingComponent'
+
+setDefaultBreakpoints([
+  { mobile: 0 },
+  { tablet: 825 },
+  { desktop: 1025 }
+]);
 
 const index = () => (
   <>
   <Helmet>
     <html lang="en"/>
-    <title>RKK Creative Freelance Web Design and Development Paphos</title>
+    <title>RKK Creative Freelance Web Design and Development</title>
     <meta name="description" content="Freelance Web Design and Development Services"></meta>
 
     <meta property="og:url" content="https://rkkcreative.xyz"></meta>
@@ -68,7 +76,9 @@ const index = () => (
         }
    `}</script>
   </Helmet>
-  <LandingContainer />
+  <BreakpointProvider>
+    <LandingComponent />
+  </BreakpointProvider>
   </>
 )
 

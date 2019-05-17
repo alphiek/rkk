@@ -27,6 +27,7 @@ export const H1 = styled.h1`
   }
 }
 `
+
 export const H2Heebo = styled.h2`
   line-height: 100%;
   font-family: ${font.heebo};
@@ -158,6 +159,33 @@ export const PortfolioLnk = styled(Link)`
   }
 `
 
+export const ServiceNavLinks = styled(Link)`
+  color: ${color.darkLinkO};
+  font-family: ${font.muli};
+  font-weight: ${weight.bold};
+  font-size: 0.45em;
+  letter-spacing: ${spacing.large};
+  text-transform: uppercase;
+  line-height: 100%;
+`
+
+const LandingLink = styled(MainLink)`
+  position: absolute;
+  z-index: 3;
+  padding: 0.6em 0.9em;
+  @media only screen and (max-width: 1024px) {
+   display: none;
+  }
+`
+export const Portfolio = styled(LandingLink)`
+  top: 21vh;
+  right: 23vw;
+`
+export const Services = styled(LandingLink)`
+  bottom: 15vh;
+  left: 35vw;
+`
+
 
 export const ListItem = styled.li`
   color: ${color.darkLinkO};
@@ -205,14 +233,4 @@ export const BodyText = styled.p`
     line-height: 150%;
   }
 }
-`
-
-export const ServiceNavLinks = styled(Link)`
-  color: ${color.darkLinkO};
-  font-family: ${font.muli};
-  font-weight: ${weight.bold};
-  font-size: 0.45em;
-  letter-spacing: ${spacing.large};
-  text-transform: uppercase;
-  line-height: 100%;
 `

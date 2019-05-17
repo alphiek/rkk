@@ -1,8 +1,15 @@
 import React from "react"
-import DevContainer from '../components/Development/DevContainer'
+import DevComponent from '../components/Development/DevComponent'
 import Helmet from "react-helmet"
 import ogImage from '../images/ogImage.png'
 import logo from '../images/icon.png'
+import { BreakpointProvider} from 'react-socks'
+import { setDefaultBreakpoints } from 'react-socks'
+
+setDefaultBreakpoints([
+  { tablet: 0 },
+  { desktop: 1025 }
+]);
 
 const Development = () => (
   <>
@@ -68,7 +75,9 @@ const Development = () => (
         }
    `}</script>
   </Helmet>
-  <DevContainer />
+  <BreakpointProvider>
+    <DevComponent />
+  </BreakpointProvider>
   </>
 )
 

@@ -1,14 +1,13 @@
 import React from 'react'
-import { HeadingText } from '../Global/Shared'
-import { H2Services, ListItem, BodyText } from '../Global/textSizes'
-import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
-import PortfolioLink from '../Global/PortfolioLink'
-import SeoImage from './SeoImage'
+import styled from 'styled-components'
 import Fade from 'react-reveal/Fade'
 import data from './data'
 import { seoData } from '../Copy/copy'
-import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import PortfolioLink from '../Global/PortfolioLink'
+import SeoImage from './SeoImage'
+import { HeadingText } from '../Global/Shared'
+import { H2Services, ListItem, BodyText } from '../Global/textSizes'
+import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
 
 const Spacer = styled.div`
   height: 0.8em;
@@ -23,13 +22,10 @@ const Spacer = styled.div`
     height: 3em;
   }
 `
-
-
-
-const SeoOptComponent = ({tablet}) => {
+const SeoOptComponent = () => {
   const services = data.map(item => <ListItem key={item.key}>{item.name}</ListItem>)
   return (
-    <ServiceFlexWrapper tablet={tablet}>
+    <ServiceFlexWrapper>
       {
         seoData.map(seo =>
           <LeftWrapper key='seo'>
@@ -56,7 +52,3 @@ const SeoOptComponent = ({tablet}) => {
 }
 
 export default SeoOptComponent
-
-SeoOptComponent.propTypes = {
-  tablet: PropTypes.bool.isRequired
-}

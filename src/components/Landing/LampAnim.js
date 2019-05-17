@@ -8,6 +8,9 @@ const Lamp = styled(a.svg)`
   height: 90vh;
   top: 1em;
   fill: ${color.lightGrey};
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
   `
 
   const LampAnim = () => {
