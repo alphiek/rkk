@@ -20,7 +20,7 @@ const PortfolioLink = () => {
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
         to='/PortfolioPage/'
-        partiallyActive={true}>View Portfolio --------</PortfolioLnk>
+        partiallyActive={true}>View Portfolio</PortfolioLnk>
     </Wrapper>
    </Fade>
   )

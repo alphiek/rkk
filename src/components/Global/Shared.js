@@ -2,6 +2,32 @@ import styled from 'styled-components'
 import { color } from './variables'
 import { H1 } from './textSizes'
 
+export const Spacer = styled.div`
+  height: 0.8em;
+  @media only screen and (max-width: 1024px) {
+    height: 2em;
+  }
+  @media only screen and (max-width: 824px){
+    height: 2.5em;
+  }
+
+  @media only screen and (max-width: 570px){
+    height: 3em;
+  }
+`
+
+export const Divider = styled.hr`
+  color: ${color.secondary};
+  background-color: ${color.secondary};
+  border: none;
+  height: 0.2em;
+  margin-bottom: 0.4em;
+  width: 7.4vw;
+  @media only screen and (max-width: 570px){
+    margin-bottom: 3em;
+  }
+`
+
 export const HeadingText = styled(H1)`
   border-left: 0.15em solid ${color.secondary};
   padding-left: 0.2em;

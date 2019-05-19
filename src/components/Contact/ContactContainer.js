@@ -4,6 +4,7 @@ import BackButton from './BackButton'
 import ContactDetails from './ContactDetails'
 import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
+import Breakpoint from 'react-socks'
 import RenderMenu from '../Footer/RenderMenu'
 import {
   PageWrapper,
@@ -12,7 +13,7 @@ import {
  } from '../Global/MenuShared'
 
 
-const ContactContainer = ({ form, tablet, toggleForm, renderMenu }) => {
+const ContactContainer = ({ form, toggleForm, renderMenu }) => {
   return (
     <PageWrapper>
      <ContactWrapper>
@@ -26,11 +27,9 @@ const ContactContainer = ({ form, tablet, toggleForm, renderMenu }) => {
         }
         <BackButton form={form} toggleForm={toggleForm}/>
      </ContactWrapper>
-     {tablet ?
+     <Breakpoint tablet only>
      <RenderMenu renderMenu={renderMenu}/>
-     :
-     null
-   }
+     </Breakpoint>
     </PageWrapper>
   )
 }

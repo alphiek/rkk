@@ -19,7 +19,7 @@ const MobileLinkContainer = styled.div`
     min-height: 9em;
   }
 
-   @media only screen and (max-width: 520px){
+   @media only screen and (max-width: 570px){
     min-height: 10em;
   }
 `
@@ -29,7 +29,7 @@ const LinkMobile = styled(BrowseLink)`
   min-height: 4%;
   min-width: 5%;
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     padding: 6vw 6.5vw;
   }
 `

@@ -9,7 +9,7 @@ import {
   ListItem,
   BodyText,
 } from '../Global/textSizes'
-
+import { Divider } from '../Global/Shared'
 import { PortfolioPageLnk } from '../Global/nonTransitionLinks'
 import {
   DevTag,
@@ -96,11 +96,12 @@ const InfoFlexContainer = ({ item, onClickToggle, live }) => {
        </ServiceFlexChild>
     </InfoFlex>
     </Fade>
+    <Divider style={{ alignSelf: 'flex-start', marginLeft: '1.8em', marginTop: '0.5em'}} />
     <PortfolioPageLnk
      aria-label='Back to main portfolio'
      id='close'
      onClick={onClickToggle}>
-     ---Back to Portfolio---
+     Back to Portfolio
     </PortfolioPageLnk>
     </>
   )

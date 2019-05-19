@@ -19,12 +19,15 @@ const InfoWrapper = styled.div`
   width: 100%;
   height: 100%;
   color: 	#f9f9f9;
+  transition: 400ms;
   background: -moz-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%, rgba(7,7,7,0) 50%, rgba(7,7,7,0) 100%);
   background: -webkit-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
   background: linear-gradient(135deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
   &: hover {
     background-color: ${color.thumbnail};
+    color: ${color.secondary};
   }
+
   @media only screen and (max-width: 1024px) {
     margin-bottom: 0.5em;
     font-size: calc(0.7em + 0.6vw);
@@ -42,6 +45,10 @@ const Line = styled.div`
   width: 2em;
   height: 0.1em;
   margin-top: 0.2em;
+  transition: 400ms;
+  ${InfoWrapper}:hover & {
+    background-color: ${color.secondary};
+  }
   @media only screen and (max-width: 824px){
     height: 0.15em;
     margin-top: 0.3em;

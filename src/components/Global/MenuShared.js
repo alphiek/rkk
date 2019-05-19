@@ -84,12 +84,30 @@ export const ContactTitle = styled(H2Menu)`
  `
 
  export const Copyright = styled.p`
-   font-weight: ${weight.light};
+   font-weight: ${weight.normal};
    position: absolute;
    bottom: 3em;
    left: 7em;
    font-size: 0.5em;
    color: ${color.secondary};
+   font-family: ${font.muli};
+   font-size: calc(0.38em + 0.1vw);
+   line-height: 130%;
+   padding: 0.3em;
+
+   @media only screen and (max-width: 1024px) {
+    margin-bottom: 0.47em;
+    font-size: calc(0.4em + 0.39vw);
+   }
+
+   @media only screen and (max-width: 824px){
+     font-size: calc(0.4em + 0.65vw);
+   }
+
+   @media only screen and (max-width: 570px){
+     font-size: calc(0.4em + 1.6vw);
+   }
+ }
  `
 
  export const Address = styled.address`
@@ -164,7 +182,7 @@ export const ContactTitle = styled(H2Menu)`
      font-size: calc(1.4em + 2vw);
    }
 
-   @media only screen and (max-width: 520px){
+   @media only screen and (max-width: 570px){
      font-size: calc(1.4em + 3.8vw);
    }
 
