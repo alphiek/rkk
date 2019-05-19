@@ -8,7 +8,7 @@ import posed, { PoseGroup } from 'react-pose';
 
 const FooterWrapper = posed.div({
   enter: {
-    opacity: 1,
+    right: 1,
     delay: 300,
     transition: {
       opacity: { type: 'spring', stiffness: 100, damping: 15 },
@@ -16,7 +16,7 @@ const FooterWrapper = posed.div({
     }
   },
   exit: {
-    opacity: 0,
+    right: 0,
     transition: { duration: 500 }
   }
 });
