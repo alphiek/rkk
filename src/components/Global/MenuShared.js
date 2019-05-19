@@ -23,7 +23,7 @@ export const PageWrapper = styled.div`
      justify-content: center;
    }
    @media only screen and (max-height: 424px) {
-         top: 5%;
+         top: 0;
          bottom:0;
          position:fixed;
          overflow-y:scroll;
@@ -43,6 +43,9 @@ export const ContactTitle = styled(H2Menu)`
    margin-top: 0.2em;
    margin-bottom: 0.6em;
    color: ${color.primary};
+   @media only screen and (max-width: 570px){
+     margin-bottom: 0.5em;
+   }
  `
 
  export const MenuLinksTitle = styled(H2Menu)`
@@ -89,10 +92,13 @@ export const ContactTitle = styled(H2Menu)`
    position: relative;
    background: ${color.offWhite};
  @media only screen and (max-width: 1024px) {
+   margin-top: 3em;
    min-height: 31em;
  }
  @media only screen and (max-width: 570px) {
-   min-height: 35em;
+   min-height: 40em;
+   margin-top: 2em;
+   width: 90%;
  }
  `
 
@@ -141,13 +147,27 @@ export const ContactTitle = styled(H2Menu)`
 
  export const Address = styled.address`
    margin-top: 3em;
-   font-size: 0.6em;
+   font-size: calc(0.5em + 0.1vw);
    color: ${color.darkLinkO};
    font-weight: ${weight.bold};
    line-height: 170%;
    font-style: normal;
    font-family: ${font.heebo};
    letter-spacing: ${spacing.large};
+   @media only screen and (max-width: 1024px) {
+     margin-bottom: 0.9em;
+     font-size: calc(0.3em + 1vw);
+     margin-top: 1.5em;
+   }
+
+   @media only screen and (max-width: 824px){
+     font-size: calc(0.3em + 1.2vw);
+   }
+
+   @media only screen and (max-width: 570px){
+     margin-top: 1em;
+     font-size: calc(0.3em + 2.3vw);
+   }
  `
 
  export const AddressLink = styled.a`
@@ -204,7 +224,7 @@ export const ContactTitle = styled(H2Menu)`
     margin: 2em;
   }
   @media only screen and (max-height: 424px) {
-        height: auto;
+    height: auto;
   }
  `
 
@@ -215,20 +235,17 @@ export const ContactTitle = styled(H2Menu)`
    letter-spacing: ${spacing.narrow};
    font-size: calc(0.7em + 0.5vw);
    line-height: 105%;
+   width: 100%;
 
    @media only screen and (max-width: 1024px) {
-     margin: 1em 0 ;
-     font-size: calc(1.4em + 1.4vw);
+     margin: 1em 0;
+     font-size: calc(0.7em + 1.5vw);
    }
    @media only screen and (max-width: 824px){
-     font-size: calc(1.4em + 2vw);
+     font-size: calc(0.7em + 1.9vw);
    }
 
    @media only screen and (max-width: 570px){
-     font-size: calc(1.4em + 3.8vw);
-   }
-
-   @media only screen and (max-width: 321px){
-     font-size: calc(1.4em + 2.5vw);
+     font-size: calc(0.7em + 2.7vw);
    }
  `

@@ -113,9 +113,22 @@ input,
 optgroup,
 select,
 textarea {
-  font-size: 0.5em;
+  font-size: calc(0.4em + 0.1vw);
   margin: 0;
   line-height: 1.5em;
+  @media only screen and (max-width: 1024px) {
+    top: -0.2em;
+   margin-bottom: 0.60em;
+   font-size: calc(0.4em + 0.5vw);
+  }
+
+  @media only screen and (max-width: 824px){
+    font-size: calc(0.4em + 0.65vw);
+  }
+
+  @media only screen and (max-width: 570px){
+    font-size: calc(0.4em + 1.8vw);
+  }
 }
 
 

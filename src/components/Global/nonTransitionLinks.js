@@ -108,7 +108,7 @@ export const MenuLinks = styled(Link)`
   }
 `
 
-export const TabletMenuLinks = styled.button`
+export const TabletMenuLinks = styled.p`
   font-size: calc(0.5em + 0.4vw);
   font-family: ${font.heebo};
   letter-spacing: ${spacing.servicesTab};

@@ -8,6 +8,12 @@ const Icon = styled.svg`
    @media only screen and (max-width: 1024px) {
      height: 1.5em;
    }
+   @media only screen and (max-width: 824px) {
+     height: 2em;
+   }
+   @media only screen and (max-width: 570px){
+     height: 2.5em;
+   }
 `
 
 const FBIcon = styled(Icon)`

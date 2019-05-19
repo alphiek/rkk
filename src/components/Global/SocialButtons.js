@@ -11,11 +11,20 @@ const SocialWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-@media only screen
-    and (max-width: 824px)
-    and (orientation:portrait) {
-      width: auto ;
-    }
+  @media only screen and (max-width: 1024px) {
+    flex-direction: row;
+    width: 40%;
+  }
+  @media only screen and (max-width: 1024px) {
+    flex-direction: row;
+    width: 50%;
+  }
+  @media only screen and (max-width: 570px){
+    margin-top: 2em;
+    margin-bottom: 2em;
+    width: 100%;
+  }
+
 `
 const SocialButtons = ({ data }) => (
     <SocialWrapper>

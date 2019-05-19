@@ -5,6 +5,7 @@ import { BackText } from '../Global/MenuShared'
 import PropTypes from 'prop-types'
 
 const MenuButton = styled(BackText)`
+  width: 100%;
   color: ${color.secondary};
   &: hover {
     color: ${color.offWhite};
@@ -12,7 +13,7 @@ const MenuButton = styled(BackText)`
 `
 
 const ButtonWrapper = styled.div`
-  width: 100%;
+  width: 95vw;
   text-align: right;
   padding-right: 6em;
 @media only screen and (max-width: 1024px) {

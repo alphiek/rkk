@@ -20,9 +20,13 @@ const Back = styled.div`
     box-shadow: 21px 21px 24px -10px rgba(0,0,0,.15);
   }
   @media only screen and (max-width: 1024px) {
-    width: 87%;
-    position: absolute;
-    bottom: 5%;
+    padding: 2em;
+    width: 100%;
+    margin-top: 1em;
+  }
+  @media only screen and (max-width: 570px){
+    padding: 2.5em;
+    margin-top: 0.5em;
   }
 `
 
