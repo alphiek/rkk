@@ -1,7 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { color } from '../../Global/variables'
 import NumberIndicator from '../NumberIndicator'
 import { Flex } from '../PortfolioShared'
 import {
@@ -17,18 +16,18 @@ const PPDImage = ({ data }) => {
       <NumberIndicator>03</NumberIndicator>
       <MainImageAnim>
         <Img
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageOne.childImageSharp.fluid} alt='Landing Page Paphos Painter Decorators' />
       </MainImageAnim>
     </Flex>
     <SecondImageAnim>
       <Img
-        backgroundColor={color.darkLink}
+        backgroundColor={true}
         fluid={data.imageTwo.childImageSharp.fluid} alt='Quote form' />
     </SecondImageAnim>
     <ThirdImageAnim>
       <Img
-        backgroundColor={color.darkLink}
+        backgroundColor={true}
         fluid={data.imageThree.childImageSharp.fluid} alt='Services mobile view' />
     </ThirdImageAnim>
     </>

@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
-import { color } from '../../Global/variables'
 import NumberIndicator from '../NumberIndicator'
 import { Flex } from '../PortfolioShared'
 import {
@@ -24,18 +23,18 @@ const LMLImage = ({ data }) => {
       <NumberIndicator>02</NumberIndicator>
       <MainImageAnim>
         <Img
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageOne.childImageSharp.fluid} alt='LML landing Page' />
       </MainImageAnim>
     </LMLFlex>
     <SecondImageAnim>
       <Img
-        backgroundColor={color.darkLink}
+        backgroundColor={true}
         fluid={data.imageThree.childImageSharp.fluid} alt='Mobile Services view' />
     </SecondImageAnim>
     <ThirdImageAnim>
       <Img
-        backgroundColor={color.darkLink}
+        backgroundColor={true}
         fluid={data.imageTwo.childImageSharp.fluid} alt='Locations section' />
     </ThirdImageAnim>
     </>

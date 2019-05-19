@@ -1,7 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Fade from 'react-reveal/Fade'
-import { color } from '../../Global/variables'
 import NumberIndicator from '../NumberIndicator'
 import {
   MainImage,
@@ -19,12 +18,12 @@ const LKImage = ({ data }) => {
       <Fade right delay={300}>
         <MainImage
           style={{ width: '15em' }}
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageOne.childImageSharp.fluid} alt='Image of the salon' />
       </Fade>
       <Fade bottom delay={200}>
         <TopImage
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageTwo.childImageSharp.fluid} alt='Rose theme image' />
       </Fade>
     </Flex>

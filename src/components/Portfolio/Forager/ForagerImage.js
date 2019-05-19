@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import NumberIndicator from '../NumberIndicator'
-import { color } from '../../Global/variables'
 import { Flex } from '../PortfolioShared'
 import {
    MainImageAnim,
@@ -17,18 +16,18 @@ const ForagerImage = ({ data }) => {
       <NumberIndicator>06</NumberIndicator>
       <MainImageAnim>
         <Img
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageOne.childImageSharp.fluid} alt='Forager Search Box' />
       </MainImageAnim>
     </Flex>
     <SecondImageAnim>
       <Img
-         backgroundColor={color.darkLink}
+         backgroundColor={true}
          fluid={data.imageTwo.childImageSharp.fluid} alt='Sample Forager Icons' />
     </SecondImageAnim>
     <ThirdImageAnim>
       <Img
-        backgroundColor={color.darkLink}
+        backgroundColor={true}
         fluid={data.imageThree.childImageSharp.fluid} alt='Forager Results UI' />
     </ThirdImageAnim>
   </>

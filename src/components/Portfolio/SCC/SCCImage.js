@@ -1,7 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { color } from '../../Global/variables'
 import NumberIndicator from '../NumberIndicator'
 import {
   Flex,
@@ -18,13 +17,13 @@ const SCCImage = ({ data }) => {
     <NumberIndicator>05</NumberIndicator>
       <MainImageAnim>
         <Img
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageOne.childImageSharp.fluid} alt='Minibus' />
       </MainImageAnim>
     </Flex>
     <SecondImageAnim>
       <Img
-        backgroundColor={color.darkLink}
+        backgroundColor={true}
         fluid={data.imageTwo.childImageSharp.fluid} alt='Quick quote button' />
     </SecondImageAnim>
     </>

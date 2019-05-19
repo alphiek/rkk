@@ -2,7 +2,6 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Fade from 'react-reveal/Fade'
 import NumberIndicator from '../NumberIndicator'
-import { color } from '../../Global/variables'
 import {
   MainImage,
   TopImage,
@@ -17,12 +16,12 @@ const FodeImage = ({ data }) => {
     <NumberIndicator>01</NumberIndicator>
       <Fade right delay={300}>
         <MainImage
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
       </Fade>
       <Fade bottom delay={200}>
         <TopImage
-          backgroundColor={color.darkLink}
+          backgroundColor={true}
           fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
       </Fade>
     </Flex>

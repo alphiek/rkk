@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import { useGesture } from 'react-use-gesture'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { color } from '../Global/variables'
 
 const Wrapper = styled.div`
   overscroll-behavior-y: contain;
@@ -62,13 +61,13 @@ const ImgWrapper = styled(a.div)`
 const ImageDeck = ({data}) => {
   const cards = [
     <Img
-      backgroundColor={color.darkLink}
+      backgroundColor={true}
       fluid={data.imageOne.childImageSharp.fluid} />,
     <Img
-      backgroundColor={color.darkLink}
+      backgroundColor={true}
       fluid={data.imageTwo.childImageSharp.fluid} />,
     <Img
-      backgroundColor={color.darkLink}
+      backgroundColor={true}
       fluid={data.imageThree.childImageSharp.fluid} />
   ]
 

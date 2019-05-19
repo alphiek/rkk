@@ -1,7 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import { color } from '../Global/variables'
 import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade'
 
@@ -36,7 +35,7 @@ const SeoImage = ({ data }) => {
     <>
     <Fade right>
       <MainImage
-        backgroundColor={color.darkLink}
+        backgroundColor={true}
         fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
     </Fade>
     </>

@@ -11,7 +11,9 @@ import {
   Message,
   ErrorMessage,
   CheckBox,
+  CustomCheckbox,
   ConsentText,
+  Icon,
   Submit,
 } from './FormStyles'
 
@@ -92,6 +94,14 @@ const SignUp = ({
           </a>{" "}
           and for RKK to contact me to discuss my request
         </ConsentText>
+        <CustomCheckbox>
+        {
+          values.consent ?
+          <Icon viewBox="0 0 24 24">
+            <polyline points="20 6 9 17 4 12" />
+          </Icon> :
+          null
+        }
         <CheckBox
           type="checkbox"
           name="consent"
@@ -99,6 +109,7 @@ const SignUp = ({
           onChange={handleChange}
           onBlur={handleBlur}
         />
+        </CustomCheckbox>
       </label>
       <Submit type="Submit">submit</Submit>
     </FormWrapper>
@@ -150,7 +161,7 @@ const Form = withFormik({
             });
     },
 
-    displayName: "Basic Form"
+    displayName: "Contact Form"
   })(SignUp);
 
   export default Form;

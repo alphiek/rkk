@@ -4,7 +4,7 @@ import { color, font, weight, spacing } from './variables'
 
 export const LogoLink = styled(Link)`
   font-family: ${font.muli};
-  color: ${color.body};
+  color: #2c2c2c;
   font-size: calc(0.7em + 0.45vw);
   font-weight: ${weight.black};
   border-bottom: 0.25em solid ${color.secondary};

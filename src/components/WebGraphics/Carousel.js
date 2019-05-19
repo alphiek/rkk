@@ -2,38 +2,8 @@ import React, { Component } from 'react'
 import Swiper from 'react-id-swiper'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-import { color, font, weight, spacing } from '../Global/variables'
-import Fade from 'react-reveal/Fade'
 
 
-const Instruction = styled.p`
-  margin-top: 2em;
-  text-align: right;
-  line-height: 100%;
-  font-family: ${font.muli};
-  font-weight: ${weight.black};
-  letter-spacing: ${spacing.wide};
-  color: ${color.darkLink};
-  text-transform: uppercase;
-  font-size: 0.45em;
-  margin-bottom: 3em;
-  @media only screen
-    and (min-width: 824px)
-    and (max-width: 1024px) {
-    font-size: 0.7em;
-}
-@media only screen
-    and (max-width: 823px)
-    and (orientation: portrait) {
-      margin-bottom: 5em;
-    }
-@media only screen
-    and (max-width: 823px)
-    and (orientation: landscape) {
-        margin-bottom:5em;
-}
-`
 class Carousel extends Component {
   constructor(props) {
     super(props);
@@ -85,39 +55,36 @@ class Carousel extends Component {
           <div>
           {
             this.state.loaded ?
-            <div>
+            <div style={{ marginBottom: '2em'}}>
                 <Swiper {...params}>
                   <Img
-                     backgroundColor={color.darkLink}
+                     backgroundColor={true}
                      fluid={this.state.items.imageTwo.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageThree.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageSeven.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageFour.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageOne.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageSix.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageEight.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageNine.childImageSharp.fluid} />
                   <Img
-                    backgroundColor={color.darkLink}
+                    backgroundColor={true}
                     fluid={this.state.items.imageTen.childImageSharp.fluid} />
                 </Swiper>
-                <Fade right>
-                <Instruction>SWIPABLE</Instruction>
-                </Fade>
               </div>
             :
             null
