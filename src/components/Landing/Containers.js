@@ -12,7 +12,7 @@ export const PageContainer = styled.div`
 @media only screen
     and (max-height: 424px)
     and (orientation: landscape) {
-      min-height: 140vh;
+      min-height: 120vh;
     }
 `
 
@@ -41,7 +41,7 @@ export const TitleContainer = styled.div`
     width: 55vw;
   }
 
-  @media only screen and (max-width: 520px) {
+  @media only screen and (max-width: 570px) {
     width: 70vw;
   }
 

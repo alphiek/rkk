@@ -16,22 +16,18 @@ const FooterWrapper = posed.div({
     }
   },
   exit: {
-    opactiy: 0,
+    right: 0,
     transition: { duration: 500 }
   }
 });
 
 const PoseWrapper = styled(FooterWrapper)`
-  display: none;
-  @media only screen and (max-width: 1024px) {
-    display: block;
-    top: 0;
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background-color: ${color.primaryFull};
-    z-index: 10;
-  }
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: ${color.primaryFull};
+  z-index: 10;
 `
 
 class FooterContainer extends Component {
@@ -44,6 +40,7 @@ class FooterContainer extends Component {
       contact: false,
       about: false,
       form: false,
+      tablet: true
     }
     this.toggleHidden = this.toggleHidden.bind(this)
     this.renderAbout = this.renderAbout.bind(this)
@@ -109,6 +106,7 @@ class FooterContainer extends Component {
           toggleHidden={this.toggleHidden}
           isHidden={this.state.isHidden}
         />
+
         <PoseGroup>
         {
           !this.state.isHidden &&
