@@ -87,15 +87,33 @@ class Carousel extends Component {
             this.state.loaded ?
             <div>
                 <Swiper {...params}>
-                  <Img fluid={this.state.items.imageTwo.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageThree.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageSeven.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageFour.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageOne.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageSix.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageEight.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageNine.childImageSharp.fluid} />
-                  <Img fluid={this.state.items.imageTen.childImageSharp.fluid} />
+                  <Img
+                     backgroundColor={color.darkLink}
+                     fluid={this.state.items.imageTwo.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageThree.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageSeven.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageFour.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageOne.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageSix.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageEight.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageNine.childImageSharp.fluid} />
+                  <Img
+                    backgroundColor={color.darkLink}
+                    fluid={this.state.items.imageTen.childImageSharp.fluid} />
                 </Swiper>
                 <Fade right>
                 <Instruction>SWIPABLE</Instruction>
@@ -118,63 +136,63 @@ class Carousel extends Component {
             imageOne: file(relativePath: { eq: "Graphics/boy.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
             imageTwo: file(relativePath: { eq: "Graphics/Friyay.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
             imageThree: file(relativePath: { eq: "Graphics/Mates.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
             imageFour: file(relativePath: { eq: "Graphics/Mobile.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
                 }
               }
             }
           imageSix: file(relativePath: { eq: "Graphics/Think.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
           imageSeven: file(relativePath: { eq: "Graphics/Time.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
           imageEight: file(relativePath: { eq: "Graphics/Unicorn.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
           imageNine: file(relativePath: { eq: "Graphics/Webdesign.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
           }
           imageTen: file(relativePath: { eq: "Graphics/Yippee.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp_tracedSVG
               }
             }
            }

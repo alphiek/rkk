@@ -60,9 +60,15 @@ const ImgWrapper = styled(a.div)`
 `
 const ImageDeck = ({data}) => {
   const cards = [
-    <Img fluid={data.imageOne.childImageSharp.fluid} />,
-    <Img fluid={data.imageTwo.childImageSharp.fluid} />,
-    <Img fluid={data.imageThree.childImageSharp.fluid} />
+    <Img
+      backgroundColor={color.darkLink}
+      fluid={data.imageOne.childImageSharp.fluid} />,
+    <Img
+      backgroundColor={color.darkLink}
+      fluid={data.imageTwo.childImageSharp.fluid} />,
+    <Img
+      backgroundColor={color.darkLink}
+      fluid={data.imageThree.childImageSharp.fluid} />
   ]
 
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
