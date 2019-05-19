@@ -22,6 +22,15 @@ export const PageWrapper = styled.div`
      align-items: center;
      justify-content: center;
    }
+   @media only screen and (max-height: 424px) {
+         top: 5%;
+         bottom:0;
+         position:fixed;
+         overflow-y:scroll;
+         overflow-x:hidden;
+         padding-top: 32%;
+         padding-bottom: 3%;
+     }
  `
 export const AboutTitle = styled(H2Menu)`
    color: ${color.secondary};
@@ -63,8 +72,15 @@ export const ContactTitle = styled(H2Menu)`
      border: 0.3em solid ${color.secondary};
      background-color: ${color.offWhite};
   }
-    @media only screen and (max-width: 570px) {
-      height: 65vh;
+  @media only screen and (max-width: 570px) {
+    height: 65vh;
+  }
+  @media only screen and (max-height: 424px) {
+    bottom: 0;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 35%;
     }
  `
  export const ContactWrapper = styled(AboutWrapper)`
@@ -117,7 +133,10 @@ export const ContactTitle = styled(H2Menu)`
      left: 4em;
      bottom: 4.5em;
    }
- }
+   @media only screen and (max-height: 424px) {
+     bottom: -50%;
+     }
+
  `
 
  export const Address = styled.address`
@@ -183,6 +202,9 @@ export const ContactTitle = styled(H2Menu)`
    }
   @media only screen and (max-width: 570px) {
     margin: 2em;
+  }
+  @media only screen and (max-height: 424px) {
+        height: auto;
   }
  `
 
