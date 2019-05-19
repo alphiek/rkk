@@ -34,5 +34,5 @@ const RenderMenu = ({ renderMenu }) => {
 export default RenderMenu
 
 RenderMenu.propTypes = {
-  renderMenu: PropTypes.func.isRequired
+  renderMenu: PropTypes.func
 }

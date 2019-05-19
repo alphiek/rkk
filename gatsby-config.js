@@ -19,23 +19,23 @@ module.exports = {
       },
       {
         name: "Web Design",
-        link: "/WebDesignPage"
+        link: "/WebDesign"
       },
       {
         name: "Development",
-        link: "/DevelopmentPage"
+        link: "/WebDevelopment"
       },
       {
         name: "Web Graphics",
-        link: "/WebGraphicsPage"
+        link: "/WebGraphics"
       },
       {
         name: "SEO",
-        link: "/SeoOptPage"
+        link: "/SEO"
       },
       {
         name: "Portfolio",
-        link: "/PortfolioPage"
+        link: "/Portfolio"
       },
     ],
   },

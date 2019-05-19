@@ -85,7 +85,7 @@ export const H2Services = styled.h2`
   margin-bottom: 0.5em;
 
   @media only screen and (max-width: 1024px) {
-   margin-bottom: 1em;
+   margin-bottom: 1.2em;
    font-size: calc(0.3em + 1.1vw);
   }
 
@@ -157,7 +157,7 @@ export const PortfolioLnk = styled(Link)`
   }
 
   @media only screen and (max-width: 1024px) {
-   font-size: calc(0.4em + 0.54vw);
+   font-size: calc(0.4em + 0.55vw);
    letter-spacing: ${spacing.servicesTab};
   }
 
@@ -237,13 +237,13 @@ export const BodyText = styled.p`
   color: ${color.darkLink};
   font-family: ${font.muli};
   font-weight: ${weight.light};
-  font-size: calc(0.45em + 0.2vw);
+  font-size: calc(0.45em + 0.23vw);
   @media only screen and (max-width: 1024px) {
-   font-size: calc(0.45em + 0.6vw);
+   font-size: calc(0.45em + 0.65vw);
   }
 
   @media only screen and (max-width: 824px){
-    font-size: calc(0.4em + 1.3vw);
+    font-size: calc(0.4em + 1.5vw);
   }
 
   @media only screen and (max-width: 570px){

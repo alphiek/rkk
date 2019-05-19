@@ -60,7 +60,12 @@ class HeaderContainer extends Component {
     toggleHidden(event) {
       event.preventDefault()
       this.setState(
-        {isHidden: !this.state.isHidden}
+        {
+          isHidden: !this.state.isHidden
+        },
+        () => {
+          window.scrollTo(0, 0)
+        }
       )
     }
 

@@ -15,9 +15,17 @@ const FBIcon = styled(Icon)`
   stroke: ${color.secondary};
   stroke-miterlimit: 10;
   stroke-width: 6.5px;
+  transition: 400ms;
+  &: hover {
+    stroke: ${color.primary};
+  }
 `
 const FillIcon = styled(Icon)`
    fill: ${color.secondary};
+   transition: 400ms;
+   &: hover {
+     fill: ${color.primary};
+   }
 `
 
 const MailIcon = styled(Icon)`
@@ -25,7 +33,11 @@ const MailIcon = styled(Icon)`
   stroke: ${color.secondary};
   stroke-linecap:round;
   stroke-linejoin:round;
-  stroke-width:2px
+  stroke-width:2px;
+  transition: 400ms;
+  &: hover {
+    stroke: ${color.primary};
+  }
 `
 
 export const Facebook = () =>{

@@ -56,7 +56,9 @@ class FooterContainer extends Component {
     toggleHidden(event) {
       event.preventDefault()
       this.setState(
-        {isHidden: !this.state.isHidden},
+        {
+          isHidden: !this.state.isHidden
+        },
         () => this.renderMenu(event)
       )
     }
@@ -99,6 +101,9 @@ class FooterContainer extends Component {
           menu: true,
           contact: false,
           about: false
+        },
+        () => {
+          window.scrollTo(0, 0)
         }
       )
     }

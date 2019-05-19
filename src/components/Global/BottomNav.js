@@ -39,28 +39,28 @@ const BottomNav = () => {
       <LinkStyle
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/WebDesignPage'
+        to='/WebDesign'
         partiallyActive={true}
         activeStyle={activeStyle}>Web Design</LinkStyle>
       <hr/>
       <LinkStyle
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/DevelopmentPage'
+        to='/WebDevelopment'
         partiallyActive={true}
         activeStyle={activeStyle}>Web Development</LinkStyle>
       <hr/>
       <LinkStyle
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/WebGraphicsPage'
+        to='/WebGraphics'
         partiallyActive={true}
         activeStyle={activeStyle}>Web Graphics</LinkStyle>
       <hr/>
       <LinkStyle
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/SeoOptPage'
+        to='/SEO'
         partiallyActive={true}
         activeStyle={activeStyle}>SEO Optimisation</LinkStyle>
       </NavContainer>

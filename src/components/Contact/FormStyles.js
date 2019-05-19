@@ -48,7 +48,7 @@ export const ErrorMessage = styled.p`
   color: red;
   float: right;
   text-align: right;
-  width: 70%;
+  width: 65%;
 `
 export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
    margin: 0.9em;
@@ -92,6 +92,10 @@ export const Submit = styled.button`
   letter-spacing: ${spacing.wide};
   text-transform: uppercase;
   font-size: 0.6em;
+  transition: 300ms;
+  &: hover {
+    box-shadow: 21px 21px 24px -10px rgba(0,0,0,.15);
+  }
   @media only screen and (max-width: 570px) {
     margin-top: 3em;
   }

@@ -23,6 +23,9 @@ export const Divider = styled.hr`
   height: 0.2em;
   margin-bottom: 0.4em;
   width: 7.4vw;
+  @media only screen and (max-width: 1024px){
+    margin-bottom: 1.8em;
+  }
   @media only screen and (max-width: 570px){
     margin-bottom: 3em;
   }
