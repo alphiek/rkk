@@ -87,18 +87,31 @@ export const MenuLinks = styled(Link)`
   line-height: 130%;
 
   @media only screen and (max-width: 1024px) {
-    font-size: 1em;
+    color: ${color.offWhite};
+    font-size: 1.2em;
+    width: 100%;
+    height:100%;
+    &: hover {
+      color: ${color.secondary};
+    }
   }
 `
 
 export const TabletMenuLinks = styled.button`
   font-size: 1em;
   font-family: ${font.heebo};
-  letter-spacing: ${spacing.wide};
+  letter-spacing: ${spacing.servicesTab};
   text-transform: uppercase;
   color: ${color.secondary};
   font-weight: ${weight.black};
   line-height: 130%;
   background-color: transparent;
   border: none;
+  @media only screen and (max-width: 1024px) {
+    font-size: 1.2em;
+    color: ${color.offWhite};
+    &: hover {
+      color: ${color.secondary};
+    }
+  }
 `

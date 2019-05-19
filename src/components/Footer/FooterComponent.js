@@ -21,7 +21,6 @@ const FooterComponent = ({ compProps, toggleHidden, renderMenu, renderAbout, ren
           <ContactContainer
           toggleForm={toggleForm}
           form={compProps.form}
-          tablet={compProps.tablet}
           toggleHidden={toggleHidden}
           renderMenu={renderMenu}
           />
@@ -42,7 +41,6 @@ export default FooterComponent
 
 FooterComponent.propTypes = {
   compProps: PropTypes.shape({
-    tablet: PropTypes.bool.isRequired,
     form: PropTypes.bool.isRequired,
     contact: PropTypes.bool.isRequired,
     about: PropTypes.bool.isRequired,
