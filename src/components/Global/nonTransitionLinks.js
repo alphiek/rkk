@@ -51,11 +51,15 @@ export const PortfolioPageLnk = styled.p`
   margin-top: 1.5em;
   line-height: 100%;
   font-family: ${font.heebo};
-  font-weight: ${weight.black};
-  letter-spacing: ${spacing.services};
-  color: ${color.secondary};
+  font-weight: ${weight.extraBold};
+  letter-spacing: ${spacing.li};
+  color: ${color.darkLink};
   text-transform: uppercase;
   font-size: calc(0.40em + 0.1vw);
+  transition: 200ms ease-out;
+  &: hover {
+    color: ${color.secondary};
+  }
 
   @media only screen and (max-width: 1024px) {
    align-self: flex-end;

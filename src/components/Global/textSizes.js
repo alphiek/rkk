@@ -130,20 +130,31 @@ export const MainLink = styled(Link)`
   text-transform: uppercase;
   font-family: ${font.heebo};
   color: ${color.primary};
+  background: white;
   font-size: 0.6em;
   letter-spacing: ${spacing.wide};
   font-weight: ${weight.extraBold};
   line-height: 180%;
+  transition: 600ms;
+  &: hover {
+    background: ${color.secondary};
+    color: white;
+    box-shadow: 21px 21px 24px -10px rgba(0,0,0,.10);
+  }
 `
 
 export const PortfolioLnk = styled(Link)`
   line-height: 100%;
   font-family: ${font.heebo};
-  font-weight: ${weight.black};
-  letter-spacing: ${spacing.services};
-  color: ${color.secondary};
+  font-weight: ${weight.extraBold};
+  letter-spacing: ${spacing.li};
+  color: ${color.darkLink};
   text-transform: uppercase;
   font-size: calc(0.40em + 0.1vw);
+  transition: 300ms;
+  &: hover {
+    color: ${color.secondary};
+  }
 
   @media only screen and (max-width: 1024px) {
    font-size: calc(0.4em + 0.54vw);
@@ -161,18 +172,25 @@ export const PortfolioLnk = styled(Link)`
 
 export const ServiceNavLinks = styled(Link)`
   color: ${color.darkLinkO};
-  font-family: ${font.muli};
+  font-family: ${font.heebo};
   font-weight: ${weight.bold};
   font-size: 0.45em;
   letter-spacing: ${spacing.large};
   text-transform: uppercase;
   line-height: 100%;
+  transition: 300ms;
+  &: hover {
+    color: ${color.secondary};
+  }
 `
 
 const LandingLink = styled(MainLink)`
   position: absolute;
   z-index: 3;
   padding: 0.6em 0.9em;
+  &: hover {
+    opacity: 0.5;
+  }
   @media only screen and (max-width: 1024px) {
    display: none;
   }
@@ -189,7 +207,7 @@ export const Services = styled(LandingLink)`
 
 export const ListItem = styled.li`
   color: ${color.darkLinkO};
-  font-family: ${font.muli};
+  font-family: ${font.heebo};
   font-weight: ${weight.black};
   font-size: calc(0.38em + 0.1vw);
   letter-spacing: ${spacing.li};
@@ -204,7 +222,7 @@ export const ListItem = styled.li`
   }
 
   @media only screen and (max-width: 824px){
-    font-size: calc(0.4em + 0.61vw);
+    font-size: calc(0.4em + 0.65vw);
   }
 
   @media only screen and (max-width: 570px){
@@ -217,7 +235,8 @@ export const BodyText = styled.p`
   line-height: 140%;
   padding-bottom: 1em;
   color: ${color.darkLink};
-  font-weight: ${weight.normal};
+  font-family: ${font.muli};
+  font-weight: ${weight.light};
   font-size: calc(0.45em + 0.2vw);
   @media only screen and (max-width: 1024px) {
    font-size: calc(0.45em + 0.6vw);
