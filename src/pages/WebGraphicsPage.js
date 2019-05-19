@@ -16,7 +16,8 @@ class WebGraphicsPage extends Component {
     return (
       <>
       <Helmet>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
+        <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
+        <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
         <html lang="en"/>
         <title>RKK Creative Web and Social Media Graphics Paphos</title>
         <meta name="description" content="High quality web and social media packages tailored to support your brand"></meta>

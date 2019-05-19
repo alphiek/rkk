@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { useGesture } from 'react-use-gesture'
 import { graphql, StaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
+import { color } from '../Global/variables'
 
 const Wrapper = styled.div`
   overscroll-behavior-y: contain;
@@ -113,21 +114,21 @@ export default () => (
       query WebDesignQuery {
         imageOne: file(relativePath: { eq: "WebDesign/LandspaceTheme.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageTwo: file(relativePath: { eq: "WebDesign/MditanoTheme.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageThree: file(relativePath: { eq: "WebDesign/SignatureLeaf.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

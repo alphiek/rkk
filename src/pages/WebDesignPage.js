@@ -15,7 +15,6 @@ const WebDesignPage = () => {
   return (
     <>
     <Helmet>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
       <html lang="en"/>
       <title>RKK Creative Web Design</title>
       <meta name="description" content="Custom crafted responsive websites and web applications to support brand direction and digital growth"></meta>
