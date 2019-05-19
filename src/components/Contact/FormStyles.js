@@ -53,6 +53,23 @@ export const ErrorMessage = styled.p`
 export const CheckBox = styled.input.attrs({ type: 'checkbox' })`
    margin: 0.9em;
    float: right;
+   opacity: 0;
+   z-index: 200;
+`
+
+export const CustomCheckbox = styled.div`
+  border: 0.08em solid ${color.secondary};
+  float: right;
+  height: 1.5em;
+  width: 1.5em;
+  position: relative;
+`
+
+export const Icon = styled.svg`
+  fill: none;
+  stroke: ${color.primary};
+  stroke-width: 2px;
+  position: absolute;
 `
 
 export const ConsentText = styled.p`

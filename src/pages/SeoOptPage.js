@@ -14,14 +14,13 @@ setDefaultBreakpoints([
 const SeoOptimization = () => (
   <>
   <Helmet>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
     <html lang="en"/>
-    <title>RKK Creative SEO optmisation Paphos</title>
+    <title>RKK Creative SEO optmisation</title>
     <meta name="description" content="Technical SEO services to improve website rankings and visibility. Contact us for a free SEO healthcheck"></meta>
 
     <meta property="og:url" content="https://rkkcreative.xyz"></meta>
     <meta property="og:type" content="website"></meta>
-    <meta property="og:title" content="SEO optmisation Paphos"></meta>
+    <meta property="og:title" content="SEO optmisation"></meta>
     <meta property="og:image" content={seo}></meta>
     <meta property="og:image:width" content="1200"></meta>
     <meta property="og:image:height" content="630"></meta>
@@ -31,7 +30,7 @@ const SeoOptimization = () => (
     <meta name="twitter:card" content="summary_large_image"></meta>
     <meta name="twitter:site" content="@rkkcreative"></meta>
     <meta name="twitter:url" content="https://rkkcreative.xyz"></meta>
-    <meta name="twitter:title" content="SEO optmisation Paphos"></meta>
+    <meta name="twitter:title" content="SEO optmisation"></meta>
     <meta name="twitter:description" content="Technical SEO services to improve website rankings and visibility. Contact us for a free SEO healthcheck"></meta>
     <meta name="twitter:image" content={seo}></meta>
 

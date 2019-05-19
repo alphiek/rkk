@@ -16,10 +16,15 @@ const LKImage = ({ data }) => {
     <Flex>
     <NumberIndicator>04</NumberIndicator>
       <Fade right delay={300}>
-        <MainImage style={{ width: '15em' }} fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
+        <MainImage
+          style={{ width: '15em' }}
+          backgroundColor={true}
+          fluid={data.imageOne.childImageSharp.fluid} alt='Image of the salon' />
       </Fade>
       <Fade bottom delay={200}>
-        <TopImage fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+        <TopImage
+          backgroundColor={true}
+          fluid={data.imageTwo.childImageSharp.fluid} alt='Rose theme image' />
       </Fade>
     </Flex>
     </>
@@ -33,14 +38,14 @@ export default () => (
         imageOne: file(relativePath: { eq: "LK/lkThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
       imageTwo: file(relativePath: { eq: "LK/rose.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

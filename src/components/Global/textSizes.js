@@ -82,7 +82,7 @@ export const H2Services = styled.h2`
   letter-spacing: ${spacing.large};
   font-family: ${font.libre};
   margin-top: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 
   @media only screen and (max-width: 1024px) {
    margin-bottom: 1em;

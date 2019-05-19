@@ -119,6 +119,9 @@ export const ContactTitle = styled(H2Menu)`
    padding-bottom: 0.5em;
    @media only screen and (max-width: 1024px) {
      padding: 1em 0;
+     background-color: ${color.primary};
+     box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
+     width: 100%;
    }
  `
  export const MenuLinksWrapper = styled.ul`
@@ -134,8 +137,9 @@ export const ContactTitle = styled(H2Menu)`
      margin: 2em 5em;
      display: flex;
      flex-direction: column;
-     align-items: center;
-     justify-content: center;
+     align-items: space-around;
+     justify-content: space-around;
+     background-color: ${color.secondary};
      height: 80%;
      width: 80%;
    }

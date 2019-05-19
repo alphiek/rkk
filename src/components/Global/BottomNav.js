@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   width: 100%;
   justify-content: flex-end;
   overflow: hidden;
+  @media only screen and (max-width: 1024px) {
+    display: none;
+  }
 `
 const NavContainer = styled.div`
   display: flex;

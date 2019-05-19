@@ -51,7 +51,6 @@ const ServiceWrapPortfolio = styled(ServiceWrapper)`
 `
 
 const InfoFlexContainer = ({ item, onClickToggle, live }) => {
-  console.log(live)
   return (
     <>
     <Fade bottom delay={200}>

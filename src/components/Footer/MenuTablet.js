@@ -25,7 +25,7 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
         onClick={toggleHidden}>
           <MenuLinks
             to='/WebDesignPage'
-            partiallyActive={true}>WebDesign</MenuLinks>
+            partiallyActive={true}>Web Design</MenuLinks>
       </MenuList>
 
       <MenuList

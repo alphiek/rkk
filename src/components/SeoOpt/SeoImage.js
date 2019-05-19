@@ -34,7 +34,9 @@ const SeoImage = ({ data }) => {
   return (
     <>
     <Fade right>
-      <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
+      <MainImage
+        backgroundColor={true}
+        fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
     </Fade>
     </>
   )
@@ -47,7 +49,7 @@ export default () => (
         imageOne: file(relativePath: { eq: "SEO.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }

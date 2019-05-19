@@ -30,11 +30,7 @@ class PortfolioContainer extends Component {
       {
       images: this.props.data,
       isLoaded: true
-      },
-      () => {
-       console.log('data loaded')
-      }
-    )
+      })
   }
 
   onClickToggle(event) {
@@ -46,7 +42,6 @@ class PortfolioContainer extends Component {
       'scc': false,
       'forager': false
     }
-    console.log(event.target.id)
 
     if (event.target.id === 'close') {
       this.setState({
@@ -99,42 +94,42 @@ export default () => (
         imageOne: file(relativePath: { eq: "Thumbnail/fodeThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageTwo: file(relativePath: { eq: "Thumbnail/lmlThumb.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageThree: file(relativePath: { eq: "Thumbnail/ppdThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageFour: file(relativePath: { eq: "Thumbnail/lkThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
       imageFive: file(relativePath: { eq: "Thumbnail/southCoastThumb.png" }) {
         childImageSharp {
           fluid(maxWidth: 768) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
        }
        imageSix: file(relativePath: { eq: "Thumbnail/foragerThumb.png" }) {
          childImageSharp {
            fluid(maxWidth: 768) {
-             ...GatsbyImageSharpFluid
+             ...GatsbyImageSharpFluid_withWebp_tracedSVG
            }
          }
         }

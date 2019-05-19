@@ -22,14 +22,20 @@ const LMLImage = ({ data }) => {
     <LMLFlex>
       <NumberIndicator>02</NumberIndicator>
       <MainImageAnim>
-        <Img fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
+        <Img
+          backgroundColor={true}
+          fluid={data.imageOne.childImageSharp.fluid} alt='LML landing Page' />
       </MainImageAnim>
     </LMLFlex>
     <SecondImageAnim>
-      <Img fluid={data.imageThree.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+      <Img
+        backgroundColor={true}
+        fluid={data.imageThree.childImageSharp.fluid} alt='Mobile Services view' />
     </SecondImageAnim>
     <ThirdImageAnim>
-      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+      <Img
+        backgroundColor={true}
+        fluid={data.imageTwo.childImageSharp.fluid} alt='Locations section' />
     </ThirdImageAnim>
     </>
   )
@@ -42,21 +48,21 @@ export default () => (
         imageOne: file(relativePath: { eq: "LML/landing.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
       imageTwo: file(relativePath: { eq: "LML/areas.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       imageThree: file(relativePath: { eq: "LML/mob.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

@@ -26,7 +26,7 @@ export const FullWidthWrapper = styled.div`
     margin-top: 6em;
   }
 `
-export const ServicesWrapper = styled.ul`
+export const ServicesWrapper = styled.div`
   margin-bottom: 0.8em;
   @media only screen and (max-width: 1024px) {
     margin-bottom: 2em;

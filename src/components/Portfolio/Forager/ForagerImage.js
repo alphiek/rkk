@@ -15,14 +15,20 @@ const ForagerImage = ({ data }) => {
     <Flex>
       <NumberIndicator>06</NumberIndicator>
       <MainImageAnim>
-          <Img fluid={data.imageOne.childImageSharp.fluid} alt='Forager Search Box' />
+        <Img
+          backgroundColor={true}
+          fluid={data.imageOne.childImageSharp.fluid} alt='Forager Search Box' />
       </MainImageAnim>
     </Flex>
     <SecondImageAnim>
-      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='Sample Forager Icons' />
+      <Img
+         backgroundColor={true}
+         fluid={data.imageTwo.childImageSharp.fluid} alt='Sample Forager Icons' />
     </SecondImageAnim>
     <ThirdImageAnim>
-      <Img fluid={data.imageThree.childImageSharp.fluid} alt='Forager Results UI' />
+      <Img
+        backgroundColor={true}
+        fluid={data.imageThree.childImageSharp.fluid} alt='Forager Results UI' />
     </ThirdImageAnim>
   </>
   )
@@ -35,21 +41,21 @@ export default () => (
         imageOne: file(relativePath: { eq: "Forager/search.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
       imageTwo: file(relativePath: { eq: "Forager/icons.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
       imageThree: file(relativePath: { eq: "Forager/ui.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

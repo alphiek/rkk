@@ -60,9 +60,15 @@ const ImgWrapper = styled(a.div)`
 `
 const ImageDeck = ({data}) => {
   const cards = [
-    <Img fluid={data.imageOne.childImageSharp.fluid} />,
-    <Img fluid={data.imageTwo.childImageSharp.fluid} />,
-    <Img fluid={data.imageThree.childImageSharp.fluid} />
+    <Img
+      backgroundColor={true}
+      fluid={data.imageOne.childImageSharp.fluid} />,
+    <Img
+      backgroundColor={true}
+      fluid={data.imageTwo.childImageSharp.fluid} />,
+    <Img
+      backgroundColor={true}
+      fluid={data.imageThree.childImageSharp.fluid} />
   ]
 
 const to = i => ({ x: 0, y: i * -4, scale: 1, rot: -10 + Math.random() * 20, delay: i * 100})
@@ -107,21 +113,21 @@ export default () => (
       query WebDesignQuery {
         imageOne: file(relativePath: { eq: "WebDesign/LandspaceTheme.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageTwo: file(relativePath: { eq: "WebDesign/MditanoTheme.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
         imageThree: file(relativePath: { eq: "WebDesign/SignatureLeaf.png" }) {
           childImageSharp {
-            fluid(maxWidth: 1000) {
+            fluid(maxWidth: 1200) {
               ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }

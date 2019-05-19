@@ -16,11 +16,15 @@ const SCCImage = ({ data }) => {
     <Flex>
     <NumberIndicator>05</NumberIndicator>
       <MainImageAnim>
-        <Img fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
+        <Img
+          backgroundColor={true}
+          fluid={data.imageOne.childImageSharp.fluid} alt='Minibus' />
       </MainImageAnim>
     </Flex>
     <SecondImageAnim>
-      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+      <Img
+        backgroundColor={true}
+        fluid={data.imageTwo.childImageSharp.fluid} alt='Quick quote button' />
     </SecondImageAnim>
     </>
   )
@@ -33,14 +37,14 @@ export default () => (
         imageOne: file(relativePath: { eq: "SCC/Southcoach.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
       imageTwo: file(relativePath: { eq: "SCC/contact.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
