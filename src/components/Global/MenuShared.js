@@ -57,10 +57,14 @@ export const ContactTitle = styled(H2Menu)`
    @media only screen and (max-width: 1024px) {
      margin: 0 10%;
      height: auto;
+     overflow: scroll;
      width: 80%;
      padding: 5%;
      border: 0.3em solid ${color.secondary};
      background-color: ${color.offWhite};
+  }
+  @media only screen and (max-width: 570px) {
+    height: 65vh;
   }
  `
  export const ContactWrapper = styled(AboutWrapper)`
