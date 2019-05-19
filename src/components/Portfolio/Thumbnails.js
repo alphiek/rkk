@@ -79,7 +79,9 @@ export const FodeThumbnail = ({ thumb, onClickToggle }) => {
         <Line />
         <SubText>Ecommerce</SubText>
       </InfoWrapper>
-      <Img fluid={thumb} />
+      <Img
+        backgroundColor={color.darkLink}
+        fluid={thumb} />
     </Wrapper>
   )
 }
@@ -93,7 +95,9 @@ export const LMLThumbnail = ({ thumb, onClickToggle }) => {
         <Line />
         <SubText>Property</SubText>
       </InfoWrapper>
-      <Img fluid={thumb} />
+      <Img
+        backgroundColor={color.darkLink}
+        fluid={thumb} />
     </Wrapper>
   )
 }
@@ -106,7 +110,9 @@ export const PPDThumbnail = ({ thumb, onClickToggle }) => {
         <Line />
         <SubText>Trades</SubText>
       </InfoWrapper>
-      <Img fluid={thumb} />
+      <Img
+        backgroundColor={color.darkLink}
+        fluid={thumb} />
     </Wrapper>
   )
 }
@@ -119,7 +125,9 @@ export const LKThumbnail = ({ thumb, onClickToggle }) => {
         <Line />
         <SubText>Beauty</SubText>
       </InfoWrapper>
-      <Img fluid={thumb} />
+      <Img
+        backgroundColor={color.darkLink}
+        fluid={thumb} />
     </Wrapper>
   )
 }
@@ -132,7 +140,9 @@ export const SCCThumbnail = ({ thumb, onClickToggle }) => {
         <Line />
         <SubText>Travel</SubText>
       </InfoWrapper>
-      <Img fluid={thumb} />
+      <Img
+        backgroundColor={color.darkLink}
+        fluid={thumb} />
     </Wrapper>
   )
 }
@@ -145,7 +155,9 @@ export const ForagerThumbnail = ({ thumb, onClickToggle }) => {
         <Line />
         <SubText>Web Application</SubText>
       </InfoWrapper>
-      <Img fluid={thumb} />
+      <Img
+        backgroundColor={color.darkLink}
+        fluid={thumb} />
     </Wrapper>
   )
 }

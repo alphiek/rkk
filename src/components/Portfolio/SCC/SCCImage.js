@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import { color } from '../../Global/variables'
 import NumberIndicator from '../NumberIndicator'
 import {
   Flex,
@@ -16,11 +17,15 @@ const SCCImage = ({ data }) => {
     <Flex>
     <NumberIndicator>05</NumberIndicator>
       <MainImageAnim>
-        <Img fluid={data.imageOne.childImageSharp.fluid} alt='FODE Holding Page' />
+        <Img
+          backgroundColor={color.darkLink}
+          fluid={data.imageOne.childImageSharp.fluid} alt='Minibus' />
       </MainImageAnim>
     </Flex>
     <SecondImageAnim>
-      <Img fluid={data.imageTwo.childImageSharp.fluid} alt='FODE Mobile Landing Page' />
+      <Img
+        backgroundColor={color.darkLink}
+        fluid={data.imageTwo.childImageSharp.fluid} alt='Quick quote button' />
     </SecondImageAnim>
     </>
   )
@@ -33,14 +38,14 @@ export default () => (
         imageOne: file(relativePath: { eq: "SCC/Southcoach.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
       imageTwo: file(relativePath: { eq: "SCC/contact.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
