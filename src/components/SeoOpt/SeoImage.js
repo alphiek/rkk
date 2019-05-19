@@ -1,6 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
+import { color } from '../Global/variables'
 import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade'
 
@@ -34,7 +35,9 @@ const SeoImage = ({ data }) => {
   return (
     <>
     <Fade right>
-      <MainImage fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
+      <MainImage
+        backgroundColor={color.darkLink}
+        fluid={data.imageOne.childImageSharp.fluid} alt='SEO Image' />
     </Fade>
     </>
   )
@@ -47,7 +50,7 @@ export default () => (
         imageOne: file(relativePath: { eq: "SEO.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }
