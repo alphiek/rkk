@@ -11,7 +11,7 @@ const ContactFlex = styled.div`
   justify-content: space-between;
   align-items: space-between;
   overflow: hidden;
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 570px) {
   Padding-bottom: 5em;
 }
 `

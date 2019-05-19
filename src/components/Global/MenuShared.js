@@ -164,7 +164,7 @@ export const ContactTitle = styled(H2Menu)`
      font-size: calc(1.4em + 2vw);
    }
 
-   @media only screen and (max-width: 520px){
+   @media only screen and (max-width: 570px){
      font-size: calc(1.4em + 3.8vw);
    }
 

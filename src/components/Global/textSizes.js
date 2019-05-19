@@ -18,7 +18,7 @@ export const H1 = styled.h1`
     font-size: calc(1.4em + 2vw);
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     font-size: calc(1.4em + 3.8vw);
   }
 
@@ -45,7 +45,7 @@ export const H2Heebo = styled.h2`
     font-size: calc(0.3em + 1.5vw);
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     font-size: calc(0.3em + 2.5vw);
   }
 `
@@ -65,7 +65,7 @@ export const H2Menu = styled.h2`
     font-size: calc(1.4em + 2vw);
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     font-size: calc(1.4em + 3.8vw);
   }
 
@@ -94,7 +94,7 @@ export const H2Services = styled.h2`
     font-size: calc(0.3em + 1.75vw);
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     font-size: calc(0.4em + 3.2vw);
   }
 }
@@ -119,7 +119,7 @@ margin-bottom: 1em;
   font-size: calc(0.3em + 1.75vw);
 }
 
-@media only screen and (max-width: 520px){
+@media only screen and (max-width: 570px){
   font-size: calc(0.4em + 3.2vw);
 }
 
@@ -154,7 +154,7 @@ export const PortfolioLnk = styled(Link)`
     font-size: calc(0.4em + 0.8vw);
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     font-size: calc(0.4em + 2vw);
   }
 `
@@ -207,7 +207,7 @@ export const ListItem = styled.li`
     font-size: calc(0.4em + 0.61vw);
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     font-size: calc(0.4em + 1.6vw);
   }
 }
@@ -227,7 +227,7 @@ export const BodyText = styled.p`
     font-size: calc(0.4em + 1.3vw);
   }
 
-  @media only screen and (max-width: 520px){
+  @media only screen and (max-width: 570px){
     font-size: calc(0.4em + 2.5vw);
     padding-bottom: 1.5em;
     line-height: 150%;
