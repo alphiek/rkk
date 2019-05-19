@@ -4,7 +4,12 @@ import styled from 'styled-components'
 import { RightWrapper } from '../Global/ServiceFlexWrapper'
 
 const GIF = styled.img`
-  width: 35em;
+  width: 20em;
+  margin-top: -2em;
+  @media only screen and (max-width: 1024px) {
+    margin-top: 0;
+    margin-bottom: -2em;
+  }
 `
 const Video = () => {
   return (

@@ -81,7 +81,7 @@ export const PortfolioPageLnk = styled.p`
 `
 
 export const MenuLinks = styled(Link)`
-  font-size: 0.75em;
+  font-size: calc(0.5em + 0.4vw);
   font-family: ${font.heebo};
   font-weight: ${weight.bold};
   letter-spacing: ${spacing.servicesTab};
@@ -92,17 +92,24 @@ export const MenuLinks = styled(Link)`
 
   @media only screen and (max-width: 1024px) {
     color: ${color.offWhite};
-    font-size: 1.2em;
+    font-size: calc(0.5em + 0.8vw);
     width: 100%;
     height:100%;
     &: hover {
       color: ${color.secondary};
     }
+    @media only screen and (max-width: 824px){
+      font-size: calc(0.4em + 1.7vw);
+    }
+
+    @media only screen and (max-width: 570px){
+      font-size: calc(0.4em + 2.5vw);
+    }
   }
 `
 
 export const TabletMenuLinks = styled.button`
-  font-size: 1em;
+  font-size: calc(0.5em + 0.4vw);
   font-family: ${font.heebo};
   letter-spacing: ${spacing.servicesTab};
   text-transform: uppercase;
@@ -112,10 +119,17 @@ export const TabletMenuLinks = styled.button`
   background-color: transparent;
   border: none;
   @media only screen and (max-width: 1024px) {
-    font-size: 1.2em;
+    font-size: calc(0.5em + 0.8vw);
     color: ${color.offWhite};
     &: hover {
       color: ${color.secondary};
+    }
+    @media only screen and (max-width: 824px){
+      font-size: calc(0.4em + 1.7vw);
+    }
+
+    @media only screen and (max-width: 570px){
+      font-size: calc(0.4em + 2.5vw);
     }
   }
 `

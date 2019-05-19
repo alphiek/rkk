@@ -23,7 +23,7 @@ const FirstAnim = styled(a.div)`
 const SecondAnim = styled(a.div)`
   width: 15vw;
   position: absolute;
-  top: 1.5em;
+  top: 0.5em;
   margin-right: 5vw;
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
   @media only screen and (max-width: 1024px) {
@@ -41,7 +41,7 @@ const SecondAnim = styled(a.div)`
 const ThirdAnim = styled(a.div)`
   width: 16vw;
   position: absolute;
-  top: 11vw;
+  top: 9.5vw;
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
   @media only screen and (max-width: 1024px) {
    width: 20.5vw;

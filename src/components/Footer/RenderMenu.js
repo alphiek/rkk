@@ -18,6 +18,8 @@ const ButtonWrapper = styled.div`
 @media only screen and (max-width: 1024px) {
   padding-right: 10%;
 }
+@media only screen and (max-width: 1024px) {
+}
 `
 
 const RenderMenu = ({ renderMenu }) => {
@@ -31,5 +33,5 @@ const RenderMenu = ({ renderMenu }) => {
 export default RenderMenu
 
 RenderMenu.propTypes = {
-  renderMenu: PropTypes.func.isRequired
+  renderMenu: PropTypes.func
 }

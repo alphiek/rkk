@@ -5,10 +5,13 @@ import { TabletMenuLinks, MenuLinks } from '../Global/nonTransitionLinks'
 import {
   MenuList,
   MenuWrapper,
-  MenuLinksWrapper } from '../Global/MenuShared'
+  MenuLinksWrapper,
+  Copyright
+} from '../Global/MenuShared'
 
 const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
   return (
+    <>
     <MenuWrapper>
     <MenuLinksWrapper>
       <Fade cascade bottom>
@@ -72,6 +75,8 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
       </Fade>
       </MenuLinksWrapper>
     </MenuWrapper>
+    <Copyright>© {new Date().getFullYear()} RKK Creative, all rights reserved </Copyright>
+    </>
   )
 }
 

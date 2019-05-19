@@ -7,7 +7,6 @@ import {
   AboutTitle,
   AboutWrapper,
   AboutText,
-  Copyright
  } from '../Global/MenuShared'
 
 const About = ({ children }) => {
@@ -33,7 +32,6 @@ const About = ({ children }) => {
         {children}
       </PageWrapper>
     )}
-    <Copyright>© {new Date().getFullYear()} RKK Creative, all rights reserved </Copyright>
     </>
   )
 }

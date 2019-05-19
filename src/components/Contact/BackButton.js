@@ -15,6 +15,10 @@ const Back = styled.div`
   height: 3em;
   background-color: ${color.secondary};
   overflow: hidden;
+  transition: 300ms;
+  &: hover {
+    box-shadow: 21px 21px 24px -10px rgba(0,0,0,.15);
+  }
   @media only screen and (max-width: 1024px) {
     width: 87%;
     position: absolute;

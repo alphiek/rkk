@@ -12,7 +12,7 @@ import {
 
 const LMLFlex = styled(Flex)`
   margin-bottom: 0.5em;
-  margin-top: 3em;
+  margin-top: 2em;
 `
 
 const LMLImage = ({ data }) => {

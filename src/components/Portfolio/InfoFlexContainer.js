@@ -20,10 +20,11 @@ import {
   SiteTag
 } from './PortfolioShared'
 import DevelopmentIcon from './DevelopmentIcon'
+import VisitSiteIcon from './VisitSiteIcon'
 
 const PortfolioTitle = styled(H1)`
   border-bottom: 0.15em solid ${color.secondary};
-  padding-bottom: 0.5em;
+  padding-bottom: 0.2em;
   margin-bottom: 0.3em;
   width: 10em;
   @media only screen and (max-width: 1024px) {
@@ -65,7 +66,7 @@ const InfoFlexContainer = ({ item, onClickToggle, live }) => {
           </>
           :
           <>
-          <DevelopmentIcon />
+          <VisitSiteIcon />
           <SiteTag
             href={item.site}
             target="_blank"

@@ -6,11 +6,13 @@ import {
   MenuLinksWrapper,
   MenuLinksTitle,
   MenuList,
+  Copyright
 } from '../Global/MenuShared'
 import { MenuLinks } from '../Global/nonTransitionLinks'
 
 const MenuComponent = ({toggleHidden, links }) => {
   return (
+    <>
     <MenuWrapper>
       <MenuLinksWrapper>
           <Fade right cascade >
@@ -32,6 +34,8 @@ const MenuComponent = ({toggleHidden, links }) => {
         }
       </MenuLinksWrapper>
     </MenuWrapper>
+    <Copyright>© {new Date().getFullYear()} RKK Creative, all rights reserved </Copyright>
+    </>
   )
 }
 
