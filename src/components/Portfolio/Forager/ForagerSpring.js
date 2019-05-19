@@ -28,6 +28,7 @@ const SecondAnim = styled(a.div)`
   width: 20vw;
   position: absolute;
   top: -0.2em;
+  margin-right: 7vw;
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
   @media only screen and (max-width: 1024px) {
    width: 19vw;
@@ -46,6 +47,7 @@ const ThirdAnim = styled(a.div)`
   width: 13vw;
   position: absolute;
   top: 8.5vw;
+  margin-right: 11vw;
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
   @media only screen and (max-width: 1024px) {
    width: 16vw;
@@ -76,8 +78,8 @@ export const SecondImageAnim = ({ children }) => {
   const props = useSpring({
     delay: 200,
     config: { mass: 1, tension: 280, friction: 60 },
-    to: ({ right: '7vw' }),
-    from: ({right: '-300vw' })
+    to: ({ right: 0 }),
+    from: ({right: -2000 })
   })
   return (
     <SecondAnim style={props}>
@@ -90,8 +92,8 @@ export const ThirdImageAnim = ({ children }) => {
   const props = useSpring({
     delay: 100,
     config: { mass: 1, tension: 280, friction: 60 },
-    to: ({right: '11vw'}),
-    from: ({right: '-30vw' })
+    to: ({right: 0}),
+    from: ({right: -2000 })
   })
   return (
     <ThirdAnim style={props}>

@@ -16,7 +16,7 @@ const FooterWrapper = posed.div({
     }
   },
   exit: {
-    opacity: 0,
+    opactiy: 0,
     transition: { duration: 500 }
   }
 });

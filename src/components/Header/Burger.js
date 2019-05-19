@@ -11,7 +11,9 @@ const BurgerMenu = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 2.1vw;
+  min-width: 40px;
   height: 1.6vw;
+  min-height: 30px;
   cursor: pointer;
   z-index: 6;
 `
@@ -22,19 +24,19 @@ const TopLine = styled.span`
   transition: 0.5s;
 
   ${BurgerMenu}: hover & {
-    transform: scaleX(0.5);
-    transform-origin: right;
+    transform: scaleX(0.4);
+    transform-origin: center;
   }
 `;
 
 const MidLine = styled(TopLine)`
   ${BurgerMenu}: hover & {
-    transform: scaleX(0.6);
+    transform: scaleX(0.8);
   }
 `;
 const BottomLine = styled(TopLine)`
   ${BurgerMenu}: hover & {
-    transform: scaleX(0.7);
+    transform: scaleX(0.4);
   }
 `;
 

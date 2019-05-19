@@ -28,6 +28,7 @@ const SecondAnim = styled(a.div)`
   width: 30vw;
   position: absolute;
   top:14vw;
+  margin-right: 5vw;
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
   @media only screen and (max-width: 1024px) {
    width: 40vw;
@@ -63,8 +64,8 @@ export const SecondImageAnim = ({ children }) => {
   const props = useSpring({
     delay: 200,
     config: { mass: 1, tension: 280, friction: 60 },
-    to: ({ right: '5vw' }),
-    from: ({right: '-300vw' })
+    to: ({ right: 0 }),
+    from: ({ right: -2000 })
   })
   return (
     <SecondAnim style={props}>
