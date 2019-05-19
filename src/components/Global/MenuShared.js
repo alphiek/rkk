@@ -74,6 +74,14 @@ export const ContactTitle = styled(H2Menu)`
   @media only screen and (max-width: 570px) {
     height: 65vh;
   }
+  @media only screen and (max-height: 424px) {
+    bottom: 0;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 35%;
+    }
+
  `
  export const ContactWrapper = styled(AboutWrapper)`
    margin-left: 0.5em;
@@ -119,7 +127,10 @@ export const ContactTitle = styled(H2Menu)`
    @media only screen and (max-width: 570px){
      font-size: calc(0.4em + 1.6vw);
    }
- }
+   @media only screen and (max-height: 424px) {
+     bottom: -50%;
+     }
+
  `
 
  export const Address = styled.address`
