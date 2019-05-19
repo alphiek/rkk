@@ -10,7 +10,7 @@ const DesktopLinks = () => {
         aria-label="Link to Portfolio"
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/PortfolioPage'
+        to='/Portfolio'
         partiallyActive={true}
         >Portfolio
       </Portfolio>
@@ -20,7 +20,7 @@ const DesktopLinks = () => {
         aria-label="Link to Services"
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/WebDesignPage'
+        to='/WebDesign'
         partiallyActive={true}
         >Services
       </Services>

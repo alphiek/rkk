@@ -24,7 +24,7 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
         key='WebDesign'
         onClick={toggleHidden}>
           <MenuLinks
-            to='/WebDesignPage'
+            to='/WebDesign'
             partiallyActive={true}>Web Design</MenuLinks>
       </MenuList>
 
@@ -32,7 +32,7 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
         key='Dev'
         onClick={toggleHidden}>
           <MenuLinks
-            to='/DevelopmentPage'
+            to='/WebDevelopment'
             partiallyActive={true}>Development</MenuLinks>
       </MenuList>
 
@@ -40,7 +40,7 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
         key='Graphics'
         onClick={toggleHidden}>
           <MenuLinks
-            to='/WebGraphicsPage'
+            to='/WebGraphics'
             partiallyActive={true}>Web Graphics</MenuLinks>
       </MenuList>
 
@@ -48,7 +48,7 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
         key='SEO'
         onClick={toggleHidden}>
           <MenuLinks
-            to='/SeoOptPage'
+            to='/SEO'
             partiallyActive={true}>SEO</MenuLinks>
       </MenuList>
 
@@ -56,7 +56,7 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
         key='Portfolio'
         onClick={toggleHidden}>
           <MenuLinks
-            to='/PortfolioPage'
+            to='/Portfolio'
             partiallyActive={true}>Portfolio</MenuLinks>
       </MenuList>
 
