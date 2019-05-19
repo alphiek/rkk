@@ -22,6 +22,15 @@ export const PageWrapper = styled.div`
      align-items: center;
      justify-content: center;
    }
+   @media only screen and (max-height: 424px) {
+         top: 5%;
+         bottom:0;
+         position:fixed;
+         overflow-y:scroll;
+         overflow-x:hidden;
+         padding-top: 32%;
+         padding-bottom: 3%;
+     }
  `
 export const AboutTitle = styled(H2Menu)`
    color: ${color.secondary};
@@ -57,7 +66,6 @@ export const ContactTitle = styled(H2Menu)`
    @media only screen and (max-width: 1024px) {
      margin: 0 10%;
      height: auto;
-     overflow: scroll;
      width: 80%;
      padding: 5%;
      border: 0.3em solid ${color.secondary};
@@ -167,6 +175,9 @@ export const ContactTitle = styled(H2Menu)`
    }
   @media only screen and (max-width: 570px) {
     margin: 2em;
+  }
+  @media only screen and (max-height: 424px) {
+        height: auto;
   }
  `
 

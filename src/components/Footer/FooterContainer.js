@@ -28,9 +28,10 @@ const PoseWrapper = styled(FooterWrapper)`
     top: 0;
     position: fixed;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: ${color.primaryFull};
     z-index: 10;
+    overflow: scroll;
   }
 `
 
@@ -39,7 +40,7 @@ class FooterContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isHidden: true,
+      isHidden: false,
       menu: true,
       contact: false,
       about: false,
