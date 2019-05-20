@@ -135,7 +135,6 @@ export const MainLink = styled(Link)`
   letter-spacing: ${spacing.wide};
   font-weight: ${weight.extraBold};
   line-height: 180%;
-  transition: 300ms ease-out;
   &: hover {
     background: ${color.secondary};
     color: white;
