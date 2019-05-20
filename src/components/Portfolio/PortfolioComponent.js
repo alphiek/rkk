@@ -10,6 +10,7 @@ class PortfolioComponent extends Component {
   render() {
     const { images, onClickToggle, mainContent, grid } = this.props
     return (
+      <div style={{ overflow: 'hidden' }}>
       <PortfolioPageWrapper>
         {
           grid ?
@@ -27,6 +28,7 @@ class PortfolioComponent extends Component {
           grid={grid}
         />
       </ PortfolioPageWrapper>
+      </div>
     )
   }
 }

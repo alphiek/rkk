@@ -19,6 +19,7 @@ export const PageWrapper = styled.div`
 `
 export const PageWrapperCenter = styled(PageWrapper)`
   align-items: center;
+  overflow: hidden;
   @media only screen and (max-width: 1024px) {
     padding-bottom: 7em;
   }

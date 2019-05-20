@@ -27,7 +27,7 @@ const ContactContainer = ({ form, toggleForm, renderMenu }) => {
         }
         <BackButton form={form} toggleForm={toggleForm}/>
      </ContactWrapper>
-     <Breakpoint tablet only>
+     <Breakpoint tablet down>
      <RenderMenu renderMenu={renderMenu}/>
      </Breakpoint>
     </PageWrapper>

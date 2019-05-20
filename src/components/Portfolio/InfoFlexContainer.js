@@ -35,7 +35,6 @@ const PortfolioTitle = styled(H1)`
  }
 `
 const Description = styled(BodyText)`
-  margin-left: 1em;
   padding-top: 0.5em;
   padding-bottom: 0.8em;
   @media only screen and (max-width: 570px) {

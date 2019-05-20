@@ -7,7 +7,7 @@ import BottomNav from '../Global/BottomNav'
 import Carousel from './Carousel'
 import MainContent from './MainContent'
 import { TransWrap } from '../Global/TransWrap'
-import { FullWidthWrapper, Divider } from '../Global/Shared'
+import { FullWidthWrapper, Divider, MobileWidthWrapper } from '../Global/Shared'
 import { PageWrapperCenter } from '../Global/ServiceFlexWrapper'
 
 
@@ -39,12 +39,14 @@ class WebGraphicsComponent extends Component {
                 <Fade right delay={200}>
                   <Carousel />
                 </Fade>
+                <MobileWidthWrapper>
                 <MainContent />
                 <Divider />
                 <PortfolioLink />
                 <Breakpoint desktop only>
                   <BottomNav />
                 </Breakpoint>
+                </MobileWidthWrapper>
               </FullWidthWrapper>
             </PageWrapperCenter >
           </TransWrap>
