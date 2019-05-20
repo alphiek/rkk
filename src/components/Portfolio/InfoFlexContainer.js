@@ -22,6 +22,24 @@ import {
 import DevelopmentIcon from './DevelopmentIcon'
 import VisitSiteIcon from './VisitSiteIcon'
 
+const PortfolioPageWrapper = styled.div`
+  align-self: flex-start;
+  margin-top: 0.5em;
+  margin-left: 1.8em;
+  @media only screen and (max-width: 1024px) {
+    margin-top: 3em;
+    margin-left: 0;
+  }
+`
+
+const PortfolioDivider = styled(Divider)`
+  width: 5.9em;
+  @media only screen and (max-width: 1024px) {
+    margin-left: 0;
+    margin-bottom: 1.5em;
+  }
+`
+
 const PortfolioTitle = styled(H1)`
   border-bottom: 0.15em solid ${color.secondary};
   padding-bottom: 0.2em;
@@ -97,13 +115,20 @@ const InfoFlexContainer = ({ item, onClickToggle, live }) => {
        </ServiceFlexChild>
     </InfoFlex>
     </Fade>
-    <Divider style={{ alignSelf: 'flex-start', marginLeft: '1.8em', marginTop: '0.5em'}} />
-    <PortfolioPageLnk
-     aria-label='Back to main portfolio'
-     id='close'
-     onClick={onClickToggle}>
-     Back to Portfolio
-    </PortfolioPageLnk>
+    <PortfolioPageWrapper>
+      <Fade delay={600}>
+        <PortfolioDivider/>
+      </Fade>
+      <Fade bottom delay={550}>
+        <PortfolioPageLnk
+         style={{marginLeft: 0}}
+         aria-label='Back to main portfolio'
+         id='close'
+         onClick={onClickToggle}>
+         Back to Portfolio
+        </PortfolioPageLnk>
+      </Fade>
+    </PortfolioPageWrapper>
     </>
   )
 }

@@ -7,7 +7,7 @@ import BottomNav from '../Global/BottomNav'
 import Carousel from './Carousel'
 import MainContent from './MainContent'
 import { TransWrap } from '../Global/TransWrap'
-import { FullWidthWrapper, Divider } from '../Global/Shared'
+import { FullWidthWrapper, Divider, GraphicsFlexWrapper } from '../Global/Shared'
 import { PageWrapperCenter } from '../Global/ServiceFlexWrapper'
 
 
@@ -36,12 +36,16 @@ class WebGraphicsComponent extends Component {
                 <NumberNav />
               </Breakpoint>
               <FullWidthWrapper>
-                <Fade right delay={200}>
+                <Fade right delay={300}>
                   <Carousel />
                 </Fade>
+                <GraphicsFlexWrapper>
                 <MainContent />
+                <Fade delay={600}>
                 <Divider />
+                </Fade>
                 <PortfolioLink />
+                </GraphicsFlexWrapper>
                 <Breakpoint desktop only>
                   <BottomNav />
                 </Breakpoint>

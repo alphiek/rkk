@@ -62,13 +62,13 @@ export const PortfolioPageLnk = styled.p`
   }
 
   @media only screen and (max-width: 1024px) {
-   align-self: flex-end;
    font-size: calc(0.4em + 0.54vw);
    letter-spacing: ${spacing.servicesTab};
+   margin-top: 0.5em;
   }
 
   @media only screen and (max-width: 824px){
-    margin-top: 6em;
+    margin-top: 0.5em;
     font-size: calc(0.4em + 0.8vw);
   }
 
@@ -77,6 +77,7 @@ export const PortfolioPageLnk = styled.p`
     font-size: calc(0.4em + 2vw);
     margin-top: 3.5em;
     margin-left: 0;
+    margin-bottom: 1em;
   }
 `
 
