@@ -54,7 +54,7 @@ const ImgWrapper = styled(a.div)`
     }
 @media only screen
       and (max-width: 570px) {
-        width: 80%;
+        width: 70%;
         margin-top: 15%;
       }
 `

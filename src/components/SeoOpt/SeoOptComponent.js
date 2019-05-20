@@ -1,42 +1,40 @@
-import React from 'react'
-import Fade from 'react-reveal/Fade'
-import data from './data'
-import { seoData } from '../Copy/copy'
-import PortfolioLink from '../Global/PortfolioLink'
+import React, { Component } from 'react'
 import SeoImage from './SeoImage'
-import { HeadingText, Divider, Spacer } from '../Global/Shared'
-import { H2Services, ListItem, BodyText } from '../Global/textSizes'
-import { ServiceFlexWrapper, LeftWrapper, RightWrapper } from '../Global/ServiceFlexWrapper'
+import MainContent from './MainContent'
+import { RightWrapper, ServiceFlexWrapper } from '../Global/ServiceFlexWrapper'
 
 
-const SeoOptComponent = () => {
-  const services = data.map(item => <ListItem key={item.key}>{item.name}</ListItem>)
-  return (
-    <ServiceFlexWrapper>
+class SeoOptComponent extends Component {
+  constructor() {
+    super()
+    this.state = {
+      loaded: false,
+    }
+  }
+
+  componentDidMount() {
+    this.setState({
+      loaded: !this.state.loaded
+    })
+  }
+
+  render() {
+    return (
+      <>
       {
-        seoData.map(seo =>
-          <LeftWrapper key='seo'>
-            <Fade bottom cascade>
-              <HeadingText>{seo.title}</HeadingText>
-            </Fade>
-            <Fade bottom cascade delay={200}>
-              <BodyText>{seo.description}</BodyText>
-              <H2Services>Services</H2Services>
-              <ul>
-              {services}
-              </ul>
-            </Fade>
-            <Spacer />
-            <Divider />
-            <PortfolioLink />
-          </LeftWrapper>
-        )
+        this.state.loaded ?
+        <ServiceFlexWrapper>
+          <MainContent />
+          <RightWrapper>
+          <SeoImage />
+          </RightWrapper>
+        </ServiceFlexWrapper>
+        :
+        null
       }
-      <RightWrapper>
-      <SeoImage />
-      </RightWrapper>
-    </ServiceFlexWrapper>
-  )
+     </>
+    )
+  }
 }
 
 export default SeoOptComponent

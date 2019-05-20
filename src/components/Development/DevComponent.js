@@ -19,10 +19,17 @@ class DevComponent extends Component {
 
   render() {
     return (
-      <ServiceFlexWrapper>
-        <MainContent />
-        <Video />
-      </ServiceFlexWrapper>
+      <>
+      {
+        this.state.loaded ?
+        <ServiceFlexWrapper>
+          <MainContent />
+          <Video />
+        </ServiceFlexWrapper>
+        :
+        null
+      }
+      </>
     )
   }
 }
