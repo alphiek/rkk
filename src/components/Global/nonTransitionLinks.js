@@ -62,7 +62,6 @@ export const PortfolioPageLnk = styled.p`
   }
 
   @media only screen and (max-width: 1024px) {
-   align-self: flex-end;
    font-size: calc(0.4em + 0.54vw);
    letter-spacing: ${spacing.servicesTab};
   }
