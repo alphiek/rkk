@@ -37,6 +37,10 @@ export const LeftWrapper = styled.div`
   width: 40%;
   margin-left: 7%;
   padding: 0em 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 
   @media only screen and (max-width: 1024px) {
     margin-left: 0;
