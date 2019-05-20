@@ -22,6 +22,25 @@ import {
 import DevelopmentIcon from './DevelopmentIcon'
 import VisitSiteIcon from './VisitSiteIcon'
 
+const PortfolioPageWrapper = styled.div`
+  align-self: flex-start;
+  margin-top: 0.5em;
+  margin-left: 1.8em;
+  @media only screen and (max-width: 1024px) {
+    margin-top: 3em;
+    margin-left: 0;
+  }
+`
+
+const PortfolioDivider = styled(Divider)`
+  width: 5.9em;
+  @media only screen and (max-width: 1024px) {
+    margin-left: 0;
+    margin-bottom: 1.5em;
+  }
+`
+
+
 const PortfolioTitle = styled(H1)`
   border-bottom: 0.15em solid ${color.secondary};
   padding-bottom: 0.2em;
