@@ -12,10 +12,14 @@ const GIF = styled.img`
     margin-bottom: -2em;
   }
 `
-@@ -15,9 +14,7 @@ const GIF = styled.img`
+const GIF = styled.img`
 const Video = () => {
   return (
     <RightWrapper>
+    <Fade right>
+     <GIF src={gif} alt='Laptop with moving code and site preview' />
+     </Fade>
+    </RightWrapper>
   )
 }
 
