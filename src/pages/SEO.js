@@ -7,7 +7,8 @@ import seo from '../images/SEO.png'
 import logo from '../images/icon.png'
 
 setDefaultBreakpoints([
-  { tablet: 0 },
+  { mobile: 0 },
+  { tablet: 824 },
   { desktop: 1025 }
 ]);
 

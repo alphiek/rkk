@@ -4,7 +4,8 @@ import { BreakpointProvider} from 'react-socks'
 import { setDefaultBreakpoints } from 'react-socks'
 
 setDefaultBreakpoints([
-  { tablet: 0 },
+  { mobile: 0 },
+  { tablet: 824 },
   { desktop: 1025 }
 ]);
 

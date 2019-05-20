@@ -12,11 +12,11 @@ setDefaultBreakpoints([
 const FooterDisplay = () => {
   return(
     <BreakpointProvider>
-     <Breakpoint tablet down>
       <footer>
-         <FooterContainer />
+        <Breakpoint tablet down>
+          <FooterContainer />
+        </Breakpoint>
       </footer>
-    </Breakpoint>
    </BreakpointProvider>
   )
 }
