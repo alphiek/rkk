@@ -19,7 +19,7 @@ export const PageWrapper = styled.div`
      width: 100%;
      height: 100vh;
      display: flex;
-     align-items: center;
+     align-items: flex-start;
      justify-content: center;
    }
    @media only screen and (max-height: 424px) {
@@ -28,8 +28,7 @@ export const PageWrapper = styled.div`
          position:fixed;
          overflow-y:scroll;
          overflow-x:hidden;
-         padding-top: 32%;
-         padding-bottom: 3%;
+         align-items: flex-start;
      }
  `
 export const AboutTitle = styled(H2Menu)`
@@ -69,21 +68,16 @@ export const ContactTitle = styled(H2Menu)`
    @media only screen and (max-width: 1024px) {
      margin: 0 10%;
      height: auto;
-     overflow: scroll;
      width: 80%;
-     padding: 5%;
+     padding: 4%;
      border: 0.3em solid ${color.secondary};
      background-color: ${color.offWhite};
   }
-  @media only screen and (max-width: 570px) {
-    height: 65vh;
-  }
   @media only screen and (max-height: 424px) {
     bottom: 0;
+    margin-top: 13em;
     position: relative;
-    overflow-y: scroll;
     overflow-x: hidden;
-    margin-top: 35%;
     }
  `
  export const ContactWrapper = styled(AboutWrapper)`
@@ -93,11 +87,15 @@ export const ContactTitle = styled(H2Menu)`
    background: ${color.offWhite};
  @media only screen and (max-width: 1024px) {
    margin-top: 3em;
-   min-height: 31em;
+   min-height: 33em;
  }
- @media only screen and (max-width: 570px) {
-   min-height: 40em;
-   margin-top: 2em;
+ @media only screen and (max-width: 1024px) and ( max-height: 600px) {
+   margin-top: 12em;
+   min-height: 33em;
+ }
+
+ @media only screen and (max-height: 424px) {
+   margin-top: 18em;
    width: 90%;
  }
  `
@@ -125,7 +123,6 @@ export const ContactTitle = styled(H2Menu)`
     position: relative;
     width: 80%;
     left: 3;
-    bottom: 4.5em;
     font-size: calc(0.4em + 0.39vw);
    }
 
@@ -139,10 +136,6 @@ export const ContactTitle = styled(H2Menu)`
      left: 4em;
      bottom: 4.5em;
    }
-   @media only screen and (max-height: 424px) {
-     bottom: -50%;
-     }
-
  `
 
  export const Address = styled.address`
@@ -195,10 +188,12 @@ export const ContactTitle = styled(H2Menu)`
      border-radius: 0.2em;
      box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
      width: 100%;
+     margin: 0.5em 0;
    }
    @media only screen and (max-width: 824px) {
      padding: 1em 0;
    }
+
  `
  export const MenuLinksWrapper = styled.ul`
    border: 0.3em solid ${color.secondary};
@@ -217,7 +212,7 @@ export const ContactTitle = styled(H2Menu)`
      align-items: space-around;
      justify-content: space-around;
      background-color: ${color.secondary};
-     height: 80%;
+     height: auto;
      width: 80%;
    }
   @media only screen and (max-width: 570px) {
