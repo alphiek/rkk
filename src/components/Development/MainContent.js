@@ -21,9 +21,7 @@ const MainContent = () => {
                 <BodyText>{data.descriptionTwo}</BodyText>
               </Fade>
               <Spacer />
-              <Fade delay={600}>
               <Divider />
-              </Fade>
               <PortfolioLink />
             </LeftWrapper>
         )

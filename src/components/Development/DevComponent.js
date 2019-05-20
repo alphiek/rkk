@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { ServiceFlexWrapper } from '../Global/ServiceFlexWrapper'
 import Video from './Video'
+
+
 import MainContent from './MainContent'
 
 class DevComponent extends Component {
@@ -19,17 +21,10 @@ class DevComponent extends Component {
 
   render() {
     return (
-      <>
-      {
-        this.state.loaded ?
-        <ServiceFlexWrapper>
-          <MainContent />
-          <Video />
-        </ServiceFlexWrapper>
-        :
-        null
-      }
-      </>
+      <ServiceFlexWrapper>
+        <MainContent />
+        <Video />
+      </ServiceFlexWrapper>
     )
   }
 }

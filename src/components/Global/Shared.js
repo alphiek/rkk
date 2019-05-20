@@ -2,12 +2,6 @@ import styled from 'styled-components'
 import { color } from './variables'
 import { H1 } from './textSizes'
 
-export const GraphicsFlexWrapper = styled.div`
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-`
-
 export const Spacer = styled.div`
   height: 0.8em;
   @media only screen and (max-width: 1024px) {
@@ -29,7 +23,6 @@ export const Divider = styled.hr`
   height: 0.2em;
   margin-bottom: 0.4em;
   width: 7.4vw;
-  align-self: flex-start;
   @media only screen and (max-width: 1024px){
     margin-bottom: 1.8em;
   }

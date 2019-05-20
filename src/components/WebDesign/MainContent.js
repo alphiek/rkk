@@ -28,11 +28,9 @@ const MainContent = () => {
                 </ul>
                 </Fade>
               </ServicesWrapper>
-            <Fade delay={600}>        
+            </Fade>
             <Divider />
-            </Fade>
             <PortfolioLink/>
-            </Fade>
          </LeftWrapper>
        )
       }
