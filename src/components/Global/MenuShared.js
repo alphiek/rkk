@@ -19,8 +19,11 @@ export const PageWrapper = styled.div`
      width: 100%;
      height: 100vh;
      display: flex;
-     align-items: flex-start;
+     align-items: center;
      justify-content: center;
+   }
+   @media only screen and (max-height: 767px) {
+     align-items: flex-start;
    }
    @media only screen and (max-height: 424px) {
          top: 0;
