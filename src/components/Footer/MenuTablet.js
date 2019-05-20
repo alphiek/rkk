@@ -6,13 +6,15 @@ import {
   MenuList,
   MenuWrapper,
   MenuLinksWrapper,
-  Copyright
+  Copyright,
+  Divider
 } from '../Global/MenuShared'
 
 const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
   return (
     <>
     <MenuWrapper>
+
     <MenuLinksWrapper>
       <Fade cascade bottom>
       <MenuList
@@ -72,10 +74,11 @@ const MenuTablet = ({ renderAbout, renderContact, toggleHidden}) => {
          key='Contact'>
           <TabletMenuLinks onClick={renderContact}>Contact</TabletMenuLinks>
       </MenuList>
+      <Divider />
+      <Copyright>© {new Date().getFullYear()} RKK Creative, all rights reserved </Copyright>
       </Fade>
       </MenuLinksWrapper>
     </MenuWrapper>
-    <Copyright>© {new Date().getFullYear()} RKK Creative, all rights reserved </Copyright>
     </>
   )
 }

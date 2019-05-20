@@ -117,7 +117,7 @@ export const Icon = styled.svg`
 export const ConsentText = styled.p`
   float: left;
   width: 80%;
-  font-size: calc(0.4em + 0.3vw);
+  font-size: calc(0.4em + 0.15vw);
   line-height: 130%;
   color: ${color.darkLink};
   margin-bottom: 1em;

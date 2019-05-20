@@ -16,6 +16,7 @@ const SocialWrapper = styled.div`
     width: 40%;
   }
   @media only screen and (max-width: 1024px) {
+    margin-bottom: 1em;
     flex-direction: row;
     width: 50%;
   }

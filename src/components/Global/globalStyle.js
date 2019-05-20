@@ -113,7 +113,8 @@ input,
 optgroup,
 select,
 textarea {
-  font-size: calc(0.4em + 0.1vw);
+  font-family: Raleway;
+  font-size: calc(0.4em + 0.2vw);
   margin: 0;
   line-height: 1.5em;
   @media only screen and (max-width: 1024px) {

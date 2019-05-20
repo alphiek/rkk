@@ -4,36 +4,43 @@ import { H2Menu, BodyText } from '../Global/textSizes'
 
 export const PageWrapper = styled.div`
   width: 30%;
-    @media only screen and (max-width: 1024px){
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
+  @media only screen and (max-width: 1024px){
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
  `
- export const MenuWrapper = styled.nav`
-   width: 30%;
-   @media only screen and (max-width: 1024px){
-     width: 100%;
-     height: 100vh;
-     display: flex;
-     align-items: flex-start;
-     justify-content: center;
-   }
-   @media only screen and (max-height: 424px) {
-         top: 0;
-         bottom:0;
-         position:fixed;
-         overflow-y:scroll;
-         overflow-x:hidden;
-         align-items: flex-start;
-     }
+export const MenuWrapper = styled.nav`
+  width: 30%;
+  @media only screen and (max-width: 1024px) {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media only screen and (max-height: 767px) {
+    align-items: flex-start;
+  }
+
+  @media only screen and (max-height: 424px) {
+    top: 0;
+    bottom:0;
+    position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    align-items: flex-start;
+  }
  `
 export const AboutTitle = styled(H2Menu)`
    color: ${color.secondary};
    @media only screen and (max-width: 1024px){
+     margin-bottom: 1em;
      color: ${color.primary};
    }
  `
@@ -65,17 +72,23 @@ export const ContactTitle = styled(H2Menu)`
    padding: 1.8em;
    overflow: hidden;
    box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
+
    @media only screen and (max-width: 1024px) {
-     margin: 0 10%;
-     height: auto;
-     width: 80%;
-     padding: 4%;
-     border: 0.3em solid ${color.secondary};
+     border: none;
+     margin: 0;
+     min-height: 100vh;
+     width: 100%;
+     padding: 13% 10%;
      background-color: ${color.offWhite};
   }
+
+  @media only screen and (max-width:570px) {
+    margin-top: 5em;
+  }
+
   @media only screen and (max-height: 424px) {
     bottom: 0;
-    margin-top: 13em;
+    margin-top: 18em;
     position: relative;
     overflow-x: hidden;
     }
@@ -86,16 +99,15 @@ export const ContactTitle = styled(H2Menu)`
    position: relative;
    background: ${color.offWhite};
  @media only screen and (max-width: 1024px) {
-   margin-top: 3em;
-   min-height: 33em;
+   min-height: 100vh;
+   width: 100%;
+   padding: 13% 10%;
  }
  @media only screen and (max-width: 1024px) and ( max-height: 600px) {
-   margin-top: 12em;
-   min-height: 33em;
  }
 
  @media only screen and (max-height: 424px) {
-   margin-top: 18em;
+   margin-top: 20em;
    width: 90%;
  }
  `
@@ -121,9 +133,10 @@ export const ContactTitle = styled(H2Menu)`
 
    @media only screen and (max-width: 1024px) {
     position: relative;
-    width: 80%;
-    left: 3;
-    font-size: calc(0.4em + 0.39vw);
+    left: 0;
+    margin-top: 2em;
+    bottom: 0;
+    font-size: calc(0.5em + 0.6vw);
    }
 
    @media only screen and (max-width: 824px){
@@ -183,12 +196,9 @@ export const ContactTitle = styled(H2Menu)`
    padding-top: 0.5em;
    padding-bottom: 0.5em;
    @media only screen and (max-width: 1024px) {
-     padding: 0.7em 0;
-     background-color: ${color.primary};
-     border-radius: 0.2em;
-     box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
+     padding: 1em 0;
      width: 100%;
-     margin: 0.5em 0;
+     margin: 0;
    }
    @media only screen and (max-width: 824px) {
      padding: 1em 0;
@@ -204,19 +214,19 @@ export const ContactTitle = styled(H2Menu)`
    padding: 1.8em;
    box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);
    @media only screen and (max-width: 1024px) {
+     border: 0px;
+     box-shadow: none;
      margin-left: 0;
-     margin: 2em 5em;
-     border-radius: 0.2em;
      display: flex;
      flex-direction: column;
      align-items: space-around;
      justify-content: space-around;
-     background-color: ${color.secondary};
      height: auto;
-     width: 80%;
+     width: 100%;
    }
   @media only screen and (max-width: 570px) {
-    margin: 2em;
+    margin: 1em;
+    width: 90%;
   }
   @media only screen and (max-height: 424px) {
     height: auto;
@@ -233,8 +243,9 @@ export const ContactTitle = styled(H2Menu)`
    width: 100%;
 
    @media only screen and (max-width: 1024px) {
-     margin: 1em 0;
-     font-size: calc(0.7em + 1.5vw);
+     margin-top: 2em;
+     width: 90%;
+     font-size: calc(0.7em + 1.8vw);
    }
    @media only screen and (max-width: 824px){
      font-size: calc(0.7em + 1.9vw);
@@ -244,3 +255,10 @@ export const ContactTitle = styled(H2Menu)`
      font-size: calc(0.7em + 2.7vw);
    }
  `
+
+export const Divider = styled.div`
+   width: 5em;
+   height: 0.2em;
+   background-color: white;
+   margin: 1em auto 0;
+`

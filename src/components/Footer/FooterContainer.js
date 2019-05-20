@@ -24,6 +24,7 @@ const FooterWrapper = posed.div({
 const PoseWrapper = styled(FooterWrapper)`
   display: none;
   @media only screen and (max-width: 1024px) {
+    margin: 0 auto;
     display: block;
     top: 0;
     position: fixed;
@@ -31,7 +32,6 @@ const PoseWrapper = styled(FooterWrapper)`
     min-height: 100vh;
     background-color: ${color.primaryFull};
     z-index: 10;
-    overflow: scroll;
   }
 `
 
@@ -70,6 +70,9 @@ class FooterContainer extends Component {
           menu: false,
           contact: false,
           about: true
+        },
+        () => {
+          window.scrollTo(0, 0)
         }
       )
     }
@@ -79,6 +82,9 @@ class FooterContainer extends Component {
       this.setState(
         {
           form: !this.state.form
+        },
+        () => {
+          window.scrollTo(0, 0)
         }
       )
     }
@@ -90,6 +96,9 @@ class FooterContainer extends Component {
           menu: false,
           contact: true,
           about: false
+        },
+        () => {
+          window.scrollTo(0, 0)
         }
       )
     }

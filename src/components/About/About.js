@@ -27,10 +27,10 @@ const About = ({ children }) => {
           {data.descriptionTwo}
           </AboutText>
          </Fade>
+          {children}
         </AboutWrapper>
         </Fade>
-        {children}
-      </PageWrapper>
+     </PageWrapper>
     )}
     </>
   )

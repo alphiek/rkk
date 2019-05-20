@@ -21,7 +21,7 @@ const Back = styled.div`
   }
   @media only screen and (max-width: 1024px) {
     padding: 2em;
-    width: 100%;
+    width: 40%;
     margin-top: 1em;
   }
   @media only screen and (max-width: 570px){
