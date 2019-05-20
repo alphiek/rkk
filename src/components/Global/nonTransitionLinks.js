@@ -77,7 +77,7 @@ export const PortfolioPageLnk = styled.p`
     font-size: calc(0.4em + 2vw);
     margin-top: 3.5em;
     margin-left: 0;
-    margin-bottom: 1em
+    margin-bottom: 1em;
   }
 `
 
