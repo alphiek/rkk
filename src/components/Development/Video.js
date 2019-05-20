@@ -12,7 +12,6 @@ const GIF = styled.img`
     margin-bottom: -2em;
   }
 `
-const GIF = styled.img`
 const Video = () => {
   return (
     <RightWrapper>
