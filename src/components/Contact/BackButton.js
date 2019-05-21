@@ -15,14 +15,21 @@ const Back = styled.div`
   height: 3em;
   background-color: ${color.secondary};
   overflow: hidden;
-  transition: 300ms;
   &: hover {
     box-shadow: 21px 21px 24px -10px rgba(0,0,0,.15);
   }
   @media only screen and (max-width: 1024px) {
     padding: 2em;
-    width: 40%;
+    width: 40vw;
     margin-top: 1em;
+    float: left;
+    background-color: #fff;
+    border: 0.1em solid ${color.secondary};
+    margin-right: 5%;
+  }
+  @media only screen and (max-width: 824px) {
+    width: 80vw;
+    margin-right: 0;
   }
   @media only screen and (max-width: 570px){
     padding: 2.5em;
