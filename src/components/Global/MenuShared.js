@@ -245,5 +245,5 @@ export const Divider = styled.div`
    width: 5em;
    height: 0.2em;
    background-color: white;
-   margin: 1em auto 0;
+   margin: 2em auto 0;
 `
