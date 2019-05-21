@@ -14,11 +14,9 @@ export const fodeData = [
       'Site Design',
       'SEO',
     ],
-    description: `This design is fucking brilliant.
-      Never, never assume that what you have achieved is fucking good enough Remember
-      it’s called the creative process, it’s not the creative fucking moment.
-      Use your fucking hands Think about all the fucking possibilities.
-      Why are you fucking reading all of this? Get back to work.`
+    description: `As an exciting upcoming London streetwear brand, our focus for FODE was to
+      create a modern progressive web app to compliment and accentuate their retro urban clothing range. For Fode mobile user experience is paramount,
+      with this at the forefront of our planning the online store has been developed to ensure ease of purchase, rapid content delivery and offline capabilities.`
   }
 ]
 
@@ -38,11 +36,7 @@ export const foragerData = [
       'Illustration',
       'App Design',
     ],
-    description: `This design is fucking brilliant.
-      Never, never assume that what you have achieved is fucking good enough Remember
-      it’s called the creative process, it’s not the creative fucking moment.
-      Use your fucking hands Think about all the fucking possibilities.
-      Why are you fucking reading all of this? Get back to work.`
+    description: `Forager is a web app which is powered by the Yelp API. Allowing users to search any global location for local business reviews and recommendations.`
   }
 ]
 
@@ -61,11 +55,9 @@ export const lkData = [
       'Re-Design',
       'Web Graphics',
     ],
-    description: `This design is fucking brilliant.
-      Never, never assume that what you have achieved is fucking good enough Remember
-      it’s called the creative process, it’s not the creative fucking moment.
-      Use your fucking hands Think about all the fucking possibilities.
-      Why are you fucking reading all of this? Get back to work.`
+    description: `Our mission was to redevelop an outdated Wordpress website into powerful brand assest which supports and visualises the modern stylish environment that the
+    salon represents. Our solution was to create a streamlined interactive experience for users to access salon booking portals and information with ease combining
+    the website and social presence with a dynamic live feed gallery via the Instagram API that seamlessly updates without the need for a CMS. `
   }
 ]
 
@@ -92,11 +84,8 @@ export const lmlData = [
       'Mobile Site',
       'SEO'
     ],
-    description: `This design is fucking brilliant.
-      Never, never assume that what you have achieved is fucking good enough Remember
-      it’s called the creative process, it’s not the creative fucking moment.
-      Use your fucking hands Think about all the fucking possibilities.
-      Why are you fucking reading all of this? Get back to work.`,
+    description: `Our challenge was to rebrand the exisiting LML website to appeal to the modern London millenial rental market, incorporating both a fully editable
+    property dashboard, search portal and blog.  `,
     site: `https://likemindedliving.co.uk`
   }
 ]
@@ -120,11 +109,9 @@ export const ppdData = [
       'Mobile Site',
       'SEO'
     ],
-    description: `This design is fucking brilliant.
-      Never, never assume that what you have achieved is fucking good enough Remember
-      it’s called the creative process, it’s not the creative fucking moment.
-      Use your fucking hands Think about all the fucking possibilities.
-      Why are you fucking reading all of this? Get back to work.`,
+    description: `The core focus for Paphos Painter Decorators was to create a modern, accessible site that was highly optimised to increase conversion
+    and online visibility. With enhanced technical optimisation we were please to achieve top result for relevant Paphos organic search results within
+    two months of launch.`,
     site: `https://paphospainterdecorators.com`
   }
 ]
@@ -134,15 +121,12 @@ export const sccData = [
     title: 'South Coast Coaches',
     key: 6,
     tech: [
-      'Webflow',
-      'HTML',
-      'CSS',
-      'jQuery',
+      'Gatsby',
+      'React',
     ],
     services: [
       'Website Design',
       'Branding',
-      'Blog',
       'Social Graphics',
       'Web Graphics',
       'Mobile Site',

@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphicsData } from '../Copy/copy'
-import { HeadingText, MobileWidthWrapper, ServicesWrapper } from '../Global/Shared'
+import PortfolioLink from '../Global/PortfolioLink'
+import { HeadingText, MobileWidthWrapper, ServicesWrapper, Divider } from '../Global/Shared'
 import { H2Services, ListItem, BodyText } from '../Global/textSizes'
 import Fade from 'react-reveal/Fade'
 
@@ -21,6 +22,10 @@ const MainContent = () => {
               )}
               </ul>
           </ServicesWrapper>
+          <Fade delay={600}>
+          <Divider />
+          </Fade>
+          <PortfolioLink />
           </MobileWidthWrapper>
         </Fade>
       )

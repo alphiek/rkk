@@ -47,7 +47,7 @@ export const BrowseLink = styled.p`
 
 export const PortfolioPageLnk = styled.p`
   align-self: flex-start;
-  margin-left: 4em;
+  margin-left: 0;
   margin-top: 1.5em;
   line-height: 100%;
   font-family: ${font.heebo};
@@ -65,6 +65,8 @@ export const PortfolioPageLnk = styled.p`
    font-size: calc(0.4em + 0.54vw);
    letter-spacing: ${spacing.servicesTab};
    margin-top: 0.5em;
+   width: 100%;
+   margin-left: 10%;
   }
 
   @media only screen and (max-width: 824px){
@@ -76,7 +78,6 @@ export const PortfolioPageLnk = styled.p`
     align-self: center;
     font-size: calc(0.4em + 2vw);
     margin-top: 3.5em;
-    margin-left: 0;
     margin-bottom: 1em;
   }
 `
