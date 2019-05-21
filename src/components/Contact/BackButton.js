@@ -19,20 +19,21 @@ const Back = styled.div`
     box-shadow: 21px 21px 24px -10px rgba(0,0,0,.15);
   }
   @media only screen and (max-width: 1024px) {
-    padding: 2em;
-    width: 40vw;
+    padding: 1em;
+    width: 30vw;
     margin-top: 1em;
     float: left;
     background-color: #fff;
     border: 0.1em solid ${color.secondary};
-    margin-right: 5%;
+    margin-right: 11%;
   }
   @media only screen and (max-width: 824px) {
     width: 80vw;
     margin-right: 0;
+    margin-bottom: 2em;
   }
   @media only screen and (max-width: 570px){
-    padding: 2.5em;
+    padding: 1em;
     margin-top: 0.5em;
   }
 `
@@ -40,14 +41,12 @@ const Back = styled.div`
 const BackButton = ({toggleForm, form}) => {
   return (
     <Back onClick={toggleForm}>
-    <Fade bottom>
     {
       form ?
       <BackText>Contact Details</BackText>
       :
       <BackText>Contact Form</BackText>
     }
-    </Fade>
     </Back>
   )
 }
