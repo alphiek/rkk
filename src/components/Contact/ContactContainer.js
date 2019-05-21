@@ -36,7 +36,7 @@ const ContactContainer = ({ form, toggleForm, renderMenu }) => {
           :
           <ContactDetails />
         }
-        <Breakpoint tablet down>
+        <Breakpoint mobile up>
         <ContactMenuButton>
         <BackButton form={form} toggleForm={toggleForm}/>
         <RenderMenu renderMenu={renderMenu}/>

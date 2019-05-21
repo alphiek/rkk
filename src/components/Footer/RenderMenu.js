@@ -18,15 +18,16 @@ const MenuButton = styled(BackText)`
     `
 
 const ButtonWrapper = styled.div`
-  width: 95vw;
-  text-align: right;
-  padding-right: 6em;
+    width: 95vw;
+    text-align: right;
+    padding-right: 6em;
+    overflow: hidden;
 @media only screen and (max-width: 1024px) {
-  border: 0.1em solid ${color.secondary};
-  width: 40vw;
-  padding: 1.17em 0;
-  float: right;
-  margin-left: 5%;
+    border: 0.1em solid hsl(181,97%,44%);
+    width: 30vw;
+    padding: 0.67em 0;
+    float: right;
+    margin-left: 11%;
 }
 @media only screen and (max-width: 824px) {
     width: 80vw;
