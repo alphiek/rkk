@@ -218,6 +218,7 @@ export const ContactTitle = styled(H2Menu)`
  `
 
  export const BackText = styled.p`
+   text-align: center;
    color: ${color.primary};
    font-family: ${font.muli};
    font-weight: ${weight.black};

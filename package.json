@@ -12,6 +12,7 @@
     "gatsby-image": "^2.0.37",
     "gatsby-plugin-accessibilityjs": "^1.0.3",
     "gatsby-plugin-canonical-urls": "^2.0.12",
+    "gatsby-plugin-htaccess": "^1.1.1",
     "gatsby-plugin-manifest": "^2.0.27",
     "gatsby-plugin-offline": "^2.0.25",
     "gatsby-plugin-react-helmet": "^3.0.12",
