@@ -22,11 +22,9 @@ export const MenuWrapper = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  @media only screen and (max-height: 767px) {
-    align-items: flex-start;
-  }
+  }  @media only screen and (max-height: 767px) and (min-width:767px) {
+      align-items: flex-start;
+    }
 
   @media only screen and (max-height: 424px) {
     top: 0;
@@ -82,15 +80,8 @@ export const ContactTitle = styled(H2Menu)`
      background-color: ${color.offWhite};
   }
 
-  @media only screen and (max-width:570px) {
-    margin-top: 5em;
-  }
-
-  @media only screen and (max-height: 424px) {
-    bottom: 0;
-    margin-top: 18em;
-    position: relative;
-    overflow-x: hidden;
+  @media only screen and (max-height: 600px) {
+    overflow: scroll;
     }
  `
  export const ContactWrapper = styled(AboutWrapper)`
@@ -102,13 +93,6 @@ export const ContactTitle = styled(H2Menu)`
    min-height: 100vh;
    width: 100%;
    padding: 13% 10%;
- }
- @media only screen and (max-width: 1024px) and ( max-height: 600px) {
- }
-
- @media only screen and (max-height: 424px) {
-   margin-top: 20em;
-   width: 90%;
  }
  `
 
@@ -136,18 +120,18 @@ export const ContactTitle = styled(H2Menu)`
     left: 0;
     margin-top: 2em;
     bottom: 0;
+    right: 0;
     font-size: calc(0.5em + 0.6vw);
    }
 
    @media only screen and (max-width: 824px){
      font-size: calc(0.4em + 0.65vw);
+     position: absolute;
    }
 
    @media only screen and (max-width: 570px){
      font-size: calc(0.4em + 1.6vw);
-     width: 90%;
-     left: 4em;
-     bottom: 4.5em;
+     bottom: 0;
    }
  `
 
@@ -243,9 +227,9 @@ export const ContactTitle = styled(H2Menu)`
    width: 100%;
 
    @media only screen and (max-width: 1024px) {
-     margin-top: 2em;
-     width: 90%;
-     font-size: calc(0.7em + 1.8vw);
+    text-align: center;
+    width: 100%;
+    font-size: calc(0.7em + 1.8vw);
    }
    @media only screen and (max-width: 824px){
      font-size: calc(0.7em + 1.9vw);

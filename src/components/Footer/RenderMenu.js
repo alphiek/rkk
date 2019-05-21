@@ -10,17 +10,27 @@ const MenuButton = styled(BackText)`
   &: hover {
     color: ${color.offWhite};
   }
-`
+
+  @media only screen and (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    `
 
 const ButtonWrapper = styled.div`
   width: 95vw;
   text-align: right;
   padding-right: 6em;
 @media only screen and (max-width: 1024px) {
-  padding-right: 10%;
+  border: 0.1em solid ${color.secondary};
+  width: 40vw;
+  padding: 1.17em 0;
+  float: right;
+  margin-left: 5%;
 }
-@media only screen and (max-width: 570px) {
-    width: 100vw;
+@media only screen and (max-width: 824px) {
+    width: 80vw;
+    margin-left: 0;
 }
 `
 

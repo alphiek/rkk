@@ -9,9 +9,20 @@ import RenderMenu from '../Footer/RenderMenu'
 import {
   PageWrapper,
   ContactTitle,
-  ContactWrapper
+  ContactWrapper,
  } from '../Global/MenuShared'
+ import styled from 'styled-components'
 
+const ContactMenuButton = styled.div`
+  @media only screen and (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  @media only screen and (max-width: 824px) {
+    flex-direction: column;
+  }
+`
 
 const ContactContainer = ({ form, toggleForm, renderMenu }) => {
   return (
@@ -25,11 +36,13 @@ const ContactContainer = ({ form, toggleForm, renderMenu }) => {
           :
           <ContactDetails />
         }
+        <Breakpoint tablet down>
+        <ContactMenuButton>
         <BackButton form={form} toggleForm={toggleForm}/>
+        <RenderMenu renderMenu={renderMenu}/>
+        </ContactMenuButton>
+        </Breakpoint>
      </ContactWrapper>
-     <Breakpoint tablet only>
-     <RenderMenu renderMenu={renderMenu}/>
-     </Breakpoint>
     </PageWrapper>
   )
 }
