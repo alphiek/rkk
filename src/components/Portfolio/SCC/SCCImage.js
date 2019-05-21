@@ -14,7 +14,7 @@ const SCCImage = ({ data }) => {
   return (
     <>
     <Flex>
-    <NumberIndicator>05</NumberIndicator>
+    <NumberIndicator>04</NumberIndicator>
       <MainImageAnim>
         <Img
           backgroundColor={true}

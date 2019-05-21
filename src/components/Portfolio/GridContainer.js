@@ -38,33 +38,33 @@ const GridContainer = ({ images, onClickToggle, grid }) => {
       grid ?
       <Container>
         <Fade bottom>
-          <FodeThumbnail
-            thumb={images.imageOne.childImageSharp.fluid}
-            onClickToggle={onClickToggle}
-          />
-        </Fade>
-        <Fade bottom delay={25}>
           <LMLThumbnail
             thumb={images.imageTwo.childImageSharp.fluid}
             onClickToggle={onClickToggle}
           />
         </Fade>
-        <Fade bottom delay={50}>
+        <Fade bottom delay={25}>
           <PPDThumbnail
           thumb={images.imageThree.childImageSharp.fluid}
           onClickToggle={onClickToggle}
           />
         </Fade>
-        <Fade bottom delay={75}>
+        <Fade bottom delay={50}>
           <LKThumbnail
           thumb={images.imageFour.childImageSharp.fluid}
           onClickToggle={onClickToggle}
           />
         </Fade>
-        <Fade bottom delay={100}>
+        <Fade bottom delay={75}>
           <SCCThumbnail
           thumb={images.imageFive.childImageSharp.fluid}
           onClickToggle={onClickToggle}
+          />
+        </Fade>
+        <Fade bottom delay={100}>
+          <FodeThumbnail
+            thumb={images.imageOne.childImageSharp.fluid}
+            onClickToggle={onClickToggle}
           />
         </Fade>
         <Fade bottom delay={125}>

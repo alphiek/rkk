@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 const FirstAnim = styled(a.div)`
   position: relative;
   width: 30vw;
-  margin-left: -1em;
+  margin-left: 0;
   margin-right: 7em;
   margin-bottom: 1em;
   box-shadow: 21px 21px 24px -10px rgba(0,0,0,.27);

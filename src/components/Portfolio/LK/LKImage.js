@@ -14,7 +14,7 @@ const LKImage = ({ data }) => {
   return (
     <>
     <Flex>
-    <NumberIndicator>04</NumberIndicator>
+    <NumberIndicator>03</NumberIndicator>
       <Fade right delay={300}>
         <MainImage
           style={{ width: '15em' }}

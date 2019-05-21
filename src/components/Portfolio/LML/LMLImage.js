@@ -20,7 +20,7 @@ const LMLImage = ({ data }) => {
   return (
     <>
     <LMLFlex>
-      <NumberIndicator>02</NumberIndicator>
+      <NumberIndicator>01</NumberIndicator>
       <MainImageAnim>
         <Img
           backgroundColor={true}

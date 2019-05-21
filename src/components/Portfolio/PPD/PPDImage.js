@@ -13,7 +13,7 @@ const PPDImage = ({ data }) => {
   return (
     <>
     <Flex>
-      <NumberIndicator>03</NumberIndicator>
+      <NumberIndicator>02</NumberIndicator>
       <MainImageAnim>
         <Img
           backgroundColor={true}
