@@ -33,10 +33,11 @@ const PortfolioPageWrapper = styled.div`
 `
 
 const PortfolioDivider = styled(Divider)`
-  width: 5.9em;
+  width: 5.8em;
   @media only screen and (max-width: 1024px) {
     margin-left: 0;
     margin-bottom: 1.5em;
+    margin-left: 10%;
   }
 `
 
@@ -121,7 +122,6 @@ const InfoFlexContainer = ({ item, onClickToggle, live }) => {
       </Fade>
       <Fade bottom delay={550}>
         <PortfolioPageLnk
-         style={{marginLeft: 0}}
          aria-label='Back to main portfolio'
          id='close'
          onClick={onClickToggle}>

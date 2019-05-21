@@ -77,7 +77,8 @@ export const ServicesWrapper = styled.div`
 
 `
 export const MobileWidthWrapper = styled.div`
-@media only screen and (max-width: 570px) {
+@media only screen and (max-width: 824px) {
     padding: 0 1em;
+    margin-top: 2em;
   }
 `
