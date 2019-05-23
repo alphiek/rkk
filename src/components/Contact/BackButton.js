@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import { color } from '../Global/variables'
 import { BackText } from '../Global/MenuShared'
-import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 
 const Back = styled.div`
