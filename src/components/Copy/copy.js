@@ -1,17 +1,17 @@
 export const aboutData = [
   {
-    title: 'A bit about us',
+    title: 'Meet Alphie & Nick',
     key: 1,
     description: `
-    Normally, both your asses would be dead as fucking fried chicken,
-    but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you,
-    I wanna help you. But I can't give you this case, it don't belong to me. Besides,
-    I've already been through too much shit this morning over this case to hand it over to your dumb ass.`,
+    A couple of weirdos who feel in love in 2015 and have been travelling the globe together since.`,
     descriptionTwo:
-    `Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house,
-    fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?
-    `,
-    copyright: 'RKK creative'
+    `Alphie is the Creative force, she is a talented artist in her own right and has a passion for all things design. She will
+    take your brand to a new level and give your company it's own unique style that is eyecatching and user friendly. She loves wine and kittens.`,
+    descriptionThree:
+    `Nick is the Technical arm, he keeps Alphie well stocked on wine and kittens while ensuring quality and security. He has a long history in IT and
+     a short time as an Aussie.`,
+    descriptionFour:
+    `Together, they are the perfect team to make magic happen on the screen.`,
   }
 ]
 

@@ -2,35 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { color } from '../Global/variables'
 import { BackText } from '../Global/MenuShared'
+import { Back } from '../Contact/BackButton'
 import PropTypes from 'prop-types'
 
 const MenuButton = styled(BackText)`
-  width: 100%;
-  color: ${color.secondary};
-  &: hover {
-    color: ${color.offWhite};
-  }
+`
 
-  @media only screen and (max-width: 1024px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    `
-
-const ButtonWrapper = styled.div`
-    width: 95vw;
-    text-align: right;
-    padding-right: 6em;
-    overflow: hidden;
+const ButtonWrapper = styled(Back)`
 @media only screen and (max-width: 1024px) {
-    border: 0.1em solid hsl(181,97%,44%);
-    width: 30vw;
-    padding: 0.67em 0;
-    float: right;
-    margin-left: 11%;
+    border: 0.15em solid ${color.secondary};
+    float: left;
+    margin-left: 0;
+    margin-right: 2%;
 }
-@media only screen and (max-width: 824px) {
-    width: 80vw;
+@media only screen and (max-width: 570px) {
     margin-left: 0;
 }
 `

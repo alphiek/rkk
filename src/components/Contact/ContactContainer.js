@@ -19,8 +19,10 @@ const ContactMenuButton = styled.div`
     align-items: center;
     width: 100%;
   }
-  @media only screen and (max-width: 824px) {
+  @media only screen and (max-width: 570px) {
     flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 `
 
@@ -36,11 +38,14 @@ const ContactContainer = ({ form, toggleForm, renderMenu }) => {
           :
           <ContactDetails />
         }
-        <Breakpoint mobile up>
-        <ContactMenuButton>
-        <BackButton form={form} toggleForm={toggleForm}/>
-        <RenderMenu renderMenu={renderMenu}/>
-        </ContactMenuButton>
+        <Breakpoint tablet down>
+          <ContactMenuButton>
+          <RenderMenu renderMenu={renderMenu}/>
+          <BackButton form={form} toggleForm={toggleForm}/>
+          </ContactMenuButton>
+        </Breakpoint>
+        <Breakpoint desktop up>
+          <BackButton form={form} toggleForm={toggleForm}/>
         </Breakpoint>
      </ContactWrapper>
     </PageWrapper>

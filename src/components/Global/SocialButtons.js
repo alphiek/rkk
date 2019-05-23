@@ -13,11 +13,10 @@ const SocialWrapper = styled.div`
   justify-content: space-between;
   @media only screen and (max-width: 1024px) {
     flex-direction: row;
-    width: 40%;
+    width: 35%;
   }
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (max-width: 824px) {
     margin-bottom: 1em;
-    flex-direction: row;
     width: 50%;
   }
   @media only screen and (max-width: 570px){

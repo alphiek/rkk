@@ -16,6 +16,7 @@ import {
   Icon,
   Submit,
 } from './FormStyles'
+import Terms from './Terms'
 
 
 const SignUp = ({
@@ -76,14 +77,7 @@ const SignUp = ({
       )}
         <ConsentText>
           I agree with the
-          <a
-            href='#www'
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            T&CS,
-          </a>
+          <Terms/>
           <a
             href="#www"
             target="_blank"

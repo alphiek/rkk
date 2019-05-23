@@ -73,6 +73,13 @@ module.exports = {
         path: path.join(__dirname, `src`, `images`),
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pdf`,
+        path: path.join(__dirname, `src`, `pdf`),
+      }
+    },
     'gatsby-plugin-transition-link',
     {
     resolve: `gatsby-plugin-accessibilityjs`,
