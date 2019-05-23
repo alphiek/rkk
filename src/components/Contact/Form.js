@@ -16,8 +16,8 @@ import {
   Icon,
   Submit,
 } from './FormStyles'
+import Swal from 'sweetalert2'
 import Terms from './Terms'
-
 
 const SignUp = ({
   values,
@@ -117,6 +117,7 @@ const Form = withFormik({
     email: "",
     message: "",
     consent: false
+
   }),
   validationSchema: Yup.object().shape({
     name: Yup.string()
@@ -143,14 +144,24 @@ const Form = withFormik({
             userEmail: values.email,
             userMessage: values.message,
             userConsent: values.consent
+
         };
 
         emailjs.send(service_id, template_id, template_params, user_id)
             .then(function (response) {
-                alert("We've received your request and we'll respond ASAP");
+                Swal.fire({
+                  text:"We've received your request and we'll respond ASAP",
+                  type: 'success',
+                  timer: '5000',
+                  width: '20em',
+                              });
                 resetForm();
             }, function (error) {
-                alert("Process failed. Please try again.");
+                Swal.fire({
+                  text:"Process failed. Please try again.",
+                  type: 'error',
+                  timer: '5000'
+                });
                 console.log('Email sending failed', error);
             });
     },
