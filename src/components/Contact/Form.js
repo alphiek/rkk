@@ -122,8 +122,8 @@ const Form = withFormik({
   mapPropsToValues: () => ({
     name: "",
     email: "",
-    consent: false,
-    message: ""
+    message: "",
+    consent: false
 
   }),
   validationSchema: Yup.object().shape({
@@ -149,8 +149,9 @@ const Form = withFormik({
         const template_params = {
             userName: values.name,
             userEmail: values.email,
-            userConsent: values.consent,
-            userMessage: values.message
+            userMessage: values.message,
+            userConsent: values.consent
+
         };
 
         emailjs.send(service_id, template_id, template_params, user_id)
@@ -159,8 +160,8 @@ const Form = withFormik({
                   text:"We've received your request and we'll respond ASAP",
                   type: 'success',
                   timer: '5000',
-                  width: '20em'
-              });
+                  width: '20em',
+                              });
                 resetForm();
             }, function (error) {
                 Swal.fire({
