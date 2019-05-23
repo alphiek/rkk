@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import { color } from '../Global/variables'
 import { BackText } from '../Global/MenuShared'
-import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 
-const Back = styled.div`
+export const Back = styled.div`
+  border: 0.10em solid ${color.secondary};
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,28 +14,25 @@ const Back = styled.div`
   margin-bottom: 1em;
   width: 100%;
   height: 3em;
-  background-color: ${color.secondary};
+  background-color: ${color.offWhite};
   overflow: hidden;
-  &: hover {
-    box-shadow: 21px 21px 24px -10px rgba(0,0,0,.15);
-  }
+
   @media only screen and (max-width: 1024px) {
-    padding: 1em;
+    border: 0.15em solid ${color.secondary};
+    padding: 1.5em 1em;
     width: 30vw;
     margin-top: 1em;
     float: left;
-    background-color: #fff;
-    border: 0.1em solid ${color.secondary};
-    margin-right: 11%;
+    margin-left: 2%;
   }
   @media only screen and (max-width: 824px) {
-    width: 80vw;
-    margin-right: 0;
-    margin-bottom: 2em;
+    width: 35vw;
+    margin-bottom: 0.5em;
   }
   @media only screen and (max-width: 570px){
-    padding: 1em;
-    margin-top: 0.5em;
+    width: 100%;
+    margin-left: 0;
+    padding: 2em 1em;
   }
 `
 

@@ -17,6 +17,7 @@ import {
   Submit,
 } from './FormStyles'
 import Swal from 'sweetalert2'
+import Terms from './Terms'
 
 const SignUp = ({
   values,
@@ -76,14 +77,7 @@ const SignUp = ({
       )}
         <ConsentText>
           I agree with the
-          <a
-            href='#www'
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {" "}
-            T&CS,
-          </a>
+          <Terms/>
           <a
             href="#www"
             target="_blank"

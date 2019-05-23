@@ -130,6 +130,10 @@ textarea {
   @media only screen and (max-width: 570px){
     font-size: calc(0.4em + 1.8vw);
   }
+  [type="text"],
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 

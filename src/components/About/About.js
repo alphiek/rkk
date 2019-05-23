@@ -26,6 +26,12 @@ const About = ({ children }) => {
           <AboutText>
           {data.descriptionTwo}
           </AboutText>
+          <AboutText>
+          {data.descriptionThree}
+          </AboutText>
+          <AboutText>
+          {data.descriptionFour}
+          </AboutText>
          </Fade>
           {children}
         </AboutWrapper>

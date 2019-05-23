@@ -7,6 +7,7 @@ export const PageWrapper = styled.div`
   @media only screen and (max-width: 1024px){
     width: 100%;
     height: 100vh;
+    padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,9 +38,10 @@ export const MenuWrapper = styled.nav`
  `
 export const AboutTitle = styled(H2Menu)`
    color: ${color.secondary};
+   margin-bottom: 0.5em;
    @media only screen and (max-width: 1024px){
-     margin-bottom: 1em;
      color: ${color.primary};
+     margin-bottom: 1.5em;
    }
  `
 
@@ -48,7 +50,8 @@ export const ContactTitle = styled(H2Menu)`
    margin-bottom: 0.6em;
    color: ${color.primary};
    @media only screen and (max-width: 570px){
-     margin-bottom: 0.5em;
+     margin-bottom: 1em;
+     margin-top: 0;
    }
  `
 
@@ -97,10 +100,11 @@ export const ContactTitle = styled(H2Menu)`
  `
 
  export const AboutText = styled(BodyText)`
-   margin-top: 2em;
+   margin-top: 1em;
    color: ${color.white};
    @media only screen and (max-width: 1024px) {
      color: ${color.darkLink};
+     margin-bottom: 1em;
  `
 
  export const Copyright = styled.p`
@@ -126,11 +130,11 @@ export const ContactTitle = styled(H2Menu)`
 
    @media only screen and (max-width: 824px){
      font-size: calc(0.4em + 0.65vw);
+     margin-top: 3em;
    }
 
    @media only screen and (max-width: 570px){
      font-size: calc(0.4em + 1.6vw);
-     bottom: 0;
    }
  `
 
@@ -208,7 +212,7 @@ export const ContactTitle = styled(H2Menu)`
      width: 100%;
    }
   @media only screen and (max-width: 570px) {
-    margin: 1em;
+    margin: 1.5em;
     width: 90%;
   }
   @media only screen and (max-height: 424px) {
@@ -218,18 +222,20 @@ export const ContactTitle = styled(H2Menu)`
 
  export const BackText = styled.p`
    text-align: center;
-   color: ${color.primary};
+   color: ${color.secondary};
    font-family: ${font.muli};
    font-weight: ${weight.black};
    letter-spacing: ${spacing.narrow};
-   font-size: calc(0.7em + 0.5vw);
+   font-size: calc(0.7em + 0.3vw);
    line-height: 105%;
    width: 100%;
+   &: hover {
+     color: ${color.primary};
+   }
 
    @media only screen and (max-width: 1024px) {
-    text-align: center;
     width: 100%;
-    font-size: calc(0.7em + 1.8vw);
+    font-size: calc(0.7em + 1.5vw);
    }
    @media only screen and (max-width: 824px){
      font-size: calc(0.7em + 1.9vw);

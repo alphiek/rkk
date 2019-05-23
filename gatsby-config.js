@@ -58,6 +58,13 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        https: true,
+        host: 'rkkcreative.xyz',
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -65,6 +72,13 @@ module.exports = {
         name: `images`,
         path: path.join(__dirname, `src`, `images`),
       },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pdf`,
+        path: path.join(__dirname, `src`, `pdf`),
+      }
     },
     'gatsby-plugin-transition-link',
     {
@@ -101,8 +115,6 @@ module.exports = {
         icon: `src/images/icon.png`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    'gatsby-plugin-offline',
   ],
 }

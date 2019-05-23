@@ -113,8 +113,8 @@ export const ppdData = [
       'SEO'
     ],
     description: `The core focus for Paphos Painter Decorators was to create a modern, accessible site that was highly optimised to increase conversion
-    and online visibility. With enhanced technical optimisation we were pleased to achieve the top result for relevant Paphos organic search results within
-    two months of launch, therefore making it one of the top performing websites within its field on location.`,
+    and online visibility. With enhanced technical optimisation we were pleased to have achieved the top organic ranking for relevant Paphos search results within
+    two months of launch, therefore making it one of the top performing websites within its sector and local area.`,
     site: `https://paphospainterdecorators.com`
   }
 ]

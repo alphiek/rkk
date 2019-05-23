@@ -13,7 +13,7 @@ const ContactFlex = styled.div`
   overflow: hidden;
 @media only screen and (max-width: 1024px) {
   flex-direction: column;
-  margin-bottom: 5em;
+  margin-bottom: 0.5em;
 }
 `
 
