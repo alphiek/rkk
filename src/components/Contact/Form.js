@@ -16,7 +16,7 @@ import {
   Icon,
   Submit,
 } from './FormStyles'
-
+import Swal from 'sweetalert2'
 
 const SignUp = ({
   values,
@@ -24,7 +24,8 @@ const SignUp = ({
   handleBlur,
   handleChange,
   handleSubmit,
-  touched
+  touched,
+  isSumitting
 }) => (
   <div>
   <Fade right cascade>
@@ -121,8 +122,9 @@ const Form = withFormik({
   mapPropsToValues: () => ({
     name: "",
     email: "",
-    message: "",
-    consent: false
+    consent: false,
+    message: ""
+
   }),
   validationSchema: Yup.object().shape({
     name: Yup.string()
@@ -140,23 +142,32 @@ const Form = withFormik({
   }),
 
 
-    handleSubmit: (values, {setSubmitting, resetForm }) => {
+    handleSubmit: (values, {setSubmitting, isSubmitting, resetForm }) => {
         const service_id = 'rkk_form_server';
         const template_id = 'rkk_form_forward';
         const user_id = 'user_Yx8GcXupiG88q1ZoCTSjT';
         const template_params = {
             userName: values.name,
             userEmail: values.email,
-            userMessage: values.message,
-            userConsent: values.consent
+            userConsent: values.consent,
+            userMessage: values.message
         };
 
         emailjs.send(service_id, template_id, template_params, user_id)
             .then(function (response) {
-                alert("We've received your request and we'll respond ASAP");
+                Swal.fire({
+                  text:"We've received your request and we'll respond ASAP",
+                  type: 'success',
+                  timer: '5000',
+                  width: '20em'
+              });
                 resetForm();
             }, function (error) {
-                alert("Process failed. Please try again.");
+                Swal.fire({
+                  text:"Process failed. Please try again.",
+                  type: 'error',
+                  timer: '5000'
+                });
                 console.log('Email sending failed', error);
             });
     },
