@@ -24,8 +24,7 @@ const SignUp = ({
   handleBlur,
   handleChange,
   handleSubmit,
-  touched,
-  isSumitting
+  touched
 }) => (
   <div>
   <Fade right cascade>
@@ -142,7 +141,7 @@ const Form = withFormik({
   }),
 
 
-    handleSubmit: (values, {setSubmitting, isSubmitting, resetForm }) => {
+    handleSubmit: (values, {setSubmitting, resetForm }) => {
         const service_id = 'rkk_form_server';
         const template_id = 'rkk_form_forward';
         const user_id = 'user_Yx8GcXupiG88q1ZoCTSjT';
