@@ -1,4 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
 Sitemap: https://www.rkkcreative.xyz/sitemap.xml
 Host: https://www.rkkcreative.xyz

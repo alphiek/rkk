@@ -77,7 +77,6 @@ const SubText = styled.span`
   }
 `
 
-
 export const FodeThumbnail = ({ thumb, onClickToggle }) => {
   return (
     <Wrapper>

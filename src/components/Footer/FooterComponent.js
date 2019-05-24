@@ -2,6 +2,7 @@ import React from 'react'
 import AboutTab from '../About/AboutTab'
 import ContactContainer from '../Contact/ContactContainer'
 import MenuTablet from './MenuTablet'
+import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 
 const FooterComponent = ({ compProps, toggleHidden, renderMenu, renderAbout, renderContact, toggleForm}) => {
@@ -18,12 +19,14 @@ const FooterComponent = ({ compProps, toggleHidden, renderMenu, renderAbout, ren
       }
       {
         compProps.contact ?
-          <ContactContainer
-          toggleForm={toggleForm}
-          form={compProps.form}
-          toggleHidden={toggleHidden}
-          renderMenu={renderMenu}
-          />
+          <Fade right>
+            <ContactContainer
+            toggleForm={toggleForm}
+            form={compProps.form}
+            toggleHidden={toggleHidden}
+            renderMenu={renderMenu}
+            />
+          </Fade>
           : null
       }
       {

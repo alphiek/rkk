@@ -3,15 +3,14 @@ export const aboutData = [
     title: 'Meet Alphie & Nick',
     key: 1,
     description: `
-    A couple of weirdos who feel in love in 2015 and have been travelling the globe together since.`,
+    We are freelance duo who combined our passion for development in 2015 and have been travelling the globe together since.`,
     descriptionTwo:
     `Alphie is the Creative force, she is a talented artist in her own right and has a passion for all things design. She will
     take your brand to a new level and give your company it's own unique style that is eyecatching and user friendly. She loves wine and kittens.`,
     descriptionThree:
-    `Nick is the Technical arm, he keeps Alphie well stocked on wine and kittens while ensuring quality and security. He has a long history in IT and
-     a short time as an Aussie.`,
+    `Nick is the Technical arm, with a background in mobile security and managed services he has a passion for performance and optimisation. Nick loves making things work.`,
     descriptionFour:
-    `Together, they are the perfect team to make magic happen on the screen.`,
+    `Combined we are devoted to working with our clients to deliver quality beyond expectation.`,
   }
 ]
 
