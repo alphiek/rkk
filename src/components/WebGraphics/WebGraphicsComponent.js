@@ -35,7 +35,7 @@ class WebGraphicsComponent extends Component {
                 <NumberNav />
               </Breakpoint>
               <FullWidthWrapper>
-                <Fade right delay={300}>
+                <Fade right delay={400}>
                   <Carousel />
                 </Fade>
                 <GraphicsFlexWrapper>

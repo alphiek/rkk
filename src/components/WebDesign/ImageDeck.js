@@ -114,21 +114,21 @@ export default () => (
         imageOne: file(relativePath: { eq: "WebDesign/LandspaceTheme.png" }) {
           childImageSharp {
             fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         imageTwo: file(relativePath: { eq: "WebDesign/MditanoTheme.png" }) {
           childImageSharp {
             fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         imageThree: file(relativePath: { eq: "WebDesign/SignatureLeaf.png" }) {
           childImageSharp {
             fluid(maxWidth: 1200) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
