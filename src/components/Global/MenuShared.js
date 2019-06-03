@@ -7,7 +7,6 @@ export const PageWrapper = styled.div`
   @media only screen and (max-width: 1024px){
     width: 100%;
     height: 100vh;
-    padding-bottom: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +81,9 @@ export const ContactTitle = styled(H2Menu)`
      padding: 13% 10%;
      background-color: ${color.offWhite};
   }
-
+    @media only screen and (max-width:570px) {
+      overflow: scroll;
+    }
   @media only screen and (max-height: 600px) {
     overflow: scroll;
     }

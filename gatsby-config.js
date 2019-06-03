@@ -3,8 +3,10 @@ const path = require(`path`)
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.rkkcreative.xyz`,
-    title: `RKK Creative`,
-    description: `Paphos Freelance Web Design and Development`,
+    logo: `/images/logo.png`,
+    defaultImage: `/images/ogImage.png`,
+    seoImage: `/images/SEO.png`,
+    webDesignImage: `/images/Graphics/Webdesign.png`,
     author: `RKK Creative`,
     email: 'info@rkkcreative.xyz',
     facebook: 'https://www.facebook.com/RKKCreative/',
@@ -47,15 +49,7 @@ module.exports = {
       options: {
         host: 'https://www.rkkcreative.xyz',
         sitemap: 'https://www.rkkcreative.xyz/sitemap.xml',
-        resolveEnv: () => process.env.GATSBY_ENV,
-        env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }]
-          },
-          production: {
-            policy: [{ userAgent: '*', allow: '/' }]
-          }
-        }
+        policy: [{ userAgent: '*', allow: '/' }]
       }
     },
     {
@@ -95,6 +89,7 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-preload-link-crossorigin`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-styled-components`,

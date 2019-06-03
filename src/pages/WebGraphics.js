@@ -1,8 +1,7 @@
-import React, { Component } from "react"
+import React from "react"
+import { graphql } from 'gatsby'
 import WebGraphicsComponent from '../components/WebGraphics/WebGraphicsComponent'
 import { Helmet } from 'react-helmet'
-import ogImage from '../images/ogImage.png'
-import logo from '../images/icon.png'
 import { BreakpointProvider} from 'react-socks'
 import { setDefaultBreakpoints } from 'react-socks'
 
@@ -12,8 +11,11 @@ setDefaultBreakpoints([
   { desktop: 1025 }
 ]);
 
-class WebGraphics extends Component {
-  render() {
+const webGraphics = ({ data }) => {
+  const siteUrl = data.site.siteMetadata.siteUrl
+  const defaultImage = data.site.siteMetadata.defaultImage
+  const logo = data.site.siteMetadata.logo
+  const name = data.site.siteMetadata.author
     return (
       <>
       <Helmet>
@@ -23,32 +25,32 @@ class WebGraphics extends Component {
         <title>RKK Creative Web and Social Media Graphics Paphos</title>
         <meta name="description" content="High quality web and social media packages tailored to support your brand"></meta>
 
-        <meta property="og:url" content="https://rkkcreative.xyz"></meta>
+        <meta property="og:url" content={siteUrl}></meta>
         <meta property="og:type" content="website"></meta>
         <meta property="og:title" content="Web and Social Media Graphics Paphos"></meta>
-        <meta property="og:image" content={ogImage}></meta>
+        <meta property="og:image" content={siteUrl + defaultImage}></meta>
         <meta property="og:image:width" content="1200"></meta>
         <meta property="og:image:height" content="630"></meta>
         <meta property="og:description" content="Have a project in mind? Contact us for a free consultation"></meta>
-        <meta property="og:site_name" content="RKK Creative"></meta>
+        <meta property="og:site_name" content={name}></meta>
 
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:site" content="@rkkcreative"></meta>
-        <meta name="twitter:url" content="https://rkkcreative.xyz"></meta>
-        <meta name="twitter:title" content="RKK Creative"></meta>
+        <meta name="twitter:url" content={siteUrl}></meta>
+        <meta name="twitter:title" content={name}></meta>
         <meta name="twitter:description" content="Web and Social Media Graphics Paphos"></meta>
-        <meta name="twitter:image" content={ogImage}></meta>
+        <meta name="twitter:image" content={siteUrl + defaultImage}></meta>
 
         <script type="application/ld+json">{`
             {
                 "@context": "http://schema.org",
                 "@type": "LocalBusiness",
-                "name": "RKK Creative",
+                "name": "${name}",
                 "description": "Web and Social Media Graphics Paphos",
-                "image": ${ogImage},
-                "logo": ${logo},
-                "@id": "https://rkkcreative.xyz/",
-                "url": "https://rkkcreative.xyz/",
+                "image": "${siteUrl}${defaultImage}",
+                "logo": "${siteUrl}${logo}",
+                "@id": "${siteUrl}",
+                "url": "${siteUrl}",
                 "telephone": "",
                 "address": {
                   "@type": "PostalAddress",
@@ -72,9 +74,11 @@ class WebGraphics extends Component {
                   "closes": "23:59"
                 },
                 "sameAs": [
-                  "https://www.facebook.com/rkkcreative/",
-                  "https://www.instagram.com/rkkcreative/"
-                  "https://www.twitter.com/rkkcreative/"
+                  "${data.site.siteMetadata.facebook}",
+                  "${data.site.siteMetadata.insta}",
+                  "${data.site.siteMetadata.twitter}",
+                  "${data.site.siteMetadata.pin}",
+                  "${data.site.siteMetadata.linked}"
                 ],
                 "priceRange": "$"
             }
@@ -86,7 +90,23 @@ class WebGraphics extends Component {
       </>
     )
   }
-}
 
+export default webGraphics
 
-export default WebGraphics
+export const query = graphql`
+  query GraphicsPageQuery {
+    site {
+      siteMetadata {
+        siteUrl
+        author
+        logo
+        defaultImage
+        facebook
+        insta
+        twitter
+        pin
+        linked
+      }
+    }
+  }
+`

@@ -12,7 +12,12 @@ const PageWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+@media only screen and (max-height: 424px) and (orientation:Landscape) {
+  min-height: 180vh;
+}
+
 `
+
 const Title = styled.h1`
   margin-top: 0.2em;
   font-size: 10em;
@@ -24,6 +29,9 @@ const Title = styled.h1`
   text-transform: uppercase;
 `
 const SubTitle = styled.h2`
+  text-align: center;
+  line-height: 130%;
+  width: 80%;
   text-transform: uppercase;
   font-size: 2em;
   color: #2c2c2c;
@@ -65,7 +73,7 @@ const NotFoundPage = () => (
   <>
   <Helmet>
     <html lang="en"/>
-    <title>Lost in Cyberspace</title>
+    <title>Error Not Found</title>
     <meta name="description" content="404 Page"></meta>
   </Helmet>
   <PageWrapper>

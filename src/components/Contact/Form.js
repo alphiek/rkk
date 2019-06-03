@@ -79,7 +79,7 @@ const SignUp = ({
           I agree with the
           <Terms/>
           <a
-            href="#www"
+            href="https://www.iubenda.com/privacy-policy/48448337"
             target="_blank"
             rel="noopener noreferrer"
           >

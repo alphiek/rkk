@@ -57,9 +57,9 @@ export const lkData = [
       'Re-Design',
       'Web Graphics',
     ],
-    description: `Our mission was to redevelop an outdated Wordpress website into powerful brand assest which supports and visualises the modern stylish environment that the
-    salon represents. Our solution was to create a streamlined interactive experience for users to access salon booking portals and information with ease combining
-    the website and social presence with a dynamic live feed gallery via the Instagram API that seamlessly updates without the need for a CMS.`
+    description: `Our mission was to create a modern, sleek and elegant web presence to support brand direction and replace their outdated WordPress site.
+    Our solution was to create a streamlined interactive experience for users to access salon booking portals and information with ease combining
+    the website and social media marketing with a dynamic live feed gallery via the Instagram API that seamlessly updates without the need for a CMS.`
   }
 ]
 
@@ -86,7 +86,7 @@ export const lmlData = [
       'Mobile Site',
       'SEO'
     ],
-    description: `Our challenge was to rebrand the exisiting LML website to appeal to professionals within the modern millenial rental market, incorporating both a
+    description: `Our challenge was to redevelop the exisiting LML website to appeal to professionals within the modern millenial rental market, incorporating both a
     fully editable property dashboard, search portal and blog. With a modern rebrand to support their company vision, LML have moved from strength to strength providing a
     breath of fresh air that was much needed and we are honoured to have assisted them in making that significant step forward.`,
     site: `https://likemindedliving.co.uk`
@@ -138,7 +138,7 @@ export const sccData = [
       'Mobile Site',
       'SEO'
     ],
-    description: `The key to a success of South Coast Coaches new website is to create a pleasurable and user friendly portal to make travel arrangements, with Gatwick Airport a stones throw away our
-     mission was to create a lean, streamlined experience to accompany their impeccable service and reliability. We are excited to assist this new start-up and looking forward to watching their company grow. `
+    description: `The key to the success of South Coast Coache's new online presence was to create a pleasurable and user-friendly portal to make travel arrangements, with Gatwick Airport a stones throw away our
+     mission was to create a lean, streamlined experience to accompany their impeccable service and reliability. We are excited to assist this new start-up and looking forward to helping their brand identity grow. `
   }
 ]
