@@ -103,63 +103,63 @@ class Carousel extends Component {
             imageOne: file(relativePath: { eq: "Graphics/boy.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
             imageTwo: file(relativePath: { eq: "Graphics/Friyay.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
             imageThree: file(relativePath: { eq: "Graphics/Mates.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
             imageFour: file(relativePath: { eq: "Graphics/Mobile.png" }) {
               childImageSharp {
                 fluid(maxWidth: 768) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }
           imageSix: file(relativePath: { eq: "Graphics/Think.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
           imageSeven: file(relativePath: { eq: "Graphics/Time.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
           imageEight: file(relativePath: { eq: "Graphics/Unicorn.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
           imageNine: file(relativePath: { eq: "Graphics/Webdesign.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
           imageTen: file(relativePath: { eq: "Graphics/Yippee.png" }) {
             childImageSharp {
               fluid(maxWidth: 768) {
-                ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
            }

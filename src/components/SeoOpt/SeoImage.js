@@ -49,7 +49,7 @@ export default () => (
         imageOne: file(relativePath: { eq: "SEO.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

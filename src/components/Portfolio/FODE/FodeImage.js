@@ -36,14 +36,14 @@ export default () => (
         imageOne: file(relativePath: { eq: "FODE/holding.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
       imageTwo: file(relativePath: { eq: "FODE/mob.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

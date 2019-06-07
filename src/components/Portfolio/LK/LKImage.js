@@ -38,14 +38,14 @@ export default () => (
         imageOne: file(relativePath: { eq: "LK/lkThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
       imageTwo: file(relativePath: { eq: "LK/rose.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

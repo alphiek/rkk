@@ -37,14 +37,14 @@ export default () => (
         imageOne: file(relativePath: { eq: "SCC/Southcoach.png" }) {
           childImageSharp {
             fluid(maxWidth: 1000) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
       imageTwo: file(relativePath: { eq: "SCC/contact.png" }) {
         childImageSharp {
           fluid(maxWidth: 1000) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }

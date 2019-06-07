@@ -94,42 +94,42 @@ export default () => (
         imageOne: file(relativePath: { eq: "Thumbnail/fodeThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         imageTwo: file(relativePath: { eq: "Thumbnail/lmlThumb.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         imageThree: file(relativePath: { eq: "Thumbnail/ppdThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
         imageFour: file(relativePath: { eq: "Thumbnail/lkThumb.png" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }
       imageFive: file(relativePath: { eq: "Thumbnail/southCoastThumb.png" }) {
         childImageSharp {
           fluid(maxWidth: 768) {
-            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
        }
        imageSix: file(relativePath: { eq: "Thumbnail/foragerThumb.png" }) {
          childImageSharp {
            fluid(maxWidth: 768) {
-             ...GatsbyImageSharpFluid_withWebp_tracedSVG
+             ...GatsbyImageSharpFluid_withWebp
            }
          }
         }
