@@ -20,23 +20,23 @@ const SEO = ({ data }) => {
     <>
     <Helmet>
       <html lang="en"/>
-      <title>RKK Creative SEO optmisation</title>
-      <meta name="description" content="Technical SEO services to improve website rankings and visibility. Contact us for a free SEO healthcheck"></meta>
+      <title>RKK Creative Technical SEO and Mobile Optmisation</title>
+      <meta name="description" content="SEO services to improve website ranking and visibility. Contact us for a free SEO healthcheck"></meta>
 
       <meta property="og:url" content={siteUrl}></meta>
       <meta property="og:type" content="website"></meta>
-      <meta property="og:title" content="SEO optmisation"></meta>
+      <meta property="og:title" content="SEO and Mobile Optmisation"></meta>
       <meta property="og:image" content={siteUrl + seoImage}></meta>
       <meta property="og:image:width" content="1200"></meta>
       <meta property="og:image:height" content="630"></meta>
-      <meta property="og:description" content="Technical SEO services to improve website rankings and visibility. Contact us for a free SEO healthcheck"></meta>
+      <meta property="og:description" content="Technical SEO services to improve website ranking and visibility. Contact us for a free SEO healthcheck"></meta>
       <meta property="og:site_name" content={name}></meta>
 
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:site" content="@rkkcreative"></meta>
       <meta name="twitter:url" content={siteUrl}></meta>
-      <meta name="twitter:title" content="SEO optmisation"></meta>
-      <meta name="twitter:description" content="Technical SEO services to improve website rankings and visibility. Contact us for a free SEO healthcheck"></meta>
+      <meta name="twitter:title" content="SEO and Mobile Optmisation"></meta>
+      <meta name="twitter:description" content="Technical SEO services to improve website ranking and visibility. Contact us for a free SEO healthcheck"></meta>
       <meta name="twitter:image" content={siteUrl + seoImage}></meta>
 
       <script type="application/ld+json">{`
@@ -44,7 +44,7 @@ const SEO = ({ data }) => {
               "@context": "http://schema.org",
               "@type": "LocalBusiness",
               "name": "${name}",
-              "description": "SEO optmisation Paphos",
+              "description": "Technical SEO services to improve website ranking and visibility. Contact us for a free SEO healthcheck",
               "image": "${siteUrl}${seoImage}",
               "logo": "${siteUrl}${logo}",
               "@id": "${siteUrl}",
@@ -52,9 +52,7 @@ const SEO = ({ data }) => {
               "telephone": "",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "8 Panagiotou Christodoulou",
-                "addressLocality": "Koili, Paphos",
-                "postalCode": "8543",
+                "addressLocality": "Paphos",
                 "addressCountry": "cy"
               },
               "openingHoursSpecification": {

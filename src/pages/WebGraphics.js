@@ -22,23 +22,23 @@ const webGraphics = ({ data }) => {
         <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
         <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
         <html lang="en"/>
-        <title>RKK Creative Web and Social Media Graphics Paphos</title>
-        <meta name="description" content="High quality web and social media packages tailored to support your brand"></meta>
+        <title>RKK Creative Web and Social Media Graphics</title>
+        <meta name="description" content="Cross platform Web and Social Media packages tailored to support your online goals. Contact us to see how we can help your business grow"></meta>
 
         <meta property="og:url" content={siteUrl}></meta>
         <meta property="og:type" content="website"></meta>
-        <meta property="og:title" content="Web and Social Media Graphics Paphos"></meta>
+        <meta property="og:title" content="Web and Social Media Graphics"></meta>
         <meta property="og:image" content={siteUrl + defaultImage}></meta>
         <meta property="og:image:width" content="1200"></meta>
         <meta property="og:image:height" content="630"></meta>
-        <meta property="og:description" content="Have a project in mind? Contact us for a free consultation"></meta>
+        <meta property="og:description" content="Cross platform Web and Social Media packages tailored to support your online goals. Contact us to see how we can help your business grow"></meta>
         <meta property="og:site_name" content={name}></meta>
 
         <meta name="twitter:card" content="summary_large_image"></meta>
         <meta name="twitter:site" content="@rkkcreative"></meta>
         <meta name="twitter:url" content={siteUrl}></meta>
-        <meta name="twitter:title" content={name}></meta>
-        <meta name="twitter:description" content="Web and Social Media Graphics Paphos"></meta>
+        <meta name="twitter:title" content="Web and Social Media Graphics"></meta>
+        <meta name="twitter:description" content="Cross platform Web and Social Media packages tailored to support your online goals. Contact us to see how we can help your business grow"></meta>
         <meta name="twitter:image" content={siteUrl + defaultImage}></meta>
 
         <script type="application/ld+json">{`
@@ -46,7 +46,7 @@ const webGraphics = ({ data }) => {
                 "@context": "http://schema.org",
                 "@type": "LocalBusiness",
                 "name": "${name}",
-                "description": "Web and Social Media Graphics Paphos",
+                "description": "Cross platform Web and Social Media packages tailored to support your online goals. Contact us to see how we can help your business grow",
                 "image": "${siteUrl}${defaultImage}",
                 "logo": "${siteUrl}${logo}",
                 "@id": "${siteUrl}",
@@ -54,9 +54,7 @@ const webGraphics = ({ data }) => {
                 "telephone": "",
                 "address": {
                   "@type": "PostalAddress",
-                  "streetAddress": "8 Panagiotou Christodoulou",
-                  "addressLocality": "Koili, Paphos",
-                  "postalCode": "8543",
+                  "addressLocality": "Paphos",
                   "addressCountry": "cy"
                 },
                 "openingHoursSpecification": {

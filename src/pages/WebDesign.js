@@ -20,31 +20,31 @@ const WebDesign = ({ data }) => {
     <>
     <Helmet>
       <html lang="en"/>
-      <title>RKK Creative Web Design</title>
-      <meta name="description" content="Custom crafted responsive websites and web applications to support brand direction and digital growth"></meta>
+      <title>RKK Creative Responsive Websites and Web Applications</title>
+      <meta name="description" content="Custom crafted responsive websites and web applications to support brand direction and digital growth. Find out more..."></meta>
 
       <meta property="og:url" content={siteUrl}></meta>
       <meta property="og:type" content="website"></meta>
-      <meta property="og:title" content={name}></meta>
+      <meta property="og:title" content="Responsive Websites and Web Applications"></meta>
       <meta property="og:image" content={siteUrl + webImage}></meta>
       <meta property="og:image:width" content="1200"></meta>
       <meta property="og:image:height" content="630"></meta>
-      <meta property="og:description" content="Custom crafted responsive websites and web applications to support brand direction and digital growth"></meta>
+      <meta property="og:description" content="Custom crafted responsive websites and web applications to support brand direction and digital growth. Find out more.."></meta>
       <meta property="og:site_name" content={siteUrl}></meta>
 
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:site" content="@rkkcreative"></meta>
       <meta name="twitter:url" content={siteUrl}></meta>
-      <meta name="twitter:title" content={name}></meta>
-      <meta name="twitter:description" content="Custom crafted responsive websites and web applications to support brand direction and digital growth"></meta>
+      <meta name="twitter:title" content="Responsive Websites and Web Applications"></meta>
+      <meta name="twitter:description" content="Custom crafted responsive websites and web applications to support brand direction and digital growth. Find out more..."></meta>
       <meta name="twitter:image" content={siteUrl + webImage}></meta>
 
       <script type="application/ld+json">{`
           {
               "@context": "http://schema.org",
               "@type": "LocalBusiness",
-              "name": ${name},
-              "description": "Web Design Paphos",
+              "name": "${name}",
+              "description": "Custom crafted responsive websites and web applications to support brand direction and digital growth. Find out more...",
               "image": "${siteUrl}${webImage}",
               "logo": "${siteUrl}${logo}",
               "@id": "${siteUrl}",
@@ -52,9 +52,7 @@ const WebDesign = ({ data }) => {
               "telephone": "",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "8 Panagiotou Christodoulou",
                 "addressLocality": "Koili, Paphos",
-                "postalCode": "8543",
                 "addressCountry": "cy"
               },
               "openingHoursSpecification": {

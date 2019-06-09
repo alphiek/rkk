@@ -21,22 +21,22 @@ const index = ({ data }) => {
     <Helmet>
       <html lang="en"/>
       <title>RKK Creative Freelance Web Design and Development</title>
-      <meta name="description" content="Freelance Web Design and Development Services"></meta>
+      <meta name="description" content="Looking for high quality, competitive freelance Web Design and Development Services? Contact us for a free consultation"></meta>
 
       <meta property="og:url" content={siteUrl}></meta>
       <meta property="og:type" content="website"></meta>
-      <meta property="og:title" content="Freelance Web Design and Development Services"></meta>
+      <meta property="og:title" content="Freelance Websites, Web Apps, Graphics and Development"></meta>
       <meta property="og:image" content={siteUrl + defaultImage}></meta>
       <meta property="og:image:width" content="1200"></meta>
       <meta property="og:image:height" content="630"></meta>
-      <meta property="og:description" content="Have a project in mind? Contact us for a free consultation"></meta>
+      <meta property="og:description" content="Looking for high quality, competitive freelance Web Design and Development Services? Contact us for a free consultation"></meta>
       <meta property="og:site_name" content={name}></meta>
 
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:site" content="@rkkcreative"></meta>
       <meta name="twitter:url" content={siteUrl}></meta>
-      <meta name="twitter:title" content={name}></meta>
-      <meta name="twitter:description" content="Freelance Web Design and Development Services"></meta>
+      <meta name="twitter:title" content="Freelance Websites, Web Apps, Graphics and Development"></meta>
+      <meta name="twitter:description" content="Looking for high quality, competitive freelance Web Design and Development Services? Contact us for a free consultation"></meta>
       <meta name="twitter:image" content={siteUrl + defaultImage}></meta>
 
       <script type="application/ld+json">{`
@@ -44,7 +44,7 @@ const index = ({ data }) => {
               "@context": "http://schema.org",
               "@type": "LocalBusiness",
               "name": "${name}",
-              "description": "Freelance Web Design and Development Services",
+              "description": "Looking for high quality, competitive freelance Web Design and Development Services? Contact us for a free consultation",
               "image": "${siteUrl}${defaultImage}",
               "logo": "${siteUrl}${logo}",
               "@id": "${siteUrl}",
@@ -52,9 +52,7 @@ const index = ({ data }) => {
               "telephone": "",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "8 Panagiotou Christodoulou",
-                "addressLocality": "Koili, Paphos",
-                "postalCode": "8543",
+                "addressLocality": "Paphos",
                 "addressCountry": "cy"
               },
               "openingHoursSpecification": {

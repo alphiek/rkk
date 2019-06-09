@@ -21,7 +21,7 @@ export const contactData = [
     description: `
     Have a project in mind? give us a call to discuss or
     click the link below to complete our contact form and we will be in touch`,
-    lineOne: `Koili, Paphos`,
+    lineOne: `Paphos`,
     lineTwo: `Cyprus`,
     email: `Email: info@rkkcreative.xyz`,
     uk: `UK: +44  7413 977023`,
@@ -36,7 +36,7 @@ export const devData = [
     description: `
     Our websites and web applications are developed with Gatsby and React providing progressive web app benefits as standard,
     which ensures that they are fast, lean and highly adaptable to enhance user experience and mobile load speed.`,
-    descriptionTwo: `Through JAMstack methodology we have the capability to seamlessly connect to serverless backend technologies
+    descriptionTwo: `We have the capability to seamlessly connect to serverless backend technologies
     and headless CMS solutions to provide flexible content management and enhanced security.
     Popular CMS or Ecommerce providers such as Wordpress, Drupal, Shopify and Snipcart are fully intergratable,
     combining the power of these platforms with the speed and finese associated with React web applications`,

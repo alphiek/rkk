@@ -20,23 +20,23 @@ const WebDevelopment = ({ data }) => {
     <>
     <Helmet>
       <html lang="en"/>
-      <title>RKK Creative Website and Web App Development Paphos</title>
-      <meta name="description" content="Providing fast, lean and highly adaptable websites and web applications build for speed and user experience"></meta>
+      <title>RKK Creative Custom Built Websites and Web Applications</title>
+      <meta name="description" content="Providing fast, lean and highly adaptable websites and web applications built for speed and user experience. Find out more..."></meta>
 
       <meta property="og:url" content={siteUrl}></meta>
       <meta property="og:type" content="website"></meta>
-      <meta property="og:title" content="Website and Web App Development Paphos"></meta>
+      <meta property="og:title" content="Custom Built Websites and Web Applications"></meta>
       <meta property="og:image" content={siteUrl + defaultImage}></meta>
       <meta property="og:image:width" content="1200"></meta>
       <meta property="og:image:height" content="630"></meta>
-      <meta property="og:description" content="Providing fast, lean and highly adaptable websites and web applications build for speed and user experience"></meta>
+      <meta property="og:description" content="Providing fast, lean and highly adaptable websites and web applications built for speed and user experience. Find out more..."></meta>
       <meta property="og:site_name" content={name}></meta>
 
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:site" content="@rkkcreative"></meta>
       <meta name="twitter:url" content={siteUrl}></meta>
-      <meta name="twitter:title" content={name}></meta>
-      <meta name="twitter:description" content="Providing fast, lean and highly adaptable websites and web applications build for speed and user experience"></meta>
+      <meta name="twitter:title" content="Custom Built Websites and Web Applications"></meta>
+      <meta name="twitter:description" content="Providing fast, lean and highly adaptable websites and web applications built for speed and user experience. Find out more..."></meta>
       <meta name="twitter:image" content={siteUrl + defaultImage}></meta>
 
       <script type="application/ld+json">{`
@@ -44,7 +44,7 @@ const WebDevelopment = ({ data }) => {
               "@context": "http://schema.org",
               "@type": "LocalBusiness",
               "name": "${name}",
-              "description": "Providing fast, lean and highly adaptable websites and web applications build for speed and user experience",
+              "description": "Providing fast, lean and highly adaptable websites and web applications built for speed and user experience. Find out more...",
               "image": "${siteUrl}${defaultImage}",
               "logo": "${siteUrl}${logo}",
               "@id": "${siteUrl}",
@@ -52,9 +52,7 @@ const WebDevelopment = ({ data }) => {
               "telephone": "",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "8 Panagiotou Christodoulou",
-                "addressLocality": "Koili, Paphos",
-                "postalCode": "8543",
+                "addressLocality": "Paphos",
                 "addressCountry": "cy"
               },
               "openingHoursSpecification": {
