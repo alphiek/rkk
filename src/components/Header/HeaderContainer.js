@@ -11,10 +11,10 @@ import { color } from '../Global/variables'
 
 const Wrapper = posed.div({
   enter: { y: '0%',
-    transition: { ease: 'easeOut', duration: 700 }
+    transition: {type: 'spring', stiffness: 100, damping: 20, mass: 1 }
 },
-  exit: { y: '100%',
-    transition: { ease: 'easeIn', duration: 500 }
+  exit: { y: '100%', 
+    transition: {type: 'spring', stiffness: 70, damping: 20, mass: 2}
 }
 });
 
