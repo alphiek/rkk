@@ -4,7 +4,7 @@ import FODE from './FODE/FODE'
 import Forager from './Forager/Forager'
 import LK from './LK/LK'
 import LML from './LML/LML'
-import PPD from './PPD/PPD'
+import PSM from './PSM/PSM'
 import SCC from './SCC/SCC'
 
 
@@ -44,9 +44,9 @@ const MainContent = ({ mainContent, onClickToggle, live }) => {
       null
     }
     {
-      mainContent.ppd ?
-      <PPD
-        ppd={mainContent.ppd}
+      mainContent.psm ?
+      <PSM
+        psm={mainContent.psm}
         onClickToggle={onClickToggle} />
       :
       null

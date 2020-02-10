@@ -11,9 +11,8 @@ export const Back = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 0.5em;
-  margin-bottom: 1em;
   width: 100%;
-  height: 3em;
+  height: 2.5em;
   background-color: ${color.offWhite};
   overflow: hidden;
 

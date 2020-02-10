@@ -15,7 +15,7 @@ class PortfolioContainer extends Component {
       mainContent: {
         fode: false,
         lml: false,
-        ppd: false,
+        psm: false,
         lk: false,
         scc: false,
         forager: false
@@ -37,7 +37,7 @@ class PortfolioContainer extends Component {
     this.defaultStates = {
       'fode': false,
       'lml': false,
-      'ppd': false,
+      'psm': false,
       'lk': false,
       'scc': false,
       'forager': false
@@ -105,7 +105,7 @@ export default () => (
             }
           }
         }
-        imageThree: file(relativePath: { eq: "Thumbnail/ppdThumb.png" }) {
+        imageThree: file(relativePath: { eq: "Thumbnail/psmThumb.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 768) {
               ...GatsbyImageSharpFluid_withWebp

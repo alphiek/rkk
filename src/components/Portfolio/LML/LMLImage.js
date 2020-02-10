@@ -30,12 +30,12 @@ const LMLImage = ({ data }) => {
     <SecondImageAnim>
       <Img
         backgroundColor={true}
-        fluid={data.imageThree.childImageSharp.fluid} alt='Mobile Services view' />
+        fluid={data.imageThree.childImageSharp.fluid} alt='Process Carousels' />
     </SecondImageAnim>
     <ThirdImageAnim>
       <Img
         backgroundColor={true}
-        fluid={data.imageTwo.childImageSharp.fluid} alt='Locations section' />
+        fluid={data.imageTwo.childImageSharp.fluid} alt='Property and blog sliders' />
     </ThirdImageAnim>
     </>
   )

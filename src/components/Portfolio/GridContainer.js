@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 import {
   FodeThumbnail,
   LMLThumbnail,
-  PPDThumbnail,
+  PSMThumbnail,
   LKThumbnail,
   SCCThumbnail,
   ForagerThumbnail
@@ -44,7 +44,7 @@ const GridContainer = ({ images, onClickToggle, grid }) => {
           />
         </Fade>
         <Fade bottom delay={25}>
-          <PPDThumbnail
+          <PSMThumbnail
           thumb={images.imageThree.childImageSharp.fluid}
           onClickToggle={onClickToggle}
           />

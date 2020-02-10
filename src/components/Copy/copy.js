@@ -1,37 +1,29 @@
 export const aboutData = [
   {
-    title: 'Meet Alphie & Nick',
+    title: "Here's a little bit about us",
     key: 1,
-    description: `
-    We are freelance duo who combined our passion for development in 2015 and have been travelling the globe together since.`,
-    descriptionTwo:
-    `Alphie is the Creative force, she is a talented artist in her own right and has a passion for all things design. She will
-    take your brand to a new level and give your company it's own unique style that is eyecatching and user friendly. She loves wine and kittens.`,
-    descriptionThree:
-    `Nick is the Technical arm, with a background in mobile security and managed services he has a passion for performance and optimisation. Nick loves making things work.`,
-    descriptionFour:
-    `Combined we are devoted to working with our clients to deliver quality beyond expectation.`,
-  }
+    description: `RKK are a freelance design consultancy that cares, we’ve worked hard to get where we are and we work smart for our clients. Priding ourselves on the little details and a personal touch that we are sure will make your project a successful one.`,
+    descriptionTwo: `We have been lucky enough over the years to have supported many industries both strategically and creatively to deliver awesome experiences or a helping hand in times of need.`,
+    descriptionThree: `Being a small team we combine forces with talented developers and designers worldwide to bring a diverse range of skills and solutions to put your ideas in motion.`,
+  },
 ]
 
 export const contactData = [
   {
-    title: 'Drop us a Line',
+    title: "Drop us a Line",
     key: 2,
-    description: `
-    Have a project in mind? give us a call to discuss or
-    click the link below to complete our contact form and we will be in touch`,
-    lineOne: `Paphos`,
-    lineTwo: `Cyprus`,
+    description: `Have a project in mind? We'd love to hear it!`,
+    subtext: `Get in touch via WhatsApp or click below to complete our contact form and we'll be\xa0right\xa0back `,
+    lineOne: `RKK Creative`,
+    lineTwo: `Cape Town`,
     email: `Email: info@rkkcreative.xyz`,
-    uk: `UK: +44  7413 977023`,
-    cy: `CY: +357 97 694965`
-  }
+    uk: `WhatsApp: +27 (0) 79943 5277`,
+  },
 ]
 
 export const devData = [
   {
-    title: 'Development',
+    title: "Development",
     key: 3,
     description: `
     Our websites and web applications are developed with Gatsby and React providing progressive web app benefits as standard,
@@ -40,12 +32,12 @@ export const devData = [
     and headless CMS solutions to provide flexible content management and enhanced security.
     Popular CMS or Ecommerce providers such as Wordpress, Drupal, Shopify and Snipcart are fully intergratable,
     combining the power of these platforms with the speed and finese associated with React web applications`,
-  }
+  },
 ]
 
 export const graphicsData = [
   {
-    title: 'Web Graphics',
+    title: "Web Graphics",
     key: 4,
     description: `
     Here at RKK we are passionate about high quality, eyecatching graphics whether for Social Media, Branding or Web use we
@@ -57,14 +49,14 @@ export const graphicsData = [
       `Illustration`,
       `Logo Design`,
       `Print Graphics`,
-      `Web Graphics`
-    ]
-  }
+      `Web Graphics`,
+    ],
+  },
 ]
 
 export const webdesignData = [
   {
-    title: 'Web Design',
+    title: "Web Design",
     key: 5,
     description: `
     We are devoted to creating experiences that advocate clean, modern design principles. We carefully analyse the needs of our
@@ -75,15 +67,15 @@ export const webdesignData = [
       `Ecommerce`,
       `Starter Sites`,
       `Portfolio Sites`,
-    ]
-  }
+    ],
+  },
 ]
 
 export const seoData = [
   {
-    title: 'SEO Optimisation',
+    title: "SEO Optimisation",
     key: 6,
     description: `
     Boost your website's organic search results and search engine visability with our technical SEO services:`,
-  }
+  },
 ]

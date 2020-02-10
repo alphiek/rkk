@@ -106,6 +106,7 @@ export const ContactTitle = styled(H2Menu)`
    @media only screen and (max-width: 1024px) {
      color: ${color.darkLink};
      margin-bottom: 1em;
+   }
  `
 
  export const Copyright = styled.p`
@@ -140,7 +141,9 @@ export const ContactTitle = styled(H2Menu)`
  `
 
  export const Address = styled.address`
-   margin-top: 3em;
+   display: flex;
+   justify-content: flex-end;
+   flex-direction: column;
    font-size: calc(0.5em + 0.1vw);
    color: ${color.darkLinkO};
    font-weight: ${weight.bold};
@@ -165,7 +168,7 @@ export const ContactTitle = styled(H2Menu)`
  `
 
  export const AddressLink = styled.a`
-   margin-top: 2em;
+   margin: 0.5em 0 0.5em 0;
    color: ${color.darkLinkO};
    font-weight: ${weight.bold};
    line-height: 150%;
@@ -173,8 +176,8 @@ export const ContactTitle = styled(H2Menu)`
    font-family: ${font.heebo};
    letter-spacing: ${spacing.large};
    transition: 600ms;
-   &: hover {
-     color: ${color.darkLink};
+   &:hover {
+     color: ${color.primary};
      font-size: ${weight.black};
    }
  `

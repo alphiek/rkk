@@ -6,10 +6,9 @@ import Fade from 'react-reveal/Fade'
 import PropTypes from 'prop-types'
 
 const SocialWrapper = styled.div`
-  margin-top: 1.5em;
-  margin-bottom: 1em;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 80%;
   justify-content: space-between;
   @media only screen and (max-width: 1024px) {
     flex-direction: row;

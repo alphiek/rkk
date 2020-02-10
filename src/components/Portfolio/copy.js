@@ -68,11 +68,11 @@ export const lmlData = [
     title: 'Like-Minded Living',
     key: 4,
     tech: [
-      'Webflow',
+      'Gatsby',
       'Wordpress',
-      'HTML',
-      'CSS',
-      'jQuery',
+      'DatoCMS',
+      'Apollo',
+      'GraphQL'
     ],
     services: [
       'Website Redesign',
@@ -93,29 +93,25 @@ export const lmlData = [
   }
 ]
 
-export const ppdData = [
+export const psmData = [
   {
-    title: 'Paphos Painter Decorators',
+    title: 'Paphos Stone Masons',
     key: 5,
     tech: [
-      'Webflow',
-      'HTML',
-      'CSS',
-      'jQuery',
+      'Gatsby',
     ],
     services: [
       'Website Design',
       'Branding',
-      'Blog',
       'Social Graphics',
       'Web Graphics',
       'Mobile Site',
       'SEO'
     ],
-    description: `The core focus for Paphos Painter Decorators was to create a modern, accessible site that was highly optimised to increase conversion
+    description: `The core focus for Paphos Stone Masons was to create a modern, accessible site that was highly optimised to increase conversion
     and online visibility. With enhanced technical optimisation we were pleased to have achieved the top organic ranking for relevant Paphos search results within
     two months of launch, therefore making it one of the top performing websites within its sector and local area.`,
-    site: `https://paphospainterdecorators.com`
+    site: `https://paphosstonemasons.com`
   }
 ]
 

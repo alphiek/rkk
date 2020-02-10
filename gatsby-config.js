@@ -9,7 +9,7 @@ module.exports = {
     webDesignImage: `/images/Graphics/Webdesign.png`,
     author: `RKK Creative`,
     email: 'info@rkkcreative.xyz',
-    facebook: 'https://www.facebook.com/RKKCreative/',
+    facebook: 'https://www.facebook.com/rkkcreative/',
     twitter: 'https://twitter.com/rkkcreative/',
     insta: 'https://www.instagram.com/rkkcreative/',
     pin: 'https://www.pinterest.com/rkkcreative/',
@@ -21,19 +21,19 @@ module.exports = {
       },
       {
         name: "Web Design",
-        link: "/WebDesign"
+        link: "/web-design"
       },
       {
         name: "Development",
-        link: "/WebDevelopment"
+        link: "/web-development"
       },
       {
         name: "Web Graphics",
-        link: "/WebGraphics"
+        link: "/web-graphics"
       },
       {
         name: "SEO",
-        link: "/SEO"
+        link: "/seo"
       },
       {
         name: "Portfolio",

@@ -6,7 +6,6 @@ export const FormWrapper = styled.form`
   flex-direction: column;
   justify-content: center;
   margin-top: 0.5em;
-  margin-bottom: 0.8em;
   @media only screen and (max-width: 570px) {
     margin-top: 0;
   }
@@ -138,7 +137,7 @@ export const ConsentText = styled.p`
 
 export const Submit = styled.button`
   margin-top: 1em;
-  height: 5em;
+  height: 4.5em;
   background: ${color.primary};
   border: 0.2em solid ${color.secondary};
   color: white;

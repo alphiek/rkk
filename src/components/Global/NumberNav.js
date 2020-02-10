@@ -23,28 +23,28 @@ const NumberNav = () => {
       <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/WebDesign'
+        to='/web-design'
         partiallyActive={true}
         activeStyle={activeStyle}>01</ServiceNavLinks>
       <hr/>
       <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/WebDevelopment'
+        to='/web-development'
         partiallyActive={true}
         activeStyle={activeStyle}>02</ServiceNavLinks>
       <hr/>
       <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/WebGraphics'
+        to='/web-graphics'
         partiallyActive={true}
         activeStyle={activeStyle}>03</ServiceNavLinks>
       <hr/>
       <ServiceNavLinks
         exit={{ length: 0.5 }}
         entry={{ delay: 0.8 }}
-        to='/SEO'
+        to='/seo'
         partiallyActive={true}
         activeStyle={activeStyle}>04</ServiceNavLinks>
       <hr/>

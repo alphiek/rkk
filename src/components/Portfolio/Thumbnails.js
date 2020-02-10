@@ -23,7 +23,7 @@ const InfoWrapper = styled.div`
   background: -moz-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%, rgba(7,7,7,0) 50%, rgba(7,7,7,0) 100%);
   background: -webkit-linear-gradient(-45deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
   background: linear-gradient(135deg, rgba(7,7,7,0.5) 1%,rgba(7,7,7,0) 50%,rgba(7,7,7,0) 100%);
-  &: hover {
+  &:hover {
     background-color: ${color.thumbnail};
     color: ${color.secondary};
   }
@@ -99,7 +99,7 @@ export const LMLThumbnail = ({ thumb, onClickToggle }) => {
       <InfoWrapper id='lml' onClick={onClickToggle}>
         Like-Minded Living
         <Line />
-        <SubText>Property</SubText>
+        <SubText>Progressive Web Application</SubText>
       </InfoWrapper>
       <Img
         backgroundColor={true}
@@ -108,13 +108,13 @@ export const LMLThumbnail = ({ thumb, onClickToggle }) => {
   )
 }
 
-export const PPDThumbnail = ({ thumb, onClickToggle }) => {
+export const PSMThumbnail = ({ thumb, onClickToggle }) => {
   return (
     <Wrapper>
-      <InfoWrapper id='ppd' onClick={onClickToggle}>
-        Paphos Painter Decorators
+      <InfoWrapper id='psm' onClick={onClickToggle}>
+        Paphos Stone Masons
         <Line />
-        <SubText>Trades</SubText>
+        <SubText>Progressive Web Application</SubText>
       </InfoWrapper>
       <Img
         backgroundColor={true}
